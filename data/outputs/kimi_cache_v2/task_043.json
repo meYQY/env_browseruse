@@ -1,0 +1,159 @@
+{
+  "task_id": "task_0022",
+  "task_description": "On GitLab, locate Target A: the open issue with IID 71 whose title contains \"login redirect loop\". Add a comment to Target A that includes the phrase \"ready for code review\".",
+  "target_environment": "gitlab",
+  "ability_dimension": "Memory",
+  "difficulty": "L5",
+  "target_entity": {
+    "entity_id": "gitlab_issue_006",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "iid": 71,
+      "state": "open",
+      "title_contains": "login redirect loop",
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_006",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "iid": 71,
+        "state": "open",
+        "title_contains": "login redirect loop",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "comment_issue",
+    "task_templates": {
+      "A": "comment_issue"
+    },
+    "structure_variant": "memory_L5_tracked_locator_exclusion_condition",
+    "locator": {
+      "iid": 71,
+      "state": "open",
+      "title_contains": "login redirect loop",
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_006",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "iid": 71,
+          "state": "open",
+          "title_contains": "login redirect loop",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "comment",
+        "target": "A",
+        "body_must_include": [
+          "ready for code review"
+        ]
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "ready for code review"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "ready for code review"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "comment",
+      "target": "A",
+      "body_must_include": [
+        "ready for code review"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_006",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "ready for code review"
+          ]
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_006",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "ready for code review"
+          ]
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": false,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": false,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 9
+  }
+}

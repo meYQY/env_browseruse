@@ -1,0 +1,589 @@
+{
+  "task_id": "task_0116",
+  "task_description": "On the forum, find post A (ID 10050) titled \"best local restaurants\", post B (ID 10081) titled \"weekend hiking trails\", and post C titled \"remote work productivity\" in the \"books\" community. For A, create a post titled \"bike commute routes\" with body containing \"public transit\", comment on A with \"prices have changed since then\", and edit A so the body includes \"public transit\". For B, create a post titled \"best coffee shops\" with body containing \"public transit\", comment on B with \"I can confirm this still works\", and edit B so the body includes \"public transit\". For C, create a post titled \"best coffee shops\" with body containing \"any suggestions appreciated\", comment on C with \"this is outdated information\", and edit C so the body includes \"any suggestions appreciated\".",
+  "target_environment": "forum",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L5",
+  "target_entity": {
+    "entity_id": "forum_post_002",
+    "site": "forum",
+    "entity_type": "post",
+    "selected_locator_fields": {
+      "post_id": "10050",
+      "title_contains": "best local restaurants"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "forum_post_002",
+      "site": "forum",
+      "entity_type": "post",
+      "selected_locator_fields": {
+        "post_id": "10050",
+        "title_contains": "best local restaurants"
+      }
+    },
+    "B": {
+      "entity_id": "forum_post_003",
+      "site": "forum",
+      "entity_type": "post",
+      "selected_locator_fields": {
+        "post_id": "10081",
+        "title_contains": "weekend hiking trails"
+      }
+    },
+    "C": {
+      "entity_id": "forum_post_021",
+      "site": "forum",
+      "entity_type": "post",
+      "selected_locator_fields": {
+        "title_contains": "remote work productivity",
+        "community": "books"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "create_comment_edit",
+    "task_templates": {
+      "A": "create_comment_edit",
+      "B": "create_comment_edit",
+      "C": "create_comment_edit"
+    },
+    "structure_variant": "long_horizon_L5_multi_action_chain_multi_condition",
+    "locator": {
+      "post_id": "10050",
+      "title_contains": "best local restaurants"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "forum_post_002",
+        "site": "forum",
+        "entity_type": "post",
+        "selected_locator_fields": {
+          "post_id": "10050",
+          "title_contains": "best local restaurants"
+        }
+      },
+      "B": {
+        "entity_id": "forum_post_003",
+        "site": "forum",
+        "entity_type": "post",
+        "selected_locator_fields": {
+          "post_id": "10081",
+          "title_contains": "weekend hiking trails"
+        }
+      },
+      "C": {
+        "entity_id": "forum_post_021",
+        "site": "forum",
+        "entity_type": "post",
+        "selected_locator_fields": {
+          "title_contains": "remote work productivity",
+          "community": "books"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_post",
+        "target": "A",
+        "title_must_include": [
+          "bike commute routes"
+        ],
+        "body_must_include": [
+          "public transit"
+        ]
+      },
+      {
+        "type": "comment_post",
+        "target": "A",
+        "body_must_include": [
+          "prices have changed since then"
+        ]
+      },
+      {
+        "type": "edit_post",
+        "target": "A",
+        "body_must_include": [
+          "public transit"
+        ]
+      },
+      {
+        "type": "create_post",
+        "target": "B",
+        "title_must_include": [
+          "best coffee shops"
+        ],
+        "body_must_include": [
+          "public transit"
+        ]
+      },
+      {
+        "type": "comment_post",
+        "target": "B",
+        "body_must_include": [
+          "I can confirm this still works"
+        ]
+      },
+      {
+        "type": "edit_post",
+        "target": "B",
+        "body_must_include": [
+          "public transit"
+        ]
+      },
+      {
+        "type": "create_post",
+        "target": "C",
+        "title_must_include": [
+          "best coffee shops"
+        ],
+        "body_must_include": [
+          "any suggestions appreciated"
+        ]
+      },
+      {
+        "type": "comment_post",
+        "target": "C",
+        "body_must_include": [
+          "this is outdated information"
+        ]
+      },
+      {
+        "type": "edit_post",
+        "target": "C",
+        "body_must_include": [
+          "any suggestions appreciated"
+        ]
+      }
+    ],
+    "requirements": {
+      "title_must_include": [
+        "bike commute routes"
+      ],
+      "body_must_include": [
+        "public transit"
+      ],
+      "comment_body_must_include": [
+        "prices have changed since then"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "title_must_include": [
+          "bike commute routes"
+        ],
+        "body_must_include": [
+          "public transit"
+        ],
+        "comment_body_must_include": [
+          "prices have changed since then"
+        ]
+      },
+      "B": {
+        "title_must_include": [
+          "best coffee shops"
+        ],
+        "body_must_include": [
+          "public transit"
+        ],
+        "comment_body_must_include": [
+          "I can confirm this still works"
+        ]
+      },
+      "C": {
+        "title_must_include": [
+          "best coffee shops"
+        ],
+        "body_must_include": [
+          "any suggestions appreciated"
+        ],
+        "comment_body_must_include": [
+          "this is outdated information"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "create_post",
+      "target": "A",
+      "title_must_include": [
+        "bike commute routes"
+      ],
+      "body_must_include": [
+        "public transit"
+      ]
+    },
+    {
+      "type": "comment_post",
+      "target": "A",
+      "body_must_include": [
+        "prices have changed since then"
+      ]
+    },
+    {
+      "type": "edit_post",
+      "target": "A",
+      "body_must_include": [
+        "public transit"
+      ]
+    },
+    {
+      "type": "create_post",
+      "target": "B",
+      "title_must_include": [
+        "best coffee shops"
+      ],
+      "body_must_include": [
+        "public transit"
+      ]
+    },
+    {
+      "type": "comment_post",
+      "target": "B",
+      "body_must_include": [
+        "I can confirm this still works"
+      ]
+    },
+    {
+      "type": "edit_post",
+      "target": "B",
+      "body_must_include": [
+        "public transit"
+      ]
+    },
+    {
+      "type": "create_post",
+      "target": "C",
+      "title_must_include": [
+        "best coffee shops"
+      ],
+      "body_must_include": [
+        "any suggestions appreciated"
+      ]
+    },
+    {
+      "type": "comment_post",
+      "target": "C",
+      "body_must_include": [
+        "this is outdated information"
+      ]
+    },
+    {
+      "type": "edit_post",
+      "target": "C",
+      "body_must_include": [
+        "any suggestions appreciated"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_002",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "bike commute routes"
+          ],
+          "body_must_include": [
+            "public transit"
+          ]
+        }
+      },
+      {
+        "check_object": "comments",
+        "conditions": {
+          "post_ref": "forum_post_002",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "prices have changed since then"
+          ]
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_002"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "public transit"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_003",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "best coffee shops"
+          ],
+          "body_must_include": [
+            "public transit"
+          ]
+        }
+      },
+      {
+        "check_object": "comments",
+        "conditions": {
+          "post_ref": "forum_post_003",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "I can confirm this still works"
+          ]
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_003"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "public transit"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_021",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "best coffee shops"
+          ],
+          "body_must_include": [
+            "any suggestions appreciated"
+          ]
+        }
+      },
+      {
+        "check_object": "comments",
+        "conditions": {
+          "post_ref": "forum_post_021",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "this is outdated information"
+          ]
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_021"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "any suggestions appreciated"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_002",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "bike commute routes"
+          ],
+          "body_must_include": [
+            "public transit"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "comments",
+          "filters": {
+            "post_ref": "forum_post_002",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "prices have changed since then"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_002"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "public transit"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_003",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "best coffee shops"
+          ],
+          "body_must_include": [
+            "public transit"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "comments",
+          "filters": {
+            "post_ref": "forum_post_003",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "I can confirm this still works"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_003"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "public transit"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_021",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "best coffee shops"
+          ],
+          "body_must_include": [
+            "any suggestions appreciated"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "comments",
+          "filters": {
+            "post_ref": "forum_post_021",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "this is outdated information"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_021"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "any suggestions appreciated"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": false,
+    "checks": {
+      "entity_exists": false,
+      "entity_type_matches": false,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": false,
+      "verifier_binds_entity": false,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 3
+  }
+}

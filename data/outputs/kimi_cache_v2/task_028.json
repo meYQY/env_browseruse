@@ -1,0 +1,367 @@
+{
+  "task_id": "task_0102",
+  "task_description": "For product A, Amazon Kitchen, Beef & Broccoli Stir-Fry, No-Prep Kit for 2, 27 oz: add it to your cart with quantity 1, then change its quantity to 3, then leave a 4-star review that includes the word \"comfortable\". For product B, Antonia racer tank: add it to your cart with quantity 1, then change its quantity to 2, then leave a 5-star review that includes the phrase \"excellent quality\".",
+  "target_environment": "shopping",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L4",
+  "target_entity": {
+    "entity_id": "shopping_product_016",
+    "site": "shopping",
+    "entity_type": "product",
+    "selected_locator_fields": {
+      "product_name": "Amazon Kitchen, Beef & Broccoli Stir-Fry, No-Prep Kit for 2, 27 oz"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "shopping_product_016",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "product_name": "Amazon Kitchen, Beef & Broccoli Stir-Fry, No-Prep Kit for 2, 27 oz"
+      }
+    },
+    "B": {
+      "entity_id": "shopping_product_019",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "product_name": "Antonia racer tank"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "cart_update_review",
+    "task_templates": {
+      "A": "cart_update_review",
+      "B": "cart_update_review"
+    },
+    "structure_variant": "long_horizon_L4_two_step_chain_direct_ref",
+    "locator": {
+      "product_name": "Amazon Kitchen, Beef & Broccoli Stir-Fry, No-Prep Kit for 2, 27 oz"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "shopping_product_016",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "product_name": "Amazon Kitchen, Beef & Broccoli Stir-Fry, No-Prep Kit for 2, 27 oz"
+        }
+      },
+      "B": {
+        "entity_id": "shopping_product_019",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "product_name": "Antonia racer tank"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "add_to_cart",
+        "target": "A",
+        "quantity": 1,
+        "exists_only": true
+      },
+      {
+        "type": "update_quantity",
+        "target": "A",
+        "quantity": 3
+      },
+      {
+        "type": "write_review",
+        "target": "A",
+        "rating": 4,
+        "body_must_include": [
+          "comfortable"
+        ]
+      },
+      {
+        "type": "add_to_cart",
+        "target": "B",
+        "quantity": 1,
+        "exists_only": true
+      },
+      {
+        "type": "update_quantity",
+        "target": "B",
+        "quantity": 2
+      },
+      {
+        "type": "write_review",
+        "target": "B",
+        "rating": 5,
+        "body_must_include": [
+          "excellent quality"
+        ]
+      }
+    ],
+    "requirements": {
+      "add_to_cart_quantity": 1,
+      "quantity": 3,
+      "update_quantity": 3,
+      "rating": 4,
+      "body_must_include": [
+        "comfortable"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "add_to_cart_quantity": 1,
+        "quantity": 3,
+        "update_quantity": 3,
+        "rating": 4,
+        "body_must_include": [
+          "comfortable"
+        ]
+      },
+      "B": {
+        "add_to_cart_quantity": 1,
+        "quantity": 2,
+        "update_quantity": 2,
+        "rating": 5,
+        "body_must_include": [
+          "excellent quality"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "add_to_cart",
+      "target": "A",
+      "quantity": 1,
+      "exists_only": true
+    },
+    {
+      "type": "update_quantity",
+      "target": "A",
+      "quantity": 3
+    },
+    {
+      "type": "write_review",
+      "target": "A",
+      "rating": 4,
+      "body_must_include": [
+        "comfortable"
+      ]
+    },
+    {
+      "type": "add_to_cart",
+      "target": "B",
+      "quantity": 1,
+      "exists_only": true
+    },
+    {
+      "type": "update_quantity",
+      "target": "B",
+      "quantity": 2
+    },
+    {
+      "type": "write_review",
+      "target": "B",
+      "rating": 5,
+      "body_must_include": [
+        "excellent quality"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_016"
+        },
+        "must_satisfy": {
+          "exists": true
+        }
+      },
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_016"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "quantity": 3
+        }
+      },
+      {
+        "check_object": "reviews",
+        "conditions": {
+          "product_ref": "shopping_product_016",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "rating": 4,
+          "body_must_include": [
+            "comfortable"
+          ]
+        }
+      },
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_019"
+        },
+        "must_satisfy": {
+          "exists": true
+        }
+      },
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_019"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "quantity": 2
+        }
+      },
+      {
+        "check_object": "reviews",
+        "conditions": {
+          "product_ref": "shopping_product_019",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "rating": 5,
+          "body_must_include": [
+            "excellent quality"
+          ]
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_016"
+          }
+        },
+        "condition": {
+          "exists": true
+        }
+      },
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_016"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "quantity": 3
+        }
+      },
+      {
+        "query": {
+          "resource": "reviews",
+          "filters": {
+            "product_ref": "shopping_product_016",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "rating": 4,
+          "body_must_include": [
+            "comfortable"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_019"
+          }
+        },
+        "condition": {
+          "exists": true
+        }
+      },
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_019"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "quantity": 2
+        }
+      },
+      {
+        "query": {
+          "resource": "reviews",
+          "filters": {
+            "product_ref": "shopping_product_019",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "rating": 5,
+          "body_must_include": [
+            "excellent quality"
+          ]
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 2
+  }
+}

@@ -1,0 +1,235 @@
+# =============================================================================
+# Shopping Task Templates
+# =============================================================================
+# Placeholder tokens:
+#   {target_entity}     -- entity_id of the resolved product or variant
+#   {quantity}          -- integer quantity for cart operations
+#   {rating}            -- integer star rating (1-5)
+#   {body_must_include} -- required phrase(s) in review body
+# =============================================================================
+
+templates:
+
+  # -------------------------------------------------------------------------
+  # add_to_cart
+  # -------------------------------------------------------------------------
+  add_to_cart:
+    site: shopping
+    required_entity_type: product_variant
+    required_entity_attributes:
+      - in_stock: true
+    allowed_actions:
+      - add_to_cart
+
+    ground_truth_rules:
+      assertions:
+        - resource: cart_items
+          where:
+            user_ref: current_user
+            variant_ref: "{target_entity}"
+          assert:
+            exists: true
+            quantity: "{quantity}"
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L1, L2, L3]
+      long_horizon_operation: [L1, L2, L3]
+
+  # -------------------------------------------------------------------------
+  # update_cart_quantity
+  # -------------------------------------------------------------------------
+  update_cart_quantity:
+    site: shopping
+    required_entity_type: product_variant
+    required_entity_attributes:
+      - in_stock: true
+    allowed_actions:
+      - update_quantity
+
+    preconditions:
+      - resource: cart_items
+        where:
+          user_ref: current_user
+          variant_ref: "{target_entity}"
+        assert:
+          exists: true
+
+    ground_truth_rules:
+      assertions:
+        - resource: cart_items
+          where:
+            user_ref: current_user
+            variant_ref: "{target_entity}"
+          assert:
+            exists: true
+            quantity: "{quantity}"
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+
+    compatible_difficulties:
+      memory_information_tracking: [L2, L3, L4]
+
+  # -------------------------------------------------------------------------
+  # write_review
+  # -------------------------------------------------------------------------
+  write_review:
+    site: shopping
+    required_entity_type: product
+    required_entity_attributes: []
+    allowed_actions:
+      - write_review
+
+    ground_truth_rules:
+      assertions:
+        - resource: reviews
+          where:
+            product_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            rating: "{rating}"
+            body_must_include: "{body_must_include}"
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L1, L2, L3, L4, L5]
+      long_horizon_operation: [L2, L3, L4, L5]
+
+  # -------------------------------------------------------------------------
+  # cart_and_review -- composite: add_to_cart then write_review
+  # -------------------------------------------------------------------------
+  cart_and_review:
+    site: shopping
+    required_entity_type: product
+    required_entity_attributes: []
+    allowed_actions:
+      - add_to_cart
+      - write_review
+
+    ground_truth_rules:
+      assertions:
+        - resource: cart_items
+          where:
+            user_ref: current_user
+            product_ref: "{target_entity}"
+          assert:
+            exists: true
+            quantity: "{quantity}"
+        - resource: reviews
+          where:
+            product_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            rating: "{rating}"
+            body_must_include: "{body_must_include}"
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - long_horizon_operation
+
+    compatible_difficulties:
+      long_horizon_operation: [L3, L4, L5]
+
+  # -------------------------------------------------------------------------
+  # cart_update_review -- composite: add_to_cart + update_quantity + write_review
+  # -------------------------------------------------------------------------
+  cart_update_review:
+    site: shopping
+    required_entity_type: product
+    required_entity_attributes: []
+    allowed_actions:
+      - add_to_cart
+      - update_quantity
+      - write_review
+
+    ground_truth_rules:
+      assertions:
+        - resource: cart_items
+          where:
+            user_ref: current_user
+            product_ref: "{target_entity}"
+          assert:
+            exists: true
+            quantity: "{quantity}"
+        - resource: reviews
+          where:
+            product_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            rating: "{rating}"
+            body_must_include: "{body_must_include}"
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - long_horizon_operation
+
+    compatible_difficulties:
+      long_horizon_operation: [L4, L5]
+
+  # -------------------------------------------------------------------------
+  # add_review_remove -- composite: add to cart, review, then remove from cart
+  # -------------------------------------------------------------------------
+  add_review_remove:
+    site: shopping
+    required_entity_type: product
+    required_entity_attributes: []
+    allowed_actions:
+      - add_to_cart
+      - write_review
+      - remove_from_cart
+
+    ground_truth_rules:
+      min_assertions: 2
+      assertions:
+        - resource: reviews
+          where:
+            product_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            rating: "{rating}"
+            body_must_include: "{body_must_include}"
+        - resource: cart_items
+          where:
+            user_ref: current_user
+            product_ref: "{target_entity}"
+          assert:
+            exists: false
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - long_horizon_operation
+
+    compatible_difficulties:
+      long_horizon_operation: [L5]

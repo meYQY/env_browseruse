@@ -1,0 +1,165 @@
+{
+  "task_id": "task_0120",
+  "task_description": "Navigate to the CMS admin and locate the page titled \"customer testimonials\" (A). Create a new page with a title that includes \"loyalty rewards\" and body content that includes \"international shipping restrictions apply\".",
+  "target_environment": "cms_admin",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L2",
+  "target_entity": {
+    "entity_id": "cms_page_009",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "selected_locator_fields": {
+      "page_title_contains": "customer testimonials"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "cms_page_009",
+      "site": "cms_admin",
+      "entity_type": "cms_page",
+      "selected_locator_fields": {
+        "page_title_contains": "customer testimonials"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "create_page",
+    "task_templates": {
+      "A": "create_page"
+    },
+    "structure_variant": "long_horizon_L2_single_action_direct_ref",
+    "locator": {
+      "page_title_contains": "customer testimonials"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "cms_page_009",
+        "site": "cms_admin",
+        "entity_type": "cms_page",
+        "selected_locator_fields": {
+          "page_title_contains": "customer testimonials"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_page",
+        "target": "A",
+        "title_must_include": [
+          "loyalty rewards"
+        ],
+        "body_must_include": [
+          "international shipping restrictions apply"
+        ]
+      }
+    ],
+    "requirements": {
+      "title_must_include": [
+        "loyalty rewards"
+      ],
+      "body_must_include": [
+        "international shipping restrictions apply"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "title_must_include": [
+          "loyalty rewards"
+        ],
+        "body_must_include": [
+          "international shipping restrictions apply"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "create_page",
+      "target": "A",
+      "title_must_include": [
+        "loyalty rewards"
+      ],
+      "body_must_include": [
+        "international shipping restrictions apply"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_009"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "loyalty rewards"
+          ],
+          "body_must_include": [
+            "international shipping restrictions apply"
+          ],
+          "creator_ref": "current_user"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "cms_pages",
+          "filters": {
+            "page_ref": "cms_page_009"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "loyalty rewards"
+          ],
+          "body_must_include": [
+            "international shipping restrictions apply"
+          ],
+          "creator_ref": "current_user"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 6
+  }
+}

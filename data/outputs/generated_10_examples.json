@@ -1,0 +1,2300 @@
+[
+  {
+    "task_id": "task_0001",
+    "task_description": "In GitLab, find the issue whose title is file upload 413. Add a comment containing \"added reproduction steps\".",
+    "target_environment": "gitlab",
+    "ability_dimension": "Memory",
+    "difficulty": "L1",
+    "target_entity": {
+      "entity_id": "gitlab_issue_018",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "title_contains": "file upload 413"
+      }
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_018",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "title_contains": "file upload 413"
+        }
+      }
+    },
+    "task_structure": {
+      "task_template": "comment_issue",
+      "task_templates": {
+        "A": "comment_issue"
+      },
+      "structure_variant": "memory_L1_lookup_direct_ref",
+      "locator": {
+        "title_contains": "file upload 413"
+      },
+      "target_entities": {
+        "A": {
+          "entity_id": "gitlab_issue_018",
+          "site": "gitlab",
+          "entity_type": "issue",
+          "selected_locator_fields": {
+            "title_contains": "file upload 413"
+          }
+        }
+      },
+      "actions": [
+        {
+          "type": "comment",
+          "target": "A",
+          "body_must_include": [
+            "added reproduction steps"
+          ]
+        }
+      ],
+      "requirements": {
+        "body_must_include": [
+          "added reproduction steps"
+        ]
+      },
+      "requirements_by_target": {
+        "A": {
+          "body_must_include": [
+            "added reproduction steps"
+          ]
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "comment",
+        "target": "A",
+        "body_must_include": [
+          "added reproduction steps"
+        ]
+      }
+    ],
+    "ground_truth": {
+      "type": "expected_backend_state",
+      "assertions": [
+        {
+          "check_object": "issue_comments",
+          "conditions": {
+            "issue_ref": "gitlab_issue_018",
+            "author_ref": "current_user"
+          },
+          "must_satisfy": {
+            "exists": true,
+            "body_must_include": [
+              "added reproduction steps"
+            ]
+          }
+        }
+      ]
+    },
+    "verifier": {
+      "type": "db_api_checker_template",
+      "checks": [
+        {
+          "query": {
+            "resource": "issue_comments",
+            "filters": {
+              "issue_ref": "gitlab_issue_018",
+              "author_ref": "current_user"
+            }
+          },
+          "condition": {
+            "exists": true,
+            "body_must_include": [
+              "added reproduction steps"
+            ]
+          }
+        }
+      ],
+      "execution_status": "not_executed"
+    },
+    "validation_status": {
+      "symbolic_grounded": true,
+      "backend_grounded": false,
+      "verifier_executed": false,
+      "needs_backend_validation": true
+    },
+    "quality_checks": {
+      "passed": true,
+      "checks": {
+        "entity_exists": true,
+        "entity_type_matches": true,
+        "locator_supported": true,
+        "has_ground_truth": true,
+        "gt_binds_entity": true,
+        "verifier_binds_entity": true,
+        "verifier_checks_user": true,
+        "requirements_from_bank": true,
+        "no_subjective": true,
+        "has_labels": true,
+        "honest_validation": true,
+        "no_raw_dsl": true,
+        "no_char_split": true,
+        "difficulty_constraints": true,
+        "canonical_schema_keys": true,
+        "verifier_covers_ground_truth": true,
+        "no_redundant_actions": true
+      },
+      "warnings": []
+    },
+    "diversity_metadata": {
+      "entity_use_count": 1,
+      "template_use_count": 1
+    }
+  },
+  {
+    "task_id": "task_0093",
+    "task_description": "In the shopping site, find the product variant whose product name is a cat t-shirt. Add it to the cart with quantity 1.",
+    "target_environment": "shopping",
+    "ability_dimension": "Long-horizon",
+    "difficulty": "L1",
+    "target_entity": {
+      "entity_id": "shopping_variant_011",
+      "site": "shopping",
+      "entity_type": "product_variant",
+      "selected_locator_fields": {
+        "product_name": "a cat t-shirt"
+      }
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "shopping_variant_011",
+        "site": "shopping",
+        "entity_type": "product_variant",
+        "selected_locator_fields": {
+          "product_name": "a cat t-shirt"
+        }
+      }
+    },
+    "task_structure": {
+      "task_template": "add_to_cart",
+      "task_templates": {
+        "A": "add_to_cart"
+      },
+      "structure_variant": "long_horizon_L1_single_action_direct_ref",
+      "locator": {
+        "product_name": "a cat t-shirt"
+      },
+      "target_entities": {
+        "A": {
+          "entity_id": "shopping_variant_011",
+          "site": "shopping",
+          "entity_type": "product_variant",
+          "selected_locator_fields": {
+            "product_name": "a cat t-shirt"
+          }
+        }
+      },
+      "actions": [
+        {
+          "type": "add_to_cart",
+          "target": "A",
+          "quantity": 1
+        }
+      ],
+      "requirements": {
+        "add_to_cart_quantity": 1,
+        "quantity": 1
+      },
+      "requirements_by_target": {
+        "A": {
+          "add_to_cart_quantity": 1,
+          "quantity": 1
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "add_to_cart",
+        "target": "A",
+        "quantity": 1
+      }
+    ],
+    "ground_truth": {
+      "type": "expected_backend_state",
+      "assertions": [
+        {
+          "check_object": "cart_items",
+          "conditions": {
+            "user_ref": "current_user",
+            "variant_ref": "shopping_variant_011"
+          },
+          "must_satisfy": {
+            "exists": true,
+            "quantity": 1
+          }
+        }
+      ]
+    },
+    "verifier": {
+      "type": "db_api_checker_template",
+      "checks": [
+        {
+          "query": {
+            "resource": "cart_items",
+            "filters": {
+              "user_ref": "current_user",
+              "variant_ref": "shopping_variant_011"
+            }
+          },
+          "condition": {
+            "exists": true,
+            "quantity": 1
+          }
+        }
+      ],
+      "execution_status": "not_executed"
+    },
+    "validation_status": {
+      "symbolic_grounded": true,
+      "backend_grounded": false,
+      "verifier_executed": false,
+      "needs_backend_validation": true
+    },
+    "quality_checks": {
+      "passed": true,
+      "checks": {
+        "entity_exists": true,
+        "entity_type_matches": true,
+        "locator_supported": true,
+        "has_ground_truth": true,
+        "gt_binds_entity": true,
+        "verifier_binds_entity": true,
+        "verifier_checks_user": true,
+        "requirements_from_bank": true,
+        "no_subjective": true,
+        "has_labels": true,
+        "honest_validation": true,
+        "no_raw_dsl": true,
+        "no_char_split": true,
+        "difficulty_constraints": true,
+        "canonical_schema_keys": true,
+        "verifier_covers_ground_truth": true,
+        "no_redundant_actions": true
+      },
+      "warnings": []
+    },
+    "diversity_metadata": {
+      "entity_use_count": 1,
+      "template_use_count": 6
+    }
+  },
+  {
+    "task_id": "task_0047",
+    "task_description": "In the forum, find the post whose title is science breakthrough news. Add a comment containing \"I would check public transit options first\".",
+    "target_environment": "forum",
+    "ability_dimension": "Memory",
+    "difficulty": "L2",
+    "target_entity": {
+      "entity_id": "forum_post_011",
+      "site": "forum",
+      "entity_type": "post",
+      "selected_locator_fields": {
+        "title_contains": "science breakthrough news"
+      }
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "forum_post_011",
+        "site": "forum",
+        "entity_type": "post",
+        "selected_locator_fields": {
+          "title_contains": "science breakthrough news"
+        }
+      }
+    },
+    "task_structure": {
+      "task_template": "comment_post",
+      "task_templates": {
+        "A": "comment_post"
+      },
+      "structure_variant": "memory_L2_lookup_single_condition",
+      "locator": {
+        "title_contains": "science breakthrough news"
+      },
+      "target_entities": {
+        "A": {
+          "entity_id": "forum_post_011",
+          "site": "forum",
+          "entity_type": "post",
+          "selected_locator_fields": {
+            "title_contains": "science breakthrough news"
+          }
+        }
+      },
+      "actions": [
+        {
+          "type": "comment_post",
+          "target": "A",
+          "body_must_include": [
+            "I would check public transit options first"
+          ]
+        }
+      ],
+      "requirements": {
+        "comment_body_must_include": [
+          "I would check public transit options first"
+        ],
+        "body_must_include": [
+          "I would check public transit options first"
+        ]
+      },
+      "requirements_by_target": {
+        "A": {
+          "comment_body_must_include": [
+            "I would check public transit options first"
+          ],
+          "body_must_include": [
+            "I would check public transit options first"
+          ]
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "comment_post",
+        "target": "A",
+        "body_must_include": [
+          "I would check public transit options first"
+        ]
+      }
+    ],
+    "ground_truth": {
+      "type": "expected_backend_state",
+      "assertions": [
+        {
+          "check_object": "comments",
+          "conditions": {
+            "post_ref": "forum_post_011",
+            "author_ref": "current_user"
+          },
+          "must_satisfy": {
+            "exists": true,
+            "body_must_include": [
+              "I would check public transit options first"
+            ]
+          }
+        }
+      ]
+    },
+    "verifier": {
+      "type": "db_api_checker_template",
+      "checks": [
+        {
+          "query": {
+            "resource": "comments",
+            "filters": {
+              "post_ref": "forum_post_011",
+              "author_ref": "current_user"
+            }
+          },
+          "condition": {
+            "exists": true,
+            "body_must_include": [
+              "I would check public transit options first"
+            ]
+          }
+        }
+      ],
+      "execution_status": "not_executed"
+    },
+    "validation_status": {
+      "symbolic_grounded": true,
+      "backend_grounded": false,
+      "verifier_executed": false,
+      "needs_backend_validation": true
+    },
+    "quality_checks": {
+      "passed": true,
+      "checks": {
+        "entity_exists": true,
+        "entity_type_matches": true,
+        "locator_supported": true,
+        "has_ground_truth": true,
+        "gt_binds_entity": true,
+        "verifier_binds_entity": true,
+        "verifier_checks_user": true,
+        "requirements_from_bank": true,
+        "no_subjective": true,
+        "has_labels": true,
+        "honest_validation": true,
+        "no_raw_dsl": true,
+        "no_char_split": true,
+        "difficulty_constraints": true,
+        "canonical_schema_keys": true,
+        "verifier_covers_ground_truth": true,
+        "no_redundant_actions": true
+      },
+      "warnings": []
+    },
+    "diversity_metadata": {
+      "entity_use_count": 1,
+      "template_use_count": 2
+    }
+  },
+  {
+    "task_id": "task_0120",
+    "task_description": "In the CMS admin, find the page whose page title is customer testimonials. Create a page with a title containing \"loyalty rewards\" and a body containing \"international shipping restrictions apply\".",
+    "target_environment": "cms_admin",
+    "ability_dimension": "Long-horizon",
+    "difficulty": "L2",
+    "target_entity": {
+      "entity_id": "cms_page_009",
+      "site": "cms_admin",
+      "entity_type": "cms_page",
+      "selected_locator_fields": {
+        "page_title_contains": "customer testimonials"
+      }
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "cms_page_009",
+        "site": "cms_admin",
+        "entity_type": "cms_page",
+        "selected_locator_fields": {
+          "page_title_contains": "customer testimonials"
+        }
+      }
+    },
+    "task_structure": {
+      "task_template": "create_page",
+      "task_templates": {
+        "A": "create_page"
+      },
+      "structure_variant": "long_horizon_L2_single_action_direct_ref",
+      "locator": {
+        "page_title_contains": "customer testimonials"
+      },
+      "target_entities": {
+        "A": {
+          "entity_id": "cms_page_009",
+          "site": "cms_admin",
+          "entity_type": "cms_page",
+          "selected_locator_fields": {
+            "page_title_contains": "customer testimonials"
+          }
+        }
+      },
+      "actions": [
+        {
+          "type": "create_page",
+          "target": "A",
+          "title_must_include": [
+            "loyalty rewards"
+          ],
+          "body_must_include": [
+            "international shipping restrictions apply"
+          ]
+        }
+      ],
+      "requirements": {
+        "title_must_include": [
+          "loyalty rewards"
+        ],
+        "body_must_include": [
+          "international shipping restrictions apply"
+        ]
+      },
+      "requirements_by_target": {
+        "A": {
+          "title_must_include": [
+            "loyalty rewards"
+          ],
+          "body_must_include": [
+            "international shipping restrictions apply"
+          ]
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_page",
+        "target": "A",
+        "title_must_include": [
+          "loyalty rewards"
+        ],
+        "body_must_include": [
+          "international shipping restrictions apply"
+        ]
+      }
+    ],
+    "ground_truth": {
+      "type": "expected_backend_state",
+      "assertions": [
+        {
+          "check_object": "cms_pages",
+          "conditions": {
+            "page_ref": "cms_page_009"
+          },
+          "must_satisfy": {
+            "exists": true,
+            "title_must_include": [
+              "loyalty rewards"
+            ],
+            "body_must_include": [
+              "international shipping restrictions apply"
+            ],
+            "creator_ref": "current_user"
+          }
+        }
+      ]
+    },
+    "verifier": {
+      "type": "db_api_checker_template",
+      "checks": [
+        {
+          "query": {
+            "resource": "cms_pages",
+            "filters": {
+              "page_ref": "cms_page_009"
+            }
+          },
+          "condition": {
+            "exists": true,
+            "title_must_include": [
+              "loyalty rewards"
+            ],
+            "body_must_include": [
+              "international shipping restrictions apply"
+            ],
+            "creator_ref": "current_user"
+          }
+        }
+      ],
+      "execution_status": "not_executed"
+    },
+    "validation_status": {
+      "symbolic_grounded": true,
+      "backend_grounded": false,
+      "verifier_executed": false,
+      "needs_backend_validation": true
+    },
+    "quality_checks": {
+      "passed": true,
+      "checks": {
+        "entity_exists": true,
+        "entity_type_matches": true,
+        "locator_supported": true,
+        "has_ground_truth": true,
+        "gt_binds_entity": true,
+        "verifier_binds_entity": true,
+        "verifier_checks_user": true,
+        "requirements_from_bank": true,
+        "no_subjective": true,
+        "has_labels": true,
+        "honest_validation": true,
+        "no_raw_dsl": true,
+        "no_char_split": true,
+        "difficulty_constraints": true,
+        "canonical_schema_keys": true,
+        "verifier_covers_ground_truth": true,
+        "no_redundant_actions": true
+      },
+      "warnings": []
+    },
+    "diversity_metadata": {
+      "entity_use_count": 2,
+      "template_use_count": 6
+    }
+  },
+  {
+    "task_id": "task_0011",
+    "task_description": "In GitLab, find the issue with IID 8 and whose state is open. Add the \"frontend\" label.",
+    "target_environment": "gitlab",
+    "ability_dimension": "Memory",
+    "difficulty": "L3",
+    "target_entity": {
+      "entity_id": "gitlab_issue_007",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "iid": 8,
+        "state": "open"
+      }
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_007",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "iid": 8,
+          "state": "open"
+        }
+      }
+    },
+    "task_structure": {
+      "task_template": "add_label_to_issue",
+      "task_templates": {
+        "A": "add_label_to_issue"
+      },
+      "structure_variant": "memory_L3_lookup_multi_condition",
+      "locator": {
+        "iid": 8,
+        "state": "open"
+      },
+      "target_entities": {
+        "A": {
+          "entity_id": "gitlab_issue_007",
+          "site": "gitlab",
+          "entity_type": "issue",
+          "selected_locator_fields": {
+            "iid": 8,
+            "state": "open"
+          }
+        }
+      },
+      "actions": [
+        {
+          "type": "add_label",
+          "target": "A",
+          "label": "frontend"
+        }
+      ],
+      "requirements": {
+        "label": "frontend"
+      },
+      "requirements_by_target": {
+        "A": {
+          "label": "frontend"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "add_label",
+        "target": "A",
+        "label": "frontend"
+      }
+    ],
+    "ground_truth": {
+      "type": "expected_backend_state",
+      "assertions": [
+        {
+          "check_object": "issue_labels",
+          "conditions": {
+            "issue_ref": "gitlab_issue_007"
+          },
+          "must_satisfy": {
+            "labels_include": "frontend"
+          }
+        }
+      ]
+    },
+    "verifier": {
+      "type": "db_api_checker_template",
+      "checks": [
+        {
+          "query": {
+            "resource": "issue_labels",
+            "filters": {
+              "issue_ref": "gitlab_issue_007"
+            }
+          },
+          "condition": {
+            "labels_include": "frontend"
+          }
+        }
+      ],
+      "execution_status": "not_executed"
+    },
+    "validation_status": {
+      "symbolic_grounded": true,
+      "backend_grounded": false,
+      "verifier_executed": false,
+      "needs_backend_validation": true
+    },
+    "quality_checks": {
+      "passed": true,
+      "checks": {
+        "entity_exists": true,
+        "entity_type_matches": true,
+        "locator_supported": true,
+        "has_ground_truth": true,
+        "gt_binds_entity": true,
+        "verifier_binds_entity": true,
+        "verifier_checks_user": true,
+        "requirements_from_bank": true,
+        "no_subjective": true,
+        "has_labels": true,
+        "honest_validation": true,
+        "no_raw_dsl": true,
+        "no_char_split": true,
+        "difficulty_constraints": true,
+        "canonical_schema_keys": true,
+        "verifier_covers_ground_truth": true,
+        "no_redundant_actions": true
+      },
+      "warnings": []
+    },
+    "diversity_metadata": {
+      "entity_use_count": 1,
+      "template_use_count": 3
+    }
+  },
+  {
+    "task_id": "task_0078",
+    "task_description": "In GitLab, find the issue whose state is open and whose title is mobile layout broken; then find the issue with IID 316. For the issue titled mobile layout broken: Add a comment containing \"performance regression noted\". For the issue titled mobile layout broken: Add the \"security\" label. For the issue titled mobile layout broken: Close the issue. For the issue #316: Reopen the issue. For the issue #316: Assign the issue to qa_bob.",
+    "target_environment": "gitlab",
+    "ability_dimension": "Long-horizon",
+    "difficulty": "L3",
+    "target_entity": {
+      "entity_id": "gitlab_issue_016",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "open",
+        "title_contains": "mobile layout broken"
+      }
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_016",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "open",
+          "title_contains": "mobile layout broken"
+        }
+      },
+      "B": {
+        "entity_id": "gitlab_issue_010",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "iid": 316
+        }
+      }
+    },
+    "task_structure": {
+      "task_template": "comment_label_close_issue",
+      "task_templates": {
+        "A": "comment_label_close_issue",
+        "B": "reopen_and_assign"
+      },
+      "structure_variant": "long_horizon_L3_two_step_chain_multi_condition",
+      "locator": {
+        "state": "open",
+        "title_contains": "mobile layout broken"
+      },
+      "target_entities": {
+        "A": {
+          "entity_id": "gitlab_issue_016",
+          "site": "gitlab",
+          "entity_type": "issue",
+          "selected_locator_fields": {
+            "state": "open",
+            "title_contains": "mobile layout broken"
+          }
+        },
+        "B": {
+          "entity_id": "gitlab_issue_010",
+          "site": "gitlab",
+          "entity_type": "issue",
+          "selected_locator_fields": {
+            "iid": 316
+          }
+        }
+      },
+      "actions": [
+        {
+          "type": "comment",
+          "target": "A",
+          "body_must_include": [
+            "performance regression noted"
+          ]
+        },
+        {
+          "type": "add_label",
+          "target": "A",
+          "label": "security"
+        },
+        {
+          "type": "close_issue",
+          "target": "A"
+        },
+        {
+          "type": "reopen_issue",
+          "target": "B"
+        },
+        {
+          "type": "assign_issue",
+          "target": "B",
+          "assignee_username": "qa_bob"
+        }
+      ],
+      "requirements": {
+        "body_must_include": [
+          "performance regression noted"
+        ],
+        "label": "security"
+      },
+      "requirements_by_target": {
+        "A": {
+          "body_must_include": [
+            "performance regression noted"
+          ],
+          "label": "security"
+        },
+        "B": {
+          "assignee_username": "qa_bob"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "comment",
+        "target": "A",
+        "body_must_include": [
+          "performance regression noted"
+        ]
+      },
+      {
+        "type": "add_label",
+        "target": "A",
+        "label": "security"
+      },
+      {
+        "type": "close_issue",
+        "target": "A"
+      },
+      {
+        "type": "reopen_issue",
+        "target": "B"
+      },
+      {
+        "type": "assign_issue",
+        "target": "B",
+        "assignee_username": "qa_bob"
+      }
+    ],
+    "ground_truth": {
+      "type": "expected_backend_state",
+      "assertions": [
+        {
+          "check_object": "issue_comments",
+          "conditions": {
+            "issue_ref": "gitlab_issue_016",
+            "author_ref": "current_user"
+          },
+          "must_satisfy": {
+            "exists": true,
+            "body_must_include": [
+              "performance regression noted"
+            ]
+          }
+        },
+        {
+          "check_object": "issue_labels",
+          "conditions": {
+            "issue_ref": "gitlab_issue_016"
+          },
+          "must_satisfy": {
+            "labels_include": "security"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_016"
+          },
+          "must_satisfy": {
+            "state": "closed"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_010"
+          },
+          "must_satisfy": {
+            "state": "open"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_010"
+          },
+          "must_satisfy": {
+            "assignee_ref": "qa_bob"
+          }
+        }
+      ],
+      "preconditions": [
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_016"
+          },
+          "must_satisfy": {
+            "state": "open"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_010"
+          },
+          "must_satisfy": {
+            "state": "closed"
+          }
+        }
+      ]
+    },
+    "verifier": {
+      "type": "db_api_checker_template",
+      "checks": [
+        {
+          "query": {
+            "resource": "issue_comments",
+            "filters": {
+              "issue_ref": "gitlab_issue_016",
+              "author_ref": "current_user"
+            }
+          },
+          "condition": {
+            "exists": true,
+            "body_must_include": [
+              "performance regression noted"
+            ]
+          }
+        },
+        {
+          "query": {
+            "resource": "issue_labels",
+            "filters": {
+              "issue_ref": "gitlab_issue_016"
+            }
+          },
+          "condition": {
+            "labels_include": "security"
+          }
+        },
+        {
+          "query": {
+            "resource": "issues",
+            "filters": {
+              "issue_ref": "gitlab_issue_016"
+            }
+          },
+          "condition": {
+            "state": "closed"
+          }
+        },
+        {
+          "query": {
+            "resource": "issues",
+            "filters": {
+              "issue_ref": "gitlab_issue_010"
+            }
+          },
+          "condition": {
+            "state": "open"
+          }
+        },
+        {
+          "query": {
+            "resource": "issues",
+            "filters": {
+              "issue_ref": "gitlab_issue_010"
+            }
+          },
+          "condition": {
+            "assignee_ref": "qa_bob"
+          }
+        }
+      ],
+      "execution_status": "not_executed"
+    },
+    "validation_status": {
+      "symbolic_grounded": true,
+      "backend_grounded": false,
+      "verifier_executed": false,
+      "needs_backend_validation": true
+    },
+    "quality_checks": {
+      "passed": true,
+      "checks": {
+        "entity_exists": true,
+        "entity_type_matches": true,
+        "locator_supported": true,
+        "has_ground_truth": true,
+        "gt_binds_entity": true,
+        "verifier_binds_entity": true,
+        "verifier_checks_user": true,
+        "requirements_from_bank": true,
+        "no_subjective": true,
+        "has_labels": true,
+        "honest_validation": true,
+        "no_raw_dsl": true,
+        "no_char_split": true,
+        "difficulty_constraints": true,
+        "canonical_schema_keys": true,
+        "verifier_covers_ground_truth": true,
+        "no_redundant_actions": true
+      },
+      "warnings": []
+    },
+    "diversity_metadata": {
+      "entity_use_count": 1,
+      "template_use_count": 1
+    }
+  },
+  {
+    "task_id": "task_0037",
+    "task_description": "In the shopping site, find the product whose category is electronics and whose product name is Circe's products. Write a 4-star review containing \"comfortable\".",
+    "target_environment": "shopping",
+    "ability_dimension": "Memory",
+    "difficulty": "L4",
+    "target_entity": {
+      "entity_id": "shopping_product_037",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "category": "electronics",
+        "product_name": "Circe's products"
+      }
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "shopping_product_037",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "category": "electronics",
+          "product_name": "Circe's products"
+        }
+      }
+    },
+    "task_structure": {
+      "task_template": "write_review",
+      "task_templates": {
+        "A": "write_review"
+      },
+      "structure_variant": "memory_L4_tracked_locator_multi_condition",
+      "locator": {
+        "category": "electronics",
+        "product_name": "Circe's products"
+      },
+      "target_entities": {
+        "A": {
+          "entity_id": "shopping_product_037",
+          "site": "shopping",
+          "entity_type": "product",
+          "selected_locator_fields": {
+            "category": "electronics",
+            "product_name": "Circe's products"
+          }
+        }
+      },
+      "actions": [
+        {
+          "type": "write_review",
+          "target": "A",
+          "rating": 4,
+          "body_must_include": [
+            "comfortable"
+          ]
+        }
+      ],
+      "requirements": {
+        "rating": 4,
+        "body_must_include": [
+          "comfortable"
+        ]
+      },
+      "requirements_by_target": {
+        "A": {
+          "rating": 4,
+          "body_must_include": [
+            "comfortable"
+          ]
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "write_review",
+        "target": "A",
+        "rating": 4,
+        "body_must_include": [
+          "comfortable"
+        ]
+      }
+    ],
+    "ground_truth": {
+      "type": "expected_backend_state",
+      "assertions": [
+        {
+          "check_object": "reviews",
+          "conditions": {
+            "product_ref": "shopping_product_037",
+            "author_ref": "current_user"
+          },
+          "must_satisfy": {
+            "exists": true,
+            "rating": 4,
+            "body_must_include": [
+              "comfortable"
+            ]
+          }
+        }
+      ]
+    },
+    "verifier": {
+      "type": "db_api_checker_template",
+      "checks": [
+        {
+          "query": {
+            "resource": "reviews",
+            "filters": {
+              "product_ref": "shopping_product_037",
+              "author_ref": "current_user"
+            }
+          },
+          "condition": {
+            "exists": true,
+            "rating": 4,
+            "body_must_include": [
+              "comfortable"
+            ]
+          }
+        }
+      ],
+      "execution_status": "not_executed"
+    },
+    "validation_status": {
+      "symbolic_grounded": true,
+      "backend_grounded": false,
+      "verifier_executed": false,
+      "needs_backend_validation": true
+    },
+    "quality_checks": {
+      "passed": true,
+      "checks": {
+        "entity_exists": true,
+        "entity_type_matches": true,
+        "locator_supported": true,
+        "has_ground_truth": true,
+        "gt_binds_entity": true,
+        "verifier_binds_entity": true,
+        "verifier_checks_user": true,
+        "requirements_from_bank": true,
+        "no_subjective": true,
+        "has_labels": true,
+        "honest_validation": true,
+        "no_raw_dsl": true,
+        "no_char_split": true,
+        "difficulty_constraints": true,
+        "canonical_schema_keys": true,
+        "verifier_covers_ground_truth": true,
+        "no_redundant_actions": true
+      },
+      "warnings": []
+    },
+    "diversity_metadata": {
+      "entity_use_count": 1,
+      "template_use_count": 3
+    }
+  },
+  {
+    "task_id": "task_0083",
+    "task_description": "In GitLab, find the issue with IID 719; then find the issue whose state is open and whose labels is backend, ux, question. For the issue #719: Reopen the issue. For the issue #719: Assign the issue to qa_bob. For the issue with state open: Add a comment containing \"requires security audit\". For the issue with state open: Add the \"documentation\" label. For the issue with state open: Close the issue.",
+    "target_environment": "gitlab",
+    "ability_dimension": "Long-horizon",
+    "difficulty": "L4",
+    "target_entity": {
+      "entity_id": "gitlab_issue_002",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "iid": 719
+      }
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_002",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "iid": 719
+        }
+      },
+      "B": {
+        "entity_id": "gitlab_issue_034",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "open",
+          "labels": [
+            "backend",
+            "ux",
+            "question"
+          ]
+        }
+      }
+    },
+    "task_structure": {
+      "task_template": "reopen_and_assign",
+      "task_templates": {
+        "A": "reopen_and_assign",
+        "B": "comment_label_close_issue"
+      },
+      "structure_variant": "long_horizon_L4_two_step_chain_single_condition",
+      "locator": {
+        "iid": 719
+      },
+      "target_entities": {
+        "A": {
+          "entity_id": "gitlab_issue_002",
+          "site": "gitlab",
+          "entity_type": "issue",
+          "selected_locator_fields": {
+            "iid": 719
+          }
+        },
+        "B": {
+          "entity_id": "gitlab_issue_034",
+          "site": "gitlab",
+          "entity_type": "issue",
+          "selected_locator_fields": {
+            "state": "open",
+            "labels": [
+              "backend",
+              "ux",
+              "question"
+            ]
+          }
+        }
+      },
+      "actions": [
+        {
+          "type": "reopen_issue",
+          "target": "A"
+        },
+        {
+          "type": "assign_issue",
+          "target": "A",
+          "assignee_username": "qa_bob"
+        },
+        {
+          "type": "comment",
+          "target": "B",
+          "body_must_include": [
+            "requires security audit"
+          ]
+        },
+        {
+          "type": "add_label",
+          "target": "B",
+          "label": "documentation"
+        },
+        {
+          "type": "close_issue",
+          "target": "B"
+        }
+      ],
+      "requirements": {
+        "assignee_username": "qa_bob"
+      },
+      "requirements_by_target": {
+        "A": {
+          "assignee_username": "qa_bob"
+        },
+        "B": {
+          "body_must_include": [
+            "requires security audit"
+          ],
+          "label": "documentation"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "reopen_issue",
+        "target": "A"
+      },
+      {
+        "type": "assign_issue",
+        "target": "A",
+        "assignee_username": "qa_bob"
+      },
+      {
+        "type": "comment",
+        "target": "B",
+        "body_must_include": [
+          "requires security audit"
+        ]
+      },
+      {
+        "type": "add_label",
+        "target": "B",
+        "label": "documentation"
+      },
+      {
+        "type": "close_issue",
+        "target": "B"
+      }
+    ],
+    "ground_truth": {
+      "type": "expected_backend_state",
+      "assertions": [
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_002"
+          },
+          "must_satisfy": {
+            "state": "open"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_002"
+          },
+          "must_satisfy": {
+            "assignee_ref": "qa_bob"
+          }
+        },
+        {
+          "check_object": "issue_comments",
+          "conditions": {
+            "issue_ref": "gitlab_issue_034",
+            "author_ref": "current_user"
+          },
+          "must_satisfy": {
+            "exists": true,
+            "body_must_include": [
+              "requires security audit"
+            ]
+          }
+        },
+        {
+          "check_object": "issue_labels",
+          "conditions": {
+            "issue_ref": "gitlab_issue_034"
+          },
+          "must_satisfy": {
+            "labels_include": "documentation"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_034"
+          },
+          "must_satisfy": {
+            "state": "closed"
+          }
+        }
+      ],
+      "preconditions": [
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_002"
+          },
+          "must_satisfy": {
+            "state": "closed"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_034"
+          },
+          "must_satisfy": {
+            "state": "open"
+          }
+        }
+      ]
+    },
+    "verifier": {
+      "type": "db_api_checker_template",
+      "checks": [
+        {
+          "query": {
+            "resource": "issues",
+            "filters": {
+              "issue_ref": "gitlab_issue_002"
+            }
+          },
+          "condition": {
+            "state": "open"
+          }
+        },
+        {
+          "query": {
+            "resource": "issues",
+            "filters": {
+              "issue_ref": "gitlab_issue_002"
+            }
+          },
+          "condition": {
+            "assignee_ref": "qa_bob"
+          }
+        },
+        {
+          "query": {
+            "resource": "issue_comments",
+            "filters": {
+              "issue_ref": "gitlab_issue_034",
+              "author_ref": "current_user"
+            }
+          },
+          "condition": {
+            "exists": true,
+            "body_must_include": [
+              "requires security audit"
+            ]
+          }
+        },
+        {
+          "query": {
+            "resource": "issue_labels",
+            "filters": {
+              "issue_ref": "gitlab_issue_034"
+            }
+          },
+          "condition": {
+            "labels_include": "documentation"
+          }
+        },
+        {
+          "query": {
+            "resource": "issues",
+            "filters": {
+              "issue_ref": "gitlab_issue_034"
+            }
+          },
+          "condition": {
+            "state": "closed"
+          }
+        }
+      ],
+      "execution_status": "not_executed"
+    },
+    "validation_status": {
+      "symbolic_grounded": true,
+      "backend_grounded": false,
+      "verifier_executed": false,
+      "needs_backend_validation": true
+    },
+    "quality_checks": {
+      "passed": true,
+      "checks": {
+        "entity_exists": true,
+        "entity_type_matches": true,
+        "locator_supported": true,
+        "has_ground_truth": true,
+        "gt_binds_entity": true,
+        "verifier_binds_entity": true,
+        "verifier_checks_user": true,
+        "requirements_from_bank": true,
+        "no_subjective": true,
+        "has_labels": true,
+        "honest_validation": true,
+        "no_raw_dsl": true,
+        "no_char_split": true,
+        "difficulty_constraints": true,
+        "canonical_schema_keys": true,
+        "verifier_covers_ground_truth": true,
+        "no_redundant_actions": true
+      },
+      "warnings": []
+    },
+    "diversity_metadata": {
+      "entity_use_count": 3,
+      "template_use_count": 6
+    }
+  },
+  {
+    "task_id": "task_0053",
+    "task_description": "In the forum, find the community whose post count is 4 and whose community name is movies and whose aliases is /f/movies. Create a post with a title containing \"neighborhood safety\" and a body containing \"family friendly\". Add a comment containing \"definitely worth checking out\".",
+    "target_environment": "forum",
+    "ability_dimension": "Memory",
+    "difficulty": "L5",
+    "target_entity": {
+      "entity_id": "forum_community_006",
+      "site": "forum",
+      "entity_type": "community",
+      "selected_locator_fields": {
+        "post_count": 4,
+        "community_name": "movies",
+        "aliases": [
+          "/f/movies"
+        ],
+        "_locator_hint": "use the ranking or recency-like field to disambiguate"
+      }
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "forum_community_006",
+        "site": "forum",
+        "entity_type": "community",
+        "selected_locator_fields": {
+          "post_count": 4,
+          "community_name": "movies",
+          "aliases": [
+            "/f/movies"
+          ],
+          "_locator_hint": "use the ranking or recency-like field to disambiguate"
+        }
+      }
+    },
+    "task_structure": {
+      "task_template": "create_and_comment_post",
+      "task_templates": {
+        "A": "create_and_comment_post"
+      },
+      "structure_variant": "memory_L5_tracked_locator_ranking_or_recent",
+      "locator": {
+        "post_count": 4,
+        "community_name": "movies",
+        "aliases": [
+          "/f/movies"
+        ],
+        "_locator_hint": "use the ranking or recency-like field to disambiguate"
+      },
+      "target_entities": {
+        "A": {
+          "entity_id": "forum_community_006",
+          "site": "forum",
+          "entity_type": "community",
+          "selected_locator_fields": {
+            "post_count": 4,
+            "community_name": "movies",
+            "aliases": [
+              "/f/movies"
+            ],
+            "_locator_hint": "use the ranking or recency-like field to disambiguate"
+          }
+        }
+      },
+      "actions": [
+        {
+          "type": "create_post",
+          "target": "A",
+          "title_must_include": [
+            "neighborhood safety"
+          ],
+          "body_must_include": [
+            "family friendly"
+          ]
+        },
+        {
+          "type": "comment_post",
+          "target": "A",
+          "body_must_include": [
+            "definitely worth checking out"
+          ]
+        }
+      ],
+      "requirements": {
+        "title_must_include": [
+          "neighborhood safety"
+        ],
+        "body_must_include": [
+          "family friendly"
+        ],
+        "comment_body_must_include": [
+          "definitely worth checking out"
+        ]
+      },
+      "requirements_by_target": {
+        "A": {
+          "title_must_include": [
+            "neighborhood safety"
+          ],
+          "body_must_include": [
+            "family friendly"
+          ],
+          "comment_body_must_include": [
+            "definitely worth checking out"
+          ]
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_post",
+        "target": "A",
+        "title_must_include": [
+          "neighborhood safety"
+        ],
+        "body_must_include": [
+          "family friendly"
+        ]
+      },
+      {
+        "type": "comment_post",
+        "target": "A",
+        "body_must_include": [
+          "definitely worth checking out"
+        ]
+      }
+    ],
+    "ground_truth": {
+      "type": "expected_backend_state",
+      "assertions": [
+        {
+          "check_object": "posts",
+          "conditions": {
+            "community_ref": "forum_community_006",
+            "author_ref": "current_user"
+          },
+          "must_satisfy": {
+            "exists": true,
+            "title_must_include": [
+              "neighborhood safety"
+            ],
+            "body_must_include": [
+              "family friendly"
+            ]
+          }
+        },
+        {
+          "check_object": "comments",
+          "conditions": {
+            "community_ref": "forum_community_006",
+            "author_ref": "current_user"
+          },
+          "must_satisfy": {
+            "exists": true
+          }
+        }
+      ]
+    },
+    "verifier": {
+      "type": "db_api_checker_template",
+      "checks": [
+        {
+          "query": {
+            "resource": "posts",
+            "filters": {
+              "community_ref": "forum_community_006",
+              "author_ref": "current_user"
+            }
+          },
+          "condition": {
+            "exists": true,
+            "title_must_include": [
+              "neighborhood safety"
+            ],
+            "body_must_include": [
+              "family friendly"
+            ]
+          }
+        },
+        {
+          "query": {
+            "resource": "comments",
+            "filters": {
+              "community_ref": "forum_community_006",
+              "author_ref": "current_user"
+            }
+          },
+          "condition": {
+            "exists": true
+          }
+        }
+      ],
+      "execution_status": "not_executed"
+    },
+    "validation_status": {
+      "symbolic_grounded": true,
+      "backend_grounded": false,
+      "verifier_executed": false,
+      "needs_backend_validation": true
+    },
+    "quality_checks": {
+      "passed": true,
+      "checks": {
+        "entity_exists": true,
+        "entity_type_matches": true,
+        "locator_supported": true,
+        "has_ground_truth": true,
+        "gt_binds_entity": true,
+        "verifier_binds_entity": true,
+        "verifier_checks_user": true,
+        "requirements_from_bank": true,
+        "no_subjective": true,
+        "has_labels": true,
+        "honest_validation": true,
+        "no_raw_dsl": true,
+        "no_char_split": true,
+        "difficulty_constraints": true,
+        "canonical_schema_keys": true,
+        "verifier_covers_ground_truth": true,
+        "no_redundant_actions": true
+      },
+      "warnings": []
+    },
+    "diversity_metadata": {
+      "entity_use_count": 1,
+      "template_use_count": 2
+    }
+  },
+  {
+    "task_id": "task_0088",
+    "task_description": "In GitLab, find the issue whose state is open and whose labels is devops, frontend; then find the issue with IID 566 and whose state is open; then find the issue whose state is closed and whose labels is enhancement, help needed, documentation. For the issue with state open: Add a comment containing \"confirmed as duplicate\". For the issue with state open: Assign the issue to ericwbailey. For the issue with state open: Close the issue. For the issue #566: Add a comment containing \"triaged for backend team\". For the issue #566: Assign the issue to byteblaze. For the issue #566: Close the issue. For the issue with state closed: Reopen the issue. For the issue with state closed: Add a comment containing \"needs retry logic\". For the issue with state closed: Add the \"high-priority\" label.",
+    "target_environment": "gitlab",
+    "ability_dimension": "Long-horizon",
+    "difficulty": "L5",
+    "target_entity": {
+      "entity_id": "gitlab_issue_021",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "open",
+        "labels": [
+          "devops",
+          "frontend"
+        ],
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_021",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "open",
+          "labels": [
+            "devops",
+            "frontend"
+          ],
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      },
+      "B": {
+        "entity_id": "gitlab_issue_001",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "iid": 566,
+          "state": "open",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      },
+      "C": {
+        "entity_id": "gitlab_issue_033",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "closed",
+          "labels": [
+            "enhancement",
+            "help needed",
+            "documentation"
+          ],
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      }
+    },
+    "task_structure": {
+      "task_template": "comment_assign_close",
+      "task_templates": {
+        "A": "comment_assign_close",
+        "B": "comment_assign_close",
+        "C": "reopen_comment_label"
+      },
+      "structure_variant": "long_horizon_L5_multi_action_chain_exclusion_condition",
+      "locator": {
+        "state": "open",
+        "labels": [
+          "devops",
+          "frontend"
+        ],
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      },
+      "target_entities": {
+        "A": {
+          "entity_id": "gitlab_issue_021",
+          "site": "gitlab",
+          "entity_type": "issue",
+          "selected_locator_fields": {
+            "state": "open",
+            "labels": [
+              "devops",
+              "frontend"
+            ],
+            "_locator_hint": "exclude alternatives that do not match all listed conditions"
+          }
+        },
+        "B": {
+          "entity_id": "gitlab_issue_001",
+          "site": "gitlab",
+          "entity_type": "issue",
+          "selected_locator_fields": {
+            "iid": 566,
+            "state": "open",
+            "_locator_hint": "exclude alternatives that do not match all listed conditions"
+          }
+        },
+        "C": {
+          "entity_id": "gitlab_issue_033",
+          "site": "gitlab",
+          "entity_type": "issue",
+          "selected_locator_fields": {
+            "state": "closed",
+            "labels": [
+              "enhancement",
+              "help needed",
+              "documentation"
+            ],
+            "_locator_hint": "exclude alternatives that do not match all listed conditions"
+          }
+        }
+      },
+      "actions": [
+        {
+          "type": "comment",
+          "target": "A",
+          "body_must_include": [
+            "confirmed as duplicate"
+          ]
+        },
+        {
+          "type": "assign_issue",
+          "target": "A",
+          "assignee_username": "ericwbailey"
+        },
+        {
+          "type": "close_issue",
+          "target": "A"
+        },
+        {
+          "type": "comment",
+          "target": "B",
+          "body_must_include": [
+            "triaged for backend team"
+          ]
+        },
+        {
+          "type": "assign_issue",
+          "target": "B",
+          "assignee_username": "byteblaze"
+        },
+        {
+          "type": "close_issue",
+          "target": "B"
+        },
+        {
+          "type": "reopen_issue",
+          "target": "C"
+        },
+        {
+          "type": "comment",
+          "target": "C",
+          "body_must_include": [
+            "needs retry logic"
+          ]
+        },
+        {
+          "type": "add_label",
+          "target": "C",
+          "label": "high-priority"
+        }
+      ],
+      "requirements": {
+        "body_must_include": [
+          "confirmed as duplicate"
+        ],
+        "assignee_username": "ericwbailey"
+      },
+      "requirements_by_target": {
+        "A": {
+          "body_must_include": [
+            "confirmed as duplicate"
+          ],
+          "assignee_username": "ericwbailey"
+        },
+        "B": {
+          "body_must_include": [
+            "triaged for backend team"
+          ],
+          "assignee_username": "byteblaze"
+        },
+        "C": {
+          "body_must_include": [
+            "needs retry logic"
+          ],
+          "label": "high-priority"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "comment",
+        "target": "A",
+        "body_must_include": [
+          "confirmed as duplicate"
+        ]
+      },
+      {
+        "type": "assign_issue",
+        "target": "A",
+        "assignee_username": "ericwbailey"
+      },
+      {
+        "type": "close_issue",
+        "target": "A"
+      },
+      {
+        "type": "comment",
+        "target": "B",
+        "body_must_include": [
+          "triaged for backend team"
+        ]
+      },
+      {
+        "type": "assign_issue",
+        "target": "B",
+        "assignee_username": "byteblaze"
+      },
+      {
+        "type": "close_issue",
+        "target": "B"
+      },
+      {
+        "type": "reopen_issue",
+        "target": "C"
+      },
+      {
+        "type": "comment",
+        "target": "C",
+        "body_must_include": [
+          "needs retry logic"
+        ]
+      },
+      {
+        "type": "add_label",
+        "target": "C",
+        "label": "high-priority"
+      }
+    ],
+    "ground_truth": {
+      "type": "expected_backend_state",
+      "assertions": [
+        {
+          "check_object": "issue_comments",
+          "conditions": {
+            "issue_ref": "gitlab_issue_021",
+            "author_ref": "current_user"
+          },
+          "must_satisfy": {
+            "exists": true,
+            "body_must_include": [
+              "confirmed as duplicate"
+            ]
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_021"
+          },
+          "must_satisfy": {
+            "assignee_ref": "ericwbailey"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_021"
+          },
+          "must_satisfy": {
+            "state": "closed"
+          }
+        },
+        {
+          "check_object": "issue_comments",
+          "conditions": {
+            "issue_ref": "gitlab_issue_001",
+            "author_ref": "current_user"
+          },
+          "must_satisfy": {
+            "exists": true,
+            "body_must_include": [
+              "triaged for backend team"
+            ]
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_001"
+          },
+          "must_satisfy": {
+            "assignee_ref": "byteblaze"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_001"
+          },
+          "must_satisfy": {
+            "state": "closed"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_033"
+          },
+          "must_satisfy": {
+            "state": "open"
+          }
+        },
+        {
+          "check_object": "issue_comments",
+          "conditions": {
+            "issue_ref": "gitlab_issue_033",
+            "author_ref": "current_user"
+          },
+          "must_satisfy": {
+            "exists": true,
+            "body_must_include": [
+              "needs retry logic"
+            ]
+          }
+        },
+        {
+          "check_object": "issue_labels",
+          "conditions": {
+            "issue_ref": "gitlab_issue_033"
+          },
+          "must_satisfy": {
+            "labels_include": "high-priority"
+          }
+        }
+      ],
+      "preconditions": [
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_021"
+          },
+          "must_satisfy": {
+            "state": "open"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_001"
+          },
+          "must_satisfy": {
+            "state": "open"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_033"
+          },
+          "must_satisfy": {
+            "state": "closed"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_021"
+          },
+          "must_satisfy": {
+            "state": "open"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_001"
+          },
+          "must_satisfy": {
+            "state": "open"
+          }
+        },
+        {
+          "check_object": "issues",
+          "conditions": {
+            "issue_ref": "gitlab_issue_033"
+          },
+          "must_satisfy": {
+            "state": "closed"
+          }
+        },
+        {
+          "check_object": "issue_labels",
+          "conditions": {
+            "issue_ref": "gitlab_issue_033"
+          },
+          "must_satisfy": {
+            "labels_do_not_include": [
+              "high-priority"
+            ]
+          }
+        }
+      ]
+    },
+    "verifier": {
+      "type": "db_api_checker_template",
+      "checks": [
+        {
+          "query": {
+            "resource": "issue_comments",
+            "filters": {
+              "issue_ref": "gitlab_issue_021",
+              "author_ref": "current_user"
+            }
+          },
+          "condition": {
+            "exists": true,
+            "body_must_include": [
+              "confirmed as duplicate"
+            ]
+          }
+        },
+        {
+          "query": {
+            "resource": "issues",
+            "filters": {
+              "issue_ref": "gitlab_issue_021"
+            }
+          },
+          "condition": {
+            "assignee_ref": "ericwbailey"
+          }
+        },
+        {
+          "query": {
+            "resource": "issues",
+            "filters": {
+              "issue_ref": "gitlab_issue_021"
+            }
+          },
+          "condition": {
+            "state": "closed"
+          }
+        },
+        {
+          "query": {
+            "resource": "issue_comments",
+            "filters": {
+              "issue_ref": "gitlab_issue_001",
+              "author_ref": "current_user"
+            }
+          },
+          "condition": {
+            "exists": true,
+            "body_must_include": [
+              "triaged for backend team"
+            ]
+          }
+        },
+        {
+          "query": {
+            "resource": "issues",
+            "filters": {
+              "issue_ref": "gitlab_issue_001"
+            }
+          },
+          "condition": {
+            "assignee_ref": "byteblaze"
+          }
+        },
+        {
+          "query": {
+            "resource": "issues",
+            "filters": {
+              "issue_ref": "gitlab_issue_001"
+            }
+          },
+          "condition": {
+            "state": "closed"
+          }
+        },
+        {
+          "query": {
+            "resource": "issues",
+            "filters": {
+              "issue_ref": "gitlab_issue_033"
+            }
+          },
+          "condition": {
+            "state": "open"
+          }
+        },
+        {
+          "query": {
+            "resource": "issue_comments",
+            "filters": {
+              "issue_ref": "gitlab_issue_033",
+              "author_ref": "current_user"
+            }
+          },
+          "condition": {
+            "exists": true,
+            "body_must_include": [
+              "needs retry logic"
+            ]
+          }
+        },
+        {
+          "query": {
+            "resource": "issue_labels",
+            "filters": {
+              "issue_ref": "gitlab_issue_033"
+            }
+          },
+          "condition": {
+            "labels_include": "high-priority"
+          }
+        }
+      ],
+      "execution_status": "not_executed"
+    },
+    "validation_status": {
+      "symbolic_grounded": true,
+      "backend_grounded": false,
+      "verifier_executed": false,
+      "needs_backend_validation": true
+    },
+    "quality_checks": {
+      "passed": true,
+      "checks": {
+        "entity_exists": true,
+        "entity_type_matches": true,
+        "locator_supported": true,
+        "has_ground_truth": true,
+        "gt_binds_entity": true,
+        "verifier_binds_entity": true,
+        "verifier_checks_user": true,
+        "requirements_from_bank": true,
+        "no_subjective": true,
+        "has_labels": true,
+        "honest_validation": true,
+        "no_raw_dsl": true,
+        "no_char_split": true,
+        "difficulty_constraints": true,
+        "canonical_schema_keys": true,
+        "verifier_covers_ground_truth": true,
+        "no_redundant_actions": true
+      },
+      "warnings": []
+    },
+    "diversity_metadata": {
+      "entity_use_count": 2,
+      "template_use_count": 2
+    }
+  }
+]

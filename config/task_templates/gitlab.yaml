@@ -1,0 +1,389 @@
+# =============================================================================
+# GitLab Task Templates
+# =============================================================================
+# Each template specifies which entity it operates on, what actions it performs,
+# how to generate ground truth assertions from (entity + action + requirements),
+# and which (ability, difficulty) cells it is compatible with.
+#
+# Placeholder tokens:
+#   {target_entity}    -- entity_id of the resolved entity
+#   {body_must_include} -- required phrase(s) in comment body
+#   {label}            -- label name to add
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Shared anchors
+# ---------------------------------------------------------------------------
+_entity_type_issue: &entity_type_issue issue
+
+_precondition_open: &precondition_open
+  resource: issues
+  where:
+    issue_ref: "{target_entity}"
+  assert:
+    state: open
+
+templates:
+
+  # -------------------------------------------------------------------------
+  # comment_issue
+  # -------------------------------------------------------------------------
+  comment_issue:
+    site: gitlab
+    required_entity_type: *entity_type_issue
+    required_entity_attributes: []
+    allowed_actions:
+      - comment
+
+    ground_truth_rules:
+      assertions:
+        - resource: issue_comments
+          where:
+            issue_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            body_must_include: "{body_must_include}"
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+      notes: >-
+        Each ground_truth assertion becomes a verifier check.
+        query.resource = assertion.resource, query.filters = assertion.where,
+        condition = assertion.assert.
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L1, L2, L3, L4, L5]
+      long_horizon_operation: [L1, L2]
+
+  # -------------------------------------------------------------------------
+  # add_label_to_issue
+  # -------------------------------------------------------------------------
+  add_label_to_issue:
+    site: gitlab
+    required_entity_type: *entity_type_issue
+    required_entity_attributes: []
+    allowed_actions:
+      - add_label
+
+    ground_truth_rules:
+      assertions:
+        - resource: issue_labels
+          where:
+            issue_ref: "{target_entity}"
+          assert:
+            labels_include: "{label}"
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L1, L2, L3, L4]
+      long_horizon_operation: [L1, L2, L3]
+
+  # -------------------------------------------------------------------------
+  # assign_issue
+  # -------------------------------------------------------------------------
+  assign_issue:
+    site: gitlab
+    required_entity_type: *entity_type_issue
+    required_entity_attributes: []
+    allowed_actions:
+      - assign_issue
+
+    ground_truth_rules:
+      assertions:
+        - resource: issues
+          where:
+            issue_ref: "{target_entity}"
+          assert:
+            assignee_ref: "{assignee_username}"
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L1, L2, L3, L4]
+      long_horizon_operation: [L1, L2, L3]
+
+  # -------------------------------------------------------------------------
+  # close_issue
+  # -------------------------------------------------------------------------
+  close_issue:
+    site: gitlab
+    required_entity_type: *entity_type_issue
+    required_entity_attributes:
+      - state: open
+    allowed_actions:
+      - close_issue
+
+    preconditions:
+      - *precondition_open
+
+    ground_truth_rules:
+      assertions:
+        - resource: issues
+          where:
+            issue_ref: "{target_entity}"
+          assert:
+            state: closed
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - long_horizon_operation
+
+    compatible_difficulties:
+      long_horizon_operation: [L1, L2]
+
+  # -------------------------------------------------------------------------
+  # reopen_issue
+  # -------------------------------------------------------------------------
+  reopen_issue:
+    site: gitlab
+    required_entity_type: *entity_type_issue
+    required_entity_attributes:
+      - state: closed
+    allowed_actions:
+      - reopen_issue
+
+    preconditions:
+      - resource: issues
+        where:
+          issue_ref: "{target_entity}"
+        assert:
+          state: closed
+
+    ground_truth_rules:
+      assertions:
+        - resource: issues
+          where:
+            issue_ref: "{target_entity}"
+          assert:
+            state: open
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - long_horizon_operation
+
+    compatible_difficulties:
+      long_horizon_operation: [L1, L2]
+
+  # -------------------------------------------------------------------------
+  # comment_label_close_issue
+  # -------------------------------------------------------------------------
+  # Composite template: comment + add label + close. Produces three assertions,
+  # making it suitable for L3-L5 long-horizon tasks. When used at L3 (which
+  # requires only 2 assertions), the generator may select any 2 of the 3
+  # assertions; the min_assertions field signals this.
+  # -------------------------------------------------------------------------
+  comment_label_close_issue:
+    site: gitlab
+    required_entity_type: *entity_type_issue
+    required_entity_attributes:
+      - state: open
+    allowed_actions:
+      - comment
+      - add_label
+      - close_issue
+
+    preconditions:
+      - *precondition_open
+
+    ground_truth_rules:
+      min_assertions: 2
+      assertions:
+        - resource: issue_comments
+          where:
+            issue_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            body_must_include: "{body_must_include}"
+
+        - resource: issue_labels
+          where:
+            issue_ref: "{target_entity}"
+          assert:
+            labels_include: "{label}"
+
+        - resource: issues
+          where:
+            issue_ref: "{target_entity}"
+          assert:
+            state: closed
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+      notes: >-
+        All three assertions should be checked regardless of whether the task
+        description mentions all three explicitly. For L3 tasks where only
+        two actions are required, the generator picks a subset but the
+        verifier still checks all selected assertions.
+
+    compatible_abilities:
+      - long_horizon_operation
+
+    compatible_difficulties:
+      long_horizon_operation: [L3, L4, L5]
+
+  # -------------------------------------------------------------------------
+  # comment_assign_close
+  # -------------------------------------------------------------------------
+  comment_assign_close:
+    site: gitlab
+    required_entity_type: *entity_type_issue
+    required_entity_attributes:
+      - state: open
+    allowed_actions:
+      - comment
+      - assign_issue
+      - close_issue
+
+    preconditions:
+      - *precondition_open
+
+    ground_truth_rules:
+      min_assertions: 3
+      assertions:
+        - resource: issue_comments
+          where:
+            issue_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            body_must_include: "{body_must_include}"
+        - resource: issues
+          where:
+            issue_ref: "{target_entity}"
+          assert:
+            assignee_ref: "{assignee_username}"
+        - resource: issues
+          where:
+            issue_ref: "{target_entity}"
+          assert:
+            state: closed
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - long_horizon_operation
+
+    compatible_difficulties:
+      long_horizon_operation: [L5]
+
+  # -------------------------------------------------------------------------
+  # reopen_and_assign
+  # -------------------------------------------------------------------------
+  reopen_and_assign:
+    site: gitlab
+    required_entity_type: *entity_type_issue
+    required_entity_attributes:
+      - state: closed
+    allowed_actions:
+      - reopen_issue
+      - assign_issue
+
+    preconditions:
+      - resource: issues
+        where:
+          issue_ref: "{target_entity}"
+        assert:
+          state: closed
+
+    ground_truth_rules:
+      assertions:
+        - resource: issues
+          where:
+            issue_ref: "{target_entity}"
+          assert:
+            state: open
+        - resource: issues
+          where:
+            issue_ref: "{target_entity}"
+          assert:
+            assignee_ref: "{assignee_username}"
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - long_horizon_operation
+
+    compatible_difficulties:
+      long_horizon_operation: [L3, L4]
+
+  # -------------------------------------------------------------------------
+  # reopen_comment_label
+  # -------------------------------------------------------------------------
+  reopen_comment_label:
+    site: gitlab
+    required_entity_type: *entity_type_issue
+    required_entity_attributes:
+      - state: closed
+    allowed_actions:
+      - reopen_issue
+      - comment
+      - add_label
+
+    preconditions:
+      - resource: issues
+        where:
+          issue_ref: "{target_entity}"
+        assert:
+          state: closed
+
+    ground_truth_rules:
+      min_assertions: 3
+      assertions:
+        - resource: issues
+          where:
+            issue_ref: "{target_entity}"
+          assert:
+            state: open
+        - resource: issue_comments
+          where:
+            issue_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            body_must_include: "{body_must_include}"
+        - resource: issue_labels
+          where:
+            issue_ref: "{target_entity}"
+          assert:
+            labels_include: "{label}"
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - long_horizon_operation
+
+    compatible_difficulties:
+      long_horizon_operation: [L5]

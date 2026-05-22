@@ -1,0 +1,157 @@
+{
+  "task_id": "task_0038",
+  "task_description": "For target A, the product named \"Mini Wireless Bluetooth Speaker\" in color purple, set the quantity to 2. Exclude alternatives that do not match all listed conditions.",
+  "target_environment": "shopping",
+  "ability_dimension": "Memory",
+  "difficulty": "L4",
+  "target_entity": {
+    "entity_id": "shopping_variant_007",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "selected_locator_fields": {
+      "product_name": "Mini Wireless Bluetooth Speaker",
+      "color": "purple",
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "shopping_variant_007",
+      "site": "shopping",
+      "entity_type": "product_variant",
+      "selected_locator_fields": {
+        "product_name": "Mini Wireless Bluetooth Speaker",
+        "color": "purple",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "update_cart_quantity",
+    "task_templates": {
+      "A": "update_cart_quantity"
+    },
+    "structure_variant": "memory_L4_tracked_locator_exclusion_condition",
+    "locator": {
+      "product_name": "Mini Wireless Bluetooth Speaker",
+      "color": "purple",
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "shopping_variant_007",
+        "site": "shopping",
+        "entity_type": "product_variant",
+        "selected_locator_fields": {
+          "product_name": "Mini Wireless Bluetooth Speaker",
+          "color": "purple",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "update_quantity",
+        "target": "A",
+        "quantity": 2
+      }
+    ],
+    "requirements": {
+      "update_quantity": 2,
+      "quantity": 2
+    },
+    "requirements_by_target": {
+      "A": {
+        "update_quantity": 2,
+        "quantity": 2
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "update_quantity",
+      "target": "A",
+      "quantity": 2
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "variant_ref": "shopping_variant_007"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "quantity": 2
+        }
+      }
+    ],
+    "preconditions": [
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "variant_ref": "shopping_variant_007"
+        },
+        "must_satisfy": {
+          "exists": true
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "variant_ref": "shopping_variant_007"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "quantity": 2
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 3
+  }
+}

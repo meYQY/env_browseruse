@@ -1,0 +1,346 @@
+{
+  "task_id": "task_0112",
+  "task_description": "Target A is the Books community, which you can find under aliases like /f/books, Books, books forum, and f/books. Target B is the forum post with ID 10081.\n\nFor target A, create a new post whose title includes the phrase \"weekend hiking trails\" and whose body includes the phrase \"personal experience\". Then add a comment that includes the exact phrase \"I would check public transit options first\".\n\nFor target B, create a new post whose title includes the phrase \"restaurant recommendations\" and whose body includes the phrase \"open on weekends\". Then edit post 10081 so its body includes the phrase \"open on weekends\".",
+  "target_environment": "forum",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L3",
+  "target_entity": {
+    "entity_id": "forum_community_001",
+    "site": "forum",
+    "entity_type": "community",
+    "selected_locator_fields": {
+      "aliases": [
+        "/f/books",
+        "Books",
+        "books forum",
+        "f/books"
+      ]
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "forum_community_001",
+      "site": "forum",
+      "entity_type": "community",
+      "selected_locator_fields": {
+        "aliases": [
+          "/f/books",
+          "Books",
+          "books forum",
+          "f/books"
+        ]
+      }
+    },
+    "B": {
+      "entity_id": "forum_post_003",
+      "site": "forum",
+      "entity_type": "post",
+      "selected_locator_fields": {
+        "post_id": "10081"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "create_and_comment_post",
+    "task_templates": {
+      "A": "create_and_comment_post",
+      "B": "create_and_edit_post"
+    },
+    "structure_variant": "long_horizon_L3_two_step_chain_multi_condition",
+    "locator": {
+      "aliases": [
+        "/f/books",
+        "Books",
+        "books forum",
+        "f/books"
+      ]
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "forum_community_001",
+        "site": "forum",
+        "entity_type": "community",
+        "selected_locator_fields": {
+          "aliases": [
+            "/f/books",
+            "Books",
+            "books forum",
+            "f/books"
+          ]
+        }
+      },
+      "B": {
+        "entity_id": "forum_post_003",
+        "site": "forum",
+        "entity_type": "post",
+        "selected_locator_fields": {
+          "post_id": "10081"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_post",
+        "target": "A",
+        "title_must_include": [
+          "weekend hiking trails"
+        ],
+        "body_must_include": [
+          "personal experience"
+        ]
+      },
+      {
+        "type": "comment_post",
+        "target": "A",
+        "body_must_include": [
+          "I would check public transit options first"
+        ]
+      },
+      {
+        "type": "create_post",
+        "target": "B",
+        "title_must_include": [
+          "restaurant recommendations"
+        ],
+        "body_must_include": [
+          "open on weekends"
+        ]
+      },
+      {
+        "type": "edit_post",
+        "target": "B",
+        "body_must_include": [
+          "open on weekends"
+        ]
+      }
+    ],
+    "requirements": {
+      "title_must_include": [
+        "weekend hiking trails"
+      ],
+      "body_must_include": [
+        "personal experience"
+      ],
+      "comment_body_must_include": [
+        "I would check public transit options first"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "title_must_include": [
+          "weekend hiking trails"
+        ],
+        "body_must_include": [
+          "personal experience"
+        ],
+        "comment_body_must_include": [
+          "I would check public transit options first"
+        ]
+      },
+      "B": {
+        "title_must_include": [
+          "restaurant recommendations"
+        ],
+        "body_must_include": [
+          "open on weekends"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "create_post",
+      "target": "A",
+      "title_must_include": [
+        "weekend hiking trails"
+      ],
+      "body_must_include": [
+        "personal experience"
+      ]
+    },
+    {
+      "type": "comment_post",
+      "target": "A",
+      "body_must_include": [
+        "I would check public transit options first"
+      ]
+    },
+    {
+      "type": "create_post",
+      "target": "B",
+      "title_must_include": [
+        "restaurant recommendations"
+      ],
+      "body_must_include": [
+        "open on weekends"
+      ]
+    },
+    {
+      "type": "edit_post",
+      "target": "B",
+      "body_must_include": [
+        "open on weekends"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "posts",
+        "conditions": {
+          "community_ref": "forum_community_001",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "weekend hiking trails"
+          ],
+          "body_must_include": [
+            "personal experience"
+          ]
+        }
+      },
+      {
+        "check_object": "comments",
+        "conditions": {
+          "community_ref": "forum_community_001",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "community_ref": "forum_post_003",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "restaurant recommendations"
+          ],
+          "body_must_include": [
+            "open on weekends"
+          ]
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_003"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "open on weekends"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "community_ref": "forum_community_001",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "weekend hiking trails"
+          ],
+          "body_must_include": [
+            "personal experience"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "comments",
+          "filters": {
+            "community_ref": "forum_community_001",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "community_ref": "forum_post_003",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "restaurant recommendations"
+          ],
+          "body_must_include": [
+            "open on weekends"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_003"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "open on weekends"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 3
+  }
+}

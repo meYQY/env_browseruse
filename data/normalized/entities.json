@@ -1,0 +1,3621 @@
+[
+  {
+    "entity_id": "gitlab_project_001",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "a11yproject.com",
+      "owner": "a11yproject",
+      "path": "a11yproject/a11yproject.com"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_002",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "design",
+      "owner": "primer",
+      "path": "primer/design"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_003",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "empathy-prompts",
+      "owner": "byteblaze",
+      "path": "byteblaze/empathy-prompts"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_004",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "a11y-webring.club",
+      "owner": "byteblaze",
+      "path": "byteblaze/a11y-webring.club"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_005",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "a11y-syntax-highlighting",
+      "owner": "byteblaze",
+      "path": "byteblaze/a11y-syntax-highlighting"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_006",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "gimmiethat.space",
+      "owner": "byteblaze",
+      "path": "byteblaze/gimmiethat.space"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_007",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "dotfiles",
+      "owner": "byteblaze",
+      "path": "byteblaze/dotfiles"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_008",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "reddit",
+      "owner": "byteblaze",
+      "path": "byteblaze/reddit"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_009",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "shopping",
+      "owner": "byteblaze",
+      "path": "byteblaze/shopping"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_010",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "a11yproject",
+      "owner": "byteblaze",
+      "path": "byteblaze/a11yproject"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_011",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "cloud-to-butt",
+      "owner": "byteblaze",
+      "path": "byteblaze/cloud-to-butt"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_012",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "metaseq",
+      "owner": "byteblaze",
+      "path": "byteblaze/metaseq"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_013",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "a11yproject.com",
+      "owner": "byteblaze",
+      "path": "byteblaze/a11yproject.com"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_014",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "ffmpeg-python",
+      "owner": "kkroening",
+      "path": "kkroening/ffmpeg-python"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_015",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "AndroidSlidingUpPanel",
+      "owner": "umano",
+      "path": "umano/AndroidSlidingUpPanel"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_016",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "shopping_admin_1",
+      "owner": "byteblaze",
+      "path": "byteblaze/shopping_admin_1"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_017",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "create-react-app",
+      "owner": "facebook",
+      "path": "facebook/create-react-app"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_018",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "shopping_admin_2",
+      "owner": "byteblaze",
+      "path": "byteblaze/shopping_admin_2"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_019",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "metaseq",
+      "owner": "root",
+      "path": "root/metaseq"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_020",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "ChatGPT",
+      "owner": "byteblaze",
+      "path": "byteblaze/ChatGPT"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_021",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "accessible-html-content-patterns",
+      "owner": "byteblaze",
+      "path": "byteblaze/accessible-html-content-patterns"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_022",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "millennials-to-snake-people",
+      "owner": "byteblaze",
+      "path": "byteblaze/millennials-to-snake-people"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_023",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "mozfest-program-2018",
+      "owner": "byteblaze",
+      "path": "byteblaze/mozfest-program-2018"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_024",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "timeit",
+      "owner": "byteblaze",
+      "path": "byteblaze/timeit"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_025",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "wxpy",
+      "owner": "byteblaze",
+      "path": "byteblaze/wxpy"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_026",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "AndroidAsync",
+      "owner": "koush",
+      "path": "koush/AndroidAsync"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_027",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "PHP_XLSXWriter",
+      "owner": "mk-j",
+      "path": "mk-j/PHP_XLSXWriter"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_028",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "2019-nCov",
+      "owner": "byteblaze",
+      "path": "byteblaze/2019-nCov"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_029",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "Pytorch GAN",
+      "owner": "byteblaze",
+      "path": "byteblaze/Pytorch GAN"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_030",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "TrafficMonitor",
+      "owner": "byteblaze",
+      "path": "byteblaze/TrafficMonitor"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_031",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "autojump",
+      "owner": "byteblaze",
+      "path": "byteblaze/autojump"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_032",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "dynamorio",
+      "owner": "byteblaze",
+      "path": "byteblaze/dynamorio"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_033",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "keycloak",
+      "owner": "byteblaze",
+      "path": "byteblaze/keycloak"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_034",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "my cloud-to-butt project",
+      "owner": "byteblaze",
+      "path": "byteblaze/my cloud-to-butt project"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_035",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "my project for a solarized theme for prism.js",
+      "owner": "byteblaze",
+      "path": "byteblaze/my project for a solarized theme for prism.js"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_036",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "sample-gitlab",
+      "owner": "byteblaze",
+      "path": "byteblaze/sample-gitlab"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_037",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "solarized-prism-theme",
+      "owner": "byteblaze",
+      "path": "byteblaze/solarized-prism-theme"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_038",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "PyTorch-GAN",
+      "owner": "eriklindernoren",
+      "path": "eriklindernoren/PyTorch-GAN"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_039",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "keycloak",
+      "owner": "keycloak",
+      "path": "keycloak/keycloak"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_040",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "administrate",
+      "owner": "thoughtbot",
+      "path": "thoughtbot/administrate"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_041",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "awesome-python",
+      "owner": "vinta",
+      "path": "vinta/awesome-python"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_042",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "autojump",
+      "owner": "wting",
+      "path": "wting/autojump"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_043",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "2019-nCov",
+      "owner": "yjlou",
+      "path": "yjlou/2019-nCov"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_044",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "aem-hacker",
+      "owner": "0ang3el",
+      "path": "0ang3el/aem-hacker"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_045",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "create-react-app",
+      "owner": "Meta",
+      "path": "Meta/create-react-app"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_046",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "openapi-generator",
+      "owner": "OpenAPI Tools",
+      "path": "OpenAPI Tools/openapi-generator"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_047",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "openapi-generator",
+      "owner": "OpenAPITools",
+      "path": "OpenAPITools/openapi-generator"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_048",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "Amazon_ML_Challenge_2021",
+      "owner": "abisubramanya27",
+      "path": "abisubramanya27/Amazon_ML_Challenge_2021"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_049",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "angular-storage",
+      "owner": "auth0",
+      "path": "auth0/angular-storage"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_project_050",
+    "site": "gitlab",
+    "entity_type": "project",
+    "attributes": {
+      "repo_name": "11711_gitlab",
+      "owner": "byteblaze",
+      "path": "byteblaze/11711_gitlab"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_001",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "database timeout",
+      "state": "open",
+      "iid": 566
+    },
+    "relations": {
+      "project_ref": "gitlab_project_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_002",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "checkout failure",
+      "state": "closed",
+      "iid": 719
+    },
+    "relations": {
+      "project_ref": "gitlab_project_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_003",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "checkout regression",
+      "state": "open",
+      "iid": 1478
+    },
+    "relations": {
+      "project_ref": "gitlab_project_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_004",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "backend ownership",
+      "state": "open",
+      "labels": [
+        "devops",
+        "flaky-test"
+      ],
+      "iid": 1517
+    },
+    "relations": {
+      "project_ref": "gitlab_project_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_005",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "checkout monitoring",
+      "state": "closed",
+      "iid": 1
+    },
+    "relations": {
+      "project_ref": "gitlab_project_005"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_006",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "login redirect loop",
+      "state": "open",
+      "iid": 71
+    },
+    "relations": {
+      "project_ref": "gitlab_project_004"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_007",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "search index stale",
+      "state": "open",
+      "iid": 8
+    },
+    "relations": {
+      "project_ref": "gitlab_project_003"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_008",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "API rate limiting",
+      "state": "open",
+      "labels": [
+        "bug",
+        "devops"
+      ],
+      "iid": 18
+    },
+    "relations": {
+      "project_ref": "gitlab_project_003"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_009",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "CI pipeline flaky",
+      "state": "closed",
+      "iid": 104
+    },
+    "relations": {
+      "project_ref": "gitlab_project_002"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_010",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "dark-mode contrast",
+      "state": "closed",
+      "labels": [
+        "backend",
+        "BUG"
+      ],
+      "iid": 316
+    },
+    "relations": {
+      "project_ref": "gitlab_project_002"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_011",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "memory leak on reload",
+      "state": "open",
+      "labels": [
+        "backend",
+        "help wanted"
+      ]
+    },
+    "relations": {
+      "project_ref": "gitlab_project_011"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_012",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "i18n missing keys",
+      "state": "open",
+      "labels": [
+        "help needed",
+        "flaky-test"
+      ]
+    },
+    "relations": {
+      "project_ref": "gitlab_project_012"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_013",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "CORS policy error",
+      "state": "closed",
+      "labels": [
+        "good first issue"
+      ],
+      "assignee_username": "dev_alice",
+      "milestone": "v1.0"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_013"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_014",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "pagination off-by-one",
+      "state": "closed",
+      "labels": [
+        "help needed",
+        "priority::high",
+        "flaky-test"
+      ],
+      "assignee_username": "dev_alice",
+      "milestone": "backlog"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_014"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_015",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "email notification delay"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_015"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_016",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "mobile layout broken",
+      "state": "open"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_016"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_017",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "caching invalidation",
+      "state": "open",
+      "labels": [
+        "frontend"
+      ]
+    },
+    "relations": {
+      "project_ref": "gitlab_project_017"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_018",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "file upload 413",
+      "state": "open",
+      "labels": [
+        "backend",
+        "security"
+      ],
+      "assignee_username": "dev_alice"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_018"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_019",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "SSO callback failure",
+      "state": "closed",
+      "labels": [
+        "backend"
+      ],
+      "assignee_username": "byteblaze",
+      "milestone": "v2.0"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_019"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_020",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "token refresh race"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_020"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_021",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "slow query optimization",
+      "state": "open",
+      "labels": [
+        "devops",
+        "frontend"
+      ]
+    },
+    "relations": {
+      "project_ref": "gitlab_project_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_022",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "dependency upgrade",
+      "state": "closed",
+      "labels": [
+        "frontend"
+      ]
+    },
+    "relations": {
+      "project_ref": "gitlab_project_022"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_023",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "accessibility audit",
+      "state": "open",
+      "labels": [
+        "priority::high",
+        "backend"
+      ],
+      "assignee_username": "byteblaze"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_023"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_024",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "docs out of date",
+      "state": "closed",
+      "labels": [
+        "performance"
+      ],
+      "assignee_username": "qa_bob",
+      "milestone": "sprint-12"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_024"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_025",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "test coverage gap"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_025"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_026",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "webhook delivery retry",
+      "state": "closed"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_026"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_027",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "role permission bug",
+      "state": "closed",
+      "labels": [
+        "testing",
+        "priority::high"
+      ]
+    },
+    "relations": {
+      "project_ref": "gitlab_project_027"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_028",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "merge conflict helper",
+      "state": "closed",
+      "labels": [
+        "help wanted"
+      ],
+      "assignee_username": "qa_bob"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_028"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_029",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "branch protection bypass",
+      "state": "open",
+      "labels": [
+        "help wanted"
+      ],
+      "assignee_username": "ericwbailey",
+      "milestone": "sprint-12"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_029"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_030",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "release notes automation"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_030"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_031",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "container build timeout",
+      "state": "closed"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_031"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_032",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "runner disk full",
+      "state": "closed",
+      "labels": [
+        "help needed"
+      ]
+    },
+    "relations": {
+      "project_ref": "gitlab_project_032"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_033",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "audit log missing events",
+      "state": "closed",
+      "labels": [
+        "enhancement",
+        "help needed",
+        "documentation"
+      ],
+      "assignee_username": "qa_bob"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_033"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_034",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "secret scanning false positive",
+      "state": "open",
+      "labels": [
+        "backend",
+        "ux",
+        "question"
+      ],
+      "assignee_username": "byteblaze",
+      "milestone": "backlog"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_034"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_035",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "license compliance check"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_035"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_mr_001",
+    "site": "gitlab",
+    "entity_type": "merge_request",
+    "attributes": {
+      "title_contains": "color ulitity",
+      "iid": 1071,
+      "state": "merged"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_mr_002",
+    "site": "gitlab",
+    "entity_type": "merge_request",
+    "attributes": {
+      "title_contains": "focus edge cases",
+      "iid": 1265,
+      "state": "open"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_mr_003",
+    "site": "gitlab",
+    "entity_type": "merge_request",
+    "attributes": {
+      "iid": 1270,
+      "state": "merged"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_mr_004",
+    "site": "gitlab",
+    "entity_type": "merge_request",
+    "attributes": {
+      "iid": 1485,
+      "state": "closed"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_mr_005",
+    "site": "gitlab",
+    "entity_type": "merge_request",
+    "attributes": {
+      "title_contains": "semantic HTML post",
+      "iid": 1531,
+      "state": "closed"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_mr_006",
+    "site": "gitlab",
+    "entity_type": "merge_request",
+    "attributes": {
+      "iid": 40,
+      "state": "merged"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_004"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_mr_007",
+    "site": "gitlab",
+    "entity_type": "merge_request",
+    "attributes": {
+      "title_contains": "fixing the broken links",
+      "iid": 19,
+      "state": "closed"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_003"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_mr_008",
+    "site": "gitlab",
+    "entity_type": "merge_request",
+    "attributes": {
+      "title_contains": "octovisuals page",
+      "iid": 450,
+      "state": "open"
+    },
+    "relations": {
+      "project_ref": "gitlab_project_002"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_001",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "PS3 Remote Controllers",
+      "category": "toys & games"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_002",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "floor lamp",
+      "category": "fitness"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_003",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Foundation For Mattress With Frame Set",
+      "category": "electronics",
+      "sku": "B07DFJ5XKH",
+      "has_reviews": false
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_004",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Jiffy Corn Muffin Cornbread Mix",
+      "category": "grocery",
+      "sku": "B07HZB38XH",
+      "has_reviews": true,
+      "price_range": "under_25"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_005",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Mini Wireless Bluetooth Speaker"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_006",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "2 Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts",
+      "category": "home & kitchen"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_007",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "a cat t-shirt",
+      "category": "outdoor"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_008",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "a make up removal kit",
+      "category": "electronics",
+      "has_reviews": true
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_009",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "a mattress foundation",
+      "category": "cell phones",
+      "has_reviews": false,
+      "price_range": "under_25"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_010",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "a table lamp"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_011",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "a TV stand",
+      "category": "office"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_012",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Aeno capri",
+      "category": "clothing"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_013",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Aeon capri",
+      "category": "clothing",
+      "has_reviews": false
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_014",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Ahi Tuna Loin 4 lbs, Tristan ULT Fresh, #1 Grade, Skinless, Boneless, and Bloodline Removed",
+      "category": "office",
+      "has_reviews": true,
+      "price_range": "50_100"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_015",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Amazon Echo Dot 3rd generation"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_016",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Amazon Kitchen, Beef & Broccoli Stir-Fry, No-Prep Kit for 2, 27 oz",
+      "category": "office"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_017",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Ana Running Short",
+      "category": "outdoor"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_018",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "andobil Original Magnetic Car Vent Mount Compatible with MagSafe [Case Friendly] Car Mount for iPhone 13 Pro Max 12 Mini [Powerful Magnet] Air Vent Car Phone Holder, Cell Phone Holder for Most of Car",
+      "category": "sports",
+      "has_reviews": true
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_019",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Antonia racer tank",
+      "category": "office",
+      "has_reviews": true,
+      "price_range": "50_100"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_020",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "artifical plants"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_021",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Bardot Capri",
+      "category": "sports"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_022",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Bella Tank",
+      "category": "video games"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_023",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "blue Cronus yoga pants with size 33",
+      "category": "video games",
+      "has_reviews": false
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_024",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Bluetooth headphones from Sony",
+      "category": "toys & games",
+      "has_reviews": false,
+      "price_range": "under_25"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_025",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "bluetooth speaker"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_026",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Breathe-Easy Tank",
+      "category": "home & kitchen"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_027",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "brown Aero daily fitness tee in every size",
+      "category": "home & kitchen"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_028",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Canon photo printer",
+      "category": "electronics",
+      "has_reviews": false
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_029",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Celeste Sports Bra",
+      "category": "fitness",
+      "has_reviews": true,
+      "price_range": "25_50"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_030",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "chair"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_031",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "chairs",
+      "category": "fitness"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_032",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "chargers from Anker",
+      "category": "electronics"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_033",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Chloe tank",
+      "category": "cell phones",
+      "has_reviews": true
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_034",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Circe fleece",
+      "category": "home & kitchen",
+      "has_reviews": true,
+      "price_range": "under_25"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_035",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Circe hooded fleece"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_036",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Circe ice fleece",
+      "category": "beauty"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_037",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Circe's products",
+      "category": "electronics"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_038",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Clamber Watch",
+      "category": "office",
+      "has_reviews": true
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_039",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "console skin",
+      "category": "grocery",
+      "has_reviews": false,
+      "price_range": "25_50"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_040",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Cora Pant"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_001",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "PS3 Remote Controllers",
+      "color": "red",
+      "size": "XXL"
+    },
+    "relations": {
+      "product_ref": "shopping_product_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_002",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "PS3 Remote Controllers",
+      "color": "white",
+      "size": "L",
+      "in_stock": false
+    },
+    "relations": {
+      "product_ref": "shopping_product_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_003",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "floor lamp",
+      "color": "white",
+      "size": "XS",
+      "in_stock": true,
+      "material": "spandex"
+    },
+    "relations": {
+      "product_ref": "shopping_product_002"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_004",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "Foundation For Mattress With Frame Set",
+      "color": "purple"
+    },
+    "relations": {
+      "product_ref": "shopping_product_003"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_005",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "Foundation For Mattress With Frame Set",
+      "color": "pink",
+      "size": "XXL"
+    },
+    "relations": {
+      "product_ref": "shopping_product_003"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_006",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "Jiffy Corn Muffin Cornbread Mix",
+      "color": "blue",
+      "size": "XS",
+      "in_stock": false
+    },
+    "relations": {
+      "product_ref": "shopping_product_004"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_007",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "Mini Wireless Bluetooth Speaker",
+      "color": "purple",
+      "size": "XS",
+      "in_stock": true,
+      "material": "polyester"
+    },
+    "relations": {
+      "product_ref": "shopping_product_005"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_008",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "Mini Wireless Bluetooth Speaker",
+      "color": "white"
+    },
+    "relations": {
+      "product_ref": "shopping_product_005"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_009",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "2 Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts",
+      "color": "red",
+      "size": "L"
+    },
+    "relations": {
+      "product_ref": "shopping_product_006"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_010",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "a cat t-shirt",
+      "color": "green",
+      "size": "L",
+      "in_stock": true
+    },
+    "relations": {
+      "product_ref": "shopping_product_007"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_011",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "a cat t-shirt",
+      "color": "blue",
+      "size": "L",
+      "in_stock": true,
+      "material": "cotton"
+    },
+    "relations": {
+      "product_ref": "shopping_product_007"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_012",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "a make up removal kit",
+      "color": "black"
+    },
+    "relations": {
+      "product_ref": "shopping_product_008"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_013",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "a mattress foundation",
+      "color": "red",
+      "size": "L"
+    },
+    "relations": {
+      "product_ref": "shopping_product_009"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_014",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "a mattress foundation",
+      "color": "pink",
+      "size": "S",
+      "in_stock": false
+    },
+    "relations": {
+      "product_ref": "shopping_product_009"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_015",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "a table lamp",
+      "color": "black",
+      "size": "S",
+      "in_stock": false,
+      "material": "cotton"
+    },
+    "relations": {
+      "product_ref": "shopping_product_010"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_016",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "a TV stand",
+      "color": "gray"
+    },
+    "relations": {
+      "product_ref": "shopping_product_011"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_017",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "a TV stand",
+      "color": "green",
+      "size": "L"
+    },
+    "relations": {
+      "product_ref": "shopping_product_011"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_018",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "Aeno capri",
+      "color": "red",
+      "size": "S",
+      "in_stock": true
+    },
+    "relations": {
+      "product_ref": "shopping_product_012"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_019",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "Aeon capri",
+      "color": "white",
+      "size": "XS",
+      "in_stock": true,
+      "material": "nylon"
+    },
+    "relations": {
+      "product_ref": "shopping_product_013"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_020",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "Aeon capri",
+      "color": "black"
+    },
+    "relations": {
+      "product_ref": "shopping_product_013"
+    },
+    "provenance": {
+      "source": "webarena_extracted_synthesized",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_001",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "books",
+      "aliases": [
+        "/f/books",
+        "Books",
+        "books forum",
+        "f/books"
+      ]
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_002",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "news",
+      "aliases": [
+        "news related forums"
+      ]
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_003",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "deeplearning",
+      "aliases": [
+        "the deep learning"
+      ],
+      "post_count": 1
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_004",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "sports",
+      "aliases": [
+        "f/sports"
+      ]
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_005",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "technology"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_006",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "movies",
+      "aliases": [
+        "/f/movies"
+      ],
+      "post_count": 4
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_007",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "DIY"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_008",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "history"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_009",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "nyc",
+      "aliases": [
+        "nyc forum"
+      ],
+      "post_count": 1
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_010",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "wallstreetbets",
+      "aliases": [
+        "/f/wallstreetbets"
+      ]
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_011",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "earthporn"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_012",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "funny"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_013",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "Music"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_014",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "space"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_015",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "Futurology",
+      "aliases": [
+        "future technology"
+      ],
+      "post_count": 1
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_016",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "gadgets"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_017",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "headphones",
+      "aliases": [
+        "f/headphones"
+      ]
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_018",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "iphone",
+      "aliases": [
+        "f/iphone"
+      ]
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_019",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "personalfinance",
+      "aliases": [
+        "personal finances"
+      ]
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_020",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "pittsburgh"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_021",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "Art",
+      "post_count": 16
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_022",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "dataisbeautiful"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_023",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "explainlikeimfive",
+      "aliases": [
+        "explain like im 5"
+      ]
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_024",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "science",
+      "aliases": [
+        "/f/science"
+      ]
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_025",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "television"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_001",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "public transit options"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_002",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "best local restaurants",
+      "post_id": "10050"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_003",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "weekend hiking trails",
+      "post_id": "10081",
+      "has_comments": false,
+      "sort_order": "new"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_004",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "affordable housing tips",
+      "post_id": "10121",
+      "has_comments": true,
+      "sort_order": "hot"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_005",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_006",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "DIY home improvement"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_007",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "tech career advice",
+      "post_id": "30768"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_008",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "stock market analysis",
+      "post_id": "30772",
+      "has_comments": true
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_009",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "movie review discussion",
+      "post_id": "30832",
+      "has_comments": true,
+      "sort_order": "new"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_010",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_011",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "science breakthrough news"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_012",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "gaming setup showcase",
+      "post_id": "30872"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_013",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "keyboard build log",
+      "post_id": "30905",
+      "has_comments": true
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_014",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "photography contest results",
+      "post_id": "51628",
+      "has_comments": false
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_015",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_016",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "Art",
+      "title_contains": "fitness routine sharing"
+    },
+    "relations": {
+      "community_ref": "forum_community_021"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_017",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "books",
+      "title_contains": "cooking recipe exchange",
+      "post_id": "103061"
+    },
+    "relations": {
+      "community_ref": "forum_community_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_018",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "books",
+      "title_contains": "travel budget planning",
+      "post_id": "124024",
+      "has_comments": false
+    },
+    "relations": {
+      "community_ref": "forum_community_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_019",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "books",
+      "title_contains": "pet adoption stories",
+      "post_id": "124043",
+      "has_comments": true
+    },
+    "relations": {
+      "community_ref": "forum_community_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_020",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "books"
+    },
+    "relations": {
+      "community_ref": "forum_community_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_021",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "books",
+      "title_contains": "remote work productivity"
+    },
+    "relations": {
+      "community_ref": "forum_community_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_022",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "books",
+      "title_contains": "AI ethics discussion",
+      "post_id": "17445"
+    },
+    "relations": {
+      "community_ref": "forum_community_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_023",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "books",
+      "title_contains": "streaming service comparison",
+      "post_id": "17589",
+      "has_comments": false,
+      "sort_order": "top"
+    },
+    "relations": {
+      "community_ref": "forum_community_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_024",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "books",
+      "title_contains": "local event announcement",
+      "post_id": "38271",
+      "has_comments": true
+    },
+    "relations": {
+      "community_ref": "forum_community_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_025",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "community": "books"
+    },
+    "relations": {
+      "community_ref": "forum_community_001"
+    },
+    "provenance": {
+      "source": "webarena_extracted",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "cms_page_001",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "attributes": {
+      "page_title_contains": "return policy",
+      "status": "published"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "fixture_data",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "cms_page_002",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "attributes": {
+      "page_title_contains": "shipping information",
+      "status": "published"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "fixture_data",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "cms_page_003",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "attributes": {
+      "page_title_contains": "about us"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "fixture_data",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "cms_page_004",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "attributes": {
+      "page_title_contains": "privacy policy",
+      "status": "published",
+      "url_key": "privacy-policy"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "fixture_data",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "cms_page_005",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "attributes": {
+      "page_title_contains": "terms and conditions",
+      "status": "published"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "fixture_data",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "cms_page_006",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "attributes": {
+      "page_title_contains": "contact us"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "fixture_data",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "cms_page_007",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "attributes": {
+      "page_title_contains": "holiday sale banner",
+      "status": "draft",
+      "content_type": "widget"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "fixture_data",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "cms_page_008",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "attributes": {
+      "page_title_contains": "new arrivals promo",
+      "status": "draft",
+      "url_key": "new-arrivals-promo",
+      "content_type": "cms_page"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "fixture_data",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "cms_page_009",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "attributes": {
+      "page_title_contains": "customer testimonials",
+      "content_type": "cms_block"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "fixture_data",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "cms_page_010",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "attributes": {
+      "page_title_contains": "FAQ",
+      "status": "published",
+      "content_type": "cms_page"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "fixture_data",
+      "source_task_ids": []
+    },
+    "grounding_status": "symbolic_entity"
+  }
+]

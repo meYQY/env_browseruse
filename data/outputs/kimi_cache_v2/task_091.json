@@ -1,0 +1,356 @@
+{
+  "task_id": "task_0085",
+  "task_description": "On GitLab, find issue A using its IID 566, and find issue B as an open issue with the label \"help wanted\". Add a comment to issue A that includes \"needs retry logic\", add the label \"documentation\" to issue A, and close issue A. Add a comment to issue B that includes \"ready for code review\", add the label \"backend\" to issue B, and close issue B.",
+  "target_environment": "gitlab",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L4",
+  "target_entity": {
+    "entity_id": "gitlab_issue_001",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "iid": 566
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_001",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "iid": 566
+      }
+    },
+    "B": {
+      "entity_id": "gitlab_issue_029",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "open",
+        "labels": [
+          "help wanted"
+        ]
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "comment_label_close_issue",
+    "task_templates": {
+      "A": "comment_label_close_issue",
+      "B": "comment_label_close_issue"
+    },
+    "structure_variant": "long_horizon_L4_two_step_chain_single_condition",
+    "locator": {
+      "iid": 566
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_001",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "iid": 566
+        }
+      },
+      "B": {
+        "entity_id": "gitlab_issue_029",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "open",
+          "labels": [
+            "help wanted"
+          ]
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "comment",
+        "target": "A",
+        "body_must_include": [
+          "needs retry logic"
+        ]
+      },
+      {
+        "type": "add_label",
+        "target": "A",
+        "label": "documentation"
+      },
+      {
+        "type": "close_issue",
+        "target": "A"
+      },
+      {
+        "type": "comment",
+        "target": "B",
+        "body_must_include": [
+          "ready for code review"
+        ]
+      },
+      {
+        "type": "add_label",
+        "target": "B",
+        "label": "backend"
+      },
+      {
+        "type": "close_issue",
+        "target": "B"
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "needs retry logic"
+      ],
+      "label": "documentation"
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "needs retry logic"
+        ],
+        "label": "documentation"
+      },
+      "B": {
+        "body_must_include": [
+          "ready for code review"
+        ],
+        "label": "backend"
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "comment",
+      "target": "A",
+      "body_must_include": [
+        "needs retry logic"
+      ]
+    },
+    {
+      "type": "add_label",
+      "target": "A",
+      "label": "documentation"
+    },
+    {
+      "type": "close_issue",
+      "target": "A"
+    },
+    {
+      "type": "comment",
+      "target": "B",
+      "body_must_include": [
+        "ready for code review"
+      ]
+    },
+    {
+      "type": "add_label",
+      "target": "B",
+      "label": "backend"
+    },
+    {
+      "type": "close_issue",
+      "target": "B"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_001",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "needs retry logic"
+          ]
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_001"
+        },
+        "must_satisfy": {
+          "labels_include": "documentation"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_001"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_029",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "ready for code review"
+          ]
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_029"
+        },
+        "must_satisfy": {
+          "labels_include": "backend"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_029"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      }
+    ],
+    "preconditions": [
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_001"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_029"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_001",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "needs retry logic"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_labels",
+          "filters": {
+            "issue_ref": "gitlab_issue_001"
+          }
+        },
+        "condition": {
+          "labels_include": "documentation"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_001"
+          }
+        },
+        "condition": {
+          "state": "closed"
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_029",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "ready for code review"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_labels",
+          "filters": {
+            "issue_ref": "gitlab_issue_029"
+          }
+        },
+        "condition": {
+          "labels_include": "backend"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_029"
+          }
+        },
+        "condition": {
+          "state": "closed"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 9
+  }
+}

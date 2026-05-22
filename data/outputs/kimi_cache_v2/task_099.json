@@ -1,0 +1,131 @@
+{
+  "task_id": "task_0009",
+  "task_description": "On GitLab, add the label \"monitoring\" to the closed issue A.",
+  "target_environment": "gitlab",
+  "ability_dimension": "Memory",
+  "difficulty": "L2",
+  "target_entity": {
+    "entity_id": "gitlab_issue_019",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "state": "closed"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_019",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "closed"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "add_label_to_issue",
+    "task_templates": {
+      "A": "add_label_to_issue"
+    },
+    "structure_variant": "memory_L2_lookup_single_condition",
+    "locator": {
+      "state": "closed"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_019",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "closed"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "add_label",
+        "target": "A",
+        "label": "monitoring"
+      }
+    ],
+    "requirements": {
+      "label": "monitoring"
+    },
+    "requirements_by_target": {
+      "A": {
+        "label": "monitoring"
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "add_label",
+      "target": "A",
+      "label": "monitoring"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_019"
+        },
+        "must_satisfy": {
+          "labels_include": "monitoring"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issue_labels",
+          "filters": {
+            "issue_ref": "gitlab_issue_019"
+          }
+        },
+        "condition": {
+          "labels_include": "monitoring"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 2
+  }
+}

@@ -1,0 +1,36 @@
+# =============================================================================
+# CMS Requirement Banks
+# =============================================================================
+# Pools of requirement values the generator samples from when instantiating
+# CMS task templates.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# page_titles  -->  {title_must_include}
+# ---------------------------------------------------------------------------
+page_titles:
+  - "returns help center"
+  - "shipping updates"
+  - "privacy notice"
+  - "customer support"
+  - "store hours"
+  - "loyalty rewards"
+  - "size guide"
+  - "holiday sale"
+  - "warranty information"
+  - "international shipping"
+
+# ---------------------------------------------------------------------------
+# page_bodies  -->  {body_must_include}
+# ---------------------------------------------------------------------------
+page_bodies:
+  - "30-day return window"
+  - "free shipping on orders over fifty dollars"
+  - "updated privacy policy effective immediately"
+  - "contact customer support at help desk"
+  - "new store hours starting next month"
+  - "loyalty program now available"
+  - "size guide for all product categories"
+  - "holiday sale terms and conditions"
+  - "warranty coverage details"
+  - "international shipping restrictions apply"

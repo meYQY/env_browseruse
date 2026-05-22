@@ -1,0 +1,302 @@
+{
+  "task_id": "task_0099",
+  "task_description": "Find product A in the video games category named blue Cronus yoga pants with size 33 on the shopping site, add 1 to cart, and leave a 2-star review that includes the exact phrase below average durability. Then find product B in the cell phones category named a mattress foundation, add 1 to cart, and leave a 4-star review that includes the exact phrase good value.",
+  "target_environment": "shopping",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L3",
+  "target_entity": {
+    "entity_id": "shopping_product_023",
+    "site": "shopping",
+    "entity_type": "product",
+    "selected_locator_fields": {
+      "category": "video games",
+      "product_name": "blue Cronus yoga pants with size 33"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "shopping_product_023",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "category": "video games",
+        "product_name": "blue Cronus yoga pants with size 33"
+      }
+    },
+    "B": {
+      "entity_id": "shopping_product_009",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "category": "cell phones",
+        "product_name": "a mattress foundation"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "cart_and_review",
+    "task_templates": {
+      "A": "cart_and_review",
+      "B": "cart_and_review"
+    },
+    "structure_variant": "long_horizon_L3_two_step_chain_multi_condition",
+    "locator": {
+      "category": "video games",
+      "product_name": "blue Cronus yoga pants with size 33"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "shopping_product_023",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "category": "video games",
+          "product_name": "blue Cronus yoga pants with size 33"
+        }
+      },
+      "B": {
+        "entity_id": "shopping_product_009",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "category": "cell phones",
+          "product_name": "a mattress foundation"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "add_to_cart",
+        "target": "A",
+        "quantity": 1
+      },
+      {
+        "type": "write_review",
+        "target": "A",
+        "rating": 2,
+        "body_must_include": [
+          "below average durability"
+        ]
+      },
+      {
+        "type": "add_to_cart",
+        "target": "B",
+        "quantity": 1
+      },
+      {
+        "type": "write_review",
+        "target": "B",
+        "rating": 4,
+        "body_must_include": [
+          "good value"
+        ]
+      }
+    ],
+    "requirements": {
+      "add_to_cart_quantity": 1,
+      "quantity": 1,
+      "rating": 2,
+      "body_must_include": [
+        "below average durability"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "add_to_cart_quantity": 1,
+        "quantity": 1,
+        "rating": 2,
+        "body_must_include": [
+          "below average durability"
+        ]
+      },
+      "B": {
+        "add_to_cart_quantity": 1,
+        "quantity": 1,
+        "rating": 4,
+        "body_must_include": [
+          "good value"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "add_to_cart",
+      "target": "A",
+      "quantity": 1
+    },
+    {
+      "type": "write_review",
+      "target": "A",
+      "rating": 2,
+      "body_must_include": [
+        "below average durability"
+      ]
+    },
+    {
+      "type": "add_to_cart",
+      "target": "B",
+      "quantity": 1
+    },
+    {
+      "type": "write_review",
+      "target": "B",
+      "rating": 4,
+      "body_must_include": [
+        "good value"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_023"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "quantity": 1
+        }
+      },
+      {
+        "check_object": "reviews",
+        "conditions": {
+          "product_ref": "shopping_product_023",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "rating": 2,
+          "body_must_include": [
+            "below average durability"
+          ]
+        }
+      },
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_009"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "quantity": 1
+        }
+      },
+      {
+        "check_object": "reviews",
+        "conditions": {
+          "product_ref": "shopping_product_009",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "rating": 4,
+          "body_must_include": [
+            "good value"
+          ]
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_023"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "quantity": 1
+        }
+      },
+      {
+        "query": {
+          "resource": "reviews",
+          "filters": {
+            "product_ref": "shopping_product_023",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "rating": 2,
+          "body_must_include": [
+            "below average durability"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_009"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "quantity": 1
+        }
+      },
+      {
+        "query": {
+          "resource": "reviews",
+          "filters": {
+            "product_ref": "shopping_product_009",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "rating": 4,
+          "body_must_include": [
+            "good value"
+          ]
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 2
+  }
+}

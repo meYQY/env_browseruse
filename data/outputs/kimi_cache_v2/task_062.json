@@ -1,0 +1,327 @@
+{
+  "task_id": "task_0084",
+  "task_description": "Locate the open GitLab issue with the labels priority::high and backend — this is issue A. Also locate the closed GitLab issue with the label frontend — this is issue B. For issue A, add a comment containing the exact phrase \"requires security audit\", then add the label bug, and close the issue. For issue B, reopen it and assign it to dev_alice.",
+  "target_environment": "gitlab",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L4",
+  "target_entity": {
+    "entity_id": "gitlab_issue_023",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "state": "open",
+      "labels": [
+        "priority::high",
+        "backend"
+      ]
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_023",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "open",
+        "labels": [
+          "priority::high",
+          "backend"
+        ]
+      }
+    },
+    "B": {
+      "entity_id": "gitlab_issue_022",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "closed",
+        "labels": [
+          "frontend"
+        ]
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "comment_label_close_issue",
+    "task_templates": {
+      "A": "comment_label_close_issue",
+      "B": "reopen_and_assign"
+    },
+    "structure_variant": "long_horizon_L4_two_step_chain_single_condition",
+    "locator": {
+      "state": "open",
+      "labels": [
+        "priority::high",
+        "backend"
+      ]
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_023",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "open",
+          "labels": [
+            "priority::high",
+            "backend"
+          ]
+        }
+      },
+      "B": {
+        "entity_id": "gitlab_issue_022",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "closed",
+          "labels": [
+            "frontend"
+          ]
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "comment",
+        "target": "A",
+        "body_must_include": [
+          "requires security audit"
+        ]
+      },
+      {
+        "type": "add_label",
+        "target": "A",
+        "label": "bug"
+      },
+      {
+        "type": "close_issue",
+        "target": "A"
+      },
+      {
+        "type": "reopen_issue",
+        "target": "B"
+      },
+      {
+        "type": "assign_issue",
+        "target": "B",
+        "assignee_username": "dev_alice"
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "requires security audit"
+      ],
+      "label": "bug"
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "requires security audit"
+        ],
+        "label": "bug"
+      },
+      "B": {
+        "assignee_username": "dev_alice"
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "comment",
+      "target": "A",
+      "body_must_include": [
+        "requires security audit"
+      ]
+    },
+    {
+      "type": "add_label",
+      "target": "A",
+      "label": "bug"
+    },
+    {
+      "type": "close_issue",
+      "target": "A"
+    },
+    {
+      "type": "reopen_issue",
+      "target": "B"
+    },
+    {
+      "type": "assign_issue",
+      "target": "B",
+      "assignee_username": "dev_alice"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_023",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "requires security audit"
+          ]
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_023"
+        },
+        "must_satisfy": {
+          "labels_include": "bug"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_023"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_022"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_022"
+        },
+        "must_satisfy": {
+          "assignee_ref": "dev_alice"
+        }
+      }
+    ],
+    "preconditions": [
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_023"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_022"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_023",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "requires security audit"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_labels",
+          "filters": {
+            "issue_ref": "gitlab_issue_023"
+          }
+        },
+        "condition": {
+          "labels_include": "bug"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_023"
+          }
+        },
+        "condition": {
+          "state": "closed"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_022"
+          }
+        },
+        "condition": {
+          "state": "open"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_022"
+          }
+        },
+        "condition": {
+          "assignee_ref": "dev_alice"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 7
+  }
+}

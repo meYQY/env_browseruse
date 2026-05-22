@@ -1,0 +1,212 @@
+{
+  "task_id": "task_0066",
+  "task_description": "In the CMS admin, locate target A, a draft CMS page whose title contains \"new arrivals promo\"; create a page for target A whose title includes \"holiday sale\" and whose body includes \"loyalty program now available\", then publish target A.",
+  "target_environment": "cms_admin",
+  "ability_dimension": "Memory",
+  "difficulty": "L5",
+  "target_entity": {
+    "entity_id": "cms_page_008",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "selected_locator_fields": {
+      "status": "draft",
+      "page_title_contains": "new arrivals promo",
+      "content_type": "cms_page"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "cms_page_008",
+      "site": "cms_admin",
+      "entity_type": "cms_page",
+      "selected_locator_fields": {
+        "status": "draft",
+        "page_title_contains": "new arrivals promo",
+        "content_type": "cms_page"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "create_and_publish_page",
+    "task_templates": {
+      "A": "create_and_publish_page"
+    },
+    "structure_variant": "memory_L5_tracked_locator_multi_condition",
+    "locator": {
+      "status": "draft",
+      "page_title_contains": "new arrivals promo",
+      "content_type": "cms_page"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "cms_page_008",
+        "site": "cms_admin",
+        "entity_type": "cms_page",
+        "selected_locator_fields": {
+          "status": "draft",
+          "page_title_contains": "new arrivals promo",
+          "content_type": "cms_page"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_page",
+        "target": "A",
+        "title_must_include": [
+          "holiday sale"
+        ],
+        "body_must_include": [
+          "loyalty program now available"
+        ]
+      },
+      {
+        "type": "publish_page",
+        "target": "A"
+      }
+    ],
+    "requirements": {
+      "title_must_include": [
+        "holiday sale"
+      ],
+      "body_must_include": [
+        "loyalty program now available"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "title_must_include": [
+          "holiday sale"
+        ],
+        "body_must_include": [
+          "loyalty program now available"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "create_page",
+      "target": "A",
+      "title_must_include": [
+        "holiday sale"
+      ],
+      "body_must_include": [
+        "loyalty program now available"
+      ]
+    },
+    {
+      "type": "publish_page",
+      "target": "A"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_008"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "holiday sale"
+          ],
+          "body_must_include": [
+            "loyalty program now available"
+          ],
+          "creator_ref": "current_user"
+        }
+      },
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_008"
+        },
+        "must_satisfy": {
+          "status": "published"
+        }
+      }
+    ],
+    "preconditions": [
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_008"
+        },
+        "must_satisfy": {
+          "status": "draft"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "cms_pages",
+          "filters": {
+            "page_ref": "cms_page_008"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "holiday sale"
+          ],
+          "body_must_include": [
+            "loyalty program now available"
+          ],
+          "creator_ref": "current_user"
+        }
+      },
+      {
+        "query": {
+          "resource": "cms_pages",
+          "filters": {
+            "page_ref": "cms_page_008"
+          }
+        },
+        "condition": {
+          "status": "published"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": false,
+    "checks": {
+      "entity_exists": false,
+      "entity_type_matches": false,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": false,
+      "verifier_binds_entity": false,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": false,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 2
+  }
+}

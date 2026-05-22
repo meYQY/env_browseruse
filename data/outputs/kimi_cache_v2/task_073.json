@@ -1,0 +1,597 @@
+{
+  "task_id": "task_0117",
+  "task_description": "On the forum, locate target A as post 103061 with a title containing \"cooking recipe exchange\", target B as the post with a title containing \"fitness routine sharing\" in the Art community, and target C as post 10121 with a title containing \"affordable housing tips\", and exclude alternatives that do not match all listed conditions for each. For A, create a post with a title containing \"bike commute routes\" and body containing \"looking for recommendations\", comment on it with \"prices have changed since then\", and edit it so the body contains \"looking for recommendations\". For B, create a post with a title containing \"local concert venues\" and body containing \"parking cost\", comment on it with \"I had a similar experience\", and edit it so the body contains \"parking cost\". For C, create a post with a title containing \"car in NYC\" and body containing \"public transit\", comment on it with \"adding my recommendation as well\", and edit it so the body contains \"public transit\".",
+  "target_environment": "forum",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L5",
+  "target_entity": {
+    "entity_id": "forum_post_017",
+    "site": "forum",
+    "entity_type": "post",
+    "selected_locator_fields": {
+      "post_id": "103061",
+      "title_contains": "cooking recipe exchange",
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "forum_post_017",
+      "site": "forum",
+      "entity_type": "post",
+      "selected_locator_fields": {
+        "post_id": "103061",
+        "title_contains": "cooking recipe exchange",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    },
+    "B": {
+      "entity_id": "forum_post_016",
+      "site": "forum",
+      "entity_type": "post",
+      "selected_locator_fields": {
+        "title_contains": "fitness routine sharing",
+        "community": "Art",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    },
+    "C": {
+      "entity_id": "forum_post_004",
+      "site": "forum",
+      "entity_type": "post",
+      "selected_locator_fields": {
+        "post_id": "10121",
+        "title_contains": "affordable housing tips",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "create_comment_edit",
+    "task_templates": {
+      "A": "create_comment_edit",
+      "B": "create_comment_edit",
+      "C": "create_comment_edit"
+    },
+    "structure_variant": "long_horizon_L5_multi_action_chain_exclusion_condition",
+    "locator": {
+      "post_id": "103061",
+      "title_contains": "cooking recipe exchange",
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "forum_post_017",
+        "site": "forum",
+        "entity_type": "post",
+        "selected_locator_fields": {
+          "post_id": "103061",
+          "title_contains": "cooking recipe exchange",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      },
+      "B": {
+        "entity_id": "forum_post_016",
+        "site": "forum",
+        "entity_type": "post",
+        "selected_locator_fields": {
+          "title_contains": "fitness routine sharing",
+          "community": "Art",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      },
+      "C": {
+        "entity_id": "forum_post_004",
+        "site": "forum",
+        "entity_type": "post",
+        "selected_locator_fields": {
+          "post_id": "10121",
+          "title_contains": "affordable housing tips",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_post",
+        "target": "A",
+        "title_must_include": [
+          "bike commute routes"
+        ],
+        "body_must_include": [
+          "looking for recommendations"
+        ]
+      },
+      {
+        "type": "comment_post",
+        "target": "A",
+        "body_must_include": [
+          "prices have changed since then"
+        ]
+      },
+      {
+        "type": "edit_post",
+        "target": "A",
+        "body_must_include": [
+          "looking for recommendations"
+        ]
+      },
+      {
+        "type": "create_post",
+        "target": "B",
+        "title_must_include": [
+          "local concert venues"
+        ],
+        "body_must_include": [
+          "parking cost"
+        ]
+      },
+      {
+        "type": "comment_post",
+        "target": "B",
+        "body_must_include": [
+          "I had a similar experience"
+        ]
+      },
+      {
+        "type": "edit_post",
+        "target": "B",
+        "body_must_include": [
+          "parking cost"
+        ]
+      },
+      {
+        "type": "create_post",
+        "target": "C",
+        "title_must_include": [
+          "car in NYC"
+        ],
+        "body_must_include": [
+          "public transit"
+        ]
+      },
+      {
+        "type": "comment_post",
+        "target": "C",
+        "body_must_include": [
+          "adding my recommendation as well"
+        ]
+      },
+      {
+        "type": "edit_post",
+        "target": "C",
+        "body_must_include": [
+          "public transit"
+        ]
+      }
+    ],
+    "requirements": {
+      "title_must_include": [
+        "bike commute routes"
+      ],
+      "body_must_include": [
+        "looking for recommendations"
+      ],
+      "comment_body_must_include": [
+        "prices have changed since then"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "title_must_include": [
+          "bike commute routes"
+        ],
+        "body_must_include": [
+          "looking for recommendations"
+        ],
+        "comment_body_must_include": [
+          "prices have changed since then"
+        ]
+      },
+      "B": {
+        "title_must_include": [
+          "local concert venues"
+        ],
+        "body_must_include": [
+          "parking cost"
+        ],
+        "comment_body_must_include": [
+          "I had a similar experience"
+        ]
+      },
+      "C": {
+        "title_must_include": [
+          "car in NYC"
+        ],
+        "body_must_include": [
+          "public transit"
+        ],
+        "comment_body_must_include": [
+          "adding my recommendation as well"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "create_post",
+      "target": "A",
+      "title_must_include": [
+        "bike commute routes"
+      ],
+      "body_must_include": [
+        "looking for recommendations"
+      ]
+    },
+    {
+      "type": "comment_post",
+      "target": "A",
+      "body_must_include": [
+        "prices have changed since then"
+      ]
+    },
+    {
+      "type": "edit_post",
+      "target": "A",
+      "body_must_include": [
+        "looking for recommendations"
+      ]
+    },
+    {
+      "type": "create_post",
+      "target": "B",
+      "title_must_include": [
+        "local concert venues"
+      ],
+      "body_must_include": [
+        "parking cost"
+      ]
+    },
+    {
+      "type": "comment_post",
+      "target": "B",
+      "body_must_include": [
+        "I had a similar experience"
+      ]
+    },
+    {
+      "type": "edit_post",
+      "target": "B",
+      "body_must_include": [
+        "parking cost"
+      ]
+    },
+    {
+      "type": "create_post",
+      "target": "C",
+      "title_must_include": [
+        "car in NYC"
+      ],
+      "body_must_include": [
+        "public transit"
+      ]
+    },
+    {
+      "type": "comment_post",
+      "target": "C",
+      "body_must_include": [
+        "adding my recommendation as well"
+      ]
+    },
+    {
+      "type": "edit_post",
+      "target": "C",
+      "body_must_include": [
+        "public transit"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_017",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "bike commute routes"
+          ],
+          "body_must_include": [
+            "looking for recommendations"
+          ]
+        }
+      },
+      {
+        "check_object": "comments",
+        "conditions": {
+          "post_ref": "forum_post_017",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "prices have changed since then"
+          ]
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_017"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "looking for recommendations"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_016",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "local concert venues"
+          ],
+          "body_must_include": [
+            "parking cost"
+          ]
+        }
+      },
+      {
+        "check_object": "comments",
+        "conditions": {
+          "post_ref": "forum_post_016",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "I had a similar experience"
+          ]
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_016"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "parking cost"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_004",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "car in NYC"
+          ],
+          "body_must_include": [
+            "public transit"
+          ]
+        }
+      },
+      {
+        "check_object": "comments",
+        "conditions": {
+          "post_ref": "forum_post_004",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "adding my recommendation as well"
+          ]
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_004"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "public transit"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_017",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "bike commute routes"
+          ],
+          "body_must_include": [
+            "looking for recommendations"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "comments",
+          "filters": {
+            "post_ref": "forum_post_017",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "prices have changed since then"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_017"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "looking for recommendations"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_016",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "local concert venues"
+          ],
+          "body_must_include": [
+            "parking cost"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "comments",
+          "filters": {
+            "post_ref": "forum_post_016",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "I had a similar experience"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_016"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "parking cost"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_004",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "car in NYC"
+          ],
+          "body_must_include": [
+            "public transit"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "comments",
+          "filters": {
+            "post_ref": "forum_post_004",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "adding my recommendation as well"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_004"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "public transit"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": false,
+    "checks": {
+      "entity_exists": false,
+      "entity_type_matches": false,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": false,
+      "verifier_binds_entity": false,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": false,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 6
+  }
+}

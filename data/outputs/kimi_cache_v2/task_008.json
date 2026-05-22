@@ -1,0 +1,157 @@
+{
+  "task_id": "task_0037",
+  "task_description": "Leave a 4-star review on the electronics product named Circe's products (A) and make sure the review includes the word \"comfortable\".",
+  "target_environment": "shopping",
+  "ability_dimension": "Memory",
+  "difficulty": "L4",
+  "target_entity": {
+    "entity_id": "shopping_product_037",
+    "site": "shopping",
+    "entity_type": "product",
+    "selected_locator_fields": {
+      "category": "electronics",
+      "product_name": "Circe's products"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "shopping_product_037",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "category": "electronics",
+        "product_name": "Circe's products"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "write_review",
+    "task_templates": {
+      "A": "write_review"
+    },
+    "structure_variant": "memory_L4_tracked_locator_multi_condition",
+    "locator": {
+      "category": "electronics",
+      "product_name": "Circe's products"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "shopping_product_037",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "category": "electronics",
+          "product_name": "Circe's products"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "write_review",
+        "target": "A",
+        "rating": 4,
+        "body_must_include": [
+          "comfortable"
+        ]
+      }
+    ],
+    "requirements": {
+      "rating": 4,
+      "body_must_include": [
+        "comfortable"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "rating": 4,
+        "body_must_include": [
+          "comfortable"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "write_review",
+      "target": "A",
+      "rating": 4,
+      "body_must_include": [
+        "comfortable"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "reviews",
+        "conditions": {
+          "product_ref": "shopping_product_037",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "rating": 4,
+          "body_must_include": [
+            "comfortable"
+          ]
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "reviews",
+          "filters": {
+            "product_ref": "shopping_product_037",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "rating": 4,
+          "body_must_include": [
+            "comfortable"
+          ]
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 3
+  }
+}

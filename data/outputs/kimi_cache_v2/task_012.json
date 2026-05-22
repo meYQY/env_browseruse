@@ -1,0 +1,177 @@
+{
+  "task_id": "task_0049",
+  "task_description": "Find the forum community A called \"nyc forum\" that has 1 post, and create a new post. The title should include \"public transit updates\" and the main text should include \"looking for recommendations\".",
+  "target_environment": "forum",
+  "ability_dimension": "Memory",
+  "difficulty": "L3",
+  "target_entity": {
+    "entity_id": "forum_community_009",
+    "site": "forum",
+    "entity_type": "community",
+    "selected_locator_fields": {
+      "aliases": [
+        "nyc forum"
+      ],
+      "post_count": 1
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "forum_community_009",
+      "site": "forum",
+      "entity_type": "community",
+      "selected_locator_fields": {
+        "aliases": [
+          "nyc forum"
+        ],
+        "post_count": 1
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "create_post",
+    "task_templates": {
+      "A": "create_post"
+    },
+    "structure_variant": "memory_L3_lookup_multi_condition",
+    "locator": {
+      "aliases": [
+        "nyc forum"
+      ],
+      "post_count": 1
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "forum_community_009",
+        "site": "forum",
+        "entity_type": "community",
+        "selected_locator_fields": {
+          "aliases": [
+            "nyc forum"
+          ],
+          "post_count": 1
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_post",
+        "target": "A",
+        "title_must_include": [
+          "public transit updates"
+        ],
+        "body_must_include": [
+          "looking for recommendations"
+        ]
+      }
+    ],
+    "requirements": {
+      "title_must_include": [
+        "public transit updates"
+      ],
+      "body_must_include": [
+        "looking for recommendations"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "title_must_include": [
+          "public transit updates"
+        ],
+        "body_must_include": [
+          "looking for recommendations"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "create_post",
+      "target": "A",
+      "title_must_include": [
+        "public transit updates"
+      ],
+      "body_must_include": [
+        "looking for recommendations"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "posts",
+        "conditions": {
+          "community_ref": "forum_community_009",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "public transit updates"
+          ],
+          "body_must_include": [
+            "looking for recommendations"
+          ]
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "community_ref": "forum_community_009",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "public transit updates"
+          ],
+          "body_must_include": [
+            "looking for recommendations"
+          ]
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 1
+  }
+}

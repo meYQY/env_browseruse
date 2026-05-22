@@ -1,0 +1,47 @@
+# =============================================================================
+# GitLab Requirement Banks
+# =============================================================================
+# Pools of requirement values the generator samples from when instantiating
+# GitLab task templates. Each bank maps to a placeholder token.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# comment_bodies  -->  {body_must_include}
+# ---------------------------------------------------------------------------
+comment_bodies:
+  - "needs retry logic"
+  - "triaged for backend team"
+  - "needs regression test"
+  - "backend ownership confirmed"
+  - "please add checkout monitoring"
+  - "confirmed as duplicate"
+  - "ready for code review"
+  - "requires security audit"
+  - "blocked by upstream dependency"
+  - "moved to next sprint"
+  - "performance regression noted"
+  - "added reproduction steps"
+
+# ---------------------------------------------------------------------------
+# labels  -->  {label}
+# ---------------------------------------------------------------------------
+labels:
+  - bug
+  - frontend
+  - backend
+  - regression
+  - monitoring
+  - security
+  - documentation
+  - performance
+  - enhancement
+  - high-priority
+
+# ---------------------------------------------------------------------------
+# assignee_usernames  -->  {assignee_username}
+# ---------------------------------------------------------------------------
+assignee_usernames:
+  - byteblaze
+  - dev_alice
+  - ericwbailey
+  - qa_bob

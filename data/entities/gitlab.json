@@ -1,0 +1,3584 @@
+{
+  "site": "gitlab",
+  "backend": "GitLab CE (PostgreSQL)",
+  "port": 8023,
+  "accounts": {
+    "username": "byteblaze",
+    "password": "hello1234"
+  },
+  "pid_to_repo_hint": {
+    "79": "2019-nCov",
+    "86": "the Pytorch GAN repo with most stars",
+    "175": "ChatGPT",
+    "33": "MetaSeq",
+    "170": "all repos from Akilesh Kannan",
+    "165": "all repos from Akilesh Kannan",
+    "163": "all repos from Akilesh Kannan",
+    "164": "all repos from Akilesh Kannan",
+    "159": "all repos from Akilesh Kannan",
+    "188": "solarized-prism-theme",
+    "122": "all repos from facebook",
+    "184": "gimmiethat.space",
+    "174": "a11yproject.com",
+    "185": "my HTML5 markup extention",
+    "190": "my time tracking tool project",
+    "179": "a11y-webring.club",
+    "181": "GitHub timeline item management extension",
+    "187": "millennials-to-snake-people",
+    "183": "my empathy-prompts",
+    "193": "my dotfiles",
+    "138": "aem-hacker",
+    "84": "awesome-python",
+    "186": "a11y-syntax-highlighting"
+  },
+  "repos": [
+    {
+      "id": 1,
+      "path": "0ang3el/aem-hacker",
+      "owner": "0ang3el",
+      "name": "aem-hacker",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 2,
+      "path": "Meta/create-react-app",
+      "owner": "Meta",
+      "name": "create-react-app",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 3,
+      "path": "OpenAPI Tools/openapi-generator",
+      "owner": "OpenAPI Tools",
+      "name": "openapi-generator",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 4,
+      "path": "OpenAPITools/openapi-generator",
+      "owner": "OpenAPITools",
+      "name": "openapi-generator",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 5,
+      "path": "a11yproject/a11yproject.com",
+      "owner": "a11yproject",
+      "name": "a11yproject.com",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [
+        {
+          "iid": 566,
+          "task_count": 1
+        },
+        {
+          "iid": 719,
+          "task_count": 2
+        },
+        {
+          "iid": 1478,
+          "task_count": 2
+        },
+        {
+          "iid": 1517,
+          "task_count": 1
+        }
+      ],
+      "merge_requests": [
+        {
+          "iid": 1071,
+          "internal_id": "72135",
+          "title_hint": "color ulitity",
+          "task_count": 1
+        },
+        {
+          "iid": 1265,
+          "internal_id": "72404",
+          "title_hint": "focus edge cases",
+          "task_count": 1
+        },
+        {
+          "iid": 1270,
+          "task_count": 1
+        },
+        {
+          "iid": 1485,
+          "task_count": 1
+        },
+        {
+          "iid": 1531,
+          "internal_id": "72594",
+          "title_hint": "semantic HTML post",
+          "task_count": 1
+        }
+      ],
+      "task_count": 25
+    },
+    {
+      "id": 6,
+      "path": "abisubramanya27/Amazon_ML_Challenge_2021",
+      "owner": "abisubramanya27",
+      "name": "Amazon_ML_Challenge_2021",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 7,
+      "path": "auth0/angular-storage",
+      "owner": "auth0",
+      "name": "angular-storage",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 8,
+      "path": "byteblaze/11711_gitlab",
+      "owner": "byteblaze",
+      "name": "11711_gitlab",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 9,
+      "path": "byteblaze/2019-nCov",
+      "owner": "byteblaze",
+      "name": "2019-nCov",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 10,
+      "path": "byteblaze/AGISite",
+      "owner": "byteblaze",
+      "name": "AGISite",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 11,
+      "path": "byteblaze/AndroidSlidingUpPanel",
+      "owner": "byteblaze",
+      "name": "AndroidSlidingUpPanel",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 12,
+      "path": "byteblaze/AutoAGI",
+      "owner": "byteblaze",
+      "name": "AutoAGI",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 13,
+      "path": "byteblaze/Awesome_DIY_ideas",
+      "owner": "byteblaze",
+      "name": "Awesome_DIY_ideas",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 14,
+      "path": "byteblaze/CacheEval",
+      "owner": "byteblaze",
+      "name": "CacheEval",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 15,
+      "path": "byteblaze/ChatGPT",
+      "owner": "byteblaze",
+      "name": "ChatGPT",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 3
+    },
+    {
+      "id": 16,
+      "path": "byteblaze/Do-it-myself",
+      "owner": "byteblaze",
+      "name": "Do-it-myself",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 17,
+      "path": "byteblaze/GitHub timeline item management extension",
+      "owner": "byteblaze",
+      "name": "GitHub timeline item management extension",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 18,
+      "path": "byteblaze/MetaSeq",
+      "owner": "byteblaze",
+      "name": "MetaSeq",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 19,
+      "path": "byteblaze/Nobel_Prize",
+      "owner": "byteblaze",
+      "name": "Nobel_Prize",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 20,
+      "path": "byteblaze/OpenAPI Generator",
+      "owner": "byteblaze",
+      "name": "OpenAPI Generator",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 21,
+      "path": "byteblaze/PyTorch implementations of GANs",
+      "owner": "byteblaze",
+      "name": "PyTorch implementations of GANs",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 22,
+      "path": "byteblaze/PyTorch-GAN",
+      "owner": "byteblaze",
+      "name": "PyTorch-GAN",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 23,
+      "path": "byteblaze/Pytorch GAN",
+      "owner": "byteblaze",
+      "name": "Pytorch GAN",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 24,
+      "path": "byteblaze/SimCache",
+      "owner": "byteblaze",
+      "name": "SimCache",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 25,
+      "path": "byteblaze/Super_Awesome_Robot",
+      "owner": "byteblaze",
+      "name": "Super_Awesome_Robot",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 26,
+      "path": "byteblaze/TODO",
+      "owner": "byteblaze",
+      "name": "TODO",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 27,
+      "path": "byteblaze/The A11Y Project",
+      "owner": "byteblaze",
+      "name": "The A11Y Project",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 28,
+      "path": "byteblaze/TrafficMonitor",
+      "owner": "byteblaze",
+      "name": "TrafficMonitor",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 29,
+      "path": "byteblaze/a list of awesome open source sysadmin resources",
+      "owner": "byteblaze",
+      "name": "a list of awesome open source sysadmin resources",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 30,
+      "path": "byteblaze/a11y-syntax-highlighting",
+      "owner": "byteblaze",
+      "name": "a11y-syntax-highlighting",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [
+        {
+          "iid": 1,
+          "task_count": 2
+        }
+      ],
+      "merge_requests": [],
+      "task_count": 8
+    },
+    {
+      "id": 31,
+      "path": "byteblaze/a11y-webring.club",
+      "owner": "byteblaze",
+      "name": "a11y-webring.club",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [
+        {
+          "iid": 71,
+          "task_count": 2
+        }
+      ],
+      "merge_requests": [
+        {
+          "iid": 40,
+          "task_count": 1
+        }
+      ],
+      "task_count": 5
+    },
+    {
+      "id": 32,
+      "path": "byteblaze/a11yproject",
+      "owner": "byteblaze",
+      "name": "a11yproject",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 8
+    },
+    {
+      "id": 33,
+      "path": "byteblaze/a11yproject.com",
+      "owner": "byteblaze",
+      "name": "a11yproject.com",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 6
+    },
+    {
+      "id": 34,
+      "path": "byteblaze/accessible-html-content-patterns",
+      "owner": "byteblaze",
+      "name": "accessible-html-content-patterns",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 3
+    },
+    {
+      "id": 35,
+      "path": "byteblaze/aem-hacker",
+      "owner": "byteblaze",
+      "name": "aem-hacker",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 36,
+      "path": "byteblaze/agi_index",
+      "owner": "byteblaze",
+      "name": "agi_index",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 37,
+      "path": "byteblaze/all repos from Akilesh Kannan",
+      "owner": "byteblaze",
+      "name": "all repos from Akilesh Kannan",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 38,
+      "path": "byteblaze/all repos from facebook",
+      "owner": "byteblaze",
+      "name": "all repos from facebook",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 39,
+      "path": "byteblaze/all source repos from Akilesh Kannan",
+      "owner": "byteblaze",
+      "name": "all source repos from Akilesh Kannan",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 40,
+      "path": "byteblaze/autojump",
+      "owner": "byteblaze",
+      "name": "autojump",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 41,
+      "path": "byteblaze/awesome-llms",
+      "owner": "byteblaze",
+      "name": "awesome-llms",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 42,
+      "path": "byteblaze/awesome-python",
+      "owner": "byteblaze",
+      "name": "awesome-python",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 43,
+      "path": "byteblaze/awesome_llm_reading",
+      "owner": "byteblaze",
+      "name": "awesome_llm_reading",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 44,
+      "path": "byteblaze/awesome_program_aided_reasoning",
+      "owner": "byteblaze",
+      "name": "awesome_program_aided_reasoning",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 45,
+      "path": "byteblaze/awesome_web_agents",
+      "owner": "byteblaze",
+      "name": "awesome_web_agents",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 46,
+      "path": "byteblaze/awesome_webagent",
+      "owner": "byteblaze",
+      "name": "awesome_webagent",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 47,
+      "path": "byteblaze/bafta_awards_nolan",
+      "owner": "byteblaze",
+      "name": "bafta_awards_nolan",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 48,
+      "path": "byteblaze/boo project by test123",
+      "owner": "byteblaze",
+      "name": "boo project by test123",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 49,
+      "path": "byteblaze/chatgpt_plugin",
+      "owner": "byteblaze",
+      "name": "chatgpt_plugin",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 50,
+      "path": "byteblaze/cloud-to-butt",
+      "owner": "byteblaze",
+      "name": "cloud-to-butt",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 7
+    },
+    {
+      "id": 51,
+      "path": "byteblaze/continent_ranking",
+      "owner": "byteblaze",
+      "name": "continent_ranking",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 52,
+      "path": "byteblaze/csvkit",
+      "owner": "byteblaze",
+      "name": "csvkit",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 53,
+      "path": "byteblaze/do-it-myself-with",
+      "owner": "byteblaze",
+      "name": "do-it-myself-with",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 54,
+      "path": "byteblaze/dotfiles",
+      "owner": "byteblaze",
+      "name": "dotfiles",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 13
+    },
+    {
+      "id": 55,
+      "path": "byteblaze/dots",
+      "owner": "byteblaze",
+      "name": "dots",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 56,
+      "path": "byteblaze/dynamorio",
+      "owner": "byteblaze",
+      "name": "dynamorio",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 57,
+      "path": "byteblaze/empathy-prompts",
+      "owner": "byteblaze",
+      "name": "empathy-prompts",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [
+        {
+          "iid": 8,
+          "task_count": 1
+        },
+        {
+          "iid": 18,
+          "task_count": 2
+        }
+      ],
+      "merge_requests": [
+        {
+          "iid": 19,
+          "internal_id": "138843",
+          "title_hint": "fixing the broken links",
+          "task_count": 1
+        }
+      ],
+      "task_count": 7
+    },
+    {
+      "id": 58,
+      "path": "byteblaze/ericwbailey.website",
+      "owner": "byteblaze",
+      "name": "ericwbailey.website",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 59,
+      "path": "byteblaze/facebook\"s guide on building react apps",
+      "owner": "byteblaze",
+      "name": "facebook\"s guide on building react apps",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 60,
+      "path": "byteblaze/facebook's guide on building react apps",
+      "owner": "byteblaze",
+      "name": "facebook's guide on building react apps",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 61,
+      "path": "byteblaze/fun_thing_to_do",
+      "owner": "byteblaze",
+      "name": "fun_thing_to_do",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 62,
+      "path": "byteblaze/gimmiethat.space",
+      "owner": "byteblaze",
+      "name": "gimmiethat.space",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 14
+    },
+    {
+      "id": 63,
+      "path": "byteblaze/gimmiethat.space and byteblaze/dotfiles",
+      "owner": "byteblaze",
+      "name": "gimmiethat.space and byteblaze",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 64,
+      "path": "byteblaze/gimmiethat.space and dotfiles",
+      "owner": "byteblaze",
+      "name": "gimmiethat.space and dotfiles",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 65,
+      "path": "byteblaze/huggingface dataset",
+      "owner": "byteblaze",
+      "name": "huggingface dataset",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 66,
+      "path": "byteblaze/keycloak",
+      "owner": "byteblaze",
+      "name": "keycloak",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 67,
+      "path": "byteblaze/live_a_life",
+      "owner": "byteblaze",
+      "name": "live_a_life",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 68,
+      "path": "byteblaze/llm_bulk_inference",
+      "owner": "byteblaze",
+      "name": "llm_bulk_inference",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 69,
+      "path": "byteblaze/mathjax",
+      "owner": "byteblaze",
+      "name": "mathjax",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 70,
+      "path": "byteblaze/metaseq",
+      "owner": "byteblaze",
+      "name": "metaseq",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 7
+    },
+    {
+      "id": 71,
+      "path": "byteblaze/millennials-to-snake-people",
+      "owner": "byteblaze",
+      "name": "millennials-to-snake-people",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 3
+    },
+    {
+      "id": 72,
+      "path": "byteblaze/mozfest-program-2018",
+      "owner": "byteblaze",
+      "name": "mozfest-program-2018",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 3
+    },
+    {
+      "id": 73,
+      "path": "byteblaze/my HTML5 markup extention",
+      "owner": "byteblaze",
+      "name": "my HTML5 markup extention",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 74,
+      "path": "byteblaze/my cloud-to-butt project",
+      "owner": "byteblaze",
+      "name": "my cloud-to-butt project",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 75,
+      "path": "byteblaze/my dotfiles",
+      "owner": "byteblaze",
+      "name": "my dotfiles",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 76,
+      "path": "byteblaze/my empathy-prompts",
+      "owner": "byteblaze",
+      "name": "my empathy-prompts",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 77,
+      "path": "byteblaze/my personal webpage",
+      "owner": "byteblaze",
+      "name": "my personal webpage",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 78,
+      "path": "byteblaze/my project for a solarized theme for prism.js",
+      "owner": "byteblaze",
+      "name": "my project for a solarized theme for prism.js",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 79,
+      "path": "byteblaze/my repository for removing board movement events from the GitHub Issue timeline",
+      "owner": "byteblaze",
+      "name": "my repository for removing board movement events from the GitHub Issue timeline",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 80,
+      "path": "byteblaze/my repository with the ‘Do What The F*ck You Want To Public License’ and with a shorter name",
+      "owner": "byteblaze",
+      "name": "my repository with the ‘Do What The F*ck You Want To Public License’ and with a shorter name",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 81,
+      "path": "byteblaze/my time tracking tool project",
+      "owner": "byteblaze",
+      "name": "my time tracking tool project",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 82,
+      "path": "byteblaze/my timeit project",
+      "owner": "byteblaze",
+      "name": "my timeit project",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 83,
+      "path": "byteblaze/new-empathy-prompts",
+      "owner": "byteblaze",
+      "name": "new-empathy-prompts",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 84,
+      "path": "byteblaze/new_a11y-syntax-highlighting",
+      "owner": "byteblaze",
+      "name": "new_a11y-syntax-highlighting",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 85,
+      "path": "byteblaze/nolan_academy_awards",
+      "owner": "byteblaze",
+      "name": "nolan_academy_awards",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 86,
+      "path": "byteblaze/nolan_followers",
+      "owner": "byteblaze",
+      "name": "nolan_followers",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 87,
+      "path": "byteblaze/nolan_honest_fans",
+      "owner": "byteblaze",
+      "name": "nolan_honest_fans",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 88,
+      "path": "byteblaze/nolan_old_fans",
+      "owner": "byteblaze",
+      "name": "nolan_old_fans",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 89,
+      "path": "byteblaze/nolan_young_fans",
+      "owner": "byteblaze",
+      "name": "nolan_young_fans",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 90,
+      "path": "byteblaze/nvidia-patch",
+      "owner": "byteblaze",
+      "name": "nvidia-patch",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 91,
+      "path": "byteblaze/olympic_baseball",
+      "owner": "byteblaze",
+      "name": "olympic_baseball",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 92,
+      "path": "byteblaze/openapi-generator",
+      "owner": "byteblaze",
+      "name": "openapi-generator",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 93,
+      "path": "byteblaze/opensourcediversity.org repository",
+      "owner": "byteblaze",
+      "name": "opensourcediversity.org repository",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 94,
+      "path": "byteblaze/planet_velocity",
+      "owner": "byteblaze",
+      "name": "planet_velocity",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 95,
+      "path": "byteblaze/planner",
+      "owner": "byteblaze",
+      "name": "planner",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 96,
+      "path": "byteblaze/primer design guide",
+      "owner": "byteblaze",
+      "name": "primer design guide",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 97,
+      "path": "byteblaze/primer-design-v2",
+      "owner": "byteblaze",
+      "name": "primer-design-v2",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 98,
+      "path": "byteblaze/prism-theme",
+      "owner": "byteblaze",
+      "name": "prism-theme",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 99,
+      "path": "byteblaze/project_site",
+      "owner": "byteblaze",
+      "name": "project_site",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 100,
+      "path": "byteblaze/reddit",
+      "owner": "byteblaze",
+      "name": "reddit",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 10
+    },
+    {
+      "id": 101,
+      "path": "byteblaze/remove-board-movement-events-from-the-github-issue-timeline",
+      "owner": "byteblaze",
+      "name": "remove-board-movement-events-from-the-github-issue-timeline",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 102,
+      "path": "byteblaze/sample-gitlab",
+      "owner": "byteblaze",
+      "name": "sample-gitlab",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 103,
+      "path": "byteblaze/sample-gitlab-v2",
+      "owner": "byteblaze",
+      "name": "sample-gitlab-v2",
+      "entity_type": "creation_target",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 104,
+      "path": "byteblaze/shopping",
+      "owner": "byteblaze",
+      "name": "shopping",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 10
+    },
+    {
+      "id": 105,
+      "path": "byteblaze/shopping_admin_1",
+      "owner": "byteblaze",
+      "name": "shopping_admin_1",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 5
+    },
+    {
+      "id": 106,
+      "path": "byteblaze/shopping_admin_2",
+      "owner": "byteblaze",
+      "name": "shopping_admin_2",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 4
+    },
+    {
+      "id": 107,
+      "path": "byteblaze/solarized-prism-theme",
+      "owner": "byteblaze",
+      "name": "solarized-prism-theme",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 108,
+      "path": "byteblaze/the Amazon ML Challenge 2021 repository",
+      "owner": "byteblaze",
+      "name": "the Amazon ML Challenge 2021 repository",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 109,
+      "path": "byteblaze/the C++ JSON library for Arduino",
+      "owner": "byteblaze",
+      "name": "the C++ JSON library for Arduino",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 110,
+      "path": "byteblaze/the Create React App repository",
+      "owner": "byteblaze",
+      "name": "the Create React App repository",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 111,
+      "path": "byteblaze/the Pytorch GAN repo with most stars",
+      "owner": "byteblaze",
+      "name": "the Pytorch GAN repo with most stars",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 112,
+      "path": "byteblaze/the administrate project by thoughtbot, inc.",
+      "owner": "byteblaze",
+      "name": "the administrate project by thoughtbot, inc.",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 113,
+      "path": "byteblaze/the angular-storage project by auth0",
+      "owner": "byteblaze",
+      "name": "the angular-storage project by auth0",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 114,
+      "path": "byteblaze/the best GAN python implementation",
+      "owner": "byteblaze",
+      "name": "the best GAN python implementation",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 115,
+      "path": "byteblaze/the buck project",
+      "owner": "byteblaze",
+      "name": "the buck project",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 116,
+      "path": "byteblaze/the most stared Covid location tracker",
+      "owner": "byteblaze",
+      "name": "the most stared Covid location tracker",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 117,
+      "path": "byteblaze/the most stared Covid related project",
+      "owner": "byteblaze",
+      "name": "the most stared Covid related project",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 118,
+      "path": "byteblaze/the repo for external large-scale work by the administrator",
+      "owner": "byteblaze",
+      "name": "the repo for external large-scale work by the administrator",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 119,
+      "path": "byteblaze/the repository for a better WeChat",
+      "owner": "byteblaze",
+      "name": "the repository for a better WeChat",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 120,
+      "path": "byteblaze/the repository for a script to download pages from Arch Wiki",
+      "owner": "byteblaze",
+      "name": "the repository for a script to download pages from Arch Wiki",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 121,
+      "path": "byteblaze/the repository for a web app to check whether I had contacted the patient of covid-19 or not",
+      "owner": "byteblaze",
+      "name": "the repository for a web app to check whether I had contacted the patient of covid-19 or not",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 122,
+      "path": "byteblaze/the repository for an app that archives my tweets",
+      "owner": "byteblaze",
+      "name": "the repository for an app that archives my tweets",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 123,
+      "path": "byteblaze/the repository for the Primer Interface Guidelines",
+      "owner": "byteblaze",
+      "name": "the repository for the Primer Interface Guidelines",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 124,
+      "path": "byteblaze/the repository that attempts to recreate the first level of Super Mario Bros.",
+      "owner": "byteblaze",
+      "name": "the repository that attempts to recreate the first level of Super Mario Bros.",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 125,
+      "path": "byteblaze/the reposotiry for C++ の歩き方",
+      "owner": "byteblaze",
+      "name": "the reposotiry for C++ の歩き方",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 126,
+      "path": "byteblaze/time tracking tool",
+      "owner": "byteblaze",
+      "name": "time tracking tool",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 127,
+      "path": "byteblaze/timeit",
+      "owner": "byteblaze",
+      "name": "timeit",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 3
+    },
+    {
+      "id": 128,
+      "path": "byteblaze/viewgrades-scraper",
+      "owner": "byteblaze",
+      "name": "viewgrades-scraper",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 129,
+      "path": "byteblaze/web_agent",
+      "owner": "byteblaze",
+      "name": "web_agent",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 130,
+      "path": "byteblaze/web_agent_android_xl",
+      "owner": "byteblaze",
+      "name": "web_agent_android_xl",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 131,
+      "path": "byteblaze/web_agent_android_xs",
+      "owner": "byteblaze",
+      "name": "web_agent_android_xs",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 132,
+      "path": "byteblaze/web_agent_index",
+      "owner": "byteblaze",
+      "name": "web_agent_index",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 133,
+      "path": "byteblaze/web_agent_nodejs",
+      "owner": "byteblaze",
+      "name": "web_agent_nodejs",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 134,
+      "path": "byteblaze/web_arena",
+      "owner": "byteblaze",
+      "name": "web_arena",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 135,
+      "path": "byteblaze/webagent",
+      "owner": "byteblaze",
+      "name": "webagent",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 136,
+      "path": "byteblaze/wxpy",
+      "owner": "byteblaze",
+      "name": "wxpy",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 3
+    },
+    {
+      "id": 137,
+      "path": "convexegg/chatgpt",
+      "owner": "convexegg",
+      "name": "chatgpt",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 138,
+      "path": "eriklindernoren/PyTorch-GAN",
+      "owner": "eriklindernoren",
+      "name": "PyTorch-GAN",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 139,
+      "path": "evilcos/xssor2",
+      "owner": "evilcos",
+      "name": "xssor2",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 140,
+      "path": "facebook/create-react-app",
+      "owner": "facebook",
+      "name": "create-react-app",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 5
+    },
+    {
+      "id": 141,
+      "path": "justinmeister/Mario-Level-1",
+      "owner": "justinmeister",
+      "name": "Mario-Level-1",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 142,
+      "path": "keycloak/keycloak",
+      "owner": "keycloak",
+      "name": "keycloak",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 143,
+      "path": "kkroening/ffmpeg-python",
+      "owner": "kkroening",
+      "name": "ffmpeg-python",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 6
+    },
+    {
+      "id": 144,
+      "path": "koush/AndroidAsync",
+      "owner": "koush",
+      "name": "AndroidAsync",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 3
+    },
+    {
+      "id": 145,
+      "path": "lahwaacz/arch-wiki-docs",
+      "owner": "lahwaacz",
+      "name": "arch-wiki-docs",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 146,
+      "path": "layeh/gumble",
+      "owner": "layeh",
+      "name": "gumble",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 147,
+      "path": "mk-j/PHP_XLSXWriter",
+      "owner": "mk-j",
+      "name": "PHP_XLSXWriter",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 3
+    },
+    {
+      "id": 148,
+      "path": "opensourcediversity/opensourcediversity.org",
+      "owner": "opensourcediversity",
+      "name": "opensourcediversity.org",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 149,
+      "path": "prime/design",
+      "owner": "prime",
+      "name": "design",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 1
+    },
+    {
+      "id": 150,
+      "path": "primer/design",
+      "owner": "primer",
+      "name": "design",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [
+        {
+          "iid": 104,
+          "task_count": 1
+        },
+        {
+          "iid": 316,
+          "task_count": 1
+        }
+      ],
+      "merge_requests": [
+        {
+          "iid": 450,
+          "internal_id": "139245",
+          "title_hint": "octovisuals page",
+          "task_count": 1
+        }
+      ],
+      "task_count": 15
+    },
+    {
+      "id": 151,
+      "path": "root/metaseq",
+      "owner": "root",
+      "name": "metaseq",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 4
+    },
+    {
+      "id": 152,
+      "path": "thoughtbot/administrate",
+      "owner": "thoughtbot",
+      "name": "administrate",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 153,
+      "path": "umano/AndroidSlidingUpPanel",
+      "owner": "umano",
+      "name": "AndroidSlidingUpPanel",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 6
+    },
+    {
+      "id": 154,
+      "path": "vinta/awesome-python",
+      "owner": "vinta",
+      "name": "awesome-python",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 155,
+      "path": "wting/autojump",
+      "owner": "wting",
+      "name": "autojump",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    },
+    {
+      "id": 156,
+      "path": "yjlou/2019-nCov",
+      "owner": "yjlou",
+      "name": "2019-nCov",
+      "entity_type": "pre_existing",
+      "project_ids": [],
+      "issues": [],
+      "merge_requests": [],
+      "task_count": 2
+    }
+  ],
+  "groups": [
+    {
+      "path": "groups/coding_friends",
+      "name": "coding_friends",
+      "task_count": 1
+    },
+    {
+      "path": "groups/crew",
+      "name": "crew",
+      "task_count": 1
+    },
+    {
+      "path": "groups/n-lab",
+      "name": "n-lab",
+      "task_count": 1
+    },
+    {
+      "path": "groups/webagent",
+      "name": "webagent",
+      "task_count": 1
+    },
+    {
+      "path": "groups/x-lab",
+      "name": "x-lab",
+      "task_count": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Assad Hashmi",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 2,
+      "username": "Derek Bruening",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 3,
+      "username": "Eric and Kilian",
+      "display_names": [],
+      "task_count": 2
+    },
+    {
+      "id": 4,
+      "username": "Iheb Haboubi",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 5,
+      "username": "Jeremy Lainé",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 6,
+      "username": "Jim Schubert",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 7,
+      "username": "Koushik Dutta",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 8,
+      "username": "Martin Bartoš",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 9,
+      "username": "OpenAPI Tools",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 10,
+      "username": "Philip de Nier",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 11,
+      "username": "R1kk3r",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 12,
+      "username": "Sergii Pechenizkyi",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 13,
+      "username": "Steven Frank",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 14,
+      "username": "Vinta Chen",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 15,
+      "username": "Václav Muzikář",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 16,
+      "username": "William Ting",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 17,
+      "username": "a11yproject",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 18,
+      "username": "abisubramanya27",
+      "display_names": [
+        "Abishek",
+        "Abishek S"
+      ],
+      "task_count": 14
+    },
+    {
+      "id": 19,
+      "username": "akileshkannan",
+      "display_names": [
+        "Akilesh Kannan"
+      ],
+      "task_count": 3
+    },
+    {
+      "id": 20,
+      "username": "anthony",
+      "display_names": [
+        "Anthony"
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 21,
+      "username": "awesome_diy_ideas",
+      "display_names": [
+        "Awesome_DIY_ideas"
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 22,
+      "username": "bblanchon",
+      "display_names": [
+        "Benoît Blanchon"
+      ],
+      "task_count": 3
+    },
+    {
+      "id": 23,
+      "username": "byteblaze",
+      "display_names": [
+        "Byte Blaze"
+      ],
+      "task_count": 3,
+      "role": "primary_test_user",
+      "password": "hello1234"
+    },
+    {
+      "id": 24,
+      "username": "convexegg",
+      "display_names": [],
+      "task_count": 2
+    },
+    {
+      "id": 25,
+      "username": "convexeggtart",
+      "display_names": [
+        "Convex Eggtart"
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 26,
+      "username": "dependabot",
+      "display_names": [],
+      "task_count": 2
+    },
+    {
+      "id": 27,
+      "username": "doitmyself",
+      "display_names": [
+        "Do it myself"
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 28,
+      "username": "ericwbailey",
+      "display_names": [
+        "Eric",
+        "Eric Bailey"
+      ],
+      "task_count": 10
+    },
+    {
+      "id": 29,
+      "username": "firstcontributions",
+      "display_names": [
+        "First Contributions"
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 30,
+      "username": "ghost",
+      "display_names": [],
+      "task_count": 2
+    },
+    {
+      "id": 31,
+      "username": "jubilee2",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 32,
+      "username": "kilian",
+      "display_names": [
+        "Kilian"
+      ],
+      "task_count": 6
+    },
+    {
+      "id": 33,
+      "username": "koush",
+      "display_names": [
+        "Koushik"
+      ],
+      "task_count": 3
+    },
+    {
+      "id": 34,
+      "username": "lahwaacz",
+      "display_names": [
+        "Jakub Klinkovský"
+      ],
+      "task_count": 7
+    },
+    {
+      "id": 35,
+      "username": "meta",
+      "display_names": [
+        "Meta"
+      ],
+      "task_count": 6
+    },
+    {
+      "id": 36,
+      "username": "mk-j",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 37,
+      "username": "muralekrishnan",
+      "display_names": [
+        "Muralekrishnan R"
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 38,
+      "username": "nickchan",
+      "display_names": [
+        "Nic",
+        "Nic Chan"
+      ],
+      "task_count": 6
+    },
+    {
+      "id": 39,
+      "username": "philip",
+      "display_names": [
+        "Philip"
+      ],
+      "task_count": 2
+    },
+    {
+      "id": 40,
+      "username": "roshanjossey",
+      "display_names": [
+        "Roshan Jossy"
+      ],
+      "task_count": 4
+    },
+    {
+      "id": 41,
+      "username": "stevenwoodson",
+      "display_names": [
+        "Steven Woodson"
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 42,
+      "username": "todo",
+      "display_names": [
+        "TODO"
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 43,
+      "username": "tokudu",
+      "display_names": [],
+      "task_count": 1
+    },
+    {
+      "id": 44,
+      "username": "vinta",
+      "display_names": [
+        "Vinta"
+      ],
+      "task_count": 10
+    },
+    {
+      "id": 45,
+      "username": "yjlou",
+      "display_names": [],
+      "task_count": 5
+    }
+  ],
+  "branches": [
+    "a new branch called title-update with no merged request",
+    "a new branch with no merged request",
+    "a11yproject.com/redesign",
+    "build time debug",
+    "bump-doctocat",
+    "dialog",
+    "dialog-component",
+    "gh-page",
+    "markdown-figure-block",
+    "php52",
+    "redesign",
+    "the branch that implements the support of template strings"
+  ],
+  "labels": [
+    "BUG",
+    "OpenAPI Generator CLI",
+    "all except BUG",
+    "flaky-test",
+    "help needed",
+    "help wanted",
+    "question",
+    "questions"
+  ],
+  "ground_truth_facts": [
+    {
+      "task_id": 132,
+      "query": "How many commits did kilian make to a11yproject.com on March 5, 2023?",
+      "template": "How many commits did {{user}} make to {{repo}} on {{date}}?",
+      "params": {
+        "user": "kilian",
+        "repo": "a11yproject.com",
+        "date": "March 5, 2023"
+      },
+      "answer": [
+        1
+      ]
+    },
+    {
+      "task_id": 133,
+      "query": "How many commits did Eric make to a11yproject.com on March 2, 2023?",
+      "template": "How many commits did {{user}} make to {{repo}} on {{date}}?",
+      "params": {
+        "user": "Eric",
+        "repo": "a11yproject.com",
+        "date": "March 2, 2023"
+      },
+      "answer": [
+        2
+      ]
+    },
+    {
+      "task_id": 134,
+      "query": "How many commits did kilian make to a11yproject.com on March 1, 2023?",
+      "template": "How many commits did {{user}} make to {{repo}} on {{date}}?",
+      "params": {
+        "user": "kilian",
+        "repo": "a11yproject.com",
+        "date": "March 1, 2023"
+      },
+      "answer": [
+        0
+      ]
+    },
+    {
+      "task_id": 135,
+      "query": "How many commits did Eric and Kilian make to a11yproject.com on January 3, 2023?",
+      "template": "How many commits did {{user}} make to {{repo}} on {{date}}?",
+      "params": {
+        "user": "Eric and Kilian",
+        "repo": "a11yproject.com",
+        "date": "January 3, 2023"
+      },
+      "answer": [
+        1
+      ]
+    },
+    {
+      "task_id": 136,
+      "query": "How many commits did Steven Woodson make to a11y-webring.club on February 6, 2023?",
+      "template": "How many commits did {{user}} make to {{repo}} on {{date}}?",
+      "params": {
+        "user": "Steven Woodson",
+        "repo": "a11y-webring.club",
+        "date": "February 6, 2023"
+      },
+      "answer": [
+        5
+      ]
+    },
+    {
+      "task_id": 169,
+      "query": "Get the project ID(s) of my personal project(s) that received the most stars",
+      "template": "Get the project ID(s) of my personal project(s) that received {{description}}",
+      "params": {
+        "description": "the most stars"
+      },
+      "answer": [
+        187,
+        183
+      ]
+    },
+    {
+      "task_id": 170,
+      "query": "Get the project ID(s) of my personal project(s) that received the least stars",
+      "template": "Get the project ID(s) of my personal project(s) that received {{description}}",
+      "params": {
+        "description": "the least stars"
+      },
+      "answer": [
+        193,
+        190,
+        189,
+        188,
+        184,
+        181
+      ]
+    },
+    {
+      "task_id": 171,
+      "query": "Get the project ID(s) of my personal project(s) that received less than 5 stars",
+      "template": "Get the project ID(s) of my personal project(s) that received {{description}}",
+      "params": {
+        "description": "less than 5 stars"
+      },
+      "answer": [
+        182,
+        179,
+        186,
+        185,
+        193,
+        190,
+        189,
+        188,
+        184,
+        181
+      ]
+    },
+    {
+      "task_id": 172,
+      "query": "Get the project ID(s) of my personal project(s) that received no stars",
+      "template": "Get the project ID(s) of my personal project(s) that received {{description}}",
+      "params": {
+        "description": "no stars"
+      },
+      "answer": [
+        193,
+        190,
+        189,
+        188,
+        184,
+        181
+      ]
+    },
+    {
+      "task_id": 173,
+      "query": "Get whether my latest updated issue with \"better\" in its title is closed. Return a boolean (true if closed, false if opened).",
+      "template": "Get whether my latest updated issue with \"{{keyword}}\" in its title is closed. {{retrieved_data_format_spec}}.",
+      "params": {
+        "keyword": "better",
+        "retrieved_data_format_spec": "Return a boolean (true if closed, false if opened)"
+      },
+      "answer": [
+        false
+      ]
+    },
+    {
+      "task_id": 174,
+      "query": "Get whether my latest updated issue with \"feature\" in its title is closed. Return a boolean (true if closed, false if opened).",
+      "template": "Get whether my latest updated issue with \"{{keyword}}\" in its title is closed. {{retrieved_data_format_spec}}.",
+      "params": {
+        "keyword": "feature",
+        "retrieved_data_format_spec": "Return a boolean (true if closed, false if opened)"
+      },
+      "answer": [
+        false
+      ]
+    },
+    {
+      "task_id": 175,
+      "query": "Get whether my latest updated issue with \"dependency\" in its title is closed. Return a boolean (true if closed, false if opened).",
+      "template": "Get whether my latest updated issue with \"{{keyword}}\" in its title is closed. {{retrieved_data_format_spec}}.",
+      "params": {
+        "keyword": "dependency",
+        "retrieved_data_format_spec": "Return a boolean (true if closed, false if opened)"
+      },
+      "answer": [
+        false
+      ]
+    },
+    {
+      "task_id": 176,
+      "query": "Get whether my latest updated issue with \"theme editor\" in its title is closed. Return a boolean (true if closed, false if opened).",
+      "template": "Get whether my latest updated issue with \"{{keyword}}\" in its title is closed. {{retrieved_data_format_spec}}.",
+      "params": {
+        "keyword": "theme editor",
+        "retrieved_data_format_spec": "Return a boolean (true if closed, false if opened)"
+      },
+      "answer": [
+        false
+      ]
+    },
+    {
+      "task_id": 177,
+      "query": "Get whether my latest updated issue with \"homepage content\" in its title is closed. Return a boolean (true if closed, false if opened).",
+      "template": "Get whether my latest updated issue with \"{{keyword}}\" in its title is closed. {{retrieved_data_format_spec}}.",
+      "params": {
+        "keyword": "homepage content",
+        "retrieved_data_format_spec": "Return a boolean (true if closed, false if opened)"
+      },
+      "answer": [
+        true
+      ]
+    },
+    {
+      "task_id": 178,
+      "query": "Get whether my latest created issue with better in its title is closed. Return a boolean (true if closed, false if opened).",
+      "template": "Get whether my latest created issue with {{keyword}} in its title is closed. {{retrieved_data_format_spec}}.",
+      "params": {
+        "keyword": "better",
+        "retrieved_data_format_spec": "Return a boolean (true if closed, false if opened)"
+      },
+      "answer": [
+        true
+      ]
+    },
+    {
+      "task_id": 179,
+      "query": "Get whether my latest created issue with feature in its title is closed. Return a boolean (true if closed, false if opened).",
+      "template": "Get whether my latest created issue with {{keyword}} in its title is closed. {{retrieved_data_format_spec}}.",
+      "params": {
+        "keyword": "feature",
+        "retrieved_data_format_spec": "Return a boolean (true if closed, false if opened)"
+      },
+      "answer": [
+        true
+      ]
+    },
+    {
+      "task_id": 180,
+      "query": "Get whether my latest created issue with dependency in its title is closed. Return a boolean (true if closed, false if opened).",
+      "template": "Get whether my latest created issue with {{keyword}} in its title is closed. {{retrieved_data_format_spec}}.",
+      "params": {
+        "keyword": "dependency",
+        "retrieved_data_format_spec": "Return a boolean (true if closed, false if opened)"
+      },
+      "answer": [
+        false
+      ]
+    },
+    {
+      "task_id": 181,
+      "query": "Get whether my latest created issue with theme editor in its title is closed. Return a boolean (true if closed, false if opened).",
+      "template": "Get whether my latest created issue with {{keyword}} in its title is closed. {{retrieved_data_format_spec}}.",
+      "params": {
+        "keyword": "theme editor",
+        "retrieved_data_format_spec": "Return a boolean (true if closed, false if opened)"
+      },
+      "answer": [
+        false
+      ]
+    },
+    {
+      "task_id": 182,
+      "query": "Get whether my latest created issue with homepage content in its title is closed. Return a boolean (true if closed, false if opened).",
+      "template": "Get whether my latest created issue with {{keyword}} in its title is closed. {{retrieved_data_format_spec}}.",
+      "params": {
+        "keyword": "homepage content",
+        "retrieved_data_format_spec": "Return a boolean (true if closed, false if opened)"
+      },
+      "answer": [
+        true
+      ]
+    },
+    {
+      "task_id": 205,
+      "query": "How many commits did kilian make on March 5, 2023 for the current project?",
+      "template": "How many commits did {{user}} make on {{date}}{{modifier}} for the current project?",
+      "params": {
+        "user": "kilian",
+        "date": "March 5, 2023",
+        "modifier": ""
+      },
+      "answer": [
+        1
+      ]
+    },
+    {
+      "task_id": 206,
+      "query": "How many commits did Eric make on March 2, 2023 for the current project?",
+      "template": "How many commits did {{user}} make on {{date}}{{modifier}} for the current project?",
+      "params": {
+        "user": "Eric",
+        "date": "March 2, 2023",
+        "modifier": ""
+      },
+      "answer": [
+        2
+      ]
+    },
+    {
+      "task_id": 207,
+      "query": "How many commits did Eric and Kilian make on January 3, 2023 in total for the current project?",
+      "template": "How many commits did {{user}} make on {{date}}{{modifier}} for the current project?",
+      "params": {
+        "user": "Eric and Kilian",
+        "date": "January 3, 2023",
+        "modifier": " in total"
+      },
+      "answer": [
+        1
+      ]
+    },
+    {
+      "task_id": 259,
+      "query": "Get me my RSS feed token",
+      "template": "Get me my RSS feed token",
+      "params": {},
+      "answer": [
+        "TMN_bBn9Z48qVbUFZV45"
+      ]
+    },
+    {
+      "task_id": 293,
+      "query": "Get the URL to clone Super_Awesome_Robot with SSH. Return the URL only, without any additional details.",
+      "template": "Get the URL to clone {{repo}} with SSH. {{retrieved_data_format_spec}}.",
+      "params": {
+        "repo": "Super_Awesome_Robot",
+        "retrieved_data_format_spec": "Return the URL only, without any additional details"
+      },
+      "answer": [
+        "git@__SSH_HOST__:convexegg/super_awesome_robot.git"
+      ]
+    },
+    {
+      "task_id": 294,
+      "query": "Get the URL to clone ChatGPT with SSH. Return the URL only, without any additional details.",
+      "template": "Get the URL to clone {{repo}} with SSH. {{retrieved_data_format_spec}}.",
+      "params": {
+        "repo": "ChatGPT",
+        "retrieved_data_format_spec": "Return the URL only, without any additional details"
+      },
+      "answer": [
+        "git@__SSH_HOST__:convexegg/chatgpt.git"
+      ]
+    },
+    {
+      "task_id": 295,
+      "query": "Get the URL to clone metaseq with SSH. Return the URL only, without any additional details.",
+      "template": "Get the URL to clone {{repo}} with SSH. {{retrieved_data_format_spec}}.",
+      "params": {
+        "repo": "metaseq",
+        "retrieved_data_format_spec": "Return the URL only, without any additional details"
+      },
+      "answer": [
+        "git@__SSH_HOST__:root/metaseq.git"
+      ]
+    },
+    {
+      "task_id": 296,
+      "query": "Get the URL to clone the best GAN python implementation with SSH. Return the URL only, without any additional details.",
+      "template": "Get the URL to clone {{repo}} with SSH. {{retrieved_data_format_spec}}.",
+      "params": {
+        "repo": "the best GAN python implementation",
+        "retrieved_data_format_spec": "Return the URL only, without any additional details"
+      },
+      "answer": [
+        "git@__SSH_HOST__:eriklindernoren/PyTorch-GAN.git"
+      ]
+    },
+    {
+      "task_id": 297,
+      "query": "Get the URL to clone the most stared Covid related project with SSH. Return the URL only, without any additional details.",
+      "template": "Get the URL to clone {{repo}} with SSH. {{retrieved_data_format_spec}}.",
+      "params": {
+        "repo": "the most stared Covid related project",
+        "retrieved_data_format_spec": "Return the URL only, without any additional details"
+      },
+      "answer": [
+        "git@__SSH_HOST__:covid19india/covid19india-react.git"
+      ]
+    },
+    {
+      "task_id": 303,
+      "query": "How many commits did Kilian make during 2023 in the current repository?",
+      "template": "How many commits did {{user}} make {{period}} in the current repository?",
+      "params": {
+        "user": "Kilian",
+        "period": "during 2023"
+      },
+      "answer": [
+        1
+      ]
+    },
+    {
+      "task_id": 304,
+      "query": "How many commits did Eric Bailey make between start of Feb 2023 and end of May 2023 in the current repository?",
+      "template": "How many commits did {{user}} make {{period}} in the current repository?",
+      "params": {
+        "user": "Eric Bailey",
+        "period": "between start of Feb 2023 and end of May 2023"
+      },
+      "answer": [
+        14
+      ]
+    },
+    {
+      "task_id": 305,
+      "query": "How many commits did Philip make in Jan 2023 in the current repository?",
+      "template": "How many commits did {{user}} make {{period}} in the current repository?",
+      "params": {
+        "user": "Philip",
+        "period": "in Jan 2023"
+      },
+      "answer": [
+        0
+      ]
+    },
+    {
+      "task_id": 306,
+      "query": "How many commits did Anthony make between August 2022 through September 2022 in the current repository?",
+      "template": "How many commits did {{user}} make {{period}} in the current repository?",
+      "params": {
+        "user": "Anthony",
+        "period": "between August 2022 through September 2022"
+      },
+      "answer": [
+        0
+      ]
+    },
+    {
+      "task_id": 307,
+      "query": "How many commits did Nic Chan make on April 7th 2022 in the current repository?",
+      "template": "How many commits did {{user}} make {{period}} in the current repository?",
+      "params": {
+        "user": "Nic Chan",
+        "period": "on April 7th 2022"
+      },
+      "answer": [
+        5
+      ]
+    },
+    {
+      "task_id": 308,
+      "query": "Get the username(s) of the user(s) with the most commits to the primer/design project",
+      "template": "Get the username(s) of the user(s) with the most commits to the {{repo}} project",
+      "params": {
+        "repo": "primer/design"
+      },
+      "answer": [
+        "shawn.allen@github.com"
+      ]
+    },
+    {
+      "task_id": 309,
+      "query": "Get the username(s) of the user(s) with the most commits to the thoughtbot/administrate project",
+      "template": "Get the username(s) of the user(s) with the most commits to the {{repo}} project",
+      "params": {
+        "repo": "thoughtbot/administrate"
+      },
+      "answer": [
+        "wright.grayson@gmail.com"
+      ]
+    },
+    {
+      "task_id": 310,
+      "query": "Get the username(s) of the user(s) with the most commits to the AndroidSlidingUpPanel project",
+      "template": "Get the username(s) of the user(s) with the most commits to the {{repo}} project",
+      "params": {
+        "repo": "AndroidSlidingUpPanel"
+      },
+      "answer": [
+        "antonlopyrev@gmail.com"
+      ]
+    },
+    {
+      "task_id": 311,
+      "query": "Get the username(s) of the user(s) with the most commits to the Pytorch GAN project",
+      "template": "Get the username(s) of the user(s) with the most commits to the {{repo}} project",
+      "params": {
+        "repo": "Pytorch GAN"
+      },
+      "answer": [
+        "eriklindernoren@live.se"
+      ]
+    },
+    {
+      "task_id": 312,
+      "query": "Get the username(s) of the user(s) with the most commits to the csvkit project",
+      "template": "Get the username(s) of the user(s) with the most commits to the {{repo}} project",
+      "params": {
+        "repo": "csvkit"
+      },
+      "answer": [
+        "staringmonkey@gmail.com"
+      ]
+    },
+    {
+      "task_id": 314,
+      "query": "Get the full names of the top 3 contributors (by commit count) to primer/design repo",
+      "template": "Get the {{attribute}} of the top 3 contributors (by commit count) to {{repo}} repo{{retrieved_data_format_spec}}",
+      "params": {
+        "repo": "primer/design",
+        "attribute": "full names",
+        "retrieved_data_format_spec": ""
+      },
+      "answer": [
+        "Shawn Allen",
+        "Inayaili León",
+        "Aurora Pleguezuelo"
+      ]
+    },
+    {
+      "task_id": 315,
+      "query": "Get the email addresses of the top 3 contributors (by commit count) to Pytorch GAN repo",
+      "template": "Get the {{attribute}} of the top 3 contributors (by commit count) to {{repo}} repo{{retrieved_data_format_spec}}",
+      "params": {
+        "repo": "Pytorch GAN",
+        "attribute": "email addresses",
+        "retrieved_data_format_spec": ""
+      },
+      "answer": [
+        "eriklindernoren@live.se",
+        "eriklindernoren@gmail.com",
+        "pinnacle.chen@qq.com"
+      ]
+    },
+    {
+      "task_id": 316,
+      "query": "Get the email addresses of the top 3 contributors (by commit count) to facebook\"s guide on building react apps repo",
+      "template": "Get the {{attribute}} of the top 3 contributors (by commit count) to {{repo}} repo{{retrieved_data_format_spec}}",
+      "params": {
+        "repo": "facebook\"s guide on building react apps",
+        "attribute": "email addresses",
+        "retrieved_data_format_spec": ""
+      },
+      "answer": [
+        "dan.abramov@gmail.com",
+        "timer150@gmail.com",
+        "ian@iansutherland.ca"
+      ]
+    },
+    {
+      "task_id": 317,
+      "query": "Get the names and number of commits of the top 3 contributors (by commit count) to metaseq repo. Return a list of objects with keys \"first_name\", \"last_name\", and \"number_of_commits\".",
+      "template": "Get the {{attribute}} of the top 3 contributors (by commit count) to {{repo}} repo{{retrieved_data_format_spec}}",
+      "params": {
+        "repo": "metaseq",
+        "attribute": "names and number of commits",
+        "retrieved_data_format_spec": ". Return a list of objects with keys \"first_name\", \"last_name\", and \"number_of_commits\"."
+      },
+      "answer": [
+        {
+          "first_name": "Susan",
+          "last_name": "Zhang",
+          "number_of_commits": 70
+        },
+        {
+          "first_name": "Stephen",
+          "last_name": "Roller",
+          "number_of_commits": 51
+        },
+        {
+          "first_name": "Peter",
+          "last_name": "Albert",
+          "number_of_commits": 12
+        }
+      ]
+    },
+    {
+      "task_id": 318,
+      "query": "Get the last names of the top 3 contributors (by commit count) to 2019-nCov repo",
+      "template": "Get the {{attribute}} of the top 3 contributors (by commit count) to {{repo}} repo{{retrieved_data_format_spec}}",
+      "params": {
+        "repo": "2019-nCov",
+        "attribute": "last names",
+        "retrieved_data_format_spec": ""
+      },
+      "answer": [
+        "Lo",
+        "Chen",
+        "Chu"
+      ]
+    },
+    {
+      "task_id": 349,
+      "query": "Get the usernames of other users who have access to my repo gimmiethat.space",
+      "template": "Get the usernames of other users who have access to my repo {{repo}}",
+      "params": {
+        "repo": "gimmiethat.space"
+      },
+      "answer": [
+        "^@?yjlou$"
+      ]
+    },
+    {
+      "task_id": 350,
+      "query": "Get the usernames of other users who have access to my repo prism-theme",
+      "template": "Get the usernames of other users who have access to my repo {{repo}}",
+      "params": {
+        "repo": "prism-theme"
+      },
+      "answer": [
+        "^@?abisubramanya27$"
+      ]
+    },
+    {
+      "task_id": 784,
+      "query": "Get the email address of the contributor who has the most commits to branch master in the current repository",
+      "template": "Get the {{attribute}} of the contributor who has the most commits to branch {{branch_name}} in the current repository{{retrieved_data_format_spec}}",
+      "params": {
+        "branch_name": "master",
+        "attribute": "email address",
+        "retrieved_data_format_spec": ""
+      },
+      "answer": [
+        "secupwn@users.noreply.github.com"
+      ]
+    },
+    {
+      "task_id": 785,
+      "query": "Get the email address of the contributor who has the most commits to branch gh-page in the current repository",
+      "template": "Get the {{attribute}} of the contributor who has the most commits to branch {{branch_name}} in the current repository{{retrieved_data_format_spec}}",
+      "params": {
+        "branch_name": "gh-page",
+        "attribute": "email address",
+        "retrieved_data_format_spec": ""
+      },
+      "answer": [
+        "secupwn@users.noreply.github.com"
+      ]
+    },
+    {
+      "task_id": 786,
+      "query": "Get the number of commits of the contributor who has the most commits to branch master in the current repository",
+      "template": "Get the {{attribute}} of the contributor who has the most commits to branch {{branch_name}} in the current repository{{retrieved_data_format_spec}}",
+      "params": {
+        "branch_name": "master",
+        "attribute": "number of commits",
+        "retrieved_data_format_spec": ""
+      },
+      "answer": [
+        414
+      ]
+    },
+    {
+      "task_id": 787,
+      "query": "Get the number of followers of the contributor who has the most commits to branch master in the current repository",
+      "template": "Get the {{attribute}} of the contributor who has the most commits to branch {{branch_name}} in the current repository{{retrieved_data_format_spec}}",
+      "params": {
+        "branch_name": "master",
+        "attribute": "number of followers",
+        "retrieved_data_format_spec": ""
+      },
+      "answer": [
+        0
+      ]
+    },
+    {
+      "task_id": 788,
+      "query": "Get the full name, username, user location and email of the contributor who has the most commits to branch php52 in the current repository. Return a list of objects with keys \"full_name\", \"username\", \"user_location\", and \"email\".",
+      "template": "Get the {{attribute}} of the contributor who has the most commits to branch {{branch_name}} in the current repository{{retrieved_data_format_spec}}",
+      "params": {
+        "branch_name": "php52",
+        "attribute": "full name, username, user location and email",
+        "retrieved_data_format_spec": ". Return a list of objects with keys \"full_name\", \"username\", \"user_location\", and \"email\"."
+      },
+      "answer": [
+        {
+          "full_name": "Andrew M. Whalen",
+          "username": "^@?amwhalen$",
+          "user_location": "Massachusetts",
+          "email": "github@amwhalen.com"
+        }
+      ]
+    },
+    {
+      "task_id": 40070,
+      "source": "webchore",
+      "query": "Tell the project that meets the following condition: the one with the most open issues among all the projects on the website. Only return the (author)/(project_name) part.",
+      "params": {
+        "start_url": "__GITLAB__/",
+        "start_url_lite": "__GITLAB__/explore",
+        "target": "the one with the most open issues among all the projects on the website",
+        "answer": "OpenAPITools/openapi-generator |OR| OpenAPI Tools/openapi-generator",
+        "difficulty": "medium"
+      },
+      "answer": "OpenAPITools/openapi-generator |OR| OpenAPI Tools/openapi-generator"
+    },
+    {
+      "task_id": 40071,
+      "source": "webchore",
+      "query": "Tell the project that meets the following condition: the one for Javascript engine that displays beautiful math. Only return the (author)/(project_name) part.",
+      "params": {
+        "start_url": "__GITLAB__/",
+        "start_url_lite": "__GITLAB__/explore",
+        "target": "the one for Javascript engine that displays beautiful math",
+        "answer": "mathjax/MathJax |OR| MathJax/MathJax",
+        "difficulty": "medium"
+      },
+      "answer": "mathjax/MathJax |OR| MathJax/MathJax"
+    },
+    {
+      "task_id": 40072,
+      "source": "webchore",
+      "query": "Tell the project that meets the following condition: the repository with already merged PRs assigned to me most recently. Only return the (author)/(project_name) part.",
+      "params": {
+        "start_url": "__GITLAB__/",
+        "start_url_lite": "__GITLAB__/explore",
+        "target": "the repository with already merged PRs assigned to me most recently",
+        "answer": "a11yproject/a11yproject.com |OR| The A11Y Project/a11yproject.com",
+        "difficulty": "medium"
+      },
+      "answer": "a11yproject/a11yproject.com |OR| The A11Y Project/a11yproject.com"
+    },
+    {
+      "task_id": 40073,
+      "source": "webchore",
+      "query": "Tell the project that meets the following condition: the one with the smallest number of PRs among the projects by Facebook. Only return the (author)/(project_name) part.",
+      "params": {
+        "start_url": "__GITLAB__/",
+        "start_url_lite": "__GITLAB__/explore",
+        "target": "the one with the smallest number of PRs among the projects by Facebook",
+        "answer": "facebook/buck |OR| Meta/buck",
+        "difficulty": "medium"
+      },
+      "answer": "facebook/buck |OR| Meta/buck"
+    },
+    {
+      "task_id": 40074,
+      "source": "webchore",
+      "query": "Tell the project that meets the following condition: the one for a Chrome extention that one of my followers hosts. Only return the (author)/(project_name) part.",
+      "params": {
+        "start_url": "__GITLAB__/",
+        "start_url_lite": "__GITLAB__/explore",
+        "target": "the one for a Chrome extention that one of my followers hosts",
+        "answer": "panicsteve/cloud-to-butt |OR| Steven Frank/cloud-to-butt",
+        "difficulty": "hard"
+      },
+      "answer": "panicsteve/cloud-to-butt |OR| Steven Frank/cloud-to-butt"
+    },
+    {
+      "task_id": 40075,
+      "source": "webchore",
+      "query": "Tell the project that meets the following condition: the repository with the most forks, neither hosted nor forked by me, and updated most recently. Only return the (author)/(project_name) part.",
+      "params": {
+        "start_url": "__GITLAB__/",
+        "start_url_lite": "__GITLAB__/explore",
+        "target": "the repository with the most forks, neither hosted nor forked by me, and updated most recently",
+        "answer": "Roshanjossey/nvidia-patch |OR| Roshan Jossy/timeit",
+        "difficulty": "hard"
+      },
+      "answer": "Roshanjossey/nvidia-patch |OR| Roshan Jossy/timeit"
+    },
+    {
+      "task_id": 40076,
+      "source": "webchore",
+      "query": "Tell the project that meets the following condition: Project ID 1. Only return the (author)/(project_name) part.",
+      "params": {
+        "start_url": "__GITLAB__/",
+        "start_url_lite": "__GITLAB__/explore",
+        "target": "Project ID 1",
+        "answer": "gitlab-instance-58545a48/Monitoring |OR| GitLab Instance/Monitoring",
+        "difficulty": "hard"
+      },
+      "answer": "gitlab-instance-58545a48/Monitoring |OR| GitLab Instance/Monitoring"
+    },
+    {
+      "task_id": 40080,
+      "source": "webchore",
+      "query": "Tell me the file name that was changed in at least two of the 4 most recently updated all PRs in this respository. Return the path to the file and \"N/A\" if such file does not exist. If there are multiple applicable files, return all of them separated by commas.",
+      "params": {
+        "start_url": "__GITLAB__/thoughtbot/administrate",
+        "start_url_lite": "__GITLAB__/thoughtbot/administrate/-/merge_requests",
+        "PRnumber": "4",
+        "answer": "N/A",
+        "difficulty": "medium"
+      },
+      "answer": "N/A"
+    },
+    {
+      "task_id": 40081,
+      "source": "webchore",
+      "query": "Tell me the file name that was changed in at least two of the 5 most recently updated all PRs in this respository. Return the path to the file and \"N/A\" if such file does not exist. If there are multiple applicable files, return all of them separated by commas.",
+      "params": {
+        "start_url": "__GITLAB__/igraph/igraph",
+        "start_url_lite": "__GITLAB__/igraph/igraph/-/merge_requests",
+        "PRnumber": "5",
+        "answer": "interfaces/functions.def",
+        "difficulty": "medium"
+      },
+      "answer": "interfaces/functions.def"
+    },
+    {
+      "task_id": 40082,
+      "source": "webchore",
+      "query": "Tell me the file name that was changed in at least two of the 5 most recently updated all PRs in this respository. Return the path to the file and \"N/A\" if such file does not exist. If there are multiple applicable files, return all of them separated by commas.",
+      "params": {
+        "start_url": "__GITLAB__/geeeeeeeeek/electronic-wechat",
+        "start_url_lite": "__GITLAB__/geeeeeeeeek/electronic-wechat/-/merge_requests",
+        "PRnumber": "5",
+        "answer": "src/windows/controllers/app_tray.js",
+        "difficulty": "medium"
+      },
+      "answer": "src/windows/controllers/app_tray.js"
+    },
+    {
+      "task_id": 40083,
+      "source": "webchore",
+      "query": "Tell me the file name that was changed in at least two of the 4 most recently updated all PRs in this respository. Return the path to the file and \"N/A\" if such file does not exist. If there are multiple applicable files, return all of them separated by commas.",
+      "params": {
+        "start_url": "__GITLAB__/quickfixgo/quickfix",
+        "start_url_lite": "__GITLAB__/quickfixgo/quickfix/-/merge_requests",
+        "PRnumber": "4",
+        "answer": "cmd/generate-fix/internal/template_helpers.go",
+        "difficulty": "medium"
+      },
+      "answer": "cmd/generate-fix/internal/template_helpers.go"
+    },
+    {
+      "task_id": 40084,
+      "source": "webchore",
+      "query": "Tell me the file name that was changed in at least two of the 3 most recently updated all PRs in this respository. Return the path to the file and \"N/A\" if such file does not exist. If there are multiple applicable files, return all of them separated by commas.",
+      "params": {
+        "start_url": "__GITLAB__/http-party/node-http-proxy",
+        "start_url_lite": "__GITLAB__/http-party/node-http-proxy/-/merge_requests",
+        "PRnumber": "3",
+        "answer": "package-lock.json",
+        "difficulty": "medium"
+      },
+      "answer": "package-lock.json"
+    },
+    {
+      "task_id": 40090,
+      "source": "webchore",
+      "query": "What is the URL to visit first if I want to look into my tweets without going to the twitter.com website according to the readme? Only return the url.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/twbs/bootstrap",
+        "question": "What is the URL to visit first if I want to look into my tweets without going to the twitter.com website",
+        "format": "Only return the url",
+        "answer": "https://github.com/amwhalen/archive-my-tweets/archive/master.zip",
+        "difficulty": "medium"
+      },
+      "answer": "https://github.com/amwhalen/archive-my-tweets/archive/master.zip"
+    },
+    {
+      "task_id": 40091,
+      "source": "webchore",
+      "query": "What could be Abishek S's student number according to the readme? Only return the student number.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/abisubramanya27/CS6910_Assignment2",
+        "question": "What could be Abishek S's student number",
+        "format": "Only return the student number",
+        "answer": "EE18B001",
+        "difficulty": "hard"
+      },
+      "answer": "EE18B001"
+    },
+    {
+      "task_id": 40092,
+      "source": "webchore",
+      "query": "What would be the command to execute if I get an import error from ffmpeg according to the readme? Only return the command and its arguments.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/kkroening/ffmpeg-python",
+        "question": "What would be the command to execute if I get an import error from ffmpeg",
+        "format": "Only return the command and its arguments",
+        "answer": "pip install ffmpeg-python",
+        "difficulty": "medium"
+      },
+      "answer": "pip install ffmpeg-python"
+    },
+    {
+      "task_id": 40093,
+      "source": "webchore",
+      "query": "What command should I add to the Gemfile to use crashtech/torque-postgresql for Rails version 6.1.7.1 according to the readme? .",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/crashtech/torque-postgresql",
+        "question": "What command should I add to the Gemfile to use crashtech/torque-postgresql for Rails version 6.1.7.1",
+        "format": "",
+        "answer": "gem 'torque-postgresql', '~> 2.0.4'",
+        "difficulty": "medium"
+      },
+      "answer": "gem 'torque-postgresql', '~> 2.0.4'"
+    },
+    {
+      "task_id": 40094,
+      "source": "webchore",
+      "query": "What is the command to execute first to use the NVENC and NvFBC patches for Nvidia drivers without a driver according to the readme? Only return the command and its arguments.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/keylase/nvidia-patch",
+        "question": "What is the command to execute first to use the NVENC and NvFBC patches for Nvidia drivers without a driver",
+        "format": "Only return the command and its arguments",
+        "answer": "mkdir /opt/nvidia && cd /opt/nvidia",
+        "difficulty": "medium"
+      },
+      "answer": "mkdir /opt/nvidia && cd /opt/nvidia"
+    },
+    {
+      "task_id": 40100,
+      "source": "webchore",
+      "query": "List the name of the branches in opensourcediversity/opensourcediversity.org that is more than 10 commits behind the default. Sort the branches by their names in alphabetical order, and output each branch in a separate line. Return 'N/A' if such branch does not exist.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/opensourcediversity/opensourcediversity.org/-/branches",
+        "repository": "opensourcediversity/opensourcediversity.org",
+        "count": "10",
+        "answer": "articles\nfaq\ngithub/fork/2201monesh/patch-1\ngithub/fork/Ahcatan/master\ngithub/fork/SANJAY072000/failing-html-checks-#123\ngithub/fork/bunnydays/faq\ngithub/fork/emmairwin/master\ngithub/fork/joelwass/twitterCardPic\ngithub/fork/kulendu/master\ngithub/fork/mayuribotre15/main\ngithub/fork/shub-garg/master\ngithub/fork/siddhanth339/master\nmore-projects\npublications",
+        "difficulty": "medium"
+      },
+      "answer": "articles\nfaq\ngithub/fork/2201monesh/patch-1\ngithub/fork/Ahcatan/master\ngithub/fork/SANJAY072000/failing-html-checks-#123\ngithub/fork/bunnydays/faq\ngithub/fork/emmairwin/master\ngithub/fork/joelwass/twitterCardPic\ngithub/fork/kulendu/master\ngithub/fork/mayuribotre15/main\ngithub/fork/shub-garg/master\ngithub/fork/siddhanth339/master\nmore-projects\npublications"
+    },
+    {
+      "task_id": 40101,
+      "source": "webchore",
+      "query": "List the name of the branches in my repository for removing board movement events from the GitHub Issue timeline that is more than 10 commits behind the default. Sort the branches by their names in alphabetical order, and output each branch in a separate line. Return 'N/A' if such branch does not exist.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/byteblaze/remove-board-movement-events-from-the-github-issue-timeline/-/branches",
+        "repository": "my repository for removing board movement events from the GitHub Issue timeline",
+        "count": "10",
+        "answer": "N/A",
+        "difficulty": "medium"
+      },
+      "answer": "N/A"
+    },
+    {
+      "task_id": 40102,
+      "source": "webchore",
+      "query": "List the name of the branches in a list of awesome open source sysadmin resources that is more than 250 commits behind the default. Sort the branches by their names in alphabetical order, and output each branch in a separate line. Return 'N/A' if such branch does not exist.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/kahun/awesome-sysadmin/-/branches",
+        "repository": "a list of awesome open source sysadmin resources",
+        "count": "250",
+        "answer": "gh-pages\ngithub/fork/dstergiou/added-ip-address-management\ngithub/fork/tsaavik/master",
+        "difficulty": "hard"
+      },
+      "answer": "gh-pages\ngithub/fork/dstergiou/added-ip-address-management\ngithub/fork/tsaavik/master"
+    },
+    {
+      "task_id": 40103,
+      "source": "webchore",
+      "query": "List the name of the branches in the repository for an app that archives my tweets that is more than 10 commits behind the default. Sort the branches by their names in alphabetical order, and output each branch in a separate line. Return 'N/A' if such branch does not exist.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/amwhalen/archive-my-tweets/-/branches",
+        "repository": "the repository for an app that archives my tweets",
+        "count": "10",
+        "answer": "php52",
+        "difficulty": "hard"
+      },
+      "answer": "php52"
+    },
+    {
+      "task_id": 40104,
+      "source": "webchore",
+      "query": "List the name of the branches in the repository for a script to download pages from Arch Wiki that is more than 3 commits behind the default. Sort the branches by their names in alphabetical order, and output each branch in a separate line. Return 'N/A' if such branch does not exist.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/lahwaacz/arch-wiki-docs/-/branches",
+        "repository": "the repository for a script to download pages from Arch Wiki",
+        "count": "3",
+        "answer": "github/fork/PQYPLZXHGF/patch-1\ngithub/fork/kiasoc5/index.html",
+        "difficulty": "medium"
+      },
+      "answer": "github/fork/PQYPLZXHGF/patch-1\ngithub/fork/kiasoc5/index.html"
+    },
+    {
+      "task_id": 40110,
+      "source": "webchore",
+      "query": "List all tags in OpenAPI Generator in the alphabetical order and show the date of the latest commit that each tag points to in UTC. Return 'N/A' if no tag exists. Output in the following format, each in a separate line-> (tag name):(yyyy-mm-dd)",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/OpenAPITools/openapi-generator/-/tags",
+        "repository": "OpenAPI Generator",
+        "answer": "2.0.17:2014-08-26\nswagger-codegen_2.9.1-1.1:2012-04-13\nswagger-codegen_2.9.1-2.0.0:2012-10-11\nswagger-codegen_2.9.1-2.0.1:2012-12-05\nv2.0.13:2014-02-21\nv2.0.18:2015-02-09\nv2.1.0-M1:2015-02-17\nv2.1.0-M2:2015-04-08\nv2.1.1-M1:2015-02-18\nv2.1.2:2015-06-09\nv2.1.2-M1:2015-02-24\nv2.1.3:2015-08-24\nv2.1.4:2015-10-26\nv2.1.5:2016-01-06\nv2.1.6:2016-04-06\nv2.2.0:2016-07-17\nv2.2.1:2016-08-07\nv2.2.2:2017-03-01\nv2.2.3:2017-07-15\nv2.3.0:2017-12-22\nv2.3.1:2018-01-13\nv3.0.0:2018-06-01\nv3.0.0-rc0:2018-01-24\nv3.0.1:2018-06-11\nv3.0.2:2018-06-18\nv3.0.3:2018-06-27\nv3.1.0:2018-07-06\nv3.1.1:2018-07-18\nv3.1.2:2018-07-25\nv3.2.0:2018-08-06\nv3.2.1:2018-08-14\nv3.2.2:2018-08-22\nv3.2.3:2018-08-30\nv3.3.0:2018-10-01\nv3.3.1:2018-10-15\nv3.3.2:2018-10-31\nv3.3.3:2018-11-15\nv3.3.4:2018-11-30\nv4.0.0:2019-05-13\nv4.0.0-beta:2018-12-31\nv4.0.0-beta2:2019-01-31\nv4.0.0-beta3:2019-04-04\nv4.0.1:2019-05-31\nv4.0.2:2019-06-20\nv4.0.3:2019-07-09\nv4.1.0:2019-08-09\nv4.1.1:2019-08-26\nv4.1.2:2019-09-11\nv4.1.3:2019-10-04\nv4.2.0:2019-10-31\nv4.2.1:2019-11-15\nv4.2.2:2019-12-02\nv4.2.3:2020-01-31\nv4.3.0:2020-03-27\nv4.3.1:2020-05-06\nv5.0.0:2020-12-21\nv5.0.0-beta:2020-06-29\nv5.0.0-beta2:2020-09-04\nv5.0.0-beta3:2020-11-20\nv5.0.1:2021-02-06\nv5.1.0:2021-03-20\nv5.1.1:2021-05-07\nv5.2.0:2021-07-09\nv5.2.1:2021-08-16\nv5.3.0:2021-10-24\nv5.3.1:2021-12-21\nv5.4.0:2022-01-31\nv6.0.0:2022-05-26\nv6.0.0-beta:2022-04-04\nv6.0.1:2022-07-03\nv6.1.0:2022-09-11\nv6.2.0:2022-09-24\nv6.2.1:2022-11-01\nv6.3.0:2023-02-01\nv6.4.0:2023-02-19",
+        "difficulty": "hard"
+      },
+      "answer": "2.0.17:2014-08-26\nswagger-codegen_2.9.1-1.1:2012-04-13\nswagger-codegen_2.9.1-2.0.0:2012-10-11\nswagger-codegen_2.9.1-2.0.1:2012-12-05\nv2.0.13:2014-02-21\nv2.0.18:2015-02-09\nv2.1.0-M1:2015-02-17\nv2.1.0-M2:2015-04-08\nv2.1.1-M1:2015-02-18\nv2.1.2:2015-06-09\nv2.1.2-M1:2015-02-24\nv2.1.3:2015-08-24\nv2.1.4:2015-10-26\nv2.1.5:2016-01-06\nv2.1.6:2016-04-06\nv2.2.0:2016-07-17\nv2.2.1:2016-08-07\nv2.2.2:2017-03-01\nv2.2.3:2017-07-15\nv2.3.0:2017-12-22\nv2.3.1:2018-01-13\nv3.0.0:2018-06-01\nv3.0.0-rc0:2018-01-24\nv3.0.1:2018-06-11\nv3.0.2:2018-06-18\nv3.0.3:2018-06-27\nv3.1.0:2018-07-06\nv3.1.1:2018-07-18\nv3.1.2:2018-07-25\nv3.2.0:2018-08-06\nv3.2.1:2018-08-14\nv3.2.2:2018-08-22\nv3.2.3:2018-08-30\nv3.3.0:2018-10-01\nv3.3.1:2018-10-15\nv3.3.2:2018-10-31\nv3.3.3:2018-11-15\nv3.3.4:2018-11-30\nv4.0.0:2019-05-13\nv4.0.0-beta:2018-12-31\nv4.0.0-beta2:2019-01-31\nv4.0.0-beta3:2019-04-04\nv4.0.1:2019-05-31\nv4.0.2:2019-06-20\nv4.0.3:2019-07-09\nv4.1.0:2019-08-09\nv4.1.1:2019-08-26\nv4.1.2:2019-09-11\nv4.1.3:2019-10-04\nv4.2.0:2019-10-31\nv4.2.1:2019-11-15\nv4.2.2:2019-12-02\nv4.2.3:2020-01-31\nv4.3.0:2020-03-27\nv4.3.1:2020-05-06\nv5.0.0:2020-12-21\nv5.0.0-beta:2020-06-29\nv5.0.0-beta2:2020-09-04\nv5.0.0-beta3:2020-11-20\nv5.0.1:2021-02-06\nv5.1.0:2021-03-20\nv5.1.1:2021-05-07\nv5.2.0:2021-07-09\nv5.2.1:2021-08-16\nv5.3.0:2021-10-24\nv5.3.1:2021-12-21\nv5.4.0:2022-01-31\nv6.0.0:2022-05-26\nv6.0.0-beta:2022-04-04\nv6.0.1:2022-07-03\nv6.1.0:2022-09-11\nv6.2.0:2022-09-24\nv6.2.1:2022-11-01\nv6.3.0:2023-02-01\nv6.4.0:2023-02-19"
+    },
+    {
+      "task_id": 40111,
+      "source": "webchore",
+      "query": "List all tags in the C++ JSON library for Arduino in the alphabetical order and show the date of the latest commit that each tag points to in UTC. Return 'N/A' if no tag exists. Output in the following format, each in a separate line-> (tag name):(yyyy-mm-dd)",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/bblanchon/ArduinoJson/-/tags",
+        "repository": "the C++ JSON library for Arduino",
+        "answer": "v1.0:2014-01-23\nv1.1:2014-02-27\nv1.2:2014-03-03\nv2.0:2014-07-09\nv2.1:2014-07-15\nv3.0:2014-07-23\nv3.1:2014-08-03\nv3.2:2014-08-04\nv3.3:2014-09-01\nv3.4:2014-09-09\nv4.0:2014-11-29\nv4.0-beta-1:2014-11-11\nv4.1:2014-12-21\nv4.2:2015-02-07\nv4.3:2015-05-03\nv4.4:2015-05-09\nv4.5:2015-06-10\nv4.6:2015-08-01\nv4.6.1:2015-08-02\nv5.0-beta-1:2015-05-31\nv5.0-beta-2:2015-07-10\nv5.0-beta-3:2015-07-25\nv5.0-beta-4:2015-07-27\nv5.0-beta-5:2015-08-10\nv5.0.0:2015-08-20\nv5.0.1:2015-08-24\nv5.0.2:2015-09-01\nv5.0.3:2015-09-19\nv5.0.4:2015-09-29\nv5.0.5:2015-10-30\nv5.0.6:2015-11-09\nv5.0.7:2015-11-25\nv5.0.8:2016-01-31\nv5.1.0:2016-02-14\nv5.1.0-beta.1:2016-02-01\nv5.1.0-beta.2:2016-02-06\nv5.1.1:2016-02-23\nv5.10.0:2017-05-20\nv5.10.1:2017-06-12\nv5.11.0:2017-06-25\nv5.11.1:2017-07-14\nv5.11.2:2017-10-17\nv5.12.0:2017-12-11\nv5.13.0:2018-01-19\nv5.13.1:2018-02-19\nv5.13.2:2018-06-01\nv5.13.3:2018-10-06\nv5.13.4:2018-12-04\nv5.13.5:2019-03-01\nv5.2.0:2016-04-16\nv5.3.0:2016-04-30\nv5.4.0:2016-05-06\nv5.5.0:2016-05-22\nv5.5.1:2016-06-06\nv5.6.0:2016-06-22\nv5.6.1:2016-06-24\nv5.6.2:2016-06-30\nv5.6.3:2016-07-19\nv5.6.4:2016-07-20\nv5.6.5:2016-08-15\nv5.6.6:2016-08-29\nv5.6.7:2016-09-20\nv5.7.0:2016-11-06\nv5.7.1:2016-11-13\nv5.7.2:2016-11-23\nv5.7.3:2016-12-10\nv5.8.0:2017-01-03\nv5.8.1:2017-01-15\nv5.8.2:2017-01-22\nv5.8.3:2017-02-11\nv5.8.4:2017-03-26\nv5.9.0:2017-04-24\nv6.0.0-beta:2018-06-07\nv6.0.1-beta:2018-06-11\nv6.1.0-beta:2018-07-02\nv6.10.0:2019-03-22\nv6.10.1:2019-04-23\nv6.11.0:2019-05-26\nv6.11.1:2019-06-21\nv6.11.2:2019-07-08\nv6.11.3:2019-07-22\nv6.11.4:2019-08-12\nv6.11.5:2019-08-23\nv6.12.0:2019-09-05\nv6.13.0:2019-11-01\nv6.14.0:2020-01-16\nv6.14.1:2020-01-27\nv6.15.0:2020-03-22\nv6.15.1:2020-04-08\nv6.15.2:2020-05-15\nv6.16.0:2020-08-01\nv6.16.1:2020-08-04\nv6.17.0:2020-10-19\nv6.17.1:2020-11-07\nv6.17.2:2020-11-14\nv6.17.3:2021-02-15\nv6.18.0:2021-05-05\nv6.18.1:2021-07-03\nv6.18.2:2021-07-19\nv6.18.3:2021-07-27\nv6.18.4:2021-09-06\nv6.18.5:2021-09-28\nv6.19.0:2022-01-08\nv6.19.1:2022-01-14\nv6.19.2:2022-02-14\nv6.19.3:2022-03-08\nv6.19.4:2022-04-05\nv6.2.0-beta:2018-07-12\nv6.2.1-beta:2018-07-17\nv6.2.2-beta:2018-07-18\nv6.2.3-beta:2018-07-19\nv6.20.0:2022-12-26\nv6.20.1:2023-02-08\nv6.21.0:2023-03-14\nv6.3.0-beta:2018-08-31\nv6.4.0-beta:2018-09-11\nv6.5.0-beta:2018-10-13\nv6.6.0-beta:2018-11-13\nv6.7.0-beta:2018-12-07\nv6.8.0-beta:2019-01-30\nv6.9.0:2019-02-26\nv6.9.1:2019-03-01",
+        "difficulty": "hard"
+      },
+      "answer": "v1.0:2014-01-23\nv1.1:2014-02-27\nv1.2:2014-03-03\nv2.0:2014-07-09\nv2.1:2014-07-15\nv3.0:2014-07-23\nv3.1:2014-08-03\nv3.2:2014-08-04\nv3.3:2014-09-01\nv3.4:2014-09-09\nv4.0:2014-11-29\nv4.0-beta-1:2014-11-11\nv4.1:2014-12-21\nv4.2:2015-02-07\nv4.3:2015-05-03\nv4.4:2015-05-09\nv4.5:2015-06-10\nv4.6:2015-08-01\nv4.6.1:2015-08-02\nv5.0-beta-1:2015-05-31\nv5.0-beta-2:2015-07-10\nv5.0-beta-3:2015-07-25\nv5.0-beta-4:2015-07-27\nv5.0-beta-5:2015-08-10\nv5.0.0:2015-08-20\nv5.0.1:2015-08-24\nv5.0.2:2015-09-01\nv5.0.3:2015-09-19\nv5.0.4:2015-09-29\nv5.0.5:2015-10-30\nv5.0.6:2015-11-09\nv5.0.7:2015-11-25\nv5.0.8:2016-01-31\nv5.1.0:2016-02-14\nv5.1.0-beta.1:2016-02-01\nv5.1.0-beta.2:2016-02-06\nv5.1.1:2016-02-23\nv5.10.0:2017-05-20\nv5.10.1:2017-06-12\nv5.11.0:2017-06-25\nv5.11.1:2017-07-14\nv5.11.2:2017-10-17\nv5.12.0:2017-12-11\nv5.13.0:2018-01-19\nv5.13.1:2018-02-19\nv5.13.2:2018-06-01\nv5.13.3:2018-10-06\nv5.13.4:2018-12-04\nv5.13.5:2019-03-01\nv5.2.0:2016-04-16\nv5.3.0:2016-04-30\nv5.4.0:2016-05-06\nv5.5.0:2016-05-22\nv5.5.1:2016-06-06\nv5.6.0:2016-06-22\nv5.6.1:2016-06-24\nv5.6.2:2016-06-30\nv5.6.3:2016-07-19\nv5.6.4:2016-07-20\nv5.6.5:2016-08-15\nv5.6.6:2016-08-29\nv5.6.7:2016-09-20\nv5.7.0:2016-11-06\nv5.7.1:2016-11-13\nv5.7.2:2016-11-23\nv5.7.3:2016-12-10\nv5.8.0:2017-01-03\nv5.8.1:2017-01-15\nv5.8.2:2017-01-22\nv5.8.3:2017-02-11\nv5.8.4:2017-03-26\nv5.9.0:2017-04-24\nv6.0.0-beta:2018-06-07\nv6.0.1-beta:2018-06-11\nv6.1.0-beta:2018-07-02\nv6.10.0:2019-03-22\nv6.10.1:2019-04-23\nv6.11.0:2019-05-26\nv6.11.1:2019-06-21\nv6.11.2:2019-07-08\nv6.11.3:2019-07-22\nv6.11.4:2019-08-12\nv6.11.5:2019-08-23\nv6.12.0:2019-09-05\nv6.13.0:2019-11-01\nv6.14.0:2020-01-16\nv6.14.1:2020-01-27\nv6.15.0:2020-03-22\nv6.15.1:2020-04-08\nv6.15.2:2020-05-15\nv6.16.0:2020-08-01\nv6.16.1:2020-08-04\nv6.17.0:2020-10-19\nv6.17.1:2020-11-07\nv6.17.2:2020-11-14\nv6.17.3:2021-02-15\nv6.18.0:2021-05-05\nv6.18.1:2021-07-03\nv6.18.2:2021-07-19\nv6.18.3:2021-07-27\nv6.18.4:2021-09-06\nv6.18.5:2021-09-28\nv6.19.0:2022-01-08\nv6.19.1:2022-01-14\nv6.19.2:2022-02-14\nv6.19.3:2022-03-08\nv6.19.4:2022-04-05\nv6.2.0-beta:2018-07-12\nv6.2.1-beta:2018-07-17\nv6.2.2-beta:2018-07-18\nv6.2.3-beta:2018-07-19\nv6.20.0:2022-12-26\nv6.20.1:2023-02-08\nv6.21.0:2023-03-14\nv6.3.0-beta:2018-08-31\nv6.4.0-beta:2018-09-11\nv6.5.0-beta:2018-10-13\nv6.6.0-beta:2018-11-13\nv6.7.0-beta:2018-12-07\nv6.8.0-beta:2019-01-30\nv6.9.0:2019-02-26\nv6.9.1:2019-03-01"
+    },
+    {
+      "task_id": 40112,
+      "source": "webchore",
+      "query": "List all tags in autojump in the alphabetical order and show the date of the latest commit that each tag points to in UTC. Return 'N/A' if no tag exists. Output in the following format, each in a separate line-> (tag name):(yyyy-mm-dd)",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/wting/autojump/-/tags",
+        "repository": "autojump",
+        "answer": "release-v1:2009-03-02\nrelease-v10:2010-06-22\nrelease-v11:2010-07-07\nrelease-v12:2010-08-25\nrelease-v13:2010-10-01\nrelease-v14:2010-12-03\nrelease-v15:2011-03-30\nrelease-v16:2011-07-28\nrelease-v17:2011-09-08\nrelease-v18:2011-11-18\nrelease-v19:2011-12-11\nrelease-v2:2009-04-17\nrelease-v20:2012-04-12\nrelease-v20.5:2012-06-16\nrelease-v20.6:2012-06-16\nrelease-v20.7:2012-06-16\nrelease-v20.8:2012-06-16\nrelease-v20.9:2012-06-16\nrelease-v21.0.2:2012-10-31\nrelease-v21.0.3:2012-11-01\nrelease-v21.0.5:2012-11-21\nrelease-v21.1.0:2012-11-22\nrelease-v21.1.2:2012-11-24\nrelease-v21.1.4:2012-12-15\nrelease-v21.2.0:2012-12-15\nrelease-v21.2.1:2012-12-17\nrelease-v21.3.0:2013-01-05\nrelease-v21.4.2:2013-02-01\nrelease-v21.5.1:2013-02-25\nrelease-v21.5.8:2013-04-29\nrelease-v21.6.8:2013-05-25\nrelease-v21.6.9:2013-05-29\nrelease-v21.7.1:2013-11-26\nrelease-v22.2.2:2014-12-16\nrelease-v22.2.4:2015-01-25\nrelease-v22.3.0:2016-02-02\nrelease-v22.3.1:2016-06-19\nrelease-v22.3.2:2016-06-22\nrelease-v22.3.3:2016-07-14\nrelease-v22.3.4:2016-07-14\nrelease-v22.3.5:2016-09-09\nrelease-v22.4.0:2016-09-30\nrelease-v22.4.1:2016-09-30\nrelease-v22.5.0:2016-10-01\nrelease-v22.5.1:2017-02-17\nrelease-v22.5.3:2018-09-09\nrelease-v3:2009-05-13\nrelease-v4:2009-05-14\nrelease-v5:2009-05-30\nrelease-v6:2009-09-16\nrelease-v7:2009-10-03\nrelease-v8:2010-01-26\nrelease-v9:2010-04-27",
+        "difficulty": "hard"
+      },
+      "answer": "release-v1:2009-03-02\nrelease-v10:2010-06-22\nrelease-v11:2010-07-07\nrelease-v12:2010-08-25\nrelease-v13:2010-10-01\nrelease-v14:2010-12-03\nrelease-v15:2011-03-30\nrelease-v16:2011-07-28\nrelease-v17:2011-09-08\nrelease-v18:2011-11-18\nrelease-v19:2011-12-11\nrelease-v2:2009-04-17\nrelease-v20:2012-04-12\nrelease-v20.5:2012-06-16\nrelease-v20.6:2012-06-16\nrelease-v20.7:2012-06-16\nrelease-v20.8:2012-06-16\nrelease-v20.9:2012-06-16\nrelease-v21.0.2:2012-10-31\nrelease-v21.0.3:2012-11-01\nrelease-v21.0.5:2012-11-21\nrelease-v21.1.0:2012-11-22\nrelease-v21.1.2:2012-11-24\nrelease-v21.1.4:2012-12-15\nrelease-v21.2.0:2012-12-15\nrelease-v21.2.1:2012-12-17\nrelease-v21.3.0:2013-01-05\nrelease-v21.4.2:2013-02-01\nrelease-v21.5.1:2013-02-25\nrelease-v21.5.8:2013-04-29\nrelease-v21.6.8:2013-05-25\nrelease-v21.6.9:2013-05-29\nrelease-v21.7.1:2013-11-26\nrelease-v22.2.2:2014-12-16\nrelease-v22.2.4:2015-01-25\nrelease-v22.3.0:2016-02-02\nrelease-v22.3.1:2016-06-19\nrelease-v22.3.2:2016-06-22\nrelease-v22.3.3:2016-07-14\nrelease-v22.3.4:2016-07-14\nrelease-v22.3.5:2016-09-09\nrelease-v22.4.0:2016-09-30\nrelease-v22.4.1:2016-09-30\nrelease-v22.5.0:2016-10-01\nrelease-v22.5.1:2017-02-17\nrelease-v22.5.3:2018-09-09\nrelease-v3:2009-05-13\nrelease-v4:2009-05-14\nrelease-v5:2009-05-30\nrelease-v6:2009-09-16\nrelease-v7:2009-10-03\nrelease-v8:2010-01-26\nrelease-v9:2010-04-27"
+    },
+    {
+      "task_id": 40113,
+      "source": "webchore",
+      "query": "List all tags in my timeit project in the alphabetical order and show the date of the latest commit that each tag points to in UTC. Return 'N/A' if no tag exists. Output in the following format, each in a separate line-> (tag name):(yyyy-mm-dd)",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/byteblaze/timeit/-/tags",
+        "repository": "my timeit project",
+        "answer": "N/A",
+        "difficulty": "medium"
+      },
+      "answer": "N/A"
+    },
+    {
+      "task_id": 40114,
+      "source": "webchore",
+      "query": "List all tags in the angular-storage project by auth0 in the alphabetical order and show the date of the latest commit that each tag points to in UTC. Return 'N/A' if no tag exists. Output in the following format, each in a separate line-> (tag name):(yyyy-mm-dd)",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/auth0/angular-storage/-/tags",
+        "repository": "the angular-storage project by auth0",
+        "answer": "0.0.1:2014-10-02\n0.0.10:2015-04-17\n0.0.11:2015-05-18\n0.0.12:2015-07-22\n0.0.13:2015-07-23\n0.0.14:2016-03-25\n0.0.15:2016-04-03\n0.0.3:2014-10-07\n0.0.4:2014-10-07\n0.0.5:2014-10-08\n0.0.6:2014-10-08\nv0.0.7:2014-11-20\nv0.0.8:2014-12-10\nv0.0.9:2014-12-10",
+        "difficulty": "medium"
+      },
+      "answer": "0.0.1:2014-10-02\n0.0.10:2015-04-17\n0.0.11:2015-05-18\n0.0.12:2015-07-22\n0.0.13:2015-07-23\n0.0.14:2016-03-25\n0.0.15:2016-04-03\n0.0.3:2014-10-07\n0.0.4:2014-10-07\n0.0.5:2014-10-08\n0.0.6:2014-10-08\nv0.0.7:2014-11-20\nv0.0.8:2014-12-10\nv0.0.9:2014-12-10"
+    },
+    {
+      "task_id": 40120,
+      "source": "webchore",
+      "query": "Show the list of branches in opensourcediversity.org repository in descending order of the latest commit date. Output each branch name in a separate line.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/opensourcediversity/opensourcediversity.org/-/branches/all",
+        "repository": "opensourcediversity.org repository",
+        "answer": "github/fork/PhuocOng/peterbranch\ngithub/fork/uixaadi/my_first_contribution\nmain\ngithub/fork/2201monesh/patch-1\njg-ahcatan-add-projects\ngithub/fork/Richie1136/richie1136\ngithub/fork/SANJAY072000/failing-html-checks-#123\ngithub/fork/mayuribotre15/main\ngithub/fork/siddhanth339/master\ngithub/fork/emmairwin/master\ngithub/fork/Ahcatan/master\ngithub/fork/kulendu/master\ngithub/fork/shub-garg/master\ngithub/fork/joelwass/twitterCardPic\npublications\nmore-projects\nfaq\ngithub/fork/bunnydays/faq\narticles",
+        "difficulty": "medium"
+      },
+      "answer": "github/fork/PhuocOng/peterbranch\ngithub/fork/uixaadi/my_first_contribution\nmain\ngithub/fork/2201monesh/patch-1\njg-ahcatan-add-projects\ngithub/fork/Richie1136/richie1136\ngithub/fork/SANJAY072000/failing-html-checks-#123\ngithub/fork/mayuribotre15/main\ngithub/fork/siddhanth339/master\ngithub/fork/emmairwin/master\ngithub/fork/Ahcatan/master\ngithub/fork/kulendu/master\ngithub/fork/shub-garg/master\ngithub/fork/joelwass/twitterCardPic\npublications\nmore-projects\nfaq\ngithub/fork/bunnydays/faq\narticles"
+    },
+    {
+      "task_id": 40121,
+      "source": "webchore",
+      "query": "Show the list of branches in wting/autojump in descending order of the latest commit date. Output each branch name in a separate line.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/wting/autojump/-/branches/all",
+        "repository": "wting/autojump",
+        "answer": "github/fork/writeameer/master\ngithub/fork/Komi7/fix-git-clone-url\ngithub/fork/abubakrsiddq/repo-path-fix\ngithub/fork/geo7/patch-1\ngithub/fork/hustnzj/master\ngithub/fork/kianmeng/fix-typos\ngithub/fork/alanhoyle/master\ngithub/fork/opelr/557/support-for-initials\ngithub/fork/rico-chet/fix-duplicate-matches-with-legacy-py\nwting_default_python3\ngithub/fork/mattst88/mock\ngithub/fork/JS-Zheng/master\ngithub/fork/joebb97/master\ngithub/fork/DeepMechatronics/patch-1\ngithub/fork/faiz-crypto/patch-1\ngithub/fork/GlazerMann/patch-3\ngithub/fork/GlazerMann/patch-2\ngithub/fork/GlazerMann/patch-1\ngithub/fork/timgates42/bugfix_typo_requires\ngithub/fork/lxp521125/master\ngithub/fork/asellappen/master\ngithub/fork/mesmerx/master\ngithub/fork/maludwig/master\ngithub/fork/mbologna/patch-1\ngithub/fork/azriel91/feature/issue-356-support-git-bash-msysgit\ngithub/fork/ashwinvis/master\ngithub/fork/abravalheri/make-sh-file-posix\ngithub/fork/Tarik02/wsl-explorer\ngithub/fork/dalanicolai/patch-2\ngithub/fork/dalanicolai/patch-1\ngithub/fork/MrKriss/refactor-windows-tests\ngithub/fork/MrKriss/add-windows-ci-with-appveyor\ngithub/fork/MrKriss/master\ngithub/fork/floydpink/fix-for-windows\ngithub/fork/L-P/fix/child\ngithub/fork/wang-ye/patch-1\nmaster\ngithub/fork/eklitzke/master\ngithub/fork/orschiro/patch-1\ngithub/fork/LinuxMercedes/master\ngithub/fork/findstr/master\ngithub/fork/n4nagappan/master\ngithub/fork/pistole/tcsh\ngithub/fork/mqudsi/fish_no_dot\ngithub/fork/Vaelatern/VoidLinuxMention\ngithub/fork/kynan/patch-1\ngithub/fork/emanresusername/master\ngithub/fork/duganchen/master\ngithub/fork/cpmsmith/master\ngithub/fork/jared-hess/multi-dir-add\ngithub/fork/vkotovv/doc_fixes\ngithub/fork/ashwin/master\ngithub/fork/leni536/master\ngithub/fork/leonid-shevtsov/master\ngithub/fork/youtux/patch-1\ngithub/fork/grota/autocomplete_jc_jco",
+        "difficulty": "hard"
+      },
+      "answer": "github/fork/writeameer/master\ngithub/fork/Komi7/fix-git-clone-url\ngithub/fork/abubakrsiddq/repo-path-fix\ngithub/fork/geo7/patch-1\ngithub/fork/hustnzj/master\ngithub/fork/kianmeng/fix-typos\ngithub/fork/alanhoyle/master\ngithub/fork/opelr/557/support-for-initials\ngithub/fork/rico-chet/fix-duplicate-matches-with-legacy-py\nwting_default_python3\ngithub/fork/mattst88/mock\ngithub/fork/JS-Zheng/master\ngithub/fork/joebb97/master\ngithub/fork/DeepMechatronics/patch-1\ngithub/fork/faiz-crypto/patch-1\ngithub/fork/GlazerMann/patch-3\ngithub/fork/GlazerMann/patch-2\ngithub/fork/GlazerMann/patch-1\ngithub/fork/timgates42/bugfix_typo_requires\ngithub/fork/lxp521125/master\ngithub/fork/asellappen/master\ngithub/fork/mesmerx/master\ngithub/fork/maludwig/master\ngithub/fork/mbologna/patch-1\ngithub/fork/azriel91/feature/issue-356-support-git-bash-msysgit\ngithub/fork/ashwinvis/master\ngithub/fork/abravalheri/make-sh-file-posix\ngithub/fork/Tarik02/wsl-explorer\ngithub/fork/dalanicolai/patch-2\ngithub/fork/dalanicolai/patch-1\ngithub/fork/MrKriss/refactor-windows-tests\ngithub/fork/MrKriss/add-windows-ci-with-appveyor\ngithub/fork/MrKriss/master\ngithub/fork/floydpink/fix-for-windows\ngithub/fork/L-P/fix/child\ngithub/fork/wang-ye/patch-1\nmaster\ngithub/fork/eklitzke/master\ngithub/fork/orschiro/patch-1\ngithub/fork/LinuxMercedes/master\ngithub/fork/findstr/master\ngithub/fork/n4nagappan/master\ngithub/fork/pistole/tcsh\ngithub/fork/mqudsi/fish_no_dot\ngithub/fork/Vaelatern/VoidLinuxMention\ngithub/fork/kynan/patch-1\ngithub/fork/emanresusername/master\ngithub/fork/duganchen/master\ngithub/fork/cpmsmith/master\ngithub/fork/jared-hess/multi-dir-add\ngithub/fork/vkotovv/doc_fixes\ngithub/fork/ashwin/master\ngithub/fork/leni536/master\ngithub/fork/leonid-shevtsov/master\ngithub/fork/youtux/patch-1\ngithub/fork/grota/autocomplete_jc_jco"
+    },
+    {
+      "task_id": 40122,
+      "source": "webchore",
+      "query": "Show the list of branches in my cloud-to-butt project in descending order of the latest commit date. Output each branch name in a separate line.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/byteblaze/cloud-to-butt/-/branches/all",
+        "repository": "my cloud-to-butt project",
+        "answer": "master\ngithub/fork/RF-Nelson/patch-1\ngithub/fork/jandahl/master\ngithub/fork/mwhite/master",
+        "difficulty": "medium"
+      },
+      "answer": "master\ngithub/fork/RF-Nelson/patch-1\ngithub/fork/jandahl/master\ngithub/fork/mwhite/master"
+    },
+    {
+      "task_id": 40123,
+      "source": "webchore",
+      "query": "Show the list of branches in boo project by test123 in descending order of the latest commit date. Output each branch name in a separate line.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/test123/boo/-/branches/all",
+        "repository": "boo project by test123",
+        "answer": "main",
+        "difficulty": "medium"
+      },
+      "answer": "main"
+    },
+    {
+      "task_id": 40124,
+      "source": "webchore",
+      "query": "Show the list of branches in the buck project in descending order of the latest commit date. Output each branch name in a separate line.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/facebook/buck/-/branches/all",
+        "repository": "the buck project",
+        "answer": "nc/test-circle-ci\nnc/fix-m1\ndev\nmain\ngithub/fork/EdTice/patch-2\ngithub/fork/marcesengel/fix/m1\ngithub/fork/Solace-Studios/patch-M1_aarch64_Support\ngithub/fork/nmcardoso/update-copyright\ngithub/fork/egpast/dev\ngithub/fork/mdzyuba/tools_import_deps\nsource-db\ngithub/fork/adolfojunior/export-D35240414-to-dev\ngithub/fork/patosai/main\ngh-pages\ngithub/fork/mikekap/patch-5\ncircleci-editor/969/main\ngithub/fork/cortinico/patch-1\ngithub/fork/yifuwang/export-D31106794-to-dev\ngithub/fork/lujiefsi/MovePythonWhlDataStep\ngithub/fork/yifuwang/export-D30802446-to-dev\ngithub/fork/R1kk3r/support_ndk_22\ngithub/fork/Lcsmarcal/feature/xcframework\ngithub/fork/alekseevpg/change-default-umbrella-header\ngithub/fork/yanks/jforbes-xcodeproj-2\ngithub/fork/yanks/jforbes-xcodeproj-3\ngithub/fork/yanks/jforbes-xcodeproj-1\ngithub/fork/yanks/jforbes-skip-appex-copy\ngithub/fork/yanks/jforbes-resources-from-deps\ngithub/fork/SiddhantRanade/patch-1\nbrianduff-patch-1\nclairehjk-patch-1\noss_fix_non_predexed_builds",
+        "difficulty": "hard"
+      },
+      "answer": "nc/test-circle-ci\nnc/fix-m1\ndev\nmain\ngithub/fork/EdTice/patch-2\ngithub/fork/marcesengel/fix/m1\ngithub/fork/Solace-Studios/patch-M1_aarch64_Support\ngithub/fork/nmcardoso/update-copyright\ngithub/fork/egpast/dev\ngithub/fork/mdzyuba/tools_import_deps\nsource-db\ngithub/fork/adolfojunior/export-D35240414-to-dev\ngithub/fork/patosai/main\ngh-pages\ngithub/fork/mikekap/patch-5\ncircleci-editor/969/main\ngithub/fork/cortinico/patch-1\ngithub/fork/yifuwang/export-D31106794-to-dev\ngithub/fork/lujiefsi/MovePythonWhlDataStep\ngithub/fork/yifuwang/export-D30802446-to-dev\ngithub/fork/R1kk3r/support_ndk_22\ngithub/fork/Lcsmarcal/feature/xcframework\ngithub/fork/alekseevpg/change-default-umbrella-header\ngithub/fork/yanks/jforbes-xcodeproj-2\ngithub/fork/yanks/jforbes-xcodeproj-3\ngithub/fork/yanks/jforbes-xcodeproj-1\ngithub/fork/yanks/jforbes-skip-appex-copy\ngithub/fork/yanks/jforbes-resources-from-deps\ngithub/fork/SiddhantRanade/patch-1\nbrianduff-patch-1\nclairehjk-patch-1\noss_fix_non_predexed_builds"
+    },
+    {
+      "task_id": 40130,
+      "source": "webchore",
+      "query": "Calculate the ratio of the number of commits in the Create React App repository that contain react in the commit message. Round the ratio so that the output would be like '14.2%'.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/facebook/create-react-app/-/commits/main",
+        "repository": "the Create React App repository",
+        "keyword": "react",
+        "answer": "13.4%",
+        "difficulty": "hard"
+      },
+      "answer": "13.4%"
+    },
+    {
+      "task_id": 40131,
+      "source": "webchore",
+      "query": "Calculate the ratio of the number of commits in vinta/awesome-python that contain py in the commit message. Round the ratio so that the output would be like '14.2%'.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/vinta/awesome-python/-/commits/master",
+        "repository": "vinta/awesome-python",
+        "keyword": "py",
+        "answer": "23.5%",
+        "difficulty": "hard"
+      },
+      "answer": "23.5%"
+    },
+    {
+      "task_id": 40132,
+      "source": "webchore",
+      "query": "Calculate the ratio of the number of commits in the repository for a better WeChat that contain chat in the commit message. Round the ratio so that the output would be like '14.2%'.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/geeeeeeeeek/electronic-wechat/-/commits/master",
+        "repository": "the repository for a better WeChat",
+        "keyword": "chat",
+        "answer": "5.5%",
+        "difficulty": "hard"
+      },
+      "answer": "5.5%"
+    },
+    {
+      "task_id": 40133,
+      "source": "webchore",
+      "query": "Calculate the ratio of the number of commits in the administrate project by thoughtbot, inc. that contain bump in the commit message. Round the ratio so that the output would be like '14.2%'.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/thoughtbot/administrate/-/commits/main",
+        "repository": "the administrate project by thoughtbot, inc.",
+        "keyword": "bump",
+        "answer": "25.0%",
+        "difficulty": "hard"
+      },
+      "answer": "25.0%"
+    },
+    {
+      "task_id": 40134,
+      "source": "webchore",
+      "query": "Calculate the ratio of the number of commits in my project for a solarized theme for prism.js that contain update in the commit message. Round the ratio so that the output would be like '14.2%'.",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/byteblaze/solarized-prism-theme/-/commits/master",
+        "repository": "my project for a solarized theme for prism.js",
+        "keyword": "update",
+        "answer": "42.9%",
+        "difficulty": "medium"
+      },
+      "answer": "42.9%"
+    },
+    {
+      "task_id": 40140,
+      "source": "webchore",
+      "query": "Identify the most active contributor in facebook/create-react-app during 2021 and 2022 and show the number of commits during that period. Show the results in the following format: (contributor name), (number of commits) commits",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/facebook/create-react-app/-/commits/main",
+        "repository": "facebook/create-react-app",
+        "date": "during 2021 and 2022",
+        "enddate": "2022",
+        "answer": "Ian Sutherland, 21 commits",
+        "difficulty": "hard"
+      },
+      "answer": "Ian Sutherland, 21 commits"
+    },
+    {
+      "task_id": 40141,
+      "source": "webchore",
+      "query": "Identify the most active contributor in my project for a solarized theme for prism.js between 2010 and 2015 and show the number of commits during that period. Show the results in the following format: (contributor name), (number of commits) commits",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/byteblaze/solarized-prism-theme/-/commits/master",
+        "repository": "my project for a solarized theme for prism.js",
+        "date": "between 2010 and 2015",
+        "answer": "小子欠扁, 4 commits",
+        "difficulty": "medium"
+      },
+      "answer": "小子欠扁, 4 commits"
+    },
+    {
+      "task_id": 40142,
+      "source": "webchore",
+      "query": "Identify the most active contributor in The A11Y Project from August 2022 and February 2023 and show the number of commits during that period. Show the results in the following format: (contributor name), (number of commits) commits",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/a11yproject/a11yproject.com/-/commits/main",
+        "repository": "The A11Y Project",
+        "date": "from August 2022 and February 2023",
+        "answer": "Eric Bailey, 36 commits",
+        "difficulty": "hard"
+      },
+      "answer": "Eric Bailey, 36 commits"
+    },
+    {
+      "task_id": 40143,
+      "source": "webchore",
+      "query": "Identify the most active contributor in the reposotiry for C++ の歩き方 during the latter half of 2022 and show the number of commits during that period. Show the results in the following format: (contributor name), (number of commits) commits",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/cppmap/cppmap.docs/-/commits/master",
+        "repository": "the reposotiry for C++ の歩き方",
+        "date": "during the latter half of 2022",
+        "answer": "Ryo Suzuki, 2 commits",
+        "difficulty": "medium"
+      },
+      "answer": "Ryo Suzuki, 2 commits"
+    },
+    {
+      "task_id": 40144,
+      "source": "webchore",
+      "query": "Identify the most active contributor in the repo for external large-scale work by the administrator until 2022 and show the number of commits during that period. Show the results in the following format: (contributor name), (number of commits) commits",
+      "params": {
+        "start_url": "__GITLAB__",
+        "start_url_lite": "__GITLAB__/root/metaseq/-/commits/main",
+        "repository": "the repo for external large-scale work by the administrator",
+        "date": "until 2022",
+        "answer": "Susan Zhang, 64 commits",
+        "difficulty": "hard"
+      },
+      "answer": "Susan Zhang, 64 commits"
+    },
+    {
+      "task_id": 50090,
+      "source": "webchore",
+      "query": "Look for the population of the 7 continents on Wikipedia and output the name of the continents in the order of their population (larger first) to readme.md in a new repository named continent_ranking. The output should be in Markdown format.",
+      "params": {
+        "start_url": "__WIKIPEDIA__",
+        "start_url_lite": "http://172.16.2.7:8888/wikipedia_en_all_maxi_2022-05/A/Amazon_(company)",
+        "content": "the population of the 7 continents",
+        "output": "the name of the continents in the order of their population (larger first)",
+        "repo_name": "continent_ranking",
+        "misc": "",
+        "answer": "- Asia\n- Africa\n- Europe\n- North America\n- South America\n- Oceania\n- Antarctica",
+        "difficulty": "medium"
+      },
+      "answer": "- Asia\n- Africa\n- Europe\n- North America\n- South America\n- Oceania\n- Antarctica"
+    },
+    {
+      "task_id": 50091,
+      "source": "webchore",
+      "query": "Look for Japanese Nobel Prize winners on Wikipedia and output the names by the category to readme.md in a new repository named Nobel_Prize. The output should be in Markdown format. Put each category in a separate section. Sort the sections alphabetically by their category name. The section title (category name) should be a level 1 header. The winner names in each category should also be in alphabetical order.",
+      "params": {
+        "start_url": "__WIKIPEDIA__",
+        "start_url_lite": "http://172.16.2.7:8888/wikipedia_en_all_maxi_2022-05/A/List_of_Japanese_Nobel_laureates",
+        "content": "Japanese Nobel Prize winners",
+        "output": "the names by the category",
+        "repo_name": "Nobel_Prize",
+        "misc": " Put each category in a separate section. Sort the sections alphabetically by their category name. The section title (category name) should be a level 1 header. The winner names in each category should also be in alphabetical order.",
+        "answer": "# Chemistry\n- Akira Suzuki\n- Akira Yoshino\n- Ei-ichi Negishi\n- Hideki Shirakawa\n- Kenichi Fukui\n- Koichi Tanaka\n- Osamu Shimomura\n- Ryōji Noyori\n# Literature\n- Kazuo Ishiguro\n- Kenzaburō Ōe\n- Yasunari Kawabata\n# Peace\n- Eisaku Satō\n# Physics\n- Hideki Yukawa\n- Hiroshi Amano\n- Isamu Akasaki\n- Leo Esaki\n- Makoto Kobayashi\n- Masatoshi Koshiba\n- Shuji Nakamura\n- Sin-Itiro Tomonaga\n- Syukuro Manabe\n- Takaaki Kajita\n- Toshihide Maskawa\n- Yoichiro Nambu\n# Physiology or Medicine\n- Satoshi Ōmura\n- Shinya Yamanaka\n- Susumu Tonegawa\n- Tasuku Honjo\n- Yoshinori Ohsumi",
+        "difficulty": "medium"
+      },
+      "answer": "# Chemistry\n- Akira Suzuki\n- Akira Yoshino\n- Ei-ichi Negishi\n- Hideki Shirakawa\n- Kenichi Fukui\n- Koichi Tanaka\n- Osamu Shimomura\n- Ryōji Noyori\n# Literature\n- Kazuo Ishiguro\n- Kenzaburō Ōe\n- Yasunari Kawabata\n# Peace\n- Eisaku Satō\n# Physics\n- Hideki Yukawa\n- Hiroshi Amano\n- Isamu Akasaki\n- Leo Esaki\n- Makoto Kobayashi\n- Masatoshi Koshiba\n- Shuji Nakamura\n- Sin-Itiro Tomonaga\n- Syukuro Manabe\n- Takaaki Kajita\n- Toshihide Maskawa\n- Yoichiro Nambu\n# Physiology or Medicine\n- Satoshi Ōmura\n- Shinya Yamanaka\n- Susumu Tonegawa\n- Tasuku Honjo\n- Yoshinori Ohsumi"
+    },
+    {
+      "task_id": 50092,
+      "source": "webchore",
+      "query": "Look for countries that got a medal for baseball on Wikipedia and output the names of the countries to readme.md in a new repository named olympic_baseball. The output should be in Markdown format. Put each event in a separate section. Sort the sections in chronological order. The section title (host city name) should be a level 1 header. The countries should be in a numbered list.",
+      "params": {
+        "start_url": "__WIKIPEDIA__",
+        "start_url_lite": "http://172.16.2.7:8888/wikipedia_en_all_maxi_2022-05/A/List_of_Olympic_medalists_in_baseball",
+        "content": "countries that got a medal for baseball",
+        "output": "the names of the countries",
+        "repo_name": "olympic_baseball",
+        "misc": " Put each event in a separate section. Sort the sections in chronological order. The section title (host city name) should be a level 1 header. The countries should be in a numbered list.",
+        "answer": "# Barcelona\n1. Cuba\n2. Chinese Taipei\n3. Japan\n# Atlanta\n1. Cuba\n2. Japan\n3. United States\n# Sydney\n1. United States\n2. Cuba\n3. South Korea\n# Athens\n1. Cuba\n2. Australia\n3. Japan\n# Beijing\n1. South Korea\n2. Cuba\n3. United States\n# Tokyo\n1. Japan\n2. United States\n3. Dominican Republic",
+        "difficulty": "medium"
+      },
+      "answer": "# Barcelona\n1. Cuba\n2. Chinese Taipei\n3. Japan\n# Atlanta\n1. Cuba\n2. Japan\n3. United States\n# Sydney\n1. United States\n2. Cuba\n3. South Korea\n# Athens\n1. Cuba\n2. Australia\n3. Japan\n# Beijing\n1. South Korea\n2. Cuba\n3. United States\n# Tokyo\n1. Japan\n2. United States\n3. Dominican Republic"
+    },
+    {
+      "task_id": 50093,
+      "source": "webchore",
+      "query": "Look for the velocity of rotation on the equator for each of the 8 planets on Wikipedia and output the names of the planets and the velocity to readme.md in a new repository named planet_velocity. The output should be in Markdown format. Output the velocity in m/s with three digits. If the velocity exceeds 1 km/s, output it in km/s instead. Truncate any unnecessary digits if needed. Each item should be formatted as (Planet Name):(number)(unit)",
+      "params": {
+        "start_url": "__WIKIPEDIA__",
+        "start_url_lite": "http://172.16.2.7:8888/wikipedia_en_all_maxi_2022-05/A/Mercury_(planet)",
+        "content": "the velocity of rotation on the equator for each of the 8 planets",
+        "output": "the names of the planets and the velocity",
+        "repo_name": "planet_velocity",
+        "misc": " Output the velocity in m/s with three digits. If the velocity exceeds 1 km/s, output it in km/s instead. Truncate any unnecessary digits if needed. Each item should be formatted as (Planet Name):(number)(unit)",
+        "answer": "- Mercury:3.02m/s\n- Venus:1.81m/s\n- Earth:465m/s\n- Mars:241m/s\n- Jupiter:12.6km/s\n- Saturn:9.87km/s\n- Uranus:2.59km/s\n- Neptune:2.68km/s",
+        "difficulty": "hard"
+      },
+      "answer": "- Mercury:3.02m/s\n- Venus:1.81m/s\n- Earth:465m/s\n- Mars:241m/s\n- Jupiter:12.6km/s\n- Saturn:9.87km/s\n- Uranus:2.59km/s\n- Neptune:2.68km/s"
+    },
+    {
+      "task_id": 50100,
+      "source": "webchore",
+      "query": "Replace the readme of the Amazon ML Challenge 2021 repository with the first paragraph of the Wikipedia article for Amazon. Add the readme file with README.md as the name if the it does not exist. Do not include any citation marks.",
+      "params": {
+        "start_url": "__WIKIPEDIA__",
+        "start_url_lite": "http://172.16.2.7:8888/wikipedia_en_all_maxi_2022-05/A/Amazon_(company)",
+        "readme_url": "__GITLAB__/abisubramanya27/Amazon_ML_Challenge_2021/-/raw/master/README.md",
+        "repository": "the Amazon ML Challenge 2021 repository",
+        "wiki_item": "Amazon",
+        "answer": "Amazon.com, Inc. (/ˈæməzɒn/ AM-ə-zon) is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It has been referred to as \"one of the most influential economic and cultural forces in the world\", and is one of the world's most valuable brands. It is one of the Big Five American information technology companies, alongside Alphabet, Apple, Meta, and Microsoft.",
+        "difficulty": "hard"
+      },
+      "answer": "Amazon.com, Inc. (/ˈæməzɒn/ AM-ə-zon) is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It has been referred to as \"one of the most influential economic and cultural forces in the world\", and is one of the world's most valuable brands. It is one of the Big Five American information technology companies, alongside Alphabet, Apple, Meta, and Microsoft."
+    },
+    {
+      "task_id": 50101,
+      "source": "webchore",
+      "query": "Replace the readme of my repository with the ‘Do What The F*ck You Want To Public License’ and with a shorter name with the first paragraph of the Wikipedia article for the license. Add the readme file with README.md as the name if the it does not exist. Do not include any citation marks.",
+      "params": {
+        "start_url": "__WIKIPEDIA__",
+        "start_url_lite": "http://172.16.2.7:8888/wikipedia_en_all_maxi_2022-05/A/WTFPL",
+        "readme_url": "__GITLAB__/byteblaze/cloud-to-butt/-/raw/master/README.md",
+        "repository": "my repository with the ‘Do What The F*ck You Want To Public License’ and with a shorter name",
+        "wiki_item": "the license",
+        "answer": "WTFPL is a permissive free software license, compatible with the GNU GPL. As a public domain like license, the WTFPL is essentially the same as dedication to the public domain. It allows redistribution and modification of the work under any terms. The title is an abbreviation of \"Do What The Fuck You Want To Public License\".",
+        "difficulty": "hard"
+      },
+      "answer": "WTFPL is a permissive free software license, compatible with the GNU GPL. As a public domain like license, the WTFPL is essentially the same as dedication to the public domain. It allows redistribution and modification of the work under any terms. The title is an abbreviation of \"Do What The Fuck You Want To Public License\"."
+    },
+    {
+      "task_id": 50102,
+      "source": "webchore",
+      "query": "Replace the readme of the repository for a web app to check whether I had contacted the patient of covid-19 or not with the first paragraph of the Wikipedia article for the virus. Add the readme file with README.md as the name if the it does not exist. Do not include any citation marks.",
+      "params": {
+        "start_url": "__WIKIPEDIA__",
+        "start_url_lite": "http://172.16.2.7:8888/wikipedia_en_all_maxi_2022-05/A/COVID-19",
+        "readme_url": "__GITLAB__/yjlou/2019-nCov/-/raw/master/README.md",
+        "repository": "the repository for a web app to check whether I had contacted the patient of covid-19 or not",
+        "wiki_item": "the virus",
+        "answer": "Coronavirus disease 2019 (COVID-19) is a contagious disease caused by a virus, the severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The first known case was identified in Wuhan, China, in December 2019. The disease spread worldwide, leading to the COVID-19 pandemic.",
+        "difficulty": "hard"
+      },
+      "answer": "Coronavirus disease 2019 (COVID-19) is a contagious disease caused by a virus, the severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The first known case was identified in Wuhan, China, in December 2019. The disease spread worldwide, leading to the COVID-19 pandemic."
+    },
+    {
+      "task_id": 50103,
+      "source": "webchore",
+      "query": "Replace the readme of the repository that attempts to recreate the first level of Super Mario Bros. with the first paragraph of the Wikipedia article for the game. Add the readme file with README.md as the name if the it does not exist. Do not include any citation marks.",
+      "params": {
+        "start_url": "__WIKIPEDIA__",
+        "start_url_lite": "http://172.16.2.7:8888/wikipedia_en_all_maxi_2022-05/A/Super_Mario_Bros.",
+        "readme_url": "__GITLAB__/justinmeister/Mario-Level-1/-/raw/master/README.md",
+        "repository": "the repository that attempts to recreate the first level of Super Mario Bros.",
+        "wiki_item": "the game",
+        "answer": "Super Mario Bros. is a platform game developed and published by Nintendo. The successor to the 1983 arcade game Mario Bros. and the first in the Super Mario series, it was released in 1985 for the Famicom in Japan. Following a limited US release for the Nintendo Entertainment System (NES), it was ported to international arcades for the Nintendo Vs. System in early 1986. The NES version received a wide release in North America that year and in PAL regions in 1987.",
+        "difficulty": "medium"
+      },
+      "answer": "Super Mario Bros. is a platform game developed and published by Nintendo. The successor to the 1983 arcade game Mario Bros. and the first in the Super Mario series, it was released in 1985 for the Famicom in Japan. Following a limited US release for the Nintendo Entertainment System (NES), it was ported to international arcades for the Nintendo Vs. System in early 1986. The NES version received a wide release in North America that year and in PAL regions in 1987."
+    },
+    {
+      "task_id": 50104,
+      "source": "webchore",
+      "query": "Replace the readme of PyTorch implementations of GANs with the first paragraph of the Wikipedia article for the network. Add the readme file with README.md as the name if the it does not exist. Do not include any citation marks.",
+      "params": {
+        "start_url": "__WIKIPEDIA__",
+        "start_url_lite": "http://172.16.2.7:8888/wikipedia_en_all_maxi_2022-05/A/Generative_adversarial_network",
+        "readme_url": "__GITLAB__/eriklindernoren/PyTorch-GAN/-/raw/master/README.md",
+        "repository": "PyTorch implementations of GANs",
+        "wiki_item": "the network",
+        "answer": "A generative adversarial network (GAN) is a class of machine learning frameworks designed by Ian Goodfellow and his colleagues in June 2014. Two neural networks contest with each other in a game (in the form of a zero-sum game, where one agent's gain is another agent's loss).",
+        "difficulty": "medium"
+      },
+      "answer": "A generative adversarial network (GAN) is a class of machine learning frameworks designed by Ian Goodfellow and his colleagues in June 2014. Two neural networks contest with each other in a game (in the form of a zero-sum game, where one agent's gain is another agent's loss)."
+    }
+  ],
+  "stats": {
+    "total_repos": 156,
+    "pre_existing_repos": 138,
+    "creation_target_repos": 18,
+    "total_groups": 5,
+    "total_issues": 10,
+    "total_merge_requests": 8,
+    "total_users": 45,
+    "total_branches": 12,
+    "total_labels": 8,
+    "total_ground_truth_facts": 101
+  }
+}

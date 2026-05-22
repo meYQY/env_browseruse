@@ -1,0 +1,321 @@
+{
+  "task_id": "task_0079",
+  "task_description": "On GitLab, find the open issue labeled \"help needed\" and \"flaky-test\" and call it A. Also find issue 719 and call it B. For A, write a comment containing the exact phrase \"added reproduction steps\", add the label \"performance\", and close the issue. For B, reopen the issue and assign it to byteblaze.",
+  "target_environment": "gitlab",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L3",
+  "target_entity": {
+    "entity_id": "gitlab_issue_012",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "state": "open",
+      "labels": [
+        "help needed",
+        "flaky-test"
+      ]
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_012",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "open",
+        "labels": [
+          "help needed",
+          "flaky-test"
+        ]
+      }
+    },
+    "B": {
+      "entity_id": "gitlab_issue_002",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "iid": 719
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "comment_label_close_issue",
+    "task_templates": {
+      "A": "comment_label_close_issue",
+      "B": "reopen_and_assign"
+    },
+    "structure_variant": "long_horizon_L3_two_step_chain_single_condition",
+    "locator": {
+      "state": "open",
+      "labels": [
+        "help needed",
+        "flaky-test"
+      ]
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_012",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "open",
+          "labels": [
+            "help needed",
+            "flaky-test"
+          ]
+        }
+      },
+      "B": {
+        "entity_id": "gitlab_issue_002",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "iid": 719
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "comment",
+        "target": "A",
+        "body_must_include": [
+          "added reproduction steps"
+        ]
+      },
+      {
+        "type": "add_label",
+        "target": "A",
+        "label": "performance"
+      },
+      {
+        "type": "close_issue",
+        "target": "A"
+      },
+      {
+        "type": "reopen_issue",
+        "target": "B"
+      },
+      {
+        "type": "assign_issue",
+        "target": "B",
+        "assignee_username": "byteblaze"
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "added reproduction steps"
+      ],
+      "label": "performance"
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "added reproduction steps"
+        ],
+        "label": "performance"
+      },
+      "B": {
+        "assignee_username": "byteblaze"
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "comment",
+      "target": "A",
+      "body_must_include": [
+        "added reproduction steps"
+      ]
+    },
+    {
+      "type": "add_label",
+      "target": "A",
+      "label": "performance"
+    },
+    {
+      "type": "close_issue",
+      "target": "A"
+    },
+    {
+      "type": "reopen_issue",
+      "target": "B"
+    },
+    {
+      "type": "assign_issue",
+      "target": "B",
+      "assignee_username": "byteblaze"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_012",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "added reproduction steps"
+          ]
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_012"
+        },
+        "must_satisfy": {
+          "labels_include": "performance"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_012"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_002"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_002"
+        },
+        "must_satisfy": {
+          "assignee_ref": "byteblaze"
+        }
+      }
+    ],
+    "preconditions": [
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_012"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_002"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_012",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "added reproduction steps"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_labels",
+          "filters": {
+            "issue_ref": "gitlab_issue_012"
+          }
+        },
+        "condition": {
+          "labels_include": "performance"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_012"
+          }
+        },
+        "condition": {
+          "state": "closed"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_002"
+          }
+        },
+        "condition": {
+          "state": "open"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_002"
+          }
+        },
+        "condition": {
+          "assignee_ref": "byteblaze"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 2
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "task_id": "task_0064",
+  "task_description": "In the CMS admin, locate target A as the published page whose title contains \"FAQ\" and exclude alternatives that do not match all listed conditions; create target A with a title that includes \"returns help center\" and a body that includes \"free shipping on orders over fifty dollars\", then publish target A.",
+  "target_environment": "cms_admin",
+  "ability_dimension": "Memory",
+  "difficulty": "L4",
+  "target_entity": {
+    "entity_id": "cms_page_010",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "selected_locator_fields": {
+      "status": "published",
+      "page_title_contains": "FAQ",
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "cms_page_010",
+      "site": "cms_admin",
+      "entity_type": "cms_page",
+      "selected_locator_fields": {
+        "status": "published",
+        "page_title_contains": "FAQ",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "create_and_publish_page",
+    "task_templates": {
+      "A": "create_and_publish_page"
+    },
+    "structure_variant": "memory_L4_tracked_locator_exclusion_condition",
+    "locator": {
+      "status": "published",
+      "page_title_contains": "FAQ",
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "cms_page_010",
+        "site": "cms_admin",
+        "entity_type": "cms_page",
+        "selected_locator_fields": {
+          "status": "published",
+          "page_title_contains": "FAQ",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_page",
+        "target": "A",
+        "title_must_include": [
+          "returns help center"
+        ],
+        "body_must_include": [
+          "free shipping on orders over fifty dollars"
+        ]
+      },
+      {
+        "type": "publish_page",
+        "target": "A"
+      }
+    ],
+    "requirements": {
+      "title_must_include": [
+        "returns help center"
+      ],
+      "body_must_include": [
+        "free shipping on orders over fifty dollars"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "title_must_include": [
+          "returns help center"
+        ],
+        "body_must_include": [
+          "free shipping on orders over fifty dollars"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "create_page",
+      "target": "A",
+      "title_must_include": [
+        "returns help center"
+      ],
+      "body_must_include": [
+        "free shipping on orders over fifty dollars"
+      ]
+    },
+    {
+      "type": "publish_page",
+      "target": "A"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_010"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "returns help center"
+          ],
+          "body_must_include": [
+            "free shipping on orders over fifty dollars"
+          ],
+          "creator_ref": "current_user"
+        }
+      },
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_010"
+        },
+        "must_satisfy": {
+          "status": "published"
+        }
+      }
+    ],
+    "preconditions": [
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_010"
+        },
+        "must_satisfy": {
+          "status": "draft"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "cms_pages",
+          "filters": {
+            "page_ref": "cms_page_010"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "returns help center"
+          ],
+          "body_must_include": [
+            "free shipping on orders over fifty dollars"
+          ],
+          "creator_ref": "current_user"
+        }
+      },
+      {
+        "query": {
+          "resource": "cms_pages",
+          "filters": {
+            "page_ref": "cms_page_010"
+          }
+        },
+        "condition": {
+          "status": "published"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": false,
+    "checks": {
+      "entity_exists": false,
+      "entity_type_matches": false,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": false,
+      "verifier_binds_entity": false,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": false,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 1
+  }
+}

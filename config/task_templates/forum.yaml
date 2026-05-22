@@ -1,0 +1,233 @@
+# =============================================================================
+# Forum Task Templates
+# =============================================================================
+# Placeholder tokens:
+#   {target_entity}      -- entity_id of the community or post
+#   {title_must_include} -- required phrase(s) in post title
+#   {body_must_include}  -- required phrase(s) in post or comment body
+# =============================================================================
+
+templates:
+
+  # -------------------------------------------------------------------------
+  # create_post
+  # -------------------------------------------------------------------------
+  create_post:
+    site: forum
+    required_entity_type: community
+    required_entity_attributes: []
+    allowed_actions:
+      - create_post
+
+    ground_truth_rules:
+      assertions:
+        - resource: posts
+          where:
+            community_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            title_must_include: "{title_must_include}"
+            body_must_include: "{body_must_include}"
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L1, L2, L3, L4, L5]
+      long_horizon_operation: [L2, L3, L4, L5]
+
+  # -------------------------------------------------------------------------
+  # comment_post
+  # -------------------------------------------------------------------------
+  comment_post:
+    site: forum
+    required_entity_type: post
+    required_entity_attributes: []
+    allowed_actions:
+      - comment_post
+
+    ground_truth_rules:
+      assertions:
+        - resource: comments
+          where:
+            post_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            body_must_include: "{body_must_include}"
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L1, L2, L3]
+      long_horizon_operation: [L1, L2]
+
+  # -------------------------------------------------------------------------
+  # edit_post
+  # -------------------------------------------------------------------------
+  edit_post:
+    site: forum
+    required_entity_type: post
+    required_entity_attributes: []
+    allowed_actions:
+      - edit_post
+
+    ground_truth_rules:
+      assertions:
+        - resource: posts
+          where:
+            post_ref: "{target_entity}"
+          assert:
+            body_must_include: "{body_must_include}"
+            last_editor_ref: current_user
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L1, L2, L3, L4, L5]
+      long_horizon_operation: [L1, L2]
+
+  # -------------------------------------------------------------------------
+  # create_and_comment_post -- composite: create a post then comment on it
+  # -------------------------------------------------------------------------
+  create_and_comment_post:
+    site: forum
+    required_entity_type: community
+    required_entity_attributes: []
+    allowed_actions:
+      - create_post
+      - comment_post
+
+    ground_truth_rules:
+      assertions:
+        - resource: posts
+          where:
+            community_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            title_must_include: "{title_must_include}"
+            body_must_include: "{body_must_include}"
+        - resource: comments
+          where:
+            community_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L4, L5]
+      long_horizon_operation: [L3, L4, L5]
+
+  # -------------------------------------------------------------------------
+  # create_and_edit_post -- composite: create a post then edit its body
+  # -------------------------------------------------------------------------
+  create_and_edit_post:
+    site: forum
+    required_entity_type: post
+    required_entity_attributes: []
+    allowed_actions:
+      - create_post
+      - edit_post
+
+    ground_truth_rules:
+      assertions:
+        - resource: posts
+          where:
+            post_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            title_must_include: "{title_must_include}"
+            body_must_include: "{body_must_include}"
+        - resource: posts
+          where:
+            post_ref: "{target_entity}"
+          assert:
+            body_must_include: "{body_must_include}"
+            last_editor_ref: current_user
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L4, L5]
+      long_horizon_operation: [L3, L4]
+
+  # -------------------------------------------------------------------------
+  # create_comment_edit -- composite: create, comment, then edit the post
+  # -------------------------------------------------------------------------
+  create_comment_edit:
+    site: forum
+    required_entity_type: post
+    required_entity_attributes: []
+    allowed_actions:
+      - create_post
+      - comment_post
+      - edit_post
+
+    ground_truth_rules:
+      min_assertions: 3
+      assertions:
+        - resource: posts
+          where:
+            post_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            title_must_include: "{title_must_include}"
+            body_must_include: "{body_must_include}"
+        - resource: comments
+          where:
+            post_ref: "{target_entity}"
+            author_ref: current_user
+          assert:
+            exists: true
+            body_must_include: "{comment_body_must_include}"
+        - resource: posts
+          where:
+            post_ref: "{target_entity}"
+          assert:
+            body_must_include: "{body_must_include}"
+            last_editor_ref: current_user
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - long_horizon_operation
+
+    compatible_difficulties:
+      long_horizon_operation: [L5]

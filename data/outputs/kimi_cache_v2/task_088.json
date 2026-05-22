@@ -1,0 +1,136 @@
+{
+  "task_id": "task_0070",
+  "task_description": "Reopen GitLab issue A titled \"pagination off-by-one\".",
+  "target_environment": "gitlab",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L1",
+  "target_entity": {
+    "entity_id": "gitlab_issue_014",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "title_contains": "pagination off-by-one"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_014",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "title_contains": "pagination off-by-one"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "reopen_issue",
+    "task_templates": {
+      "A": "reopen_issue"
+    },
+    "structure_variant": "long_horizon_L1_single_action_direct_ref",
+    "locator": {
+      "title_contains": "pagination off-by-one"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_014",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "title_contains": "pagination off-by-one"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "reopen_issue",
+        "target": "A"
+      }
+    ],
+    "requirements": {},
+    "requirements_by_target": {
+      "A": {}
+    }
+  },
+  "actions": [
+    {
+      "type": "reopen_issue",
+      "target": "A"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_014"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      }
+    ],
+    "preconditions": [
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_014"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_014"
+          }
+        },
+        "condition": {
+          "state": "open"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 2
+  }
+}

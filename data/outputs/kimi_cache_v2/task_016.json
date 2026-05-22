@@ -1,0 +1,145 @@
+{
+  "task_id": "task_0060",
+  "task_description": "In the CMS admin, locate draft page A titled cms_page_007 and edit it to include the text \"new store hours starting next month\".",
+  "target_environment": "cms_admin",
+  "ability_dimension": "Memory",
+  "difficulty": "L2",
+  "target_entity": {
+    "entity_id": "cms_page_007",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "selected_locator_fields": {
+      "status": "draft"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "cms_page_007",
+      "site": "cms_admin",
+      "entity_type": "cms_page",
+      "selected_locator_fields": {
+        "status": "draft"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "edit_page",
+    "task_templates": {
+      "A": "edit_page"
+    },
+    "structure_variant": "memory_L2_lookup_single_condition",
+    "locator": {
+      "status": "draft"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "cms_page_007",
+        "site": "cms_admin",
+        "entity_type": "cms_page",
+        "selected_locator_fields": {
+          "status": "draft"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "edit_page",
+        "target": "A",
+        "body_must_include": [
+          "new store hours starting next month"
+        ]
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "new store hours starting next month"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "new store hours starting next month"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "edit_page",
+      "target": "A",
+      "body_must_include": [
+        "new store hours starting next month"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_007"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "new store hours starting next month"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "cms_pages",
+          "filters": {
+            "page_ref": "cms_page_007"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "new store hours starting next month"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 2
+  }
+}

@@ -1,0 +1,487 @@
+{
+  "task_id": "task_0106",
+  "task_description": "For product A, which is an electronics product named chargers from Anker, add one to your cart, then submit a review with a rating of 1 that includes the phrase \"would not recommend\", and then remove it from your cart. For product B, which is a grocery product with SKU B07HZB38XH, add one to your cart, update the quantity to 5, and submit a review with a rating of 2 that includes the phrase \"below average durability\". For product C, which is a video games product named blue Cronus yoga pants with size 33, add one to your cart, update the quantity to 3, and submit a review with a rating of 4 that includes the phrase \"good value\".",
+  "target_environment": "shopping",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L5",
+  "target_entity": {
+    "entity_id": "shopping_product_032",
+    "site": "shopping",
+    "entity_type": "product",
+    "selected_locator_fields": {
+      "category": "electronics",
+      "product_name": "chargers from Anker"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "shopping_product_032",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "category": "electronics",
+        "product_name": "chargers from Anker"
+      }
+    },
+    "B": {
+      "entity_id": "shopping_product_004",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "sku": "B07HZB38XH",
+        "category": "grocery"
+      }
+    },
+    "C": {
+      "entity_id": "shopping_product_023",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "category": "video games",
+        "product_name": "blue Cronus yoga pants with size 33"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "add_review_remove",
+    "task_templates": {
+      "A": "add_review_remove",
+      "B": "cart_update_review",
+      "C": "cart_update_review"
+    },
+    "structure_variant": "long_horizon_L5_multi_action_chain_multi_condition",
+    "locator": {
+      "category": "electronics",
+      "product_name": "chargers from Anker"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "shopping_product_032",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "category": "electronics",
+          "product_name": "chargers from Anker"
+        }
+      },
+      "B": {
+        "entity_id": "shopping_product_004",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "sku": "B07HZB38XH",
+          "category": "grocery"
+        }
+      },
+      "C": {
+        "entity_id": "shopping_product_023",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "category": "video games",
+          "product_name": "blue Cronus yoga pants with size 33"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "add_to_cart",
+        "target": "A",
+        "quantity": 1,
+        "final_assertion": false
+      },
+      {
+        "type": "write_review",
+        "target": "A",
+        "rating": 1,
+        "body_must_include": [
+          "would not recommend"
+        ]
+      },
+      {
+        "type": "remove_from_cart",
+        "target": "A"
+      },
+      {
+        "type": "add_to_cart",
+        "target": "B",
+        "quantity": 1,
+        "exists_only": true
+      },
+      {
+        "type": "update_quantity",
+        "target": "B",
+        "quantity": 5
+      },
+      {
+        "type": "write_review",
+        "target": "B",
+        "rating": 2,
+        "body_must_include": [
+          "below average durability"
+        ]
+      },
+      {
+        "type": "add_to_cart",
+        "target": "C",
+        "quantity": 1,
+        "exists_only": true
+      },
+      {
+        "type": "update_quantity",
+        "target": "C",
+        "quantity": 3
+      },
+      {
+        "type": "write_review",
+        "target": "C",
+        "rating": 4,
+        "body_must_include": [
+          "good value"
+        ]
+      }
+    ],
+    "requirements": {
+      "add_to_cart_quantity": 1,
+      "quantity": 1,
+      "rating": 1,
+      "body_must_include": [
+        "would not recommend"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "add_to_cart_quantity": 1,
+        "quantity": 1,
+        "rating": 1,
+        "body_must_include": [
+          "would not recommend"
+        ]
+      },
+      "B": {
+        "add_to_cart_quantity": 1,
+        "quantity": 5,
+        "update_quantity": 5,
+        "rating": 2,
+        "body_must_include": [
+          "below average durability"
+        ]
+      },
+      "C": {
+        "add_to_cart_quantity": 1,
+        "quantity": 3,
+        "update_quantity": 3,
+        "rating": 4,
+        "body_must_include": [
+          "good value"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "add_to_cart",
+      "target": "A",
+      "quantity": 1,
+      "final_assertion": false
+    },
+    {
+      "type": "write_review",
+      "target": "A",
+      "rating": 1,
+      "body_must_include": [
+        "would not recommend"
+      ]
+    },
+    {
+      "type": "remove_from_cart",
+      "target": "A"
+    },
+    {
+      "type": "add_to_cart",
+      "target": "B",
+      "quantity": 1,
+      "exists_only": true
+    },
+    {
+      "type": "update_quantity",
+      "target": "B",
+      "quantity": 5
+    },
+    {
+      "type": "write_review",
+      "target": "B",
+      "rating": 2,
+      "body_must_include": [
+        "below average durability"
+      ]
+    },
+    {
+      "type": "add_to_cart",
+      "target": "C",
+      "quantity": 1,
+      "exists_only": true
+    },
+    {
+      "type": "update_quantity",
+      "target": "C",
+      "quantity": 3
+    },
+    {
+      "type": "write_review",
+      "target": "C",
+      "rating": 4,
+      "body_must_include": [
+        "good value"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "reviews",
+        "conditions": {
+          "product_ref": "shopping_product_032",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "rating": 1,
+          "body_must_include": [
+            "would not recommend"
+          ]
+        }
+      },
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_032"
+        },
+        "must_satisfy": {
+          "exists": false
+        }
+      },
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_004"
+        },
+        "must_satisfy": {
+          "exists": true
+        }
+      },
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_004"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "quantity": 5
+        }
+      },
+      {
+        "check_object": "reviews",
+        "conditions": {
+          "product_ref": "shopping_product_004",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "rating": 2,
+          "body_must_include": [
+            "below average durability"
+          ]
+        }
+      },
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_023"
+        },
+        "must_satisfy": {
+          "exists": true
+        }
+      },
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_023"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "quantity": 3
+        }
+      },
+      {
+        "check_object": "reviews",
+        "conditions": {
+          "product_ref": "shopping_product_023",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "rating": 4,
+          "body_must_include": [
+            "good value"
+          ]
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "reviews",
+          "filters": {
+            "product_ref": "shopping_product_032",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "rating": 1,
+          "body_must_include": [
+            "would not recommend"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_032"
+          }
+        },
+        "condition": {
+          "exists": false
+        }
+      },
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_004"
+          }
+        },
+        "condition": {
+          "exists": true
+        }
+      },
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_004"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "quantity": 5
+        }
+      },
+      {
+        "query": {
+          "resource": "reviews",
+          "filters": {
+            "product_ref": "shopping_product_004",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "rating": 2,
+          "body_must_include": [
+            "below average durability"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_023"
+          }
+        },
+        "condition": {
+          "exists": true
+        }
+      },
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_023"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "quantity": 3
+        }
+      },
+      {
+        "query": {
+          "resource": "reviews",
+          "filters": {
+            "product_ref": "shopping_product_023",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "rating": 4,
+          "body_must_include": [
+            "good value"
+          ]
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 4
+  }
+}

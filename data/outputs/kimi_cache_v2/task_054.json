@@ -1,0 +1,145 @@
+{
+  "task_id": "task_0059",
+  "task_description": "In the CMS admin, edit target A, the page with URL key \"privacy-policy\", so that it includes \"size guide for all product categories\".",
+  "target_environment": "cms_admin",
+  "ability_dimension": "Memory",
+  "difficulty": "L1",
+  "target_entity": {
+    "entity_id": "cms_page_004",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "selected_locator_fields": {
+      "url_key": "privacy-policy"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "cms_page_004",
+      "site": "cms_admin",
+      "entity_type": "cms_page",
+      "selected_locator_fields": {
+        "url_key": "privacy-policy"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "edit_page",
+    "task_templates": {
+      "A": "edit_page"
+    },
+    "structure_variant": "memory_L1_lookup_direct_ref",
+    "locator": {
+      "url_key": "privacy-policy"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "cms_page_004",
+        "site": "cms_admin",
+        "entity_type": "cms_page",
+        "selected_locator_fields": {
+          "url_key": "privacy-policy"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "edit_page",
+        "target": "A",
+        "body_must_include": [
+          "size guide for all product categories"
+        ]
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "size guide for all product categories"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "size guide for all product categories"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "edit_page",
+      "target": "A",
+      "body_must_include": [
+        "size guide for all product categories"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_004"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "size guide for all product categories"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "cms_pages",
+          "filters": {
+            "page_ref": "cms_page_004"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "size guide for all product categories"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 1
+  }
+}

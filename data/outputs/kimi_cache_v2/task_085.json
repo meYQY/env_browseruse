@@ -1,0 +1,145 @@
+{
+  "task_id": "task_0036",
+  "task_description": "Add 1 of variant A of the product named \"a cat t-shirt\" in size \"L\" and color \"green\" to the cart.",
+  "target_environment": "shopping",
+  "ability_dimension": "Memory",
+  "difficulty": "L3",
+  "target_entity": {
+    "entity_id": "shopping_variant_010",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "selected_locator_fields": {
+      "product_name": "a cat t-shirt",
+      "size": "L",
+      "color": "green"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "shopping_variant_010",
+      "site": "shopping",
+      "entity_type": "product_variant",
+      "selected_locator_fields": {
+        "product_name": "a cat t-shirt",
+        "size": "L",
+        "color": "green"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "add_to_cart",
+    "task_templates": {
+      "A": "add_to_cart"
+    },
+    "structure_variant": "memory_L3_lookup_multi_condition",
+    "locator": {
+      "product_name": "a cat t-shirt",
+      "size": "L",
+      "color": "green"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "shopping_variant_010",
+        "site": "shopping",
+        "entity_type": "product_variant",
+        "selected_locator_fields": {
+          "product_name": "a cat t-shirt",
+          "size": "L",
+          "color": "green"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "add_to_cart",
+        "target": "A",
+        "quantity": 1
+      }
+    ],
+    "requirements": {
+      "add_to_cart_quantity": 1,
+      "quantity": 1
+    },
+    "requirements_by_target": {
+      "A": {
+        "add_to_cart_quantity": 1,
+        "quantity": 1
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "add_to_cart",
+      "target": "A",
+      "quantity": 1
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "variant_ref": "shopping_variant_010"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "quantity": 1
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "variant_ref": "shopping_variant_010"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "quantity": 1
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 5
+  }
+}

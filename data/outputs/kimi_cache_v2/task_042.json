@@ -1,0 +1,147 @@
+{
+  "task_id": "task_0017",
+  "task_description": "Find the closed GitLab issue labeled frontend (target A) and assign it to ericwbailey.",
+  "target_environment": "gitlab",
+  "ability_dimension": "Memory",
+  "difficulty": "L4",
+  "target_entity": {
+    "entity_id": "gitlab_issue_022",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "state": "closed",
+      "labels": [
+        "frontend"
+      ],
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_022",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "closed",
+        "labels": [
+          "frontend"
+        ],
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "assign_issue",
+    "task_templates": {
+      "A": "assign_issue"
+    },
+    "structure_variant": "memory_L4_tracked_locator_exclusion_condition",
+    "locator": {
+      "state": "closed",
+      "labels": [
+        "frontend"
+      ],
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_022",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "closed",
+          "labels": [
+            "frontend"
+          ],
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "assign_issue",
+        "target": "A",
+        "assignee_username": "ericwbailey"
+      }
+    ],
+    "requirements": {
+      "assignee_username": "ericwbailey"
+    },
+    "requirements_by_target": {
+      "A": {
+        "assignee_username": "ericwbailey"
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "assign_issue",
+      "target": "A",
+      "assignee_username": "ericwbailey"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_022"
+        },
+        "must_satisfy": {
+          "assignee_ref": "ericwbailey"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_022"
+          }
+        },
+        "condition": {
+          "assignee_ref": "ericwbailey"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 7
+  }
+}

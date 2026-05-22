@@ -1,0 +1,323 @@
+{
+  "task_id": "task_0113",
+  "task_description": "Create post A in the Art community with a title that includes \"remote work spaces\" and a body that includes \"family friendly\". Then edit post A, ensuring its body includes \"family friendly\". Next, create post B in the gadgets community with a title that includes \"bike commute routes\" and a body that includes \"monthly budget\". Finally, comment on post B with \"I can confirm this still works\".",
+  "target_environment": "forum",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L3",
+  "target_entity": {
+    "entity_id": "forum_post_015",
+    "site": "forum",
+    "entity_type": "post",
+    "selected_locator_fields": {
+      "community": "Art"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "forum_post_015",
+      "site": "forum",
+      "entity_type": "post",
+      "selected_locator_fields": {
+        "community": "Art"
+      }
+    },
+    "B": {
+      "entity_id": "forum_community_016",
+      "site": "forum",
+      "entity_type": "community",
+      "selected_locator_fields": {
+        "community_name": "gadgets"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "create_and_edit_post",
+    "task_templates": {
+      "A": "create_and_edit_post",
+      "B": "create_and_comment_post"
+    },
+    "structure_variant": "long_horizon_L3_two_step_chain_multi_condition",
+    "locator": {
+      "community": "Art"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "forum_post_015",
+        "site": "forum",
+        "entity_type": "post",
+        "selected_locator_fields": {
+          "community": "Art"
+        }
+      },
+      "B": {
+        "entity_id": "forum_community_016",
+        "site": "forum",
+        "entity_type": "community",
+        "selected_locator_fields": {
+          "community_name": "gadgets"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_post",
+        "target": "A",
+        "title_must_include": [
+          "remote work spaces"
+        ],
+        "body_must_include": [
+          "family friendly"
+        ]
+      },
+      {
+        "type": "edit_post",
+        "target": "A",
+        "body_must_include": [
+          "family friendly"
+        ]
+      },
+      {
+        "type": "create_post",
+        "target": "B",
+        "title_must_include": [
+          "bike commute routes"
+        ],
+        "body_must_include": [
+          "monthly budget"
+        ]
+      },
+      {
+        "type": "comment_post",
+        "target": "B",
+        "body_must_include": [
+          "I can confirm this still works"
+        ]
+      }
+    ],
+    "requirements": {
+      "title_must_include": [
+        "remote work spaces"
+      ],
+      "body_must_include": [
+        "family friendly"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "title_must_include": [
+          "remote work spaces"
+        ],
+        "body_must_include": [
+          "family friendly"
+        ]
+      },
+      "B": {
+        "title_must_include": [
+          "bike commute routes"
+        ],
+        "body_must_include": [
+          "monthly budget"
+        ],
+        "comment_body_must_include": [
+          "I can confirm this still works"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "create_post",
+      "target": "A",
+      "title_must_include": [
+        "remote work spaces"
+      ],
+      "body_must_include": [
+        "family friendly"
+      ]
+    },
+    {
+      "type": "edit_post",
+      "target": "A",
+      "body_must_include": [
+        "family friendly"
+      ]
+    },
+    {
+      "type": "create_post",
+      "target": "B",
+      "title_must_include": [
+        "bike commute routes"
+      ],
+      "body_must_include": [
+        "monthly budget"
+      ]
+    },
+    {
+      "type": "comment_post",
+      "target": "B",
+      "body_must_include": [
+        "I can confirm this still works"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_015",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "remote work spaces"
+          ],
+          "body_must_include": [
+            "family friendly"
+          ]
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_015"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "family friendly"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_community_016",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "bike commute routes"
+          ],
+          "body_must_include": [
+            "monthly budget"
+          ]
+        }
+      },
+      {
+        "check_object": "comments",
+        "conditions": {
+          "community_ref": "forum_community_016",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_015",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "remote work spaces"
+          ],
+          "body_must_include": [
+            "family friendly"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_015"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "family friendly"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_community_016",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "bike commute routes"
+          ],
+          "body_must_include": [
+            "monthly budget"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "comments",
+          "filters": {
+            "community_ref": "forum_community_016",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 3
+  }
+}

@@ -1,0 +1,172 @@
+[
+  {
+    "entity_id": "gitlab_issue_014",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "database timeout",
+      "state": "open",
+      "labels": ["bug"]
+    },
+    "relations": {
+      "project_ref": "gitlab_project_003"
+    },
+    "provenance": {
+      "source": "released_webarena_style_data",
+      "source_task_ids": ["webarena_symbolic_238"]
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_021",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "checkout failure",
+      "state": "open",
+      "labels": []
+    },
+    "relations": {
+      "project_ref": "gitlab_project_004"
+    },
+    "provenance": {
+      "source": "released_webarena_style_data",
+      "source_task_ids": ["webarena_symbolic_241"]
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_034",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "checkout regression",
+      "state": "open",
+      "labels": ["frontend"]
+    },
+    "relations": {
+      "project_ref": "gitlab_project_004"
+    },
+    "provenance": {
+      "source": "released_webarena_style_data",
+      "source_task_ids": ["webchore_symbolic_052"]
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_046",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "backend ownership",
+      "state": "open",
+      "labels": []
+    },
+    "relations": {
+      "project_ref": "gitlab_project_007"
+    },
+    "provenance": {
+      "source": "released_webarena_style_data",
+      "source_task_ids": ["webchore_symbolic_069"]
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "gitlab_issue_052",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "attributes": {
+      "title_contains": "checkout monitoring",
+      "state": "open",
+      "labels": []
+    },
+    "relations": {
+      "project_ref": "gitlab_project_007"
+    },
+    "provenance": {
+      "source": "released_webarena_style_data",
+      "source_task_ids": ["webchore_symbolic_077"]
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_variant_031",
+    "site": "shopping",
+    "entity_type": "product_variant",
+    "attributes": {
+      "product_name": "Quest Lumaflex Band",
+      "color": "black",
+      "size": "medium",
+      "in_stock": true
+    },
+    "relations": {
+      "product_ref": "shopping_product_027"
+    },
+    "provenance": {
+      "source": "released_webarena_style_data",
+      "source_task_ids": ["webarena_symbolic_091"]
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "shopping_product_027",
+    "site": "shopping",
+    "entity_type": "product",
+    "attributes": {
+      "product_name": "Quest Lumaflex Band",
+      "category": "fitness"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "released_webarena_style_data",
+      "source_task_ids": ["webarena_symbolic_091"]
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_post_018",
+    "site": "forum",
+    "entity_type": "post",
+    "attributes": {
+      "title_contains": "public transit options",
+      "community": "nyc"
+    },
+    "relations": {
+      "community_ref": "forum_community_006"
+    },
+    "provenance": {
+      "source": "released_webarena_style_data",
+      "source_task_ids": ["webarena_symbolic_412"]
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "forum_community_006",
+    "site": "forum",
+    "entity_type": "community",
+    "attributes": {
+      "community_name": "nyc"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "released_webarena_style_data",
+      "source_task_ids": ["webarena_symbolic_412"]
+    },
+    "grounding_status": "symbolic_entity"
+  },
+  {
+    "entity_id": "cms_page_011",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "attributes": {
+      "page_title_contains": "return policy",
+      "status": "draft_or_published_unknown"
+    },
+    "relations": {},
+    "provenance": {
+      "source": "released_webarena_style_data",
+      "source_task_ids": ["webarena_symbolic_301"]
+    },
+    "grounding_status": "symbolic_entity"
+  }
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "task_id": "gitlab_memory_L1_001",
+    "task_description": "Open the database timeout issue in GitLab and leave a comment containing: needs retry logic.",
+    "target_environment": "GitLab",
+    "ability_dimension": "memory_information_tracking",
+    "difficulty": "L1",
+    "target_entity_ref": "gitlab_issue_014",
+    "task_family": "comment_issue",
+    "expected_answer_or_verification": "DB/API check issue_comments for a comment where issue_ref=gitlab_issue_014 and author_ref=current_user; body must include 'needs retry logic'.",
+    "ground_truth": {
+      "ground_truth_type": "expected_backend_state",
+      "assertions": [
+        {
+          "resource": "issue_comments",
+          "where": {"issue_ref": "gitlab_issue_014", "author_ref": "current_user"},
+          "assert": {"exists": true, "body_must_include": ["needs retry logic"]}
+        }
+      ],
+      "grounding_status": "symbolic_grounded"
+    }
+  },
+  {
+    "task_id": "gitlab_long_L1_001",
+    "task_description": "Open the checkout failure issue in GitLab, add the backend label, and leave a comment containing: triaged for backend team.",
+    "target_environment": "GitLab",
+    "ability_dimension": "long_horizon_operation",
+    "difficulty": "L1",
+    "target_entity_ref": "gitlab_issue_021",
+    "task_family": "add_label_to_issue + comment_issue",
+    "expected_answer_or_verification": "DB/API checks issue_labels includes backend for gitlab_issue_021, and issue_comments contains current user's comment with 'triaged for backend team'.",
+    "ground_truth": {
+      "ground_truth_type": "expected_backend_state",
+      "assertions": [
+        {"resource": "issue_labels", "where": {"issue_ref": "gitlab_issue_021"}, "assert": {"labels_include": ["backend"]}},
+        {"resource": "issue_comments", "where": {"issue_ref": "gitlab_issue_021", "author_ref": "current_user"}, "assert": {"exists": true, "body_must_include": ["triaged for backend team"]}}
+      ],
+      "grounding_status": "symbolic_grounded"
+    }
+  },
+  {
+    "task_id": "shopping_memory_L2_001",
+    "task_description": "Find the black medium Quest Lumaflex Band variant in the shopping site and add it to the cart with quantity 2.",
+    "target_environment": "Shopping",
+    "ability_dimension": "memory_information_tracking",
+    "difficulty": "L2",
+    "target_entity_ref": "shopping_variant_031",
+    "task_family": "add_to_cart",
+    "expected_answer_or_verification": "DB/API check cart_items for user_ref=current_user and variant_ref=shopping_variant_031; quantity must equal 2.",
+    "ground_truth": {
+      "ground_truth_type": "expected_backend_state",
+      "assertions": [
+        {"resource": "cart_items", "where": {"user_ref": "current_user", "variant_ref": "shopping_variant_031"}, "assert": {"exists": true, "quantity": 2}}
+      ],
+      "grounding_status": "symbolic_grounded"
+    }
+  },
+  {
+    "task_id": "forum_memory_L2_001",
+    "task_description": "Find the forum post about public transit options and reply with a comment containing: I would check public transit options first.",
+    "target_environment": "Forum / Reddit-style site",
+    "ability_dimension": "memory_information_tracking",
+    "difficulty": "L2",
+    "target_entity_ref": "forum_post_018",
+    "task_family": "comment_post",
+    "expected_answer_or_verification": "DB/API check comments for post_ref=forum_post_018 and author_ref=current_user; body must include 'I would check public transit options first'.",
+    "ground_truth": {
+      "ground_truth_type": "expected_backend_state",
+      "assertions": [
+        {"resource": "comments", "where": {"post_ref": "forum_post_018", "author_ref": "current_user"}, "assert": {"exists": true, "body_must_include": ["I would check public transit options first"]}}
+      ],
+      "grounding_status": "symbolic_grounded"
+    }
+  },
+  {
+    "task_id": "gitlab_long_L3_001",
+    "task_description": "Find the checkout regression issue in GitLab; comment needs regression test, add the regression label, and close the issue.",
+    "target_environment": "GitLab",
+    "ability_dimension": "long_horizon_operation",
+    "difficulty": "L3",
+    "target_entity_ref": "gitlab_issue_034",
+    "task_family": "comment_issue + add_label_to_issue + close_issue",
+    "expected_answer_or_verification": "DB/API checks: current user's issue comment contains 'needs regression test'; issue_labels includes regression; issues.state is closed.",
+    "ground_truth": {
+      "ground_truth_type": "expected_backend_state",
+      "assertions": [
+        {"resource": "issue_comments", "where": {"issue_ref": "gitlab_issue_034", "author_ref": "current_user"}, "assert": {"exists": true, "body_must_include": ["needs regression test"]}},
+        {"resource": "issue_labels", "where": {"issue_ref": "gitlab_issue_034"}, "assert": {"labels_include": ["regression"]}},
+        {"resource": "issues", "where": {"issue_ref": "gitlab_issue_034"}, "assert": {"state": "closed"}}
+      ],
+      "grounding_status": "symbolic_grounded"
+    }
+  },
+  {
+    "task_id": "shopping_memory_L3_001",
+    "task_description": "Find the Quest Lumaflex Band product and write a 4-star review whose text contains both comfortable and good value.",
+    "target_environment": "Shopping",
+    "ability_dimension": "memory_information_tracking",
+    "difficulty": "L3",
+    "target_entity_ref": "shopping_product_027",
+    "task_family": "write_review",
+    "expected_answer_or_verification": "DB/API check reviews for product_ref=shopping_product_027 and author_ref=current_user; rating=4; body includes comfortable and good value.",
+    "ground_truth": {
+      "ground_truth_type": "expected_backend_state",
+      "assertions": [
+        {"resource": "reviews", "where": {"product_ref": "shopping_product_027", "author_ref": "current_user"}, "assert": {"exists": true, "rating": 4, "body_must_include": ["comfortable", "good value"]}}
+      ],
+      "grounding_status": "symbolic_grounded"
+    }
+  },
+  {
+    "task_id": "gitlab_memory_L4_001",
+    "task_description": "Find the backend ownership issue in GitLab. If it does not already have the backend label, add that label and comment backend ownership confirmed.",
+    "target_environment": "GitLab",
+    "ability_dimension": "memory_information_tracking",
+    "difficulty": "L4",
+    "target_entity_ref": "gitlab_issue_046",
+    "task_family": "conditional add_label_to_issue + comment_issue",
+    "expected_answer_or_verification": "DB/API checks issue_labels includes backend for gitlab_issue_046 and issue_comments has current user's comment containing 'backend ownership confirmed'. Initial symbolic state says labels is empty.",
+    "ground_truth": {
+      "ground_truth_type": "expected_backend_state",
+      "preconditions": [{"resource": "issues", "where": {"issue_ref": "gitlab_issue_046"}, "assert": {"labels_do_not_include": ["backend"]}}],
+      "assertions": [
+        {"resource": "issue_labels", "where": {"issue_ref": "gitlab_issue_046"}, "assert": {"labels_include": ["backend"]}},
+        {"resource": "issue_comments", "where": {"issue_ref": "gitlab_issue_046", "author_ref": "current_user"}, "assert": {"exists": true, "body_must_include": ["backend ownership confirmed"]}}
+      ],
+      "grounding_status": "symbolic_grounded"
+    }
+  },
+  {
+    "task_id": "cms_long_L4_001",
+    "task_description": "Open the return policy page in the CMS/Admin site, update the page body so it includes 30-day return window, and publish the page.",
+    "target_environment": "CMS / Shopping Admin",
+    "ability_dimension": "long_horizon_operation",
+    "difficulty": "L4",
+    "target_entity_ref": "cms_page_011",
+    "task_family": "edit_page_publish",
+    "expected_answer_or_verification": "DB/API check cms_pages for page_ref=cms_page_011; body includes '30-day return window'; status=published; last_editor_ref=current_user.",
+    "ground_truth": {
+      "ground_truth_type": "expected_backend_state",
+      "assertions": [
+        {"resource": "cms_pages", "where": {"page_ref": "cms_page_011"}, "assert": {"body_must_include": ["30-day return window"], "status": "published", "last_editor_ref": "current_user"}}
+      ],
+      "grounding_status": "symbolic_grounded"
+    }
+  },
+  {
+    "task_id": "gitlab_long_L5_001",
+    "task_description": "Find the checkout monitoring issue in GitLab. Confirm it is open, then comment please add checkout monitoring, add the monitoring label, and close it.",
+    "target_environment": "GitLab",
+    "ability_dimension": "long_horizon_operation",
+    "difficulty": "L5",
+    "target_entity_ref": "gitlab_issue_052",
+    "task_family": "preconditioned comment_issue + add_label_to_issue + close_issue",
+    "expected_answer_or_verification": "Initial state should have issues.state=open. Final DB/API checks: comment contains 'please add checkout monitoring'; labels include monitoring; issue state=closed.",
+    "ground_truth": {
+      "ground_truth_type": "expected_backend_state",
+      "preconditions": [{"resource": "issues", "where": {"issue_ref": "gitlab_issue_052"}, "assert": {"state": "open"}}],
+      "assertions": [
+        {"resource": "issue_comments", "where": {"issue_ref": "gitlab_issue_052", "author_ref": "current_user"}, "assert": {"exists": true, "body_must_include": ["please add checkout monitoring"]}},
+        {"resource": "issue_labels", "where": {"issue_ref": "gitlab_issue_052"}, "assert": {"labels_include": ["monitoring"]}},
+        {"resource": "issues", "where": {"issue_ref": "gitlab_issue_052"}, "assert": {"state": "closed"}}
+      ],
+      "grounding_status": "symbolic_grounded"
+    }
+  },
+  {
+    "task_id": "forum_memory_L5_001",
+    "task_description": "Go to the nyc community and create a new post. The title must include car in NYC, and the body must include both public transit and parking cost.",
+    "target_environment": "Forum / Reddit-style site",
+    "ability_dimension": "memory_information_tracking",
+    "difficulty": "L5",
+    "target_entity_ref": "forum_community_006",
+    "task_family": "create_post",
+    "expected_answer_or_verification": "DB/API check posts for community_ref=forum_community_006 and author_ref=current_user; title includes 'car in NYC'; body includes public transit and parking cost.",
+    "ground_truth": {
+      "ground_truth_type": "expected_backend_state",
+      "assertions": [
+        {"resource": "posts", "where": {"community_ref": "forum_community_006", "author_ref": "current_user"}, "assert": {"exists": true, "title_must_include": ["car in NYC"], "body_must_include": ["public transit", "parking cost"]}}
+      ],
+      "grounding_status": "symbolic_grounded"
+    }
+  }
+]

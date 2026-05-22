@@ -1,0 +1,135 @@
+{
+  "task_id": "task_0011",
+  "task_description": "Add the label \"frontend\" to the open issue A with IID 8 on GitLab.",
+  "target_environment": "gitlab",
+  "ability_dimension": "Memory",
+  "difficulty": "L3",
+  "target_entity": {
+    "entity_id": "gitlab_issue_007",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "iid": 8,
+      "state": "open"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_007",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "iid": 8,
+        "state": "open"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "add_label_to_issue",
+    "task_templates": {
+      "A": "add_label_to_issue"
+    },
+    "structure_variant": "memory_L3_lookup_multi_condition",
+    "locator": {
+      "iid": 8,
+      "state": "open"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_007",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "iid": 8,
+          "state": "open"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "add_label",
+        "target": "A",
+        "label": "frontend"
+      }
+    ],
+    "requirements": {
+      "label": "frontend"
+    },
+    "requirements_by_target": {
+      "A": {
+        "label": "frontend"
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "add_label",
+      "target": "A",
+      "label": "frontend"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_007"
+        },
+        "must_satisfy": {
+          "labels_include": "frontend"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issue_labels",
+          "filters": {
+            "issue_ref": "gitlab_issue_007"
+          }
+        },
+        "condition": {
+          "labels_include": "frontend"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 3
+  }
+}

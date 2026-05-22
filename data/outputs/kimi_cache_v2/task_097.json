@@ -1,0 +1,441 @@
+{
+  "task_id": "task_0107",
+  "task_description": "Find three products labeled A, B, and C. Product A is in the home & kitchen category and is named \"2 Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts\". Product B is in the sports category and is named \"andobil Original Magnetic Car Vent Mount Compatible with MagSafe [Case Friendly] Car Mount for iPhone 13 Pro Max 12 Mini [Powerful Magnet] Air Vent Car Phone Holder, Cell Phone Holder for Most of Car\". Product C is in the toys & games category and is named \"Bluetooth headphones from Sony\". Exclude alternatives that do not match all listed conditions. For product A, add 1 to your cart, leave a 1-star review that includes the phrase \"would not recommend\", then remove it from your cart. For product B, add 1 to your cart, leave a 3-star review that includes the phrase \"average performance\", then remove it from your cart. For product C, add 1 to your cart, leave a 5-star review that includes the phrase \"excellent quality\", then remove it from your cart.",
+  "target_environment": "shopping",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L5",
+  "target_entity": {
+    "entity_id": "shopping_product_006",
+    "site": "shopping",
+    "entity_type": "product",
+    "selected_locator_fields": {
+      "category": "home & kitchen",
+      "product_name": "2 Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts",
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "shopping_product_006",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "category": "home & kitchen",
+        "product_name": "2 Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    },
+    "B": {
+      "entity_id": "shopping_product_018",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "category": "sports",
+        "product_name": "andobil Original Magnetic Car Vent Mount Compatible with MagSafe [Case Friendly] Car Mount for iPhone 13 Pro Max 12 Mini [Powerful Magnet] Air Vent Car Phone Holder, Cell Phone Holder for Most of Car",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    },
+    "C": {
+      "entity_id": "shopping_product_024",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "category": "toys & games",
+        "product_name": "Bluetooth headphones from Sony",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "add_review_remove",
+    "task_templates": {
+      "A": "add_review_remove",
+      "B": "add_review_remove",
+      "C": "add_review_remove"
+    },
+    "structure_variant": "long_horizon_L5_multi_action_chain_exclusion_condition",
+    "locator": {
+      "category": "home & kitchen",
+      "product_name": "2 Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts",
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "shopping_product_006",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "category": "home & kitchen",
+          "product_name": "2 Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      },
+      "B": {
+        "entity_id": "shopping_product_018",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "category": "sports",
+          "product_name": "andobil Original Magnetic Car Vent Mount Compatible with MagSafe [Case Friendly] Car Mount for iPhone 13 Pro Max 12 Mini [Powerful Magnet] Air Vent Car Phone Holder, Cell Phone Holder for Most of Car",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      },
+      "C": {
+        "entity_id": "shopping_product_024",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "category": "toys & games",
+          "product_name": "Bluetooth headphones from Sony",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "add_to_cart",
+        "target": "A",
+        "quantity": 1,
+        "final_assertion": false
+      },
+      {
+        "type": "write_review",
+        "target": "A",
+        "rating": 1,
+        "body_must_include": [
+          "would not recommend"
+        ]
+      },
+      {
+        "type": "remove_from_cart",
+        "target": "A"
+      },
+      {
+        "type": "add_to_cart",
+        "target": "B",
+        "quantity": 1,
+        "final_assertion": false
+      },
+      {
+        "type": "write_review",
+        "target": "B",
+        "rating": 3,
+        "body_must_include": [
+          "average performance"
+        ]
+      },
+      {
+        "type": "remove_from_cart",
+        "target": "B"
+      },
+      {
+        "type": "add_to_cart",
+        "target": "C",
+        "quantity": 1,
+        "final_assertion": false
+      },
+      {
+        "type": "write_review",
+        "target": "C",
+        "rating": 5,
+        "body_must_include": [
+          "excellent quality"
+        ]
+      },
+      {
+        "type": "remove_from_cart",
+        "target": "C"
+      }
+    ],
+    "requirements": {
+      "add_to_cart_quantity": 1,
+      "quantity": 1,
+      "rating": 1,
+      "body_must_include": [
+        "would not recommend"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "add_to_cart_quantity": 1,
+        "quantity": 1,
+        "rating": 1,
+        "body_must_include": [
+          "would not recommend"
+        ]
+      },
+      "B": {
+        "add_to_cart_quantity": 1,
+        "quantity": 1,
+        "rating": 3,
+        "body_must_include": [
+          "average performance"
+        ]
+      },
+      "C": {
+        "add_to_cart_quantity": 1,
+        "quantity": 1,
+        "rating": 5,
+        "body_must_include": [
+          "excellent quality"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "add_to_cart",
+      "target": "A",
+      "quantity": 1,
+      "final_assertion": false
+    },
+    {
+      "type": "write_review",
+      "target": "A",
+      "rating": 1,
+      "body_must_include": [
+        "would not recommend"
+      ]
+    },
+    {
+      "type": "remove_from_cart",
+      "target": "A"
+    },
+    {
+      "type": "add_to_cart",
+      "target": "B",
+      "quantity": 1,
+      "final_assertion": false
+    },
+    {
+      "type": "write_review",
+      "target": "B",
+      "rating": 3,
+      "body_must_include": [
+        "average performance"
+      ]
+    },
+    {
+      "type": "remove_from_cart",
+      "target": "B"
+    },
+    {
+      "type": "add_to_cart",
+      "target": "C",
+      "quantity": 1,
+      "final_assertion": false
+    },
+    {
+      "type": "write_review",
+      "target": "C",
+      "rating": 5,
+      "body_must_include": [
+        "excellent quality"
+      ]
+    },
+    {
+      "type": "remove_from_cart",
+      "target": "C"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "reviews",
+        "conditions": {
+          "product_ref": "shopping_product_006",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "rating": 1,
+          "body_must_include": [
+            "would not recommend"
+          ]
+        }
+      },
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_006"
+        },
+        "must_satisfy": {
+          "exists": false
+        }
+      },
+      {
+        "check_object": "reviews",
+        "conditions": {
+          "product_ref": "shopping_product_018",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "rating": 3,
+          "body_must_include": [
+            "average performance"
+          ]
+        }
+      },
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_018"
+        },
+        "must_satisfy": {
+          "exists": false
+        }
+      },
+      {
+        "check_object": "reviews",
+        "conditions": {
+          "product_ref": "shopping_product_024",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "rating": 5,
+          "body_must_include": [
+            "excellent quality"
+          ]
+        }
+      },
+      {
+        "check_object": "cart_items",
+        "conditions": {
+          "user_ref": "current_user",
+          "product_ref": "shopping_product_024"
+        },
+        "must_satisfy": {
+          "exists": false
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "reviews",
+          "filters": {
+            "product_ref": "shopping_product_006",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "rating": 1,
+          "body_must_include": [
+            "would not recommend"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_006"
+          }
+        },
+        "condition": {
+          "exists": false
+        }
+      },
+      {
+        "query": {
+          "resource": "reviews",
+          "filters": {
+            "product_ref": "shopping_product_018",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "rating": 3,
+          "body_must_include": [
+            "average performance"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_018"
+          }
+        },
+        "condition": {
+          "exists": false
+        }
+      },
+      {
+        "query": {
+          "resource": "reviews",
+          "filters": {
+            "product_ref": "shopping_product_024",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "rating": 5,
+          "body_must_include": [
+            "excellent quality"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "cart_items",
+          "filters": {
+            "user_ref": "current_user",
+            "product_ref": "shopping_product_024"
+          }
+        },
+        "condition": {
+          "exists": false
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 7
+  }
+}

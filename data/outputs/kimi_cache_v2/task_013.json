@@ -1,0 +1,219 @@
+{
+  "task_id": "task_0051",
+  "task_description": "In forum community A, which is named personalfinance and also goes by personal finances, publish a new post with a title that includes \"weekend hiking trails\" and body text that includes \"looking for recommendations\". Then reply to that same post with a comment that includes \"great suggestion thanks\".",
+  "target_environment": "forum",
+  "ability_dimension": "Memory",
+  "difficulty": "L4",
+  "target_entity": {
+    "entity_id": "forum_community_019",
+    "site": "forum",
+    "entity_type": "community",
+    "selected_locator_fields": {
+      "aliases": [
+        "personal finances"
+      ],
+      "community_name": "personalfinance"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "forum_community_019",
+      "site": "forum",
+      "entity_type": "community",
+      "selected_locator_fields": {
+        "aliases": [
+          "personal finances"
+        ],
+        "community_name": "personalfinance"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "create_and_comment_post",
+    "task_templates": {
+      "A": "create_and_comment_post"
+    },
+    "structure_variant": "memory_L4_tracked_locator_multi_condition",
+    "locator": {
+      "aliases": [
+        "personal finances"
+      ],
+      "community_name": "personalfinance"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "forum_community_019",
+        "site": "forum",
+        "entity_type": "community",
+        "selected_locator_fields": {
+          "aliases": [
+            "personal finances"
+          ],
+          "community_name": "personalfinance"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_post",
+        "target": "A",
+        "title_must_include": [
+          "weekend hiking trails"
+        ],
+        "body_must_include": [
+          "looking for recommendations"
+        ]
+      },
+      {
+        "type": "comment_post",
+        "target": "A",
+        "body_must_include": [
+          "great suggestion thanks"
+        ]
+      }
+    ],
+    "requirements": {
+      "title_must_include": [
+        "weekend hiking trails"
+      ],
+      "body_must_include": [
+        "looking for recommendations"
+      ],
+      "comment_body_must_include": [
+        "great suggestion thanks"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "title_must_include": [
+          "weekend hiking trails"
+        ],
+        "body_must_include": [
+          "looking for recommendations"
+        ],
+        "comment_body_must_include": [
+          "great suggestion thanks"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "create_post",
+      "target": "A",
+      "title_must_include": [
+        "weekend hiking trails"
+      ],
+      "body_must_include": [
+        "looking for recommendations"
+      ]
+    },
+    {
+      "type": "comment_post",
+      "target": "A",
+      "body_must_include": [
+        "great suggestion thanks"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "posts",
+        "conditions": {
+          "community_ref": "forum_community_019",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "weekend hiking trails"
+          ],
+          "body_must_include": [
+            "looking for recommendations"
+          ]
+        }
+      },
+      {
+        "check_object": "comments",
+        "conditions": {
+          "community_ref": "forum_community_019",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "community_ref": "forum_community_019",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "weekend hiking trails"
+          ],
+          "body_must_include": [
+            "looking for recommendations"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "comments",
+          "filters": {
+            "community_ref": "forum_community_019",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 1
+  }
+}

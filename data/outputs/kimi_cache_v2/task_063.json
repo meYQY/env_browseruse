@@ -1,0 +1,555 @@
+{
+  "task_id": "task_0089",
+  "task_description": "On GitLab, locate issue A which is open and labeled \"help needed\" and \"flaky-test\", issue B which is closed and labeled \"help needed\", and issue C which is closed with IID 1. Then: on A, leave a comment containing exactly \"performance regression noted\", assign it to byteblaze, and close the issue; on B, reopen the issue, leave a comment containing exactly \"needs retry logic\", and add the \"enhancement\" label; on C, reopen the issue, leave a comment containing exactly \"needs regression test\", and add the \"documentation\" label.",
+  "target_environment": "gitlab",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L5",
+  "target_entity": {
+    "entity_id": "gitlab_issue_012",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "state": "open",
+      "labels": [
+        "help needed",
+        "flaky-test"
+      ]
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_012",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "open",
+        "labels": [
+          "help needed",
+          "flaky-test"
+        ]
+      }
+    },
+    "B": {
+      "entity_id": "gitlab_issue_032",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "closed",
+        "labels": [
+          "help needed"
+        ]
+      }
+    },
+    "C": {
+      "entity_id": "gitlab_issue_005",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "iid": 1,
+        "state": "closed"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "comment_assign_close",
+    "task_templates": {
+      "A": "comment_assign_close",
+      "B": "reopen_comment_label",
+      "C": "reopen_comment_label"
+    },
+    "structure_variant": "long_horizon_L5_multi_action_chain_multi_condition",
+    "locator": {
+      "state": "open",
+      "labels": [
+        "help needed",
+        "flaky-test"
+      ]
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_012",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "open",
+          "labels": [
+            "help needed",
+            "flaky-test"
+          ]
+        }
+      },
+      "B": {
+        "entity_id": "gitlab_issue_032",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "closed",
+          "labels": [
+            "help needed"
+          ]
+        }
+      },
+      "C": {
+        "entity_id": "gitlab_issue_005",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "iid": 1,
+          "state": "closed"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "comment",
+        "target": "A",
+        "body_must_include": [
+          "performance regression noted"
+        ]
+      },
+      {
+        "type": "assign_issue",
+        "target": "A",
+        "assignee_username": "byteblaze"
+      },
+      {
+        "type": "close_issue",
+        "target": "A"
+      },
+      {
+        "type": "reopen_issue",
+        "target": "B"
+      },
+      {
+        "type": "comment",
+        "target": "B",
+        "body_must_include": [
+          "needs retry logic"
+        ]
+      },
+      {
+        "type": "add_label",
+        "target": "B",
+        "label": "enhancement"
+      },
+      {
+        "type": "reopen_issue",
+        "target": "C"
+      },
+      {
+        "type": "comment",
+        "target": "C",
+        "body_must_include": [
+          "needs regression test"
+        ]
+      },
+      {
+        "type": "add_label",
+        "target": "C",
+        "label": "documentation"
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "performance regression noted"
+      ],
+      "assignee_username": "byteblaze"
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "performance regression noted"
+        ],
+        "assignee_username": "byteblaze"
+      },
+      "B": {
+        "body_must_include": [
+          "needs retry logic"
+        ],
+        "label": "enhancement"
+      },
+      "C": {
+        "body_must_include": [
+          "needs regression test"
+        ],
+        "label": "documentation"
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "comment",
+      "target": "A",
+      "body_must_include": [
+        "performance regression noted"
+      ]
+    },
+    {
+      "type": "assign_issue",
+      "target": "A",
+      "assignee_username": "byteblaze"
+    },
+    {
+      "type": "close_issue",
+      "target": "A"
+    },
+    {
+      "type": "reopen_issue",
+      "target": "B"
+    },
+    {
+      "type": "comment",
+      "target": "B",
+      "body_must_include": [
+        "needs retry logic"
+      ]
+    },
+    {
+      "type": "add_label",
+      "target": "B",
+      "label": "enhancement"
+    },
+    {
+      "type": "reopen_issue",
+      "target": "C"
+    },
+    {
+      "type": "comment",
+      "target": "C",
+      "body_must_include": [
+        "needs regression test"
+      ]
+    },
+    {
+      "type": "add_label",
+      "target": "C",
+      "label": "documentation"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_012",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "performance regression noted"
+          ]
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_012"
+        },
+        "must_satisfy": {
+          "assignee_ref": "byteblaze"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_012"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_032"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_032",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "needs retry logic"
+          ]
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_032"
+        },
+        "must_satisfy": {
+          "labels_include": "enhancement"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_005"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_005",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "needs regression test"
+          ]
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_005"
+        },
+        "must_satisfy": {
+          "labels_include": "documentation"
+        }
+      }
+    ],
+    "preconditions": [
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_012"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_032"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_005"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_012"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_032"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_032"
+        },
+        "must_satisfy": {
+          "labels_do_not_include": [
+            "enhancement"
+          ]
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_005"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_005"
+        },
+        "must_satisfy": {
+          "labels_do_not_include": [
+            "documentation"
+          ]
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_012",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "performance regression noted"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_012"
+          }
+        },
+        "condition": {
+          "assignee_ref": "byteblaze"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_012"
+          }
+        },
+        "condition": {
+          "state": "closed"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_032"
+          }
+        },
+        "condition": {
+          "state": "open"
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_032",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "needs retry logic"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_labels",
+          "filters": {
+            "issue_ref": "gitlab_issue_032"
+          }
+        },
+        "condition": {
+          "labels_include": "enhancement"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_005"
+          }
+        },
+        "condition": {
+          "state": "open"
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_005",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "needs regression test"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_labels",
+          "filters": {
+            "issue_ref": "gitlab_issue_005"
+          }
+        },
+        "condition": {
+          "labels_include": "documentation"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 3
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "task_id": "task_0023",
+  "task_description": "Find the closed GitLab issue A with title containing \"docs out of date\" in milestone sprint-12. If multiple issues match, use the ranking or recency-like field to disambiguate. Comment on issue A and include exactly \"please add checkout monitoring\".",
+  "target_environment": "gitlab",
+  "ability_dimension": "Memory",
+  "difficulty": "L5",
+  "target_entity": {
+    "entity_id": "gitlab_issue_024",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "title_contains": "docs out of date",
+      "state": "closed",
+      "milestone": "sprint-12",
+      "_locator_hint": "use the ranking or recency-like field to disambiguate"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_024",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "title_contains": "docs out of date",
+        "state": "closed",
+        "milestone": "sprint-12",
+        "_locator_hint": "use the ranking or recency-like field to disambiguate"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "comment_issue",
+    "task_templates": {
+      "A": "comment_issue"
+    },
+    "structure_variant": "memory_L5_tracked_locator_ranking_or_recent",
+    "locator": {
+      "title_contains": "docs out of date",
+      "state": "closed",
+      "milestone": "sprint-12",
+      "_locator_hint": "use the ranking or recency-like field to disambiguate"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_024",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "title_contains": "docs out of date",
+          "state": "closed",
+          "milestone": "sprint-12",
+          "_locator_hint": "use the ranking or recency-like field to disambiguate"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "comment",
+        "target": "A",
+        "body_must_include": [
+          "please add checkout monitoring"
+        ]
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "please add checkout monitoring"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "please add checkout monitoring"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "comment",
+      "target": "A",
+      "body_must_include": [
+        "please add checkout monitoring"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_024",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "please add checkout monitoring"
+          ]
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_024",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "please add checkout monitoring"
+          ]
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": false,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": false,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 10
+  }
+}

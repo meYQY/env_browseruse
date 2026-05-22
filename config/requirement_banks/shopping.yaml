@@ -1,0 +1,42 @@
+# =============================================================================
+# Shopping Requirement Banks
+# =============================================================================
+# Pools of requirement values the generator samples from when instantiating
+# Shopping task templates.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# quantities  -->  {quantity}
+# ---------------------------------------------------------------------------
+quantities:
+  - 1
+  - 2
+  - 3
+  - 5
+
+# ---------------------------------------------------------------------------
+# reviews  -->  {rating} + {body_must_include}
+# Each entry is a (rating, body_must_include) pair. The generator picks one
+# entry and fills both placeholders from it.
+# ---------------------------------------------------------------------------
+reviews:
+  - rating: 5
+    body_must_include: "excellent quality"
+  - rating: 4
+    body_must_include: "comfortable"
+  - rating: 4
+    body_must_include: "good value"
+  - rating: 3
+    body_must_include: "average performance"
+  - rating: 3
+    body_must_include: "meets expectations"
+  - rating: 2
+    body_must_include: "below average durability"
+  - rating: 1
+    body_must_include: "would not recommend"
+  - rating: 5
+    body_must_include: "perfect fit"
+  - rating: 4
+    body_must_include: "fast shipping"
+  - rating: 2
+    body_must_include: "not as described"

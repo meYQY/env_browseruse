@@ -1,0 +1,51 @@
+# =============================================================================
+# Forum Requirement Banks
+# =============================================================================
+# Pools of requirement values the generator samples from when instantiating
+# Forum task templates.
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# post_titles  -->  {title_must_include}
+# ---------------------------------------------------------------------------
+post_titles:
+  - "car in NYC"
+  - "best coffee shops"
+  - "weekend hiking trails"
+  - "apartment hunting tips"
+  - "local concert venues"
+  - "public transit updates"
+  - "bike commute routes"
+  - "restaurant recommendations"
+  - "neighborhood safety"
+  - "remote work spaces"
+
+# ---------------------------------------------------------------------------
+# post_bodies  -->  {body_must_include}  (used for create_post)
+# ---------------------------------------------------------------------------
+post_bodies:
+  - "public transit"
+  - "parking cost"
+  - "monthly budget"
+  - "personal experience"
+  - "looking for recommendations"
+  - "any suggestions appreciated"
+  - "compared to last year"
+  - "open on weekends"
+  - "family friendly"
+  - "affordable options"
+
+# ---------------------------------------------------------------------------
+# comment_bodies  -->  {body_must_include}  (used for comment_post)
+# ---------------------------------------------------------------------------
+comment_bodies:
+  - "I would check public transit options first"
+  - "great suggestion thanks"
+  - "have you tried the one on main street"
+  - "I had a similar experience"
+  - "definitely worth checking out"
+  - "this is outdated information"
+  - "I can confirm this still works"
+  - "adding my recommendation as well"
+  - "prices have changed since then"
+  - "strongly agree with this advice"

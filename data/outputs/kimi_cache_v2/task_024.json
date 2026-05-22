@@ -1,0 +1,556 @@
+{
+  "task_id": "task_0088",
+  "task_description": "On GitLab, handle three issues labeled A, B, and C as follows.\n\nFor issue A, find the open issue that has both the devops and frontend labels. Add a comment that includes the exact text \"confirmed as duplicate\", assign the issue to ericwbailey, and close the issue.\n\nFor issue B, find the open issue with IID 566. Add a comment that includes the exact text \"triaged for backend team\", assign the issue to byteblaze, and close the issue.\n\nFor issue C, find the closed issue with the enhancement, help needed, and documentation labels. Reopen the issue, add a comment that includes the exact text \"needs retry logic\", and apply the high-priority label.",
+  "target_environment": "gitlab",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L5",
+  "target_entity": {
+    "entity_id": "gitlab_issue_021",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "state": "open",
+      "labels": [
+        "devops",
+        "frontend"
+      ],
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_021",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "open",
+        "labels": [
+          "devops",
+          "frontend"
+        ],
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    },
+    "B": {
+      "entity_id": "gitlab_issue_001",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "iid": 566,
+        "state": "open",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    },
+    "C": {
+      "entity_id": "gitlab_issue_033",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "closed",
+        "labels": [
+          "enhancement",
+          "help needed",
+          "documentation"
+        ],
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "comment_assign_close",
+    "task_templates": {
+      "A": "comment_assign_close",
+      "B": "comment_assign_close",
+      "C": "reopen_comment_label"
+    },
+    "structure_variant": "long_horizon_L5_multi_action_chain_exclusion_condition",
+    "locator": {
+      "state": "open",
+      "labels": [
+        "devops",
+        "frontend"
+      ],
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_021",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "open",
+          "labels": [
+            "devops",
+            "frontend"
+          ],
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      },
+      "B": {
+        "entity_id": "gitlab_issue_001",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "iid": 566,
+          "state": "open",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      },
+      "C": {
+        "entity_id": "gitlab_issue_033",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "closed",
+          "labels": [
+            "enhancement",
+            "help needed",
+            "documentation"
+          ],
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "comment",
+        "target": "A",
+        "body_must_include": [
+          "confirmed as duplicate"
+        ]
+      },
+      {
+        "type": "assign_issue",
+        "target": "A",
+        "assignee_username": "ericwbailey"
+      },
+      {
+        "type": "close_issue",
+        "target": "A"
+      },
+      {
+        "type": "comment",
+        "target": "B",
+        "body_must_include": [
+          "triaged for backend team"
+        ]
+      },
+      {
+        "type": "assign_issue",
+        "target": "B",
+        "assignee_username": "byteblaze"
+      },
+      {
+        "type": "close_issue",
+        "target": "B"
+      },
+      {
+        "type": "reopen_issue",
+        "target": "C"
+      },
+      {
+        "type": "comment",
+        "target": "C",
+        "body_must_include": [
+          "needs retry logic"
+        ]
+      },
+      {
+        "type": "add_label",
+        "target": "C",
+        "label": "high-priority"
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "confirmed as duplicate"
+      ],
+      "assignee_username": "ericwbailey"
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "confirmed as duplicate"
+        ],
+        "assignee_username": "ericwbailey"
+      },
+      "B": {
+        "body_must_include": [
+          "triaged for backend team"
+        ],
+        "assignee_username": "byteblaze"
+      },
+      "C": {
+        "body_must_include": [
+          "needs retry logic"
+        ],
+        "label": "high-priority"
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "comment",
+      "target": "A",
+      "body_must_include": [
+        "confirmed as duplicate"
+      ]
+    },
+    {
+      "type": "assign_issue",
+      "target": "A",
+      "assignee_username": "ericwbailey"
+    },
+    {
+      "type": "close_issue",
+      "target": "A"
+    },
+    {
+      "type": "comment",
+      "target": "B",
+      "body_must_include": [
+        "triaged for backend team"
+      ]
+    },
+    {
+      "type": "assign_issue",
+      "target": "B",
+      "assignee_username": "byteblaze"
+    },
+    {
+      "type": "close_issue",
+      "target": "B"
+    },
+    {
+      "type": "reopen_issue",
+      "target": "C"
+    },
+    {
+      "type": "comment",
+      "target": "C",
+      "body_must_include": [
+        "needs retry logic"
+      ]
+    },
+    {
+      "type": "add_label",
+      "target": "C",
+      "label": "high-priority"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_021",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "confirmed as duplicate"
+          ]
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_021"
+        },
+        "must_satisfy": {
+          "assignee_ref": "ericwbailey"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_021"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_001",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "triaged for backend team"
+          ]
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_001"
+        },
+        "must_satisfy": {
+          "assignee_ref": "byteblaze"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_001"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_033"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_033",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "needs retry logic"
+          ]
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_033"
+        },
+        "must_satisfy": {
+          "labels_include": "high-priority"
+        }
+      }
+    ],
+    "preconditions": [
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_021"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_001"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_033"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_021"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_001"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_033"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_033"
+        },
+        "must_satisfy": {
+          "labels_do_not_include": [
+            "high-priority"
+          ]
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_021",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "confirmed as duplicate"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_021"
+          }
+        },
+        "condition": {
+          "assignee_ref": "ericwbailey"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_021"
+          }
+        },
+        "condition": {
+          "state": "closed"
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_001",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "triaged for backend team"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_001"
+          }
+        },
+        "condition": {
+          "assignee_ref": "byteblaze"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_001"
+          }
+        },
+        "condition": {
+          "state": "closed"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_033"
+          }
+        },
+        "condition": {
+          "state": "open"
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_033",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "needs retry logic"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_labels",
+          "filters": {
+            "issue_ref": "gitlab_issue_033"
+          }
+        },
+        "condition": {
+          "labels_include": "high-priority"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 2
+  }
+}

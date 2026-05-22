@@ -1,0 +1,547 @@
+{
+  "task_id": "task_0090",
+  "task_description": "On GitLab, find issue A: the closed issue with IID 316. Find issue B: the closed issue with title containing \"container build timeout\". Find issue C: the open issue with IID 18. For A, reopen the issue, leave a comment that says \"moved to next sprint\", and give it the label \"enhancement\". For B, reopen the issue, leave a comment that says \"confirmed as duplicate\", and give it the label \"performance\". For C, leave a comment that says \"blocked by upstream dependency\", assign it to qa_bob, and close the issue.",
+  "target_environment": "gitlab",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L5",
+  "target_entity": {
+    "entity_id": "gitlab_issue_010",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "iid": 316,
+      "state": "closed",
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_010",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "iid": 316,
+        "state": "closed",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    },
+    "B": {
+      "entity_id": "gitlab_issue_031",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "closed",
+        "title_contains": "container build timeout",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    },
+    "C": {
+      "entity_id": "gitlab_issue_008",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "iid": 18,
+        "state": "open",
+        "_locator_hint": "exclude alternatives that do not match all listed conditions"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "reopen_comment_label",
+    "task_templates": {
+      "A": "reopen_comment_label",
+      "B": "reopen_comment_label",
+      "C": "comment_assign_close"
+    },
+    "structure_variant": "long_horizon_L5_multi_action_chain_exclusion_condition",
+    "locator": {
+      "iid": 316,
+      "state": "closed",
+      "_locator_hint": "exclude alternatives that do not match all listed conditions"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_010",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "iid": 316,
+          "state": "closed",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      },
+      "B": {
+        "entity_id": "gitlab_issue_031",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "closed",
+          "title_contains": "container build timeout",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      },
+      "C": {
+        "entity_id": "gitlab_issue_008",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "iid": 18,
+          "state": "open",
+          "_locator_hint": "exclude alternatives that do not match all listed conditions"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "reopen_issue",
+        "target": "A"
+      },
+      {
+        "type": "comment",
+        "target": "A",
+        "body_must_include": [
+          "moved to next sprint"
+        ]
+      },
+      {
+        "type": "add_label",
+        "target": "A",
+        "label": "enhancement"
+      },
+      {
+        "type": "reopen_issue",
+        "target": "B"
+      },
+      {
+        "type": "comment",
+        "target": "B",
+        "body_must_include": [
+          "confirmed as duplicate"
+        ]
+      },
+      {
+        "type": "add_label",
+        "target": "B",
+        "label": "performance"
+      },
+      {
+        "type": "comment",
+        "target": "C",
+        "body_must_include": [
+          "blocked by upstream dependency"
+        ]
+      },
+      {
+        "type": "assign_issue",
+        "target": "C",
+        "assignee_username": "qa_bob"
+      },
+      {
+        "type": "close_issue",
+        "target": "C"
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "moved to next sprint"
+      ],
+      "label": "enhancement"
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "moved to next sprint"
+        ],
+        "label": "enhancement"
+      },
+      "B": {
+        "body_must_include": [
+          "confirmed as duplicate"
+        ],
+        "label": "performance"
+      },
+      "C": {
+        "body_must_include": [
+          "blocked by upstream dependency"
+        ],
+        "assignee_username": "qa_bob"
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "reopen_issue",
+      "target": "A"
+    },
+    {
+      "type": "comment",
+      "target": "A",
+      "body_must_include": [
+        "moved to next sprint"
+      ]
+    },
+    {
+      "type": "add_label",
+      "target": "A",
+      "label": "enhancement"
+    },
+    {
+      "type": "reopen_issue",
+      "target": "B"
+    },
+    {
+      "type": "comment",
+      "target": "B",
+      "body_must_include": [
+        "confirmed as duplicate"
+      ]
+    },
+    {
+      "type": "add_label",
+      "target": "B",
+      "label": "performance"
+    },
+    {
+      "type": "comment",
+      "target": "C",
+      "body_must_include": [
+        "blocked by upstream dependency"
+      ]
+    },
+    {
+      "type": "assign_issue",
+      "target": "C",
+      "assignee_username": "qa_bob"
+    },
+    {
+      "type": "close_issue",
+      "target": "C"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_010"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_010",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "moved to next sprint"
+          ]
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_010"
+        },
+        "must_satisfy": {
+          "labels_include": "enhancement"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_031"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_031",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "confirmed as duplicate"
+          ]
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_031"
+        },
+        "must_satisfy": {
+          "labels_include": "performance"
+        }
+      },
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_008",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "blocked by upstream dependency"
+          ]
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_008"
+        },
+        "must_satisfy": {
+          "assignee_ref": "qa_bob"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_008"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      }
+    ],
+    "preconditions": [
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_010"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_031"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_008"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_010"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_010"
+        },
+        "must_satisfy": {
+          "labels_do_not_include": [
+            "enhancement"
+          ]
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_031"
+        },
+        "must_satisfy": {
+          "state": "closed"
+        }
+      },
+      {
+        "check_object": "issue_labels",
+        "conditions": {
+          "issue_ref": "gitlab_issue_031"
+        },
+        "must_satisfy": {
+          "labels_do_not_include": [
+            "performance"
+          ]
+        }
+      },
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_008"
+        },
+        "must_satisfy": {
+          "state": "open"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_010"
+          }
+        },
+        "condition": {
+          "state": "open"
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_010",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "moved to next sprint"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_labels",
+          "filters": {
+            "issue_ref": "gitlab_issue_010"
+          }
+        },
+        "condition": {
+          "labels_include": "enhancement"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_031"
+          }
+        },
+        "condition": {
+          "state": "open"
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_031",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "confirmed as duplicate"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_labels",
+          "filters": {
+            "issue_ref": "gitlab_issue_031"
+          }
+        },
+        "condition": {
+          "labels_include": "performance"
+        }
+      },
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_008",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "blocked by upstream dependency"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_008"
+          }
+        },
+        "condition": {
+          "assignee_ref": "qa_bob"
+        }
+      },
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_008"
+          }
+        },
+        "condition": {
+          "state": "closed"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 2,
+    "template_use_count": 5
+  }
+}

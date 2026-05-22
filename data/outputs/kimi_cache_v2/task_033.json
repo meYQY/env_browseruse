@@ -1,0 +1,326 @@
+{
+  "task_id": "task_0114",
+  "task_description": "In the forum's \"deeplearning\" community (target A), create a post with a title containing \"apartment hunting tips\" and a body containing \"affordable options\", then comment on that post with a body containing \"adding my recommendation as well\". Next, for target B (the post whose title contains \"public transit options\"), create a post with a title containing \"restaurant recommendations\" and a body containing \"compared to last year\", then edit that post so its body contains \"compared to last year\".",
+  "target_environment": "forum",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L4",
+  "target_entity": {
+    "entity_id": "forum_community_003",
+    "site": "forum",
+    "entity_type": "community",
+    "selected_locator_fields": {
+      "community_name": "deeplearning"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "forum_community_003",
+      "site": "forum",
+      "entity_type": "community",
+      "selected_locator_fields": {
+        "community_name": "deeplearning"
+      }
+    },
+    "B": {
+      "entity_id": "forum_post_001",
+      "site": "forum",
+      "entity_type": "post",
+      "selected_locator_fields": {
+        "title_contains": "public transit options"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "create_and_comment_post",
+    "task_templates": {
+      "A": "create_and_comment_post",
+      "B": "create_and_edit_post"
+    },
+    "structure_variant": "long_horizon_L4_two_step_chain_direct_ref",
+    "locator": {
+      "community_name": "deeplearning"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "forum_community_003",
+        "site": "forum",
+        "entity_type": "community",
+        "selected_locator_fields": {
+          "community_name": "deeplearning"
+        }
+      },
+      "B": {
+        "entity_id": "forum_post_001",
+        "site": "forum",
+        "entity_type": "post",
+        "selected_locator_fields": {
+          "title_contains": "public transit options"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_post",
+        "target": "A",
+        "title_must_include": [
+          "apartment hunting tips"
+        ],
+        "body_must_include": [
+          "affordable options"
+        ]
+      },
+      {
+        "type": "comment_post",
+        "target": "A",
+        "body_must_include": [
+          "adding my recommendation as well"
+        ]
+      },
+      {
+        "type": "create_post",
+        "target": "B",
+        "title_must_include": [
+          "restaurant recommendations"
+        ],
+        "body_must_include": [
+          "compared to last year"
+        ]
+      },
+      {
+        "type": "edit_post",
+        "target": "B",
+        "body_must_include": [
+          "compared to last year"
+        ]
+      }
+    ],
+    "requirements": {
+      "title_must_include": [
+        "apartment hunting tips"
+      ],
+      "body_must_include": [
+        "affordable options"
+      ],
+      "comment_body_must_include": [
+        "adding my recommendation as well"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "title_must_include": [
+          "apartment hunting tips"
+        ],
+        "body_must_include": [
+          "affordable options"
+        ],
+        "comment_body_must_include": [
+          "adding my recommendation as well"
+        ]
+      },
+      "B": {
+        "title_must_include": [
+          "restaurant recommendations"
+        ],
+        "body_must_include": [
+          "compared to last year"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "create_post",
+      "target": "A",
+      "title_must_include": [
+        "apartment hunting tips"
+      ],
+      "body_must_include": [
+        "affordable options"
+      ]
+    },
+    {
+      "type": "comment_post",
+      "target": "A",
+      "body_must_include": [
+        "adding my recommendation as well"
+      ]
+    },
+    {
+      "type": "create_post",
+      "target": "B",
+      "title_must_include": [
+        "restaurant recommendations"
+      ],
+      "body_must_include": [
+        "compared to last year"
+      ]
+    },
+    {
+      "type": "edit_post",
+      "target": "B",
+      "body_must_include": [
+        "compared to last year"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "posts",
+        "conditions": {
+          "community_ref": "forum_community_003",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "apartment hunting tips"
+          ],
+          "body_must_include": [
+            "affordable options"
+          ]
+        }
+      },
+      {
+        "check_object": "comments",
+        "conditions": {
+          "community_ref": "forum_community_003",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "community_ref": "forum_post_001",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "restaurant recommendations"
+          ],
+          "body_must_include": [
+            "compared to last year"
+          ]
+        }
+      },
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_001"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "compared to last year"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "community_ref": "forum_community_003",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "apartment hunting tips"
+          ],
+          "body_must_include": [
+            "affordable options"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "comments",
+          "filters": {
+            "community_ref": "forum_community_003",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "community_ref": "forum_post_001",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "restaurant recommendations"
+          ],
+          "body_must_include": [
+            "compared to last year"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_001"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "compared to last year"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": false,
+    "checks": {
+      "entity_exists": false,
+      "entity_type_matches": false,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": false,
+      "verifier_binds_entity": false,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 5
+  }
+}

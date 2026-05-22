@@ -1,0 +1,147 @@
+{
+  "task_id": "task_0001",
+  "task_description": "On GitLab, find the issue whose title contains \"file upload 413\" (A) and leave a comment on it that includes the exact phrase \"added reproduction steps\".",
+  "target_environment": "gitlab",
+  "ability_dimension": "Memory",
+  "difficulty": "L1",
+  "target_entity": {
+    "entity_id": "gitlab_issue_018",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "title_contains": "file upload 413"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_018",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "title_contains": "file upload 413"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "comment_issue",
+    "task_templates": {
+      "A": "comment_issue"
+    },
+    "structure_variant": "memory_L1_lookup_direct_ref",
+    "locator": {
+      "title_contains": "file upload 413"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_018",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "title_contains": "file upload 413"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "comment",
+        "target": "A",
+        "body_must_include": [
+          "added reproduction steps"
+        ]
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "added reproduction steps"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "added reproduction steps"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "comment",
+      "target": "A",
+      "body_must_include": [
+        "added reproduction steps"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issue_comments",
+        "conditions": {
+          "issue_ref": "gitlab_issue_018",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "body_must_include": [
+            "added reproduction steps"
+          ]
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issue_comments",
+          "filters": {
+            "issue_ref": "gitlab_issue_018",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "body_must_include": [
+            "added reproduction steps"
+          ]
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 1
+  }
+}

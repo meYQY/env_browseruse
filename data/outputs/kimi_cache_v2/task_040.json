@@ -1,0 +1,131 @@
+{
+  "task_id": "task_0007",
+  "task_description": "On GitLab, assign the open issue A, issue 017, to byteblaze.",
+  "target_environment": "gitlab",
+  "ability_dimension": "Memory",
+  "difficulty": "L2",
+  "target_entity": {
+    "entity_id": "gitlab_issue_017",
+    "site": "gitlab",
+    "entity_type": "issue",
+    "selected_locator_fields": {
+      "state": "open"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "gitlab_issue_017",
+      "site": "gitlab",
+      "entity_type": "issue",
+      "selected_locator_fields": {
+        "state": "open"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "assign_issue",
+    "task_templates": {
+      "A": "assign_issue"
+    },
+    "structure_variant": "memory_L2_lookup_single_condition",
+    "locator": {
+      "state": "open"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "gitlab_issue_017",
+        "site": "gitlab",
+        "entity_type": "issue",
+        "selected_locator_fields": {
+          "state": "open"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "assign_issue",
+        "target": "A",
+        "assignee_username": "byteblaze"
+      }
+    ],
+    "requirements": {
+      "assignee_username": "byteblaze"
+    },
+    "requirements_by_target": {
+      "A": {
+        "assignee_username": "byteblaze"
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "assign_issue",
+      "target": "A",
+      "assignee_username": "byteblaze"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "issues",
+        "conditions": {
+          "issue_ref": "gitlab_issue_017"
+        },
+        "must_satisfy": {
+          "assignee_ref": "byteblaze"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "issues",
+          "filters": {
+            "issue_ref": "gitlab_issue_017"
+          }
+        },
+        "condition": {
+          "assignee_ref": "byteblaze"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 3
+  }
+}

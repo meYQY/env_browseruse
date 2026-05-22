@@ -1,0 +1,145 @@
+# =============================================================================
+# CMS Task Templates
+# =============================================================================
+# Placeholder tokens:
+#   {target_entity}     -- entity_id of the CMS page
+#   {body_must_include} -- required phrase(s) in page body after edit
+# =============================================================================
+
+templates:
+
+  # -------------------------------------------------------------------------
+  # edit_page
+  # -------------------------------------------------------------------------
+  edit_page:
+    site: cms_admin
+    required_entity_type: cms_page
+    required_entity_attributes: []
+    allowed_actions:
+      - edit_page
+
+    ground_truth_rules:
+      assertions:
+        - resource: cms_pages
+          where:
+            page_ref: "{target_entity}"
+          assert:
+            body_must_include: "{body_must_include}"
+            last_editor_ref: current_user
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L1, L2, L3, L4, L5]
+      long_horizon_operation: [L1, L2, L3]
+
+  # -------------------------------------------------------------------------
+  # create_page
+  # -------------------------------------------------------------------------
+  create_page:
+    site: cms_admin
+    required_entity_type: cms_page
+    required_entity_attributes: []
+    allowed_actions:
+      - create_page
+
+    ground_truth_rules:
+      assertions:
+        - resource: cms_pages
+          where:
+            page_ref: "{target_entity}"
+          assert:
+            exists: true
+            title_must_include: "{title_must_include}"
+            body_must_include: "{body_must_include}"
+            creator_ref: current_user
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L1, L2, L3, L4, L5]
+      long_horizon_operation: [L1, L2]
+
+  # -------------------------------------------------------------------------
+  # edit_and_publish_page
+  # -------------------------------------------------------------------------
+  edit_and_publish_page:
+    site: cms_admin
+    required_entity_type: cms_page
+    required_entity_attributes: []
+    allowed_actions:
+      - edit_page
+      - publish_page
+
+    ground_truth_rules:
+      assertions:
+        - resource: cms_pages
+          where:
+            page_ref: "{target_entity}"
+          assert:
+            body_must_include: "{body_must_include}"
+            status: published
+            last_editor_ref: current_user
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L4, L5]
+      long_horizon_operation: [L3, L4, L5]
+
+  # -------------------------------------------------------------------------
+  # create_and_publish_page
+  # -------------------------------------------------------------------------
+  create_and_publish_page:
+    site: cms_admin
+    required_entity_type: cms_page
+    required_entity_attributes: []
+    allowed_actions:
+      - create_page
+      - publish_page
+
+    ground_truth_rules:
+      assertions:
+        - resource: cms_pages
+          where:
+            page_ref: "{target_entity}"
+          assert:
+            exists: true
+            title_must_include: "{title_must_include}"
+            body_must_include: "{body_must_include}"
+            creator_ref: current_user
+        - resource: cms_pages
+          where:
+            page_ref: "{target_entity}"
+          assert:
+            status: published
+
+    verifier_rules:
+      verifier_type: db_api_state_checker
+      derive_from: ground_truth_assertions
+
+    compatible_abilities:
+      - memory_information_tracking
+      - long_horizon_operation
+
+    compatible_difficulties:
+      memory_information_tracking: [L4, L5]
+      long_horizon_operation: [L3, L4]

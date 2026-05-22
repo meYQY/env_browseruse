@@ -1,0 +1,227 @@
+{
+  "task_id": "task_0053",
+  "task_description": "Find the movies community (A) on the forum. It has 4 posts and the path /f/movies, and you can use ranking or recency to disambiguate it if needed. Submit a new post there with a title containing \"neighborhood safety\" and body text containing \"family friendly\". Then add a comment to that post containing \"definitely worth checking out\".",
+  "target_environment": "forum",
+  "ability_dimension": "Memory",
+  "difficulty": "L5",
+  "target_entity": {
+    "entity_id": "forum_community_006",
+    "site": "forum",
+    "entity_type": "community",
+    "selected_locator_fields": {
+      "post_count": 4,
+      "community_name": "movies",
+      "aliases": [
+        "/f/movies"
+      ],
+      "_locator_hint": "use the ranking or recency-like field to disambiguate"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "forum_community_006",
+      "site": "forum",
+      "entity_type": "community",
+      "selected_locator_fields": {
+        "post_count": 4,
+        "community_name": "movies",
+        "aliases": [
+          "/f/movies"
+        ],
+        "_locator_hint": "use the ranking or recency-like field to disambiguate"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "create_and_comment_post",
+    "task_templates": {
+      "A": "create_and_comment_post"
+    },
+    "structure_variant": "memory_L5_tracked_locator_ranking_or_recent",
+    "locator": {
+      "post_count": 4,
+      "community_name": "movies",
+      "aliases": [
+        "/f/movies"
+      ],
+      "_locator_hint": "use the ranking or recency-like field to disambiguate"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "forum_community_006",
+        "site": "forum",
+        "entity_type": "community",
+        "selected_locator_fields": {
+          "post_count": 4,
+          "community_name": "movies",
+          "aliases": [
+            "/f/movies"
+          ],
+          "_locator_hint": "use the ranking or recency-like field to disambiguate"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "create_post",
+        "target": "A",
+        "title_must_include": [
+          "neighborhood safety"
+        ],
+        "body_must_include": [
+          "family friendly"
+        ]
+      },
+      {
+        "type": "comment_post",
+        "target": "A",
+        "body_must_include": [
+          "definitely worth checking out"
+        ]
+      }
+    ],
+    "requirements": {
+      "title_must_include": [
+        "neighborhood safety"
+      ],
+      "body_must_include": [
+        "family friendly"
+      ],
+      "comment_body_must_include": [
+        "definitely worth checking out"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "title_must_include": [
+          "neighborhood safety"
+        ],
+        "body_must_include": [
+          "family friendly"
+        ],
+        "comment_body_must_include": [
+          "definitely worth checking out"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "create_post",
+      "target": "A",
+      "title_must_include": [
+        "neighborhood safety"
+      ],
+      "body_must_include": [
+        "family friendly"
+      ]
+    },
+    {
+      "type": "comment_post",
+      "target": "A",
+      "body_must_include": [
+        "definitely worth checking out"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "posts",
+        "conditions": {
+          "community_ref": "forum_community_006",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "neighborhood safety"
+          ],
+          "body_must_include": [
+            "family friendly"
+          ]
+        }
+      },
+      {
+        "check_object": "comments",
+        "conditions": {
+          "community_ref": "forum_community_006",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "community_ref": "forum_community_006",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "neighborhood safety"
+          ],
+          "body_must_include": [
+            "family friendly"
+          ]
+        }
+      },
+      {
+        "query": {
+          "resource": "comments",
+          "filters": {
+            "community_ref": "forum_community_006",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": false,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": false,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 2
+  }
+}

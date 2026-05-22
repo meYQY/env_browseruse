@@ -1,0 +1,147 @@
+# =============================================================================
+# Difficulty Structure Rules
+# =============================================================================
+# Defines structural constraints per (ability_dimension, difficulty_level) cell.
+# All fields use normalized forms:
+#   locator  -- list of allowed locator types
+#   conditions -- {min, max} count of filtering conditions the task description
+#                 must embed
+#   actions  -- {min, max} count of distinct backend-mutating actions
+#   conditional_logic -- whether the task includes if/else branching
+#   assertions -- exact count of verifier assertions in ground truth
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Reusable locator anchors
+# ---------------------------------------------------------------------------
+locator_types:
+  direct_ref: &loc_direct_ref
+    description: >-
+      The entity is referenced by an unambiguous identifier (e.g. issue title,
+      product name) with no extra filtering needed.
+  single_condition: &loc_single_condition
+    description: >-
+      The entity is located via one attribute condition (e.g. "the open issue",
+      "the black variant").
+  multi_condition: &loc_multi_condition
+    description: >-
+      The entity is located via 2+ attribute conditions combined
+      (e.g. "the open bug issue in project X").
+  exclusion_condition: &loc_exclusion_condition
+    description: >-
+      The entity is located by excluding alternatives
+      (e.g. "the issue that is NOT labeled frontend").
+  ranking_or_recent: &loc_ranking_or_recent
+    description: >-
+      The entity is located via a temporal or ranking criterion
+      (e.g. "the most recent issue", "the highest-rated product").
+
+# ============================================================================
+# Memory (memory_information_tracking)
+# ============================================================================
+memory_information_tracking:
+
+  L1:
+    locator: [direct_ref]
+    conditions: { min: 0, max: 1 }
+    actions: { min: 1, max: 1 }
+    conditional_logic: false
+    assertions: 1
+    notes: >-
+      Simplest memory task. Entity found by direct name/title reference.
+      One action, one assertion.
+
+  L2:
+    locator: [single_condition]
+    conditions: { min: 1, max: 1 }
+    actions: { min: 1, max: 1 }
+    conditional_logic: false
+    assertions: 1
+    notes: >-
+      Entity located through a single attribute filter. One action, one
+      assertion, no branching.
+
+  L3:
+    locator: [multi_condition]
+    conditions: { min: 2, max: 3 }
+    actions: { min: 1, max: 1 }
+    conditional_logic: false
+    assertions: 1
+    notes: >-
+      Entity requires combining 2-3 conditions to identify. Still a single
+      action.
+
+  L4:
+    locator: [multi_condition, exclusion_condition]
+    conditions: { min: 2, max: 4 }
+    actions: { min: 1, max: 2 }
+    conditional_logic: optional
+    assertions: 1
+    notes: >-
+      Harder locator patterns including exclusion. May involve two actions
+      and optional conditional logic (e.g. "if label missing, add it").
+
+  L5:
+    locator: [multi_condition, exclusion_condition, ranking_or_recent]
+    conditions: { min: 3, max: 5 }
+    actions: { min: 1, max: 2 }
+    conditional_logic: true_or_initial_state_check
+    assertions: 1
+    notes: >-
+      Most complex memory task. Locator may use temporal/ranking criteria.
+      Memory complexity comes from the locator, not action count.
+      Conditional logic or initial-state verification required.
+
+# ============================================================================
+# Long-horizon (long_horizon_operation)
+# ============================================================================
+long_horizon_operation:
+
+  L1:
+    locator: [direct_ref]
+    conditions: { min: 0, max: 1 }
+    actions: { min: 1, max: 1 }
+    conditional_logic: false
+    assertions: 1
+    notes: >-
+      Simplest long-horizon task. One action, entity by direct reference.
+
+  L2:
+    locator: [direct_ref, single_condition]
+    conditions: { min: 0, max: 1 }
+    actions: { min: 1, max: 2 }
+    conditional_logic: false
+    assertions: 1
+    notes: >-
+      Slightly longer sequence. May involve up to two actions, still
+      straightforward entity location.
+
+  L3:
+    locator: [single_condition, multi_condition]
+    conditions: { min: 1, max: 2 }
+    actions: { min: 2, max: 3 }
+    conditional_logic: false
+    assertions: 2
+    notes: >-
+      Two or three actions with two assertions. Entity found via one or
+      more conditions.
+
+  L4:
+    locator: [direct_ref, single_condition, multi_condition]
+    conditions: { min: 1, max: 3 }
+    actions: { min: 2, max: 3 }
+    conditional_logic: false
+    assertions: 2
+    notes: >-
+      Longer action chain (2-3 steps). Two assertions verify the final
+      state.
+
+  L5:
+    locator: [multi_condition, exclusion_condition]
+    conditions: { min: 2, max: 5 }
+    actions: { min: 2, max: 4 }
+    conditional_logic: optional_or_required
+    assertions: 2
+    notes: >-
+      Most complex long-horizon task. 2-4 actions depending on environment,
+      optional or required conditional logic, complex locator conditions.

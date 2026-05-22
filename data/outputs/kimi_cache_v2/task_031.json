@@ -1,0 +1,145 @@
+{
+  "task_id": "task_0110",
+  "task_description": "Edit target A, the forum post with ID 103061, so that its body includes the phrase \"affordable options\".",
+  "target_environment": "forum",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L2",
+  "target_entity": {
+    "entity_id": "forum_post_017",
+    "site": "forum",
+    "entity_type": "post",
+    "selected_locator_fields": {
+      "post_id": "103061"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "forum_post_017",
+      "site": "forum",
+      "entity_type": "post",
+      "selected_locator_fields": {
+        "post_id": "103061"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "edit_post",
+    "task_templates": {
+      "A": "edit_post"
+    },
+    "structure_variant": "long_horizon_L2_single_action_single_condition",
+    "locator": {
+      "post_id": "103061"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "forum_post_017",
+        "site": "forum",
+        "entity_type": "post",
+        "selected_locator_fields": {
+          "post_id": "103061"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "edit_post",
+        "target": "A",
+        "body_must_include": [
+          "affordable options"
+        ]
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "affordable options"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "affordable options"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "edit_post",
+      "target": "A",
+      "body_must_include": [
+        "affordable options"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "posts",
+        "conditions": {
+          "post_ref": "forum_post_017"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "affordable options"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "posts",
+          "filters": {
+            "post_ref": "forum_post_017"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "affordable options"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": true,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 5
+  }
+}

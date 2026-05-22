@@ -1,0 +1,165 @@
+{
+  "task_id": "task_0044",
+  "task_description": "Find the product named Chloe tank in the cell phones category that has reviews. Use the ranking or recency-like field to disambiguate if needed. Write a 5-star review for it that includes the phrase \"excellent quality\".",
+  "target_environment": "shopping",
+  "ability_dimension": "Memory",
+  "difficulty": "L5",
+  "target_entity": {
+    "entity_id": "shopping_product_033",
+    "site": "shopping",
+    "entity_type": "product",
+    "selected_locator_fields": {
+      "has_reviews": true,
+      "product_name": "Chloe tank",
+      "category": "cell phones",
+      "_locator_hint": "use the ranking or recency-like field to disambiguate"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "shopping_product_033",
+      "site": "shopping",
+      "entity_type": "product",
+      "selected_locator_fields": {
+        "has_reviews": true,
+        "product_name": "Chloe tank",
+        "category": "cell phones",
+        "_locator_hint": "use the ranking or recency-like field to disambiguate"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "write_review",
+    "task_templates": {
+      "A": "write_review"
+    },
+    "structure_variant": "memory_L5_tracked_locator_ranking_or_recent",
+    "locator": {
+      "has_reviews": true,
+      "product_name": "Chloe tank",
+      "category": "cell phones",
+      "_locator_hint": "use the ranking or recency-like field to disambiguate"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "shopping_product_033",
+        "site": "shopping",
+        "entity_type": "product",
+        "selected_locator_fields": {
+          "has_reviews": true,
+          "product_name": "Chloe tank",
+          "category": "cell phones",
+          "_locator_hint": "use the ranking or recency-like field to disambiguate"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "write_review",
+        "target": "A",
+        "rating": 5,
+        "body_must_include": [
+          "excellent quality"
+        ]
+      }
+    ],
+    "requirements": {
+      "rating": 5,
+      "body_must_include": [
+        "excellent quality"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "rating": 5,
+        "body_must_include": [
+          "excellent quality"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "write_review",
+      "target": "A",
+      "rating": 5,
+      "body_must_include": [
+        "excellent quality"
+      ]
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "reviews",
+        "conditions": {
+          "product_ref": "shopping_product_033",
+          "author_ref": "current_user"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "rating": 5,
+          "body_must_include": [
+            "excellent quality"
+          ]
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "reviews",
+          "filters": {
+            "product_ref": "shopping_product_033",
+            "author_ref": "current_user"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "rating": 5,
+          "body_must_include": [
+            "excellent quality"
+          ]
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": false,
+    "checks": {
+      "entity_exists": true,
+      "entity_type_matches": true,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": true,
+      "verifier_binds_entity": true,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": false,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 1,
+    "template_use_count": 9
+  }
+}

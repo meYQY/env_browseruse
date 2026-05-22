@@ -1,0 +1,1716 @@
+{
+  "site": "reddit",
+  "backend": "Postmill (PostgreSQL)",
+  "port": 9999,
+  "accounts": {
+    "username": "MarvelsGrantMan136",
+    "password": "test1234"
+  },
+  "forums": [
+    {
+      "id": 1,
+      "slug": "Art",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "10038"
+        },
+        {
+          "post_id": "10050"
+        },
+        {
+          "post_id": "10081"
+        },
+        {
+          "post_id": "10121"
+        },
+        {
+          "post_id": "10146"
+        },
+        {
+          "post_id": "116617"
+        },
+        {
+          "post_id": "30768"
+        },
+        {
+          "post_id": "30772"
+        },
+        {
+          "post_id": "30832"
+        },
+        {
+          "post_id": "30842"
+        },
+        {
+          "post_id": "30859"
+        },
+        {
+          "post_id": "30872"
+        },
+        {
+          "post_id": "30905"
+        },
+        {
+          "post_id": "51628"
+        },
+        {
+          "post_id": "51774"
+        },
+        {
+          "post_id": "95719"
+        }
+      ],
+      "task_count": 2
+    },
+    {
+      "id": 2,
+      "slug": "AskReddit",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 3,
+      "slug": "askscience",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 2
+    },
+    {
+      "id": 4,
+      "slug": "aww",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 5,
+      "slug": "books",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "103061"
+        },
+        {
+          "post_id": "124024"
+        },
+        {
+          "post_id": "124043"
+        },
+        {
+          "post_id": "124150"
+        },
+        {
+          "post_id": "124260"
+        },
+        {
+          "post_id": "17445"
+        },
+        {
+          "post_id": "17589"
+        },
+        {
+          "post_id": "38271"
+        },
+        {
+          "post_id": "38309"
+        },
+        {
+          "post_id": "59396"
+        },
+        {
+          "post_id": "59401"
+        },
+        {
+          "post_id": "59421"
+        },
+        {
+          "post_id": "59447"
+        },
+        {
+          "post_id": "59471"
+        },
+        {
+          "post_id": "59477"
+        },
+        {
+          "post_id": "59478"
+        },
+        {
+          "post_id": "81371"
+        }
+      ],
+      "task_count": 15,
+      "aliases": [
+        "/f/books",
+        "Books",
+        "books forum",
+        "f/books"
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "BuyItForLife",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 7,
+      "slug": "cars",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 8,
+      "slug": "cmu_lti",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 0
+    },
+    {
+      "id": 9,
+      "slug": "connecticut",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 10,
+      "slug": "consoles",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 11,
+      "slug": "Cyberpunk",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 0
+    },
+    {
+      "id": 12,
+      "slug": "dataisbeautiful",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 2
+    },
+    {
+      "id": 13,
+      "slug": "deeplearning",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "124993"
+        }
+      ],
+      "task_count": 10,
+      "aliases": [
+        "the deep learning"
+      ]
+    },
+    {
+      "id": 14,
+      "slug": "DIY",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "119019"
+        },
+        {
+          "post_id": "97953"
+        }
+      ],
+      "task_count": 5
+    },
+    {
+      "id": 15,
+      "slug": "diy",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 0
+    },
+    {
+      "id": 16,
+      "slug": "earthporn",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 4
+    },
+    {
+      "id": 17,
+      "slug": "EarthPorn",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "98256"
+        },
+        {
+          "post_id": "98297"
+        },
+        {
+          "post_id": "98332"
+        }
+      ],
+      "task_count": 0
+    },
+    {
+      "id": 18,
+      "slug": "explainlikeimfive",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "39244"
+        }
+      ],
+      "task_count": 2,
+      "aliases": [
+        "explain like im 5"
+      ]
+    },
+    {
+      "id": 19,
+      "slug": "funny",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 4
+    },
+    {
+      "id": 20,
+      "slug": "Futurology",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "119517"
+        }
+      ],
+      "task_count": 3,
+      "aliases": [
+        "future technology"
+      ]
+    },
+    {
+      "id": 21,
+      "slug": "gadgets",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "19459"
+        }
+      ],
+      "task_count": 3
+    },
+    {
+      "id": 22,
+      "slug": "games",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 1,
+      "aliases": [
+        "games forum"
+      ]
+    },
+    {
+      "id": 23,
+      "slug": "gaming",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 1,
+      "aliases": [
+        "/f/gaming"
+      ]
+    },
+    {
+      "id": 24,
+      "slug": "headphones",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 3,
+      "aliases": [
+        "f/headphones"
+      ]
+    },
+    {
+      "id": 25,
+      "slug": "history",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "105990"
+        },
+        {
+          "post_id": "84338"
+        }
+      ],
+      "task_count": 5
+    },
+    {
+      "id": 26,
+      "slug": "IAmA",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "119714"
+        },
+        {
+          "post_id": "119719"
+        },
+        {
+          "post_id": "119742"
+        },
+        {
+          "post_id": "13170"
+        },
+        {
+          "post_id": "13175"
+        },
+        {
+          "post_id": "34032"
+        },
+        {
+          "post_id": "55142"
+        },
+        {
+          "post_id": "55155"
+        }
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 27,
+      "slug": "iphone",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 3,
+      "aliases": [
+        "f/iphone"
+      ]
+    },
+    {
+      "id": 28,
+      "slug": "iphone13",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 29,
+      "slug": "Karaoke",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 0
+    },
+    {
+      "id": 30,
+      "slug": "LifeProTips",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 31,
+      "slug": "machine",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 0
+    },
+    {
+      "id": 32,
+      "slug": "MachineLearning",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "1"
+        }
+      ],
+      "task_count": 1,
+      "aliases": [
+        "machine learning"
+      ]
+    },
+    {
+      "id": 33,
+      "slug": "machinelearning",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 0
+    },
+    {
+      "id": 34,
+      "slug": "massachusetts",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "84954"
+        }
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 35,
+      "slug": "MechanicalKeyboards",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "100026"
+        },
+        {
+          "post_id": "100156"
+        },
+        {
+          "post_id": "100201"
+        },
+        {
+          "post_id": "120870"
+        },
+        {
+          "post_id": "120987"
+        },
+        {
+          "post_id": "121006"
+        },
+        {
+          "post_id": "14329"
+        },
+        {
+          "post_id": "35118"
+        },
+        {
+          "post_id": "35141"
+        },
+        {
+          "post_id": "35145"
+        },
+        {
+          "post_id": "56302"
+        },
+        {
+          "post_id": "56381"
+        },
+        {
+          "post_id": "78288"
+        },
+        {
+          "post_id": "78374"
+        }
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 36,
+      "slug": "memes",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 4
+    },
+    {
+      "id": 37,
+      "slug": "movies",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "42682"
+        },
+        {
+          "post_id": "86029"
+        },
+        {
+          "post_id": "86055"
+        },
+        {
+          "post_id": "86174"
+        }
+      ],
+      "task_count": 6,
+      "aliases": [
+        "/f/movies"
+      ]
+    },
+    {
+      "id": 38,
+      "slug": "Music",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "100326"
+        },
+        {
+          "post_id": "100424"
+        },
+        {
+          "post_id": "121233"
+        },
+        {
+          "post_id": "14701"
+        },
+        {
+          "post_id": "14731"
+        },
+        {
+          "post_id": "35373"
+        },
+        {
+          "post_id": "35453"
+        },
+        {
+          "post_id": "35510"
+        },
+        {
+          "post_id": "56575"
+        },
+        {
+          "post_id": "56626"
+        },
+        {
+          "post_id": "56719"
+        },
+        {
+          "post_id": "78525"
+        },
+        {
+          "post_id": "78662"
+        }
+      ],
+      "task_count": 4
+    },
+    {
+      "id": 39,
+      "slug": "new york",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 40,
+      "slug": "newjersey",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 0
+    },
+    {
+      "id": 41,
+      "slug": "news",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "129508"
+        },
+        {
+          "post_id": "129594"
+        },
+        {
+          "post_id": "129783"
+        },
+        {
+          "post_id": "129794"
+        },
+        {
+          "post_id": "129808"
+        },
+        {
+          "post_id": "129816"
+        },
+        {
+          "post_id": "43558"
+        },
+        {
+          "post_id": "43572"
+        },
+        {
+          "post_id": "43781"
+        },
+        {
+          "post_id": "43839"
+        }
+      ],
+      "task_count": 11,
+      "aliases": [
+        "news related forums"
+      ]
+    },
+    {
+      "id": 42,
+      "slug": "news related subreddits",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 43,
+      "slug": "nyc",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "44650"
+        }
+      ],
+      "task_count": 5,
+      "aliases": [
+        "nyc forum"
+      ]
+    },
+    {
+      "id": 44,
+      "slug": "OldSchoolCool",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 2
+    },
+    {
+      "id": 45,
+      "slug": "personalfinance",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "109821"
+        },
+        {
+          "post_id": "44843"
+        }
+      ],
+      "task_count": 3,
+      "aliases": [
+        "personal finances"
+      ]
+    },
+    {
+      "id": 46,
+      "slug": "philadelphia",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "88884"
+        }
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 47,
+      "slug": "photoshopbattles",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 48,
+      "slug": "pittsburgh",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "45899"
+        }
+      ],
+      "task_count": 3
+    },
+    {
+      "id": 49,
+      "slug": "PlantsForCatParents",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 0
+    },
+    {
+      "id": 50,
+      "slug": "r/books",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 51,
+      "slug": "r/headphones",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 52,
+      "slug": "r/iphone",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 53,
+      "slug": "r/sports",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 3
+    },
+    {
+      "id": 54,
+      "slug": "relationship_advice",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "46378"
+        }
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 55,
+      "slug": "rva",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 0
+    },
+    {
+      "id": 56,
+      "slug": "sci_fi",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 0
+    },
+    {
+      "id": 57,
+      "slug": "science",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 2,
+      "aliases": [
+        "/f/science"
+      ]
+    },
+    {
+      "id": 58,
+      "slug": "Showerthoughts",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 2
+    },
+    {
+      "id": 59,
+      "slug": "singularity",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "69404"
+        }
+      ],
+      "task_count": 0
+    },
+    {
+      "id": 60,
+      "slug": "space",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 4
+    },
+    {
+      "id": 61,
+      "slug": "sports",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "48303"
+        }
+      ],
+      "task_count": 8,
+      "aliases": [
+        "f/sports"
+      ]
+    },
+    {
+      "id": 62,
+      "slug": "technology",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "134696"
+        },
+        {
+          "post_id": "134852"
+        },
+        {
+          "post_id": "48670"
+        },
+        {
+          "post_id": "48785"
+        },
+        {
+          "post_id": "70233"
+        },
+        {
+          "post_id": "70354"
+        }
+      ],
+      "task_count": 8
+    },
+    {
+      "id": 63,
+      "slug": "television",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "134868"
+        },
+        {
+          "post_id": "135152"
+        },
+        {
+          "post_id": "135156"
+        },
+        {
+          "post_id": "135201"
+        },
+        {
+          "post_id": "70886"
+        }
+      ],
+      "task_count": 2
+    },
+    {
+      "id": 64,
+      "slug": "tifu",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 65,
+      "slug": "UpliftingNews",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "16087"
+        }
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 66,
+      "slug": "vermont",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 67,
+      "slug": "videos",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "115139"
+        }
+      ],
+      "task_count": 1
+    },
+    {
+      "id": 68,
+      "slug": "wallstreetbets",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "29458"
+        },
+        {
+          "post_id": "29478"
+        }
+      ],
+      "task_count": 5,
+      "aliases": [
+        "/f/wallstreetbets"
+      ]
+    },
+    {
+      "id": 69,
+      "slug": "Washington",
+      "url_confirmed": true,
+      "posts": [
+        {
+          "post_id": "102023"
+        },
+        {
+          "post_id": "122910"
+        },
+        {
+          "post_id": "16268"
+        },
+        {
+          "post_id": "16294"
+        },
+        {
+          "post_id": "36974"
+        },
+        {
+          "post_id": "37094"
+        },
+        {
+          "post_id": "37120"
+        },
+        {
+          "post_id": "58175"
+        },
+        {
+          "post_id": "58186"
+        },
+        {
+          "post_id": "58250"
+        },
+        {
+          "post_id": "80243"
+        }
+      ],
+      "task_count": 2
+    },
+    {
+      "id": 70,
+      "slug": "washington",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 0
+    },
+    {
+      "id": 71,
+      "slug": "washingtondc",
+      "url_confirmed": true,
+      "posts": [],
+      "task_count": 0
+    },
+    {
+      "id": 72,
+      "slug": "Worcester",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 1
+    },
+    {
+      "id": 73,
+      "slug": "worldnews",
+      "url_confirmed": false,
+      "posts": [],
+      "task_count": 5
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "7dayweekendgirl",
+      "task_count": 1
+    },
+    {
+      "id": 2,
+      "username": "AdamCannon",
+      "task_count": 1
+    },
+    {
+      "id": 3,
+      "username": "Akilesh Kannan",
+      "task_count": 1
+    },
+    {
+      "id": 4,
+      "username": "CameronKelsey",
+      "task_count": 1
+    },
+    {
+      "id": 5,
+      "username": "Convex Eggtart",
+      "task_count": 1
+    },
+    {
+      "id": 6,
+      "username": "Dhghomon",
+      "task_count": 0
+    },
+    {
+      "id": 7,
+      "username": "Don_Gato1",
+      "task_count": 1
+    },
+    {
+      "id": 8,
+      "username": "ExternalUserError",
+      "task_count": 1
+    },
+    {
+      "id": 9,
+      "username": "FTorrez81",
+      "task_count": 1
+    },
+    {
+      "id": 10,
+      "username": "First Contributions",
+      "task_count": 1
+    },
+    {
+      "id": 11,
+      "username": "Gonzostewie",
+      "task_count": 1
+    },
+    {
+      "id": 12,
+      "username": "Hammer94",
+      "task_count": 0
+    },
+    {
+      "id": 13,
+      "username": "Hrekires",
+      "task_count": 2
+    },
+    {
+      "id": 14,
+      "username": "Justtryme90",
+      "task_count": 1
+    },
+    {
+      "id": 15,
+      "username": "Looney_forner",
+      "task_count": 1
+    },
+    {
+      "id": 16,
+      "username": "MarvelsGrantMan136",
+      "task_count": 0,
+      "role": "primary_test_user"
+    },
+    {
+      "id": 17,
+      "username": "Meta",
+      "task_count": 1
+    },
+    {
+      "id": 18,
+      "username": "PatientBuilder499",
+      "task_count": 1
+    },
+    {
+      "id": 19,
+      "username": "Picture-unrelated",
+      "task_count": 1
+    },
+    {
+      "id": 20,
+      "username": "Proud_Idiot",
+      "task_count": 0
+    },
+    {
+      "id": 21,
+      "username": "Reselects420",
+      "task_count": 1
+    },
+    {
+      "id": 22,
+      "username": "RickyDontLoseThat",
+      "task_count": 1
+    },
+    {
+      "id": 23,
+      "username": "Roshan Jossy",
+      "task_count": 1
+    },
+    {
+      "id": 24,
+      "username": "Sariel007",
+      "task_count": 1
+    },
+    {
+      "id": 25,
+      "username": "ThetaGang_wsb",
+      "task_count": 1
+    },
+    {
+      "id": 26,
+      "username": "Tolkien",
+      "task_count": 0
+    },
+    {
+      "id": 27,
+      "username": "TreeMac12",
+      "task_count": 1
+    },
+    {
+      "id": 28,
+      "username": "UniversityofBath",
+      "task_count": 1
+    },
+    {
+      "id": 29,
+      "username": "WhoIsJolyonWest",
+      "task_count": 1
+    },
+    {
+      "id": 30,
+      "username": "bunkerbash",
+      "task_count": 1
+    },
+    {
+      "id": 31,
+      "username": "chrisdh79",
+      "task_count": 1
+    },
+    {
+      "id": 32,
+      "username": "cutie_chipmunk",
+      "task_count": 1
+    },
+    {
+      "id": 33,
+      "username": "eggiecat",
+      "task_count": 1
+    },
+    {
+      "id": 34,
+      "username": "gammapsi05",
+      "task_count": 1
+    },
+    {
+      "id": 35,
+      "username": "imakenosensetopeople",
+      "task_count": 1
+    },
+    {
+      "id": 36,
+      "username": "jacyanthis",
+      "task_count": 1
+    },
+    {
+      "id": 37,
+      "username": "mineinhusdson",
+      "task_count": 0
+    },
+    {
+      "id": 38,
+      "username": "mossadnik",
+      "task_count": 1
+    },
+    {
+      "id": 39,
+      "username": "nastratin",
+      "task_count": 1
+    },
+    {
+      "id": 40,
+      "username": "pmk0286",
+      "task_count": 1
+    },
+    {
+      "id": 41,
+      "username": "sirbarani",
+      "task_count": 1
+    },
+    {
+      "id": 42,
+      "username": "thebelsnickle1991",
+      "task_count": 1
+    },
+    {
+      "id": 43,
+      "username": "wowsuchtroll",
+      "task_count": 1
+    },
+    {
+      "id": 44,
+      "username": "ziostraccette",
+      "task_count": 0
+    },
+    {
+      "id": 45,
+      "username": "zsreport",
+      "task_count": 1
+    }
+  ],
+  "ground_truth_facts": [
+    {
+      "task_id": 27,
+      "query": "In the personal finances forum, get the username and post title of the most recent post, and count the number of comments on that post that are not from the author and have more downvotes than upvotes. Return a list of objects with keys \"username\", \"post_title\", and \"count\".",
+      "template": "In the {{forum}} forum, get the username and post title of the most recent post, and count the number of comments on that post that are not from the author and have more downvotes than upvotes. {{retrieved_data_format_spec}}.",
+      "params": {
+        "forum": "personal finances",
+        "retrieved_data_format_spec": "Return a list of objects with keys \"username\", \"post_title\", and \"count\""
+      },
+      "answer": [
+        {
+          "username": "Hammer94",
+          "post_title": "56 year old mom has no retirement. Where do I even start on her behalf?",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "task_id": 28,
+      "query": "In the Worcester forum, get the username and post title of the most recent post, and count the number of comments on that post that are not from the author and have more downvotes than upvotes. Return a list of objects with keys \"username\", \"post_title\", and \"count\".",
+      "template": "In the {{forum}} forum, get the username and post title of the most recent post, and count the number of comments on that post that are not from the author and have more downvotes than upvotes. {{retrieved_data_format_spec}}.",
+      "params": {
+        "forum": "Worcester",
+        "retrieved_data_format_spec": "Return a list of objects with keys \"username\", \"post_title\", and \"count\""
+      },
+      "answer": [
+        {
+          "username": "mineinhusdson",
+          "post_title": "Best place for a foot rub?",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "task_id": 29,
+      "query": "In the DIY forum, get the username and post title of the most recent post, and count the number of comments on that post that are not from the author and have more downvotes than upvotes. Return a list of objects with keys \"username\", \"post_title\", and \"count\".",
+      "template": "In the {{forum}} forum, get the username and post title of the most recent post, and count the number of comments on that post that are not from the author and have more downvotes than upvotes. {{retrieved_data_format_spec}}.",
+      "params": {
+        "forum": "DIY",
+        "retrieved_data_format_spec": "Return a list of objects with keys \"username\", \"post_title\", and \"count\""
+      },
+      "answer": [
+        {
+          "username": "ziostraccette",
+          "post_title": "How can I bring an HDMI cable from my pc downstairs to my TV upstairs?",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "task_id": 30,
+      "query": "In the space forum, get the username and post title of the most recent post, and count the number of comments on that post that are not from the author and have more downvotes than upvotes. Return a list of objects with keys \"username\", \"post_title\", and \"count\".",
+      "template": "In the {{forum}} forum, get the username and post title of the most recent post, and count the number of comments on that post that are not from the author and have more downvotes than upvotes. {{retrieved_data_format_spec}}.",
+      "params": {
+        "forum": "space",
+        "retrieved_data_format_spec": "Return a list of objects with keys \"username\", \"post_title\", and \"count\""
+      },
+      "answer": [
+        {
+          "username": "Dhghomon",
+          "post_title": "Scientists erupt at NASA gutting funding for crucial Venus mission",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "task_id": 31,
+      "query": "In the photoshopbattles forum, get the username and post title of the most recent post, and count the number of comments on that post that are not from the author and have more downvotes than upvotes. Return a list of objects with keys \"username\", \"post_title\", and \"count\".",
+      "template": "In the {{forum}} forum, get the username and post title of the most recent post, and count the number of comments on that post that are not from the author and have more downvotes than upvotes. {{retrieved_data_format_spec}}.",
+      "params": {
+        "forum": "photoshopbattles",
+        "retrieved_data_format_spec": "Return a list of objects with keys \"username\", \"post_title\", and \"count\""
+      },
+      "answer": [
+        {
+          "username": "Proud_Idiot",
+          "post_title": "UK Prime Minister Rishi Sunak looking at a pothole",
+          "count": 0
+        }
+      ]
+    },
+    {
+      "task_id": 66,
+      "query": "Among the top 10 hottest posts in the \"Books\" forum, get the post titles from those that recommend exactly one book.",
+      "template": "Among the top {{number}} hottest posts in the \"{{forum}}\" forum, get {{description}} from those that {{filter_criterion}}.{{retrieved_data_format_spec}}",
+      "params": {
+        "number": 10,
+        "description": "the post titles",
+        "forum": "Books",
+        "filter_criterion": "recommend exactly one book",
+        "retrieved_data_format_spec": ""
+      },
+      "answer": [
+        "I just finished reading The Hobbit to my 6 year old daughter, and she loved it!",
+        "Apple Books has a free audiobook of A Christmas Carol narrated by LeVar Burton!"
+      ]
+    },
+    {
+      "task_id": 67,
+      "query": "Among the top 10 hottest posts in the \"Books\" forum, get the book titles, exactly as they appear in the post description, from those that recommend exactly one book.",
+      "template": "Among the top {{number}} hottest posts in the \"{{forum}}\" forum, get {{description}} from those that {{filter_criterion}}.{{retrieved_data_format_spec}}",
+      "params": {
+        "number": 10,
+        "description": "the book titles, exactly as they appear in the post description,",
+        "forum": "Books",
+        "filter_criterion": "recommend exactly one book",
+        "retrieved_data_format_spec": ""
+      },
+      "answer": [
+        "The Hobbit",
+        "A Christmas Carol"
+      ]
+    },
+    {
+      "task_id": 68,
+      "query": "Among the top 10 hottest posts in the \"Books\" forum, get the author names and book titles, exactly as they appear in the post description, from those that recommend exactly one book. Return a list of objects with keys \"book\" and \"author\".",
+      "template": "Among the top {{number}} hottest posts in the \"{{forum}}\" forum, get {{description}} from those that {{filter_criterion}}.{{retrieved_data_format_spec}}",
+      "params": {
+        "number": 10,
+        "description": "the author names and book titles, exactly as they appear in the post description,",
+        "forum": "Books",
+        "filter_criterion": "recommend exactly one book",
+        "retrieved_data_format_spec": " Return a list of objects with keys \"book\" and \"author\"."
+      },
+      "answer": [
+        {
+          "book": "The Hobbit",
+          "author": "Tolkien"
+        },
+        {
+          "book": "A Christmas Carol",
+          "author": null
+        }
+      ]
+    },
+    {
+      "task_id": 69,
+      "query": "Among the top 10 hottest posts in the \"Books\" forum, get the URLs of any organizations involved, exactly as they appear in the post description, from those that talk about supporting local book stores.",
+      "template": "Among the top {{number}} hottest posts in the \"{{forum}}\" forum, get {{description}} from those that {{filter_criterion}}.{{retrieved_data_format_spec}}",
+      "params": {
+        "number": 10,
+        "description": "the URLs of any organizations involved, exactly as they appear in the post description,",
+        "forum": "Books",
+        "filter_criterion": "talk about supporting local book stores",
+        "retrieved_data_format_spec": ""
+      },
+      "answer": [
+        [
+          "bookshop.org",
+          "https://bookshop.org"
+        ]
+      ]
+    },
+    {
+      "task_id": 30080,
+      "source": "webchore",
+      "query": "Calculate the total number of comments on the top 40 most commented posts of all time on forum worldnews.",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/f/worldnews/most_commented?t=all",
+        "number": "40",
+        "forum": "worldnews",
+        "answer": "7280 |OR| 7,280",
+        "difficulty": "hard"
+      },
+      "answer": "7280 |OR| 7,280"
+    },
+    {
+      "task_id": 30081,
+      "source": "webchore",
+      "query": "Calculate the total number of comments on the top 40 most commented posts of all time on forum deeplearning.",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/f/deeplearning/most_commented?t=all",
+        "number": "40",
+        "forum": "deeplearning",
+        "answer": "941",
+        "difficulty": "hard"
+      },
+      "answer": "941"
+    },
+    {
+      "task_id": 30082,
+      "source": "webchore",
+      "query": "Calculate the total number of comments on the top 30 most commented posts of all time on forum space.",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/f/space/most_commented?t=all",
+        "number": "30",
+        "forum": "space",
+        "answer": "5491 |OR| 5,491",
+        "difficulty": "hard"
+      },
+      "answer": "5491 |OR| 5,491"
+    },
+    {
+      "task_id": 30083,
+      "source": "webchore",
+      "query": "Calculate the total number of comments on the top 30 most commented posts of all time on forum OldSchoolCool.",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/f/OldSchoolCool/most_commented?t=all",
+        "number": "30",
+        "forum": "OldSchoolCool",
+        "answer": "5361 |OR| 5,361",
+        "difficulty": "hard"
+      },
+      "answer": "5361 |OR| 5,361"
+    },
+    {
+      "task_id": 30084,
+      "source": "webchore",
+      "query": "Calculate the total number of comments on the top 50 most commented posts of all time on forum askscience.",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/f/askscience/most_commented?t=all",
+        "number": "50",
+        "forum": "askscience",
+        "answer": "8719 |OR| 8,719",
+        "difficulty": "hard"
+      },
+      "answer": "8719 |OR| 8,719"
+    },
+    {
+      "task_id": 30090,
+      "source": "webchore",
+      "query": "Search for I Photographed Something No One Can Explain and What Happened at Hotel Carlton and determine which post has a higher votes-to-comments ratio (rounded to the nearest integer). Output the result in the following format: Ans: [title], Ratio: [votes/comments]",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/search?q=I+Photographed+Something+No+One+Can+Explain",
+        "title1": "I Photographed Something No One Can Explain",
+        "title2": "What Happened at Hotel Carlton",
+        "ans": "I Photographed Something No One Can Explain",
+        "ratio": "19",
+        "difficulty": "hard"
+      },
+      "answer": "I Photographed Something No One Can Explain"
+    },
+    {
+      "task_id": 30091,
+      "source": "webchore",
+      "query": "Search for How long is to long of a commute. and Those of you on Fidium Fiber, how do you like it? and determine which post has a higher votes-to-comments ratio (rounded to the nearest integer). Output the result in the following format: Ans: [title], Ratio: [votes/comments]",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/search?q=How+long+is+to+long+of+a+commute.",
+        "title1": "How long is to long of a commute.",
+        "title2": "Those of you on Fidium Fiber, how do you like it?",
+        "ans": "Those of you on Fidium Fiber, how do you like it?",
+        "ratio": "0",
+        "difficulty": "hard"
+      },
+      "answer": "Those of you on Fidium Fiber, how do you like it?"
+    },
+    {
+      "task_id": 30092,
+      "source": "webchore",
+      "query": "Search for The global income distribution and Bank Failures 2005 - 2023 - Should we be worried? [OC] and determine which post has a higher votes-to-comments ratio (rounded to the nearest integer). Output the result in the following format: Ans: [title], Ratio: [votes/comments]",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/search?q=The+global+income+distribution.",
+        "title1": "The global income distribution",
+        "title2": "Bank Failures 2005 - 2023 - Should we be worried? [OC]",
+        "ans": "The global income distribution",
+        "ratio": "36",
+        "difficulty": "hard"
+      },
+      "answer": "The global income distribution"
+    },
+    {
+      "task_id": 30093,
+      "source": "webchore",
+      "query": "Search for I like to tell dad jokes and I’m currently writing this from the hospital. and determine which post has a higher votes-to-comments ratio (rounded to the nearest integer). Output the result in the following format: Ans: [title], Ratio: [votes/comments]",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/search?q=I+like+to+tell+dad+jokes.",
+        "title1": "I like to tell dad jokes",
+        "title2": "I’m currently writing this from the hospital.",
+        "ans": "I’m currently writing this from the hospital.",
+        "ratio": "25",
+        "difficulty": "hard"
+      },
+      "answer": "I’m currently writing this from the hospital."
+    },
+    {
+      "task_id": 30094,
+      "source": "webchore",
+      "query": "Search for Rooster Run and I'll raise you one Dollar more... and determine which post has a higher votes-to-comments ratio (rounded to the nearest integer). Output the result in the following format: Ans: [title], Ratio: [votes/comments]",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/search?q=Rooster+Run.",
+        "title1": "Rooster Run",
+        "title2": "I'll raise you one Dollar more...",
+        "ans": "Rooster Run",
+        "ratio": "30",
+        "difficulty": "hard"
+      },
+      "answer": "Rooster Run"
+    },
+    {
+      "task_id": 30100,
+      "source": "webchore",
+      "query": "List the number of submissions made by Sariel007 in each forum, sorted in descending order. If the counts are the same, sort them alphabetically. Display the results in the following format: [forum]: [count], [forum]: [count], ...",
+      "params": {
+        "start_url": "__REDDIT__/user/Sariel007",
+        "start_url_lite": "__REDDIT__/user/Sariel007",
+        "user": "Sariel007",
+        "forum": "Sariel007",
+        "ans": "UpliftingNews: 82, Futurology: 18, space: 6, books: 5, technology: 3, nottheonion: 1",
+        "difficulty": "hard"
+      },
+      "answer": "UpliftingNews: 82, Futurology: 18, space: 6, books: 5, technology: 3, nottheonion: 1"
+    },
+    {
+      "task_id": 30101,
+      "source": "webchore",
+      "query": "List the number of submissions made by mossadnik in each forum, sorted in descending order. If the counts are the same, sort them alphabetically. Display the results in the following format: [forum]: [count], [forum]: [count], ...",
+      "params": {
+        "start_url": "__REDDIT__/user/mossadnik",
+        "start_url_lite": "__REDDIT__/user/mossadnik",
+        "user": "mossadnik",
+        "forum": "mossadnik",
+        "ans": "Futurology: 43, science: 24, technology: 9, sports: 1",
+        "difficulty": "hard"
+      },
+      "answer": "Futurology: 43, science: 24, technology: 9, sports: 1"
+    },
+    {
+      "task_id": 30102,
+      "source": "webchore",
+      "query": "List the number of submissions made by thebelsnickle1991 in each forum, sorted in descending order. If the counts are the same, sort them alphabetically. Display the results in the following format: [forum]: [count], [forum]: [count], ...",
+      "params": {
+        "start_url": "__REDDIT__/user/thebelsnickle1991",
+        "start_url_lite": "__REDDIT__/user/thebelsnickle1991",
+        "user": "thebelsnickle1991",
+        "forum": "thebelsnickle1991",
+        "ans": "gadgets: 73, science: 45, technology: 12, Futurology: 7, Music: 1, space: 1",
+        "difficulty": "hard"
+      },
+      "answer": "gadgets: 73, science: 45, technology: 12, Futurology: 7, Music: 1, space: 1"
+    },
+    {
+      "task_id": 30103,
+      "source": "webchore",
+      "query": "List the number of submissions made by nastratin in each forum, sorted in descending order. If the counts are the same, sort them alphabetically. Display the results in the following format: [forum]: [count], [forum]: [count], ...",
+      "params": {
+        "start_url": "__REDDIT__/user/nastratin",
+        "start_url_lite": "__REDDIT__/user/nastratin",
+        "user": "nastratin",
+        "forum": "nastratin",
+        "ans": "Futurology: 25, technology: 6, books: 1, worldnews: 1",
+        "difficulty": "hard"
+      },
+      "answer": "Futurology: 25, technology: 6, books: 1, worldnews: 1"
+    },
+    {
+      "task_id": 30104,
+      "source": "webchore",
+      "query": "List the number of submissions made by chrisdh79 in each forum, sorted in descending order. If the counts are the same, sort them alphabetically. Display the results in the following format: [forum]: [count], [forum]: [count], ...",
+      "params": {
+        "start_url": "__REDDIT__/user/chrisdh79",
+        "start_url_lite": "__REDDIT__/user/chrisdh79",
+        "user": "chrisdh79",
+        "forum": "chrisdh79",
+        "ans": "technology: 124, science: 120, gadgets: 118, Futurology: 39, space: 15, UpliftingNews: 5, movie: 3",
+        "difficulty": "hard"
+      },
+      "answer": "technology: 124, science: 120, gadgets: 118, Futurology: 39, space: 15, UpliftingNews: 5, movie: 3"
+    },
+    {
+      "task_id": 30110,
+      "source": "webchore",
+      "query": "What is the oldest post among the top 20 posts in forum /f/gaming? Please provide the result in the following format with UTC time: Ans: [title], Date: [MM/DD]",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/search?q=Large+study+provides+evidence+that+goal+incongruence+can+harm+romantic+relationship+satisfaction",
+        "forum": "/f/gaming",
+        "number": "20",
+        "ans": "[OC] visited a video game museum today this is the original master copy of DOOM 2",
+        "date": "10/30",
+        "difficulty": "hard"
+      },
+      "answer": "[OC] visited a video game museum today this is the original master copy of DOOM 2"
+    },
+    {
+      "task_id": 30111,
+      "source": "webchore",
+      "query": "What is the oldest post among the top 30 posts in forum /f/wallstreetbets? Please provide the result in the following format with UTC time: Ans: [title], Date: [MM/DD]",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/search?q=Large+study+provides+evidence+that+goal+incongruence+can+harm+romantic+relationship+satisfaction",
+        "forum": "/f/wallstreetbets",
+        "number": "30",
+        "ans": "Confirmed. Sky Bear sighting signals bull trap and pawwing for your calls...",
+        "date": "10/29",
+        "difficulty": "hard"
+      },
+      "answer": "Confirmed. Sky Bear sighting signals bull trap and pawwing for your calls..."
+    },
+    {
+      "task_id": 30112,
+      "source": "webchore",
+      "query": "What is the oldest post among the top 30 posts in forum /f/movies? Please provide the result in the following format with UTC time: Ans: [title], Date: [MM/DD]",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/search?q=Large+study+provides+evidence+that+goal+incongruence+can+harm+romantic+relationship+satisfaction",
+        "forum": "/f/movies",
+        "number": "30",
+        "ans": "Bullet Train is a fun movie!",
+        "date": "10/24",
+        "difficulty": "hard"
+      },
+      "answer": "Bullet Train is a fun movie!"
+    },
+    {
+      "task_id": 30113,
+      "source": "webchore",
+      "query": "What is the oldest post among the top 15 posts in forum /f/books? Please provide the result in the following format with UTC time: Ans: [title], Date: [MM/DD]",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/search?q=Large+study+provides+evidence+that+goal+incongruence+can+harm+romantic+relationship+satisfaction",
+        "forum": "/f/books",
+        "number": "15",
+        "ans": "I just finished reading The Hobbit to my 6 year old daughter, and she loved it!",
+        "date": "10/25",
+        "difficulty": "hard"
+      },
+      "answer": "I just finished reading The Hobbit to my 6 year old daughter, and she loved it!"
+    },
+    {
+      "task_id": 30114,
+      "source": "webchore",
+      "query": "What is the oldest post among the top 30 posts in forum /f/science? Please provide the result in the following format with UTC time: Ans: [title], Date: [MM/DD]",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "__REDDIT__/search?q=Large+study+provides+evidence+that+goal+incongruence+can+harm+romantic+relationship+satisfaction",
+        "forum": "/f/science",
+        "number": "30",
+        "ans": "Scientists have proved goldfish do have good memories and are able to navigate their surroundings. A team from Oxford University trained nine fish to travel 70cm (2.3ft) and back, receiving a food reward at the end. The study disproves the long-held belief goldfish have little or no memory.",
+        "date": "10/13",
+        "difficulty": "hard"
+      },
+      "answer": "Scientists have proved goldfish do have good memories and are able to navigate their surroundings. A team from Oxford University trained nine fish to travel 70cm (2.3ft) and back, receiving a food reward at the end. The study disproves the long-held belief goldfish have little or no memory."
+    },
+    {
+      "task_id": 50050,
+      "source": "webchore",
+      "query": "List all the dynasties or kingdoms under the Medieval period in the Sasanian Empire page on Wikipedia. Post it to a related Reddit forum. Follow the instructions below when posting:\nTitle: {dynasties or kingdoms under the Medieval period in Sasanian Empire}, Body: {kingdom1}, {kingdom2}, {kingdom3}, ...}.",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "",
+        "element": "dynasties or kingdoms under the Medieval period",
+        "region": "Sasanian Empire",
+        "wiki_url": "http://172.16.2.7:8888/wikipedia_en_all_maxi_2022-05/A/Sasanian_Empire",
+        "answer": "kingdom",
+        "forum": "history",
+        "contents": "Rashidun Caliphate, Umayyad Caliphate, Abbasid Caliphate, Dabuyids, Bavandids, Masmughans of Damavand, Baduspanids, Justanids, Alid dynasties, Tahirid dynasty, Samanid Empire, Saffarid dynasty, Ghurid dynasty, Sajid dynasty, Sallarid dynasty, Ziyarid dynasty, Ilyasids, Buyid dynasty, Rawadid dynasty, Hasanwayhids, Ghaznavid dynasty, Annazids, Kakuyids, Nasrid dynasty, Shabankara, Seljuk Empire, Khwarazmian dynasty, Eldiguzids, Atabegs of Yazd, Salghurids, Hazaraspids, Pishkinid dynasty, Khorshidi dynasty, Qutlugh-Khanids, Mihrabanids, Kurt dynasty, Ilkhanate Empire, Chobanid dynasty, Muzaffarid dynasty, Jalayirid Sultanate, Sarbadars, Injuids, Afrasiyab dynasty, Mar'ashis, Timurid Empire, Kar-Kiya dynasty, Qara Qoyunlu, Aq Qoyunlu"
+      },
+      "answer": "kingdom"
+    },
+    {
+      "task_id": 50051,
+      "source": "webchore",
+      "query": "List all the dynasties, state, or emirates of the Arabian Peninsula in the Umayyad Caliphate page on Wikipedia. Post it to a related Reddit forum. Follow the instructions below when posting:\nTitle: {dynasties, state, or emirates of the Arabian Peninsula in Umayyad Caliphate}, Body: {dynasties1}, {dynasties2}, {dynasties3}, ...}.",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "",
+        "element": "dynasties, state, or emirates of the Arabian Peninsula",
+        "region": "Umayyad Caliphate",
+        "wiki_url": "http://172.16.2.7:8888/wikipedia_en_all_maxi_2022-05/A/Umayyad_Caliphate",
+        "answer": "dynasties",
+        "forum": "history",
+        "contents": "Imamate of Oman, Ziyadids, Yufirids, Ukhaidhirds, Rassids, Qarmatians, Wajihids, Sharifate of Mecca, Sulayhids, Sulaymanids, Uyunids, Zurayids, Nabhanids, Mahdids, Rasulids, Usfurids, Jarwanids, Kathirids, Tahirids, Jabrids, Qasimids, Ya'arubids, Upper Yafa, Muscat and Oman, Rashidids, Qu'aitids, Emirate of Beihan, Idrisids, Mutawakkilite Kingdom"
+      },
+      "answer": "dynasties"
+    },
+    {
+      "task_id": 50052,
+      "source": "webchore",
+      "query": "List all the Japanese historical periods in the Japan page on Wikipedia. Post it to a related Reddit forum. Follow the instructions below when posting:\nTitle: {Japanese historical periods in Japan}, Body: {period1}, {period2}, {period3}, ...}.",
+      "params": {
+        "start_url": "__REDDIT__",
+        "start_url_lite": "",
+        "element": "Japanese historical periods",
+        "region": "Japan",
+        "wiki_url": "http://172.16.2.7:8888/wikipedia_en_all_maxi_2022-05/A/History_of_Japan",
+        "answer": "period",
+        "forum": "history",
+        "contents": "Paleolithic, Jōmon, Yayoi, Kofun, Asuka, Nara, Heian, Kamakura, Kenmu Restoration, Muromachi, Azuchi–Momoyama, Edo, Meiji, Taishō, Shōwa, Heisei, Reiwa"
+      },
+      "answer": "period"
+    }
+  ],
+  "stats": {
+    "total_forums": 73,
+    "url_confirmed_forums": 54,
+    "total_posts_with_id": 129,
+    "total_users": 45,
+    "total_ground_truth_facts": 32
+  }
+}

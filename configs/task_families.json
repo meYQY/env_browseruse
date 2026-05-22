@@ -1,0 +1,120 @@
+{
+  "comment_issue": {
+    "site": "gitlab",
+    "required_entity_type": "issue",
+    "ground_truth_template": {
+      "resource": "issue_comments",
+      "where": {
+        "issue_ref": "{target_entity}",
+        "author_ref": "current_user"
+      },
+      "assert": {
+        "exists": true,
+        "body_must_include": "{body_must_include}"
+      }
+    }
+  },
+  "add_label_to_issue": {
+    "site": "gitlab",
+    "required_entity_type": "issue",
+    "ground_truth_template": {
+      "resource": "issue_labels",
+      "where": {
+        "issue_ref": "{target_entity}"
+      },
+      "assert": {
+        "labels_include": "{label}"
+      }
+    }
+  },
+  "close_issue": {
+    "site": "gitlab",
+    "required_entity_type": "issue",
+    "ground_truth_template": {
+      "resource": "issues",
+      "where": {
+        "issue_ref": "{target_entity}"
+      },
+      "assert": {
+        "state": "closed"
+      }
+    }
+  },
+  "add_to_cart": {
+    "site": "shopping",
+    "required_entity_type": "product_variant",
+    "ground_truth_template": {
+      "resource": "cart_items",
+      "where": {
+        "user_ref": "current_user",
+        "variant_ref": "{target_entity}"
+      },
+      "assert": {
+        "exists": true,
+        "quantity": "{quantity}"
+      }
+    }
+  },
+  "write_review": {
+    "site": "shopping",
+    "required_entity_type": "product",
+    "ground_truth_template": {
+      "resource": "reviews",
+      "where": {
+        "user_ref": "current_user",
+        "product_ref": "{target_entity}"
+      },
+      "assert": {
+        "exists": true,
+        "rating": "{rating}",
+        "body_must_include": "{body_must_include}"
+      }
+    }
+  },
+  "comment_post": {
+    "site": "forum",
+    "required_entity_type": "post",
+    "ground_truth_template": {
+      "resource": "comments",
+      "where": {
+        "post_ref": "{target_entity}",
+        "author_ref": "current_user"
+      },
+      "assert": {
+        "exists": true,
+        "body_must_include": "{body_must_include}"
+      }
+    }
+  },
+  "create_post": {
+    "site": "forum",
+    "required_entity_type": "community",
+    "ground_truth_template": {
+      "resource": "posts",
+      "where": {
+        "community_ref": "{target_entity}",
+        "author_ref": "current_user"
+      },
+      "assert": {
+        "exists": true,
+        "title_must_include": "{title_must_include}",
+        "body_must_include": "{body_must_include}"
+      }
+    }
+  },
+  "edit_page_publish": {
+    "site": "cms_admin",
+    "required_entity_type": "cms_page",
+    "ground_truth_template": {
+      "resource": "cms_pages",
+      "where": {
+        "page_ref": "{target_entity}"
+      },
+      "assert": {
+        "body_must_include": "{body_must_include}",
+        "status": "published",
+        "last_editor_ref": "current_user"
+      }
+    }
+  }
+}

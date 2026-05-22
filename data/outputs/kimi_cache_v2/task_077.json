@@ -1,0 +1,296 @@
+{
+  "task_id": "task_0125",
+  "task_description": "In the CMS admin panel, locate page A, the \"contact us\" page, edit it so the body includes \"international shipping restrictions apply\", and publish page A. Then create page B, the \"shipping information\" page, ensuring the title includes \"privacy notice\" and the body includes \"holiday sale terms and conditions\", and publish page B.",
+  "target_environment": "cms_admin",
+  "ability_dimension": "Long-horizon",
+  "difficulty": "L4",
+  "target_entity": {
+    "entity_id": "cms_page_006",
+    "site": "cms_admin",
+    "entity_type": "cms_page",
+    "selected_locator_fields": {
+      "page_title_contains": "contact us"
+    }
+  },
+  "target_entities": {
+    "A": {
+      "entity_id": "cms_page_006",
+      "site": "cms_admin",
+      "entity_type": "cms_page",
+      "selected_locator_fields": {
+        "page_title_contains": "contact us"
+      }
+    },
+    "B": {
+      "entity_id": "cms_page_002",
+      "site": "cms_admin",
+      "entity_type": "cms_page",
+      "selected_locator_fields": {
+        "page_title_contains": "shipping information"
+      }
+    }
+  },
+  "task_structure": {
+    "task_template": "edit_and_publish_page",
+    "task_templates": {
+      "A": "edit_and_publish_page",
+      "B": "create_and_publish_page"
+    },
+    "structure_variant": "long_horizon_L4_two_step_chain_direct_ref",
+    "locator": {
+      "page_title_contains": "contact us"
+    },
+    "target_entities": {
+      "A": {
+        "entity_id": "cms_page_006",
+        "site": "cms_admin",
+        "entity_type": "cms_page",
+        "selected_locator_fields": {
+          "page_title_contains": "contact us"
+        }
+      },
+      "B": {
+        "entity_id": "cms_page_002",
+        "site": "cms_admin",
+        "entity_type": "cms_page",
+        "selected_locator_fields": {
+          "page_title_contains": "shipping information"
+        }
+      }
+    },
+    "actions": [
+      {
+        "type": "edit_page",
+        "target": "A",
+        "body_must_include": [
+          "international shipping restrictions apply"
+        ]
+      },
+      {
+        "type": "publish_page",
+        "target": "A"
+      },
+      {
+        "type": "create_page",
+        "target": "B",
+        "title_must_include": [
+          "privacy notice"
+        ],
+        "body_must_include": [
+          "holiday sale terms and conditions"
+        ]
+      },
+      {
+        "type": "publish_page",
+        "target": "B"
+      }
+    ],
+    "requirements": {
+      "body_must_include": [
+        "international shipping restrictions apply"
+      ]
+    },
+    "requirements_by_target": {
+      "A": {
+        "body_must_include": [
+          "international shipping restrictions apply"
+        ]
+      },
+      "B": {
+        "title_must_include": [
+          "privacy notice"
+        ],
+        "body_must_include": [
+          "holiday sale terms and conditions"
+        ]
+      }
+    }
+  },
+  "actions": [
+    {
+      "type": "edit_page",
+      "target": "A",
+      "body_must_include": [
+        "international shipping restrictions apply"
+      ]
+    },
+    {
+      "type": "publish_page",
+      "target": "A"
+    },
+    {
+      "type": "create_page",
+      "target": "B",
+      "title_must_include": [
+        "privacy notice"
+      ],
+      "body_must_include": [
+        "holiday sale terms and conditions"
+      ]
+    },
+    {
+      "type": "publish_page",
+      "target": "B"
+    }
+  ],
+  "ground_truth": {
+    "type": "expected_backend_state",
+    "assertions": [
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_006"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "international shipping restrictions apply"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_006"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "international shipping restrictions apply"
+          ],
+          "status": "published",
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_002"
+        },
+        "must_satisfy": {
+          "exists": true,
+          "title_must_include": [
+            "privacy notice"
+          ],
+          "body_must_include": [
+            "holiday sale terms and conditions"
+          ],
+          "creator_ref": "current_user"
+        }
+      },
+      {
+        "check_object": "cms_pages",
+        "conditions": {
+          "page_ref": "cms_page_002"
+        },
+        "must_satisfy": {
+          "body_must_include": [
+            "holiday sale terms and conditions"
+          ],
+          "status": "published",
+          "last_editor_ref": "current_user"
+        }
+      }
+    ]
+  },
+  "verifier": {
+    "type": "db_api_checker_template",
+    "checks": [
+      {
+        "query": {
+          "resource": "cms_pages",
+          "filters": {
+            "page_ref": "cms_page_006"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "international shipping restrictions apply"
+          ],
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "query": {
+          "resource": "cms_pages",
+          "filters": {
+            "page_ref": "cms_page_006"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "international shipping restrictions apply"
+          ],
+          "status": "published",
+          "last_editor_ref": "current_user"
+        }
+      },
+      {
+        "query": {
+          "resource": "cms_pages",
+          "filters": {
+            "page_ref": "cms_page_002"
+          }
+        },
+        "condition": {
+          "exists": true,
+          "title_must_include": [
+            "privacy notice"
+          ],
+          "body_must_include": [
+            "holiday sale terms and conditions"
+          ],
+          "creator_ref": "current_user"
+        }
+      },
+      {
+        "query": {
+          "resource": "cms_pages",
+          "filters": {
+            "page_ref": "cms_page_002"
+          }
+        },
+        "condition": {
+          "body_must_include": [
+            "holiday sale terms and conditions"
+          ],
+          "status": "published",
+          "last_editor_ref": "current_user"
+        }
+      }
+    ],
+    "execution_status": "not_executed"
+  },
+  "validation_status": {
+    "symbolic_grounded": true,
+    "backend_grounded": false,
+    "verifier_executed": false,
+    "needs_backend_validation": true
+  },
+  "quality_checks": {
+    "passed": false,
+    "checks": {
+      "entity_exists": false,
+      "entity_type_matches": false,
+      "locator_supported": true,
+      "has_ground_truth": true,
+      "gt_binds_entity": false,
+      "verifier_binds_entity": false,
+      "verifier_checks_user": true,
+      "requirements_from_bank": true,
+      "no_subjective": true,
+      "has_labels": true,
+      "honest_validation": true,
+      "no_raw_dsl": true,
+      "no_char_split": true,
+      "difficulty_constraints": true,
+      "canonical_schema_keys": true,
+      "verifier_covers_ground_truth": true,
+      "no_redundant_actions": true
+    },
+    "warnings": []
+  },
+  "diversity_metadata": {
+    "entity_use_count": 3,
+    "template_use_count": 5
+  }
+}

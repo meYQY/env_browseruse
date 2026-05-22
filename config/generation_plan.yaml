@@ -1,0 +1,165 @@
+# =============================================================================
+# Generation Plan
+# =============================================================================
+# Targets 120 tasks (buffer above the final desired set) distributed across
+# ability dimensions, difficulty levels, and environments.
+# Distribution values are targets, not hard constraints -- the generator should
+# approximate these proportions but may deviate when template compatibility
+# prevents exact fills.
+# =============================================================================
+
+target_total_tasks: 120
+
+# ---------------------------------------------------------------------------
+# Ability-dimension distribution
+# ---------------------------------------------------------------------------
+ability_dimensions:
+  memory_information_tracking:
+    label: Memory
+    target_fraction: 0.50          # ~60 tasks
+  long_horizon_operation:
+    label: Long-horizon
+    target_fraction: 0.50          # ~60 tasks
+
+# ---------------------------------------------------------------------------
+# Difficulty distribution (roughly equal across L1-L5)
+# ---------------------------------------------------------------------------
+difficulty_levels: &difficulty_levels
+  - L1
+  - L2
+  - L3
+  - L4
+  - L5
+
+difficulty_distribution:
+  L1: { target_fraction: 0.20 }    # ~24 tasks
+  L2: { target_fraction: 0.20 }    # ~24 tasks
+  L3: { target_fraction: 0.20 }    # ~24 tasks
+  L4: { target_fraction: 0.20 }    # ~24 tasks
+  L5: { target_fraction: 0.20 }    # ~24 tasks
+
+# ---------------------------------------------------------------------------
+# Environment distribution
+# ---------------------------------------------------------------------------
+environments:
+  gitlab:
+    label: GitLab
+    site: gitlab
+    target_fraction: 0.40          # ~48 tasks
+    template_file: config/task_templates/gitlab.yaml
+    requirement_bank_file: config/requirement_banks/gitlab.yaml
+    entity_source: data/entities/gitlab.json
+
+  shopping:
+    label: Shopping
+    site: shopping
+    target_fraction: 0.25          # ~30 tasks
+    template_file: config/task_templates/shopping.yaml
+    requirement_bank_file: config/requirement_banks/shopping.yaml
+    entity_source: data/entities/shopping.json
+
+  forum:
+    label: Forum
+    site: forum
+    target_fraction: 0.20          # ~24 tasks
+    template_file: config/task_templates/forum.yaml
+    requirement_bank_file: config/requirement_banks/forum.yaml
+    entity_source: data/entities/reddit.json
+
+  cms:
+    label: CMS
+    site: cms_admin
+    target_fraction: 0.15          # ~18 tasks
+    template_file: config/task_templates/cms.yaml
+    requirement_bank_file: config/requirement_banks/cms.yaml
+    entity_source: data/entities/cms.json
+
+# ---------------------------------------------------------------------------
+# Curated examples
+# ---------------------------------------------------------------------------
+# Hand-selected seed tasks used for few-shot prompting and quality calibration.
+# Each entry references a task_id from the sample output and the template it
+# exercises. The generator may also use these to bootstrap coverage in
+# under-represented cells.
+# ---------------------------------------------------------------------------
+curated_examples:
+  target_count: 10
+  examples:
+    - task_id: gitlab_memory_L1_001
+      environment: gitlab
+      ability: memory_information_tracking
+      difficulty: L1
+      template: comment_issue
+      notes: Simplest memory task -- direct entity reference, single comment action.
+
+    - task_id: gitlab_long_L1_001
+      environment: gitlab
+      ability: long_horizon_operation
+      difficulty: L1
+      template: add_label_to_issue + comment_issue
+      notes: Two-action long-horizon at L1 combining label and comment.
+
+    - task_id: shopping_memory_L2_001
+      environment: shopping
+      ability: memory_information_tracking
+      difficulty: L2
+      template: add_to_cart
+      notes: Single-condition locator (color+size) with quantity requirement.
+
+    - task_id: forum_memory_L2_001
+      environment: forum
+      ability: memory_information_tracking
+      difficulty: L2
+      template: comment_post
+      notes: Forum comment with single condition locator on post topic.
+
+    - task_id: gitlab_long_L3_001
+      environment: gitlab
+      ability: long_horizon_operation
+      difficulty: L3
+      template: comment_label_close_issue
+      notes: Three-action sequence -- comment, label, close.
+
+    - task_id: shopping_memory_L3_001
+      environment: shopping
+      ability: memory_information_tracking
+      difficulty: L3
+      template: write_review
+      notes: Multi-condition locator with rating and body constraints.
+
+    - task_id: gitlab_memory_L4_001
+      environment: gitlab
+      ability: memory_information_tracking
+      difficulty: L4
+      template: add_label_to_issue + comment_issue
+      notes: Conditional action -- add label only if not already present.
+
+    - task_id: cms_long_L4_001
+      environment: cms
+      ability: long_horizon_operation
+      difficulty: L4
+      template: edit_and_publish_page
+      notes: Edit body content then publish, multi-step CMS workflow.
+
+    - task_id: gitlab_long_L5_001
+      environment: gitlab
+      ability: long_horizon_operation
+      difficulty: L5
+      template: comment_label_close_issue
+      notes: Full three-action sequence with precondition state check.
+
+    - task_id: forum_memory_L5_001
+      environment: forum
+      ability: memory_information_tracking
+      difficulty: L5
+      template: create_post
+      notes: Multi-condition memory task with title and body constraints.
+
+# ---------------------------------------------------------------------------
+# Sampling parameters
+# ---------------------------------------------------------------------------
+sampling:
+  seed: 42
+  max_retries_per_cell: 10
+  dedup_strategy: entity_template_pair   # same entity + same template = duplicate
+  shuffle_final: true
