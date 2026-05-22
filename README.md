@@ -94,10 +94,9 @@ Stage 1-8 和 10 完全确定性（相同 seed 可复现）。仅 Stage 9 调用
 
 | 文件 | 说明 |
 |------|------|
-| [`data/outputs/generated_10_examples.json`](data/outputs/generated_10_examples.json) | **10 道精选示例**（Memory L1-L5 + Long-horizon L1-L5），每道包含完整结构 |
+| [`data/outputs/generated_10_examples.json`](data/outputs/generated_10_examples.json) | **10 道精选示例**，每道包含完整的 task_description、actions、ground_truth、verifier、quality_checks |
 | [`data/outputs/generated_10_examples.md`](data/outputs/generated_10_examples.md) | 同上的 Markdown 可读版本 |
 | [`data/outputs/generated_tasks_100.json`](data/outputs/generated_tasks_100.json) | 100 道完整任务集 |
-| [`data/outputs/generated_tasks_100.csv`](data/outputs/generated_tasks_100.csv) | **100 道任务摘要表格**（适合快速浏览难度/维度/环境分布） |
 | [`data/outputs/generation_report.json`](data/outputs/generation_report.json) | 生成报告（多样性统计 + 废弃原因） |
 
 也可以用命令行快速浏览：
