@@ -1,419 +1,111 @@
-# Generated Browser-Use Task Examples
+# 10 Curated Examples (Kimi-rendered)
 
-## Task 1: task_0001
+## 1. Memory L1 — gitlab
 
-**Task description:**
-In GitLab, find the issue whose title is file upload 413. Add a comment containing "added reproduction steps".
+**Task ID:** task_0001
 
-**Target environment:** gitlab
+**Description:** On GitLab, find the issue whose title contains "file upload 413" and leave a comment on it that includes the exact phrase "added reproduction steps".
 
-**Ability dimension:** Memory
+**Actions:** 1 step(s)
 
-**Difficulty:** L1
+**Assertions:** 1
 
-**Target entity:** gitlab_issue_018
 
-**Ground truth:**
+## 2. Memory L2 — shopping
 
-- `issue_comments` where {'issue_ref': 'gitlab_issue_018', 'author_ref': 'current_user'} must satisfy {'exists': True, 'body_must_include': ['added reproduction steps']}
+**Task ID:** task_0032
 
-**Verifier:**
+**Description:** Add the product named "Aeno capri" to your cart with a quantity of 1.
 
-- Query `issue_comments` with filters {'issue_ref': 'gitlab_issue_018', 'author_ref': 'current_user'}, check {'exists': True, 'body_must_include': ['added reproduction steps']}
+**Actions:** 1 step(s)
 
-- Execution status: `not_executed`
+**Assertions:** 1
 
-**Validation status:**
 
-- symbolic_grounded: True
+## 3. Memory L3 — forum
 
-- backend_grounded: False
+**Task ID:** task_0049
 
-- verifier_executed: False
+**Description:** Find the forum community called "nyc forum" that has 1 post, and create a new post. The title should include "public transit updates" and the main text should include "looking for recommendations".
 
-- needs_backend_validation: True
+**Actions:** 1 step(s)
 
----
+**Assertions:** 1
 
-## Task 2: task_0093
 
-**Task description:**
-In the shopping site, find the product variant whose product name is a cat t-shirt. Add it to the cart with quantity 1.
+## 4. Memory L4 — cms_admin
 
-**Target environment:** shopping
+**Task ID:** task_0065
 
-**Ability dimension:** Long-horizon
+**Description:** Find CMS page with a title containing "customer testimonials" and content type "cms_block". Exclude alternatives that do not match all listed conditions. Edit page so its body includes "30-day return window", then publish page.
 
-**Difficulty:** L1
+**Actions:** 2 step(s)
 
-**Target entity:** shopping_variant_011
+**Assertions:** 2
 
-**Ground truth:**
 
-- `cart_items` where {'user_ref': 'current_user', 'variant_ref': 'shopping_variant_011'} must satisfy {'exists': True, 'quantity': 1}
+## 5. Memory L5 — shopping
 
-**Verifier:**
+**Task ID:** task_0041
 
-- Query `cart_items` with filters {'user_ref': 'current_user', 'variant_ref': 'shopping_variant_011'}, check {'exists': True, 'quantity': 1}
+**Description:** Locate the clothing product named Aeon capri that has no reviews and leave a 3-star review on it containing the phrase "average performance".
 
-- Execution status: `not_executed`
+**Actions:** 1 step(s)
 
-**Validation status:**
+**Assertions:** 1
 
-- symbolic_grounded: True
 
-- backend_grounded: False
+## 6. Long-horizon L1 — gitlab
 
-- verifier_executed: False
+**Task ID:** task_0068
 
-- needs_backend_validation: True
+**Description:** Close the GitLab issue with a title containing "accessibility audit".
 
----
+**Actions:** 1 step(s)
 
-## Task 3: task_0047
+**Assertions:** 1
 
-**Task description:**
-In the forum, find the post whose title is science breakthrough news. Add a comment containing "I would check public transit options first".
 
-**Target environment:** forum
+## 7. Long-horizon L2 — forum
 
-**Ability dimension:** Memory
+**Task ID:** task_0110
 
-**Difficulty:** L2
+**Description:** Edit the forum post with ID 103061, so that its body includes the phrase "affordable options".
 
-**Target entity:** forum_post_011
+**Actions:** 1 step(s)
 
-**Ground truth:**
+**Assertions:** 1
 
-- `comments` where {'post_ref': 'forum_post_011', 'author_ref': 'current_user'} must satisfy {'exists': True, 'body_must_include': ['I would check public transit options first']}
 
-**Verifier:**
+## 8. Long-horizon L3 — cms_admin
 
-- Query `comments` with filters {'post_ref': 'forum_post_011', 'author_ref': 'current_user'}, check {'exists': True, 'body_must_include': ['I would check public transit options first']}
+**Task ID:** task_0122
 
-- Execution status: `not_executed`
+**Description:** In the CMS admin, create a new page with a title that includes "store hours" and body text that includes "international shipping restrictions apply", then publish it. Next, edit the published page with a title containing "shipping information" to include "holiday sale terms and conditions" in its body, then publish it.
 
-**Validation status:**
+**Actions:** 4 step(s)
 
-- symbolic_grounded: True
+**Assertions:** 4
 
-- backend_grounded: False
 
-- verifier_executed: False
+## 9. Long-horizon L4 — gitlab
 
-- needs_backend_validation: True
+**Task ID:** task_0083
 
----
+**Description:** For issue A, which is issue 719, reopen it and assign it to qa_bob. For issue B, which is the open issue labeled backend, ux, and question, post a comment that includes "requires security audit", add the documentation label, and close it.
 
-## Task 4: task_0120
+**Actions:** 5 step(s)
 
-**Task description:**
-In the CMS admin, find the page whose page title is customer testimonials. Create a page with a title containing "loyalty rewards" and a body containing "international shipping restrictions apply".
+**Assertions:** 5
 
-**Target environment:** cms_admin
 
-**Ability dimension:** Long-horizon
+## 10. Long-horizon L5 — shopping
 
-**Difficulty:** L2
+**Task ID:** task_0105
 
-**Target entity:** cms_page_009
+**Description:** For product A, the beauty item named "Circe ice fleece", add one to your cart, submit a 5-star review containing "perfect fit", then remove it from your cart. Next, for product B, the home & kitchen item "2 Hawaiian Bamboo Orchid Roots #zc50 - by Discount Hawaiian Gifts", do the same (5-star, "perfect fit", remove). Finally, for product C, the office item "Ahi Tuna Loin 4 lbs...", add, submit a 4-star review containing "fast shipping", then remove.
 
-**Ground truth:**
+**Actions:** 9 step(s)
 
-- `cms_pages` where {'page_ref': 'cms_page_009'} must satisfy {'exists': True, 'title_must_include': ['loyalty rewards'], 'body_must_include': ['international shipping restrictions apply'], 'creator_ref': 'current_user'}
+**Assertions:** 6
 
-**Verifier:**
-
-- Query `cms_pages` with filters {'page_ref': 'cms_page_009'}, check {'exists': True, 'title_must_include': ['loyalty rewards'], 'body_must_include': ['international shipping restrictions apply'], 'creator_ref': 'current_user'}
-
-- Execution status: `not_executed`
-
-**Validation status:**
-
-- symbolic_grounded: True
-
-- backend_grounded: False
-
-- verifier_executed: False
-
-- needs_backend_validation: True
-
----
-
-## Task 5: task_0011
-
-**Task description:**
-In GitLab, find the issue with IID 8 and whose state is open. Add the "frontend" label.
-
-**Target environment:** gitlab
-
-**Ability dimension:** Memory
-
-**Difficulty:** L3
-
-**Target entity:** gitlab_issue_007
-
-**Ground truth:**
-
-- `issue_labels` where {'issue_ref': 'gitlab_issue_007'} must satisfy {'labels_include': 'frontend'}
-
-**Verifier:**
-
-- Query `issue_labels` with filters {'issue_ref': 'gitlab_issue_007'}, check {'labels_include': 'frontend'}
-
-- Execution status: `not_executed`
-
-**Validation status:**
-
-- symbolic_grounded: True
-
-- backend_grounded: False
-
-- verifier_executed: False
-
-- needs_backend_validation: True
-
----
-
-## Task 6: task_0078
-
-**Task description:**
-In GitLab, find the issue whose state is open and whose title is mobile layout broken; then find the issue with IID 316. For the issue titled mobile layout broken: Add a comment containing "performance regression noted". For the issue titled mobile layout broken: Add the "security" label. For the issue titled mobile layout broken: Close the issue. For the issue #316: Reopen the issue. For the issue #316: Assign the issue to qa_bob.
-
-**Target environment:** gitlab
-
-**Ability dimension:** Long-horizon
-
-**Difficulty:** L3
-
-**Target entity:** gitlab_issue_016
-
-**Ground truth:**
-
-- `issue_comments` where {'issue_ref': 'gitlab_issue_016', 'author_ref': 'current_user'} must satisfy {'exists': True, 'body_must_include': ['performance regression noted']}
-
-- `issue_labels` where {'issue_ref': 'gitlab_issue_016'} must satisfy {'labels_include': 'security'}
-
-- `issues` where {'issue_ref': 'gitlab_issue_016'} must satisfy {'state': 'closed'}
-
-- `issues` where {'issue_ref': 'gitlab_issue_010'} must satisfy {'state': 'open'}
-
-- `issues` where {'issue_ref': 'gitlab_issue_010'} must satisfy {'assignee_ref': 'qa_bob'}
-
-**Verifier:**
-
-- Query `issue_comments` with filters {'issue_ref': 'gitlab_issue_016', 'author_ref': 'current_user'}, check {'exists': True, 'body_must_include': ['performance regression noted']}
-
-- Query `issue_labels` with filters {'issue_ref': 'gitlab_issue_016'}, check {'labels_include': 'security'}
-
-- Query `issues` with filters {'issue_ref': 'gitlab_issue_016'}, check {'state': 'closed'}
-
-- Query `issues` with filters {'issue_ref': 'gitlab_issue_010'}, check {'state': 'open'}
-
-- Query `issues` with filters {'issue_ref': 'gitlab_issue_010'}, check {'assignee_ref': 'qa_bob'}
-
-- Execution status: `not_executed`
-
-**Validation status:**
-
-- symbolic_grounded: True
-
-- backend_grounded: False
-
-- verifier_executed: False
-
-- needs_backend_validation: True
-
----
-
-## Task 7: task_0037
-
-**Task description:**
-In the shopping site, find the product whose category is electronics and whose product name is Circe's products. Write a 4-star review containing "comfortable".
-
-**Target environment:** shopping
-
-**Ability dimension:** Memory
-
-**Difficulty:** L4
-
-**Target entity:** shopping_product_037
-
-**Ground truth:**
-
-- `reviews` where {'product_ref': 'shopping_product_037', 'author_ref': 'current_user'} must satisfy {'exists': True, 'rating': 4, 'body_must_include': ['comfortable']}
-
-**Verifier:**
-
-- Query `reviews` with filters {'product_ref': 'shopping_product_037', 'author_ref': 'current_user'}, check {'exists': True, 'rating': 4, 'body_must_include': ['comfortable']}
-
-- Execution status: `not_executed`
-
-**Validation status:**
-
-- symbolic_grounded: True
-
-- backend_grounded: False
-
-- verifier_executed: False
-
-- needs_backend_validation: True
-
----
-
-## Task 8: task_0083
-
-**Task description:**
-In GitLab, find the issue with IID 719; then find the issue whose state is open and whose labels is backend, ux, question. For the issue #719: Reopen the issue. For the issue #719: Assign the issue to qa_bob. For the issue with state open: Add a comment containing "requires security audit". For the issue with state open: Add the "documentation" label. For the issue with state open: Close the issue.
-
-**Target environment:** gitlab
-
-**Ability dimension:** Long-horizon
-
-**Difficulty:** L4
-
-**Target entity:** gitlab_issue_002
-
-**Ground truth:**
-
-- `issues` where {'issue_ref': 'gitlab_issue_002'} must satisfy {'state': 'open'}
-
-- `issues` where {'issue_ref': 'gitlab_issue_002'} must satisfy {'assignee_ref': 'qa_bob'}
-
-- `issue_comments` where {'issue_ref': 'gitlab_issue_034', 'author_ref': 'current_user'} must satisfy {'exists': True, 'body_must_include': ['requires security audit']}
-
-- `issue_labels` where {'issue_ref': 'gitlab_issue_034'} must satisfy {'labels_include': 'documentation'}
-
-- `issues` where {'issue_ref': 'gitlab_issue_034'} must satisfy {'state': 'closed'}
-
-**Verifier:**
-
-- Query `issues` with filters {'issue_ref': 'gitlab_issue_002'}, check {'state': 'open'}
-
-- Query `issues` with filters {'issue_ref': 'gitlab_issue_002'}, check {'assignee_ref': 'qa_bob'}
-
-- Query `issue_comments` with filters {'issue_ref': 'gitlab_issue_034', 'author_ref': 'current_user'}, check {'exists': True, 'body_must_include': ['requires security audit']}
-
-- Query `issue_labels` with filters {'issue_ref': 'gitlab_issue_034'}, check {'labels_include': 'documentation'}
-
-- Query `issues` with filters {'issue_ref': 'gitlab_issue_034'}, check {'state': 'closed'}
-
-- Execution status: `not_executed`
-
-**Validation status:**
-
-- symbolic_grounded: True
-
-- backend_grounded: False
-
-- verifier_executed: False
-
-- needs_backend_validation: True
-
----
-
-## Task 9: task_0053
-
-**Task description:**
-In the forum, find the community whose post count is 4 and whose community name is movies and whose aliases is /f/movies. Create a post with a title containing "neighborhood safety" and a body containing "family friendly". Add a comment containing "definitely worth checking out".
-
-**Target environment:** forum
-
-**Ability dimension:** Memory
-
-**Difficulty:** L5
-
-**Target entity:** forum_community_006
-
-**Ground truth:**
-
-- `posts` where {'community_ref': 'forum_community_006', 'author_ref': 'current_user'} must satisfy {'exists': True, 'title_must_include': ['neighborhood safety'], 'body_must_include': ['family friendly']}
-
-- `comments` where {'community_ref': 'forum_community_006', 'author_ref': 'current_user'} must satisfy {'exists': True}
-
-**Verifier:**
-
-- Query `posts` with filters {'community_ref': 'forum_community_006', 'author_ref': 'current_user'}, check {'exists': True, 'title_must_include': ['neighborhood safety'], 'body_must_include': ['family friendly']}
-
-- Query `comments` with filters {'community_ref': 'forum_community_006', 'author_ref': 'current_user'}, check {'exists': True}
-
-- Execution status: `not_executed`
-
-**Validation status:**
-
-- symbolic_grounded: True
-
-- backend_grounded: False
-
-- verifier_executed: False
-
-- needs_backend_validation: True
-
----
-
-## Task 10: task_0088
-
-**Task description:**
-In GitLab, find the issue whose state is open and whose labels is devops, frontend; then find the issue with IID 566 and whose state is open; then find the issue whose state is closed and whose labels is enhancement, help needed, documentation. For the issue with state open: Add a comment containing "confirmed as duplicate". For the issue with state open: Assign the issue to ericwbailey. For the issue with state open: Close the issue. For the issue #566: Add a comment containing "triaged for backend team". For the issue #566: Assign the issue to byteblaze. For the issue #566: Close the issue. For the issue with state closed: Reopen the issue. For the issue with state closed: Add a comment containing "needs retry logic". For the issue with state closed: Add the "high-priority" label.
-
-**Target environment:** gitlab
-
-**Ability dimension:** Long-horizon
-
-**Difficulty:** L5
-
-**Target entity:** gitlab_issue_021
-
-**Ground truth:**
-
-- `issue_comments` where {'issue_ref': 'gitlab_issue_021', 'author_ref': 'current_user'} must satisfy {'exists': True, 'body_must_include': ['confirmed as duplicate']}
-
-- `issues` where {'issue_ref': 'gitlab_issue_021'} must satisfy {'assignee_ref': 'ericwbailey'}
-
-- `issues` where {'issue_ref': 'gitlab_issue_021'} must satisfy {'state': 'closed'}
-
-- `issue_comments` where {'issue_ref': 'gitlab_issue_001', 'author_ref': 'current_user'} must satisfy {'exists': True, 'body_must_include': ['triaged for backend team']}
-
-- `issues` where {'issue_ref': 'gitlab_issue_001'} must satisfy {'assignee_ref': 'byteblaze'}
-
-- `issues` where {'issue_ref': 'gitlab_issue_001'} must satisfy {'state': 'closed'}
-
-- `issues` where {'issue_ref': 'gitlab_issue_033'} must satisfy {'state': 'open'}
-
-- `issue_comments` where {'issue_ref': 'gitlab_issue_033', 'author_ref': 'current_user'} must satisfy {'exists': True, 'body_must_include': ['needs retry logic']}
-
-- `issue_labels` where {'issue_ref': 'gitlab_issue_033'} must satisfy {'labels_include': 'high-priority'}
-
-**Verifier:**
-
-- Query `issue_comments` with filters {'issue_ref': 'gitlab_issue_021', 'author_ref': 'current_user'}, check {'exists': True, 'body_must_include': ['confirmed as duplicate']}
-
-- Query `issues` with filters {'issue_ref': 'gitlab_issue_021'}, check {'assignee_ref': 'ericwbailey'}
-
-- Query `issues` with filters {'issue_ref': 'gitlab_issue_021'}, check {'state': 'closed'}
-
-- Query `issue_comments` with filters {'issue_ref': 'gitlab_issue_001', 'author_ref': 'current_user'}, check {'exists': True, 'body_must_include': ['triaged for backend team']}
-
-- Query `issues` with filters {'issue_ref': 'gitlab_issue_001'}, check {'assignee_ref': 'byteblaze'}
-
-- Query `issues` with filters {'issue_ref': 'gitlab_issue_001'}, check {'state': 'closed'}
-
-- Query `issues` with filters {'issue_ref': 'gitlab_issue_033'}, check {'state': 'open'}
-
-- Query `issue_comments` with filters {'issue_ref': 'gitlab_issue_033', 'author_ref': 'current_user'}, check {'exists': True, 'body_must_include': ['needs retry logic']}
-
-- Query `issue_labels` with filters {'issue_ref': 'gitlab_issue_033'}, check {'labels_include': 'high-priority'}
-
-- Execution status: `not_executed`
-
-**Validation status:**
-
-- symbolic_grounded: True
-
-- backend_grounded: False
-
-- verifier_executed: False
-
-- needs_backend_validation: True
-
----
