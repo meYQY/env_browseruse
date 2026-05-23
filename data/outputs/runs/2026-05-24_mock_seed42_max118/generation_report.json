@@ -1,0 +1,101 @@
+{
+  "total_generated": 118,
+  "total_rejected": 7,
+  "diversity": {
+    "by_ability": {
+      "Memory": 60,
+      "Long-horizon": 58
+    },
+    "by_difficulty": {
+      "L1": 24,
+      "L2": 24,
+      "L3": 24,
+      "L4": 24,
+      "L5": 22
+    },
+    "by_environment": {
+      "gitlab": 50,
+      "shopping": 30,
+      "forum": 20,
+      "cms_admin": 18
+    },
+    "by_task_template": {
+      "comment_issue": 12,
+      "add_label_to_issue": 7,
+      "add_to_cart": 9,
+      "write_review": 9,
+      "comment_post": 5,
+      "create_post": 2,
+      "create_and_comment_post": 4,
+      "create_page": 6,
+      "edit_page": 5,
+      "create_and_publish_page": 5,
+      "close_issue": 4,
+      "reopen_issue": 4,
+      "comment_label_close_issue": 7,
+      "reopen_and_assign": 3,
+      "comment_assign_close": 3,
+      "cart_and_review": 4,
+      "cart_update_review": 2,
+      "add_review_remove": 3,
+      "edit_post": 5,
+      "create_comment_edit": 2,
+      "assign_issue": 8,
+      "update_cart_quantity": 3,
+      "edit_and_publish_page": 2,
+      "create_and_edit_post": 2,
+      "reopen_comment_label": 2
+    },
+    "by_structure_variant": {
+      "memory_L1_lookup_direct_ref": 12,
+      "memory_L2_lookup_single_condition": 12,
+      "memory_L3_lookup_multi_condition": 12,
+      "memory_L4_tracked_locator_exclusion_condition": 7,
+      "memory_L5_tracked_locator_ranking_or_recent": 6,
+      "memory_L4_tracked_locator_multi_condition": 5,
+      "memory_L5_tracked_locator_exclusion_condition": 5,
+      "memory_L5_tracked_locator_multi_condition": 1,
+      "long_horizon_L1_single_action_direct_ref": 12,
+      "long_horizon_L2_single_action_single_condition": 3,
+      "long_horizon_L3_two_step_chain_multi_condition": 10,
+      "long_horizon_L4_two_step_chain_single_condition": 5,
+      "long_horizon_L5_multi_action_chain_exclusion_condition": 6,
+      "long_horizon_L4_two_step_chain_direct_ref": 4,
+      "long_horizon_L5_multi_action_chain_multi_condition": 4,
+      "long_horizon_L2_single_action_direct_ref": 9,
+      "long_horizon_L4_two_step_chain_multi_condition": 3,
+      "long_horizon_L3_two_step_chain_single_condition": 2
+    },
+    "entity_reuse_count": {
+      "cms_page_005": 3,
+      "gitlab_issue_023": 3,
+      "cms_page_006": 3,
+      "shopping_variant_019": 3,
+      "gitlab_issue_018": 2,
+      "gitlab_issue_006": 2,
+      "gitlab_issue_007": 2,
+      "gitlab_issue_024": 2,
+      "gitlab_issue_033": 2,
+      "shopping_variant_018": 2,
+      "shopping_variant_003": 2,
+      "forum_post_022": 2,
+      "forum_post_011": 2,
+      "cms_page_004": 2,
+      "cms_page_007": 2,
+      "cms_page_010": 2,
+      "cms_page_008": 2,
+      "gitlab_issue_031": 2,
+      "gitlab_issue_016": 2,
+      "gitlab_issue_002": 2
+    },
+    "total_tasks": 118,
+    "unique_entities": 79,
+    "unique_templates": 25
+  },
+  "rejection_reasons": {
+    "quality_check_failed": 7
+  },
+  "verifier_execution_summary": {
+    "not_executed": 118
+  }
+}

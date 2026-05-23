@@ -21,13 +21,13 @@ PYTHONPATH=src python3 -m pytest tests/ -v
 PYTHONPATH=src python3 -m taskgen.cli normalize --input data/entities --output data/normalized/entities.json
 
 # Generate 100 tasks (mock LLM)
-PYTHONPATH=src python3 -m taskgen.cli generate --count 100 --mock-llm --entities data/normalized/entities.json --output data/outputs/generated_tasks_100.json
+PYTHONPATH=src python3 -m taskgen.cli generate --count 100 --mock-llm --entities data/normalized/entities.json --output data/outputs/runs/latest/generated_tasks_100.json
 
 # Generate 10 curated examples (mock LLM)
-PYTHONPATH=src python3 -m taskgen.cli generate-examples --count 10 --mock-llm --entities data/normalized/entities.json --output data/outputs/generated_10_examples.json
+PYTHONPATH=src python3 -m taskgen.cli generate-examples --count 10 --mock-llm --entities data/normalized/entities.json --output data/outputs/examples/generated_10_examples.json
 
 # Diversity report
-PYTHONPATH=src python3 -m taskgen.cli report --input data/outputs/generated_tasks_100.json
+PYTHONPATH=src python3 -m taskgen.cli report --input data/outputs/runs/latest/generated_tasks_100.json
 ```
 
 ## Environment Variables (for Kimi API production mode)
@@ -42,7 +42,11 @@ PYTHONPATH=src python3 -m taskgen.cli report --input data/outputs/generated_task
 - `config/` — YAML configs (generation plan, structure rules, templates, requirement banks)
 - `data/entities/` — raw WebArena extractions (gitlab, shopping, reddit JSON)
 - `data/normalized/` — normalized entity database
-- `data/outputs/` — generated task outputs
+- `data/outputs/examples/` — curated example outputs
+- `data/outputs/baseline/` — fixed-seed baseline outputs
+- `data/outputs/runs/` — per-run generated outputs
+- `data/outputs/cache/` — LLM cache and other intermediate output artifacts
+- `legacy/` — archived prototype scripts/configs/outputs not used by the main pipeline
 - `tests/` — 76 tests covering all pipeline stages
 
 ## Pipeline Stages

@@ -12,7 +12,7 @@ PYTHONPATH=src python3 -m pytest tests/ -v         # 76 个测试, ~0.7s, 无需
 PYTHONPATH=src python3 -m taskgen.cli generate \
   --count 100 --mock-llm \
   --entities data/normalized/entities.json \
-  --output data/outputs/generated_tasks_100.json   # 离线生成 100 道题
+  --output data/outputs/runs/latest/generated_tasks_100.json   # 离线生成 100 道题
 ```
 
 ## 框架做了什么
@@ -94,11 +94,12 @@ Stage 1-8 和 10 完全确定性（相同 seed 可复现）。仅 Stage 9 调用
 
 | 文件 | 说明 |
 |------|------|
-| [`data/outputs/generated_10_examples.json`](data/outputs/generated_10_examples.json) | **10 道精选示例**，每道包含完整的 task_description、actions、ground_truth、verifier、quality_checks |
-| [`data/outputs/generated_10_examples.md`](data/outputs/generated_10_examples.md) | 同上的 Markdown 可读版本 |
-| [`data/outputs/generated_tasks_100.json`](data/outputs/generated_tasks_100.json) | 100 道完整任务集 |
-| [`data/outputs/generated_tasks_100.csv`](data/outputs/generated_tasks_100.csv) | **100 道任务摘要表格**（适合快速浏览难度/维度/环境分布） |
-| [`data/outputs/generation_report.json`](data/outputs/generation_report.json) | 生成报告（多样性统计 + 废弃原因） |
+| [`data/outputs/examples/generated_10_examples.json`](data/outputs/examples/generated_10_examples.json) | **10 道精选示例**，每道包含完整的 task_description、actions、ground_truth、verifier、quality_checks |
+| [`data/outputs/examples/generated_10_examples.md`](data/outputs/examples/generated_10_examples.md) | 同上的 Markdown 可读版本 |
+| [`data/outputs/baseline/seed42_100/generated_tasks_100.json`](data/outputs/baseline/seed42_100/generated_tasks_100.json) | 100 道基线任务集 |
+| [`data/outputs/baseline/seed42_100/generated_tasks_100.csv`](data/outputs/baseline/seed42_100/generated_tasks_100.csv) | **100 道任务摘要表格**（适合快速浏览难度/维度/环境分布） |
+| [`data/outputs/baseline/seed42_100/generation_report.json`](data/outputs/baseline/seed42_100/generation_report.json) | 基线生成报告（多样性统计 + 废弃原因） |
+| [`data/outputs/runs/2026-05-24_mock_seed42_max118/`](data/outputs/runs/2026-05-24_mock_seed42_max118/) | 当前配置下 mock/seed42 可生成的最大任务集（118 道） |
 
 也可以用命令行快速浏览：
 
@@ -106,7 +107,7 @@ Stage 1-8 和 10 完全确定性（相同 seed 可复现）。仅 Stage 9 调用
 # 列出 10 道精选题的难度、维度、环境、描述
 PYTHONPATH=src python3 -c "
 import json
-for i, t in enumerate(json.load(open('data/outputs/generated_10_examples.json')), 1):
+for i, t in enumerate(json.load(open('data/outputs/examples/generated_10_examples.json')), 1):
     print(f\"{i}. [{t['ability_dimension']} {t['difficulty']} | {t['target_environment']}]\")
     print(f\"   {t['task_description'][:100]}...\")
     print(f\"   actions={len(t['actions'])}  assertions={len(t['ground_truth']['assertions'])}  quality={t['quality_checks']['passed']}\")
@@ -115,11 +116,11 @@ for i, t in enumerate(json.load(open('data/outputs/generated_10_examples.json'))
 
 # 查看第 1 道题的完整结构（ground truth + verifier + quality checks）
 PYTHONPATH=src python3 -c "
-import json; print(json.dumps(json.load(open('data/outputs/generated_10_examples.json'))[0], indent=2, ensure_ascii=False))
+import json; print(json.dumps(json.load(open('data/outputs/examples/generated_10_examples.json'))[0], indent=2, ensure_ascii=False))
 "
 
 # 查看 100 题的多样性分布
-PYTHONPATH=src python3 -m taskgen.cli report --input data/outputs/generated_tasks_100.json
+PYTHONPATH=src python3 -m taskgen.cli report --input data/outputs/baseline/seed42_100/generated_tasks_100.json
 ```
 
 ---
@@ -140,10 +141,10 @@ PYTHONPATH=src python3 -m pytest tests/ -v
 PYTHONPATH=src python3 -m taskgen.cli generate \
   --count 100 --mock-llm \
   --entities data/normalized/entities.json \
-  --output data/outputs/generated_tasks_100.json
+  --output data/outputs/runs/latest/generated_tasks_100.json
 ```
 
-产出 5 个文件到 `data/outputs/`：
+产出 5 个文件到 `data/outputs/runs/latest/`：
 
 | 文件 | 说明 |
 |------|------|
@@ -152,6 +153,8 @@ PYTHONPATH=src python3 -m taskgen.cli generate \
 | `generated_10_examples.json` | 10 道精选示例（L1-L5 × 两个维度） |
 | `generated_10_examples.md` | 可读 Markdown 格式 |
 | `generation_report.json` | 多样性统计 + 废弃原因统计 |
+
+说明：`generate` 当前只使用 `--output` 的父目录，文件名固定为上表这些名字。建议每次正式运行都写入单独目录，例如 `data/outputs/runs/2026-05-24_mock_seed42_max118/`。
 
 ### 第三步：查看单道题的完整结构
 
@@ -176,10 +179,10 @@ print(json.dumps(tasks[0], indent=2, ensure_ascii=False))
 
 ```bash
 PYTHONPATH=src python3 -m taskgen.cli generate --count 50 --mock-llm --seed 42 \
-  --entities data/normalized/entities.json --output /tmp/run1.json
+  --entities data/normalized/entities.json --output /tmp/run1/tasks.json
 PYTHONPATH=src python3 -m taskgen.cli generate --count 50 --mock-llm --seed 42 \
-  --entities data/normalized/entities.json --output /tmp/run2.json
-diff /tmp/run1.json /tmp/run2.json   # 无输出 = 完全一致
+  --entities data/normalized/entities.json --output /tmp/run2/tasks.json
+diff /tmp/run1/generated_tasks_100.json /tmp/run2/generated_tasks_100.json   # 无输出 = 完全一致
 ```
 
 ### 第五步：生产模式（可选，需 Kimi API key）
@@ -187,7 +190,7 @@ diff /tmp/run1.json /tmp/run2.json   # 无输出 = 完全一致
 ```bash
 export KIMI_API_KEY="your-key"
 PYTHONPATH=src python3 -m taskgen.cli generate --count 10 \
-  --entities data/normalized/entities.json --output data/outputs/kimi_tasks.json
+  --entities data/normalized/entities.json --output data/outputs/runs/kimi_latest/generated_tasks_100.json
 ```
 
 与 mock 模式唯一区别：Stage 9 调用 Kimi API 做自然语言改写，其余阶段不变。
@@ -288,7 +291,13 @@ config/
 data/
 ├── entities/          WebArena 原始实体数据
 ├── normalized/        归一化实体库（213 个实体, 4 环境, 8 类型）
-└── outputs/           生成的任务输出
+└── outputs/
+    ├── examples/      精选示例输出
+    ├── baseline/      固定 seed 的基线输出
+    ├── runs/          每次生成运行的独立输出目录
+    └── cache/         LLM 调用缓存等中间产物
+
+legacy/                旧原型入口、旧配置和旧输出存档；不参与当前主流程
 
 tests/                 76 个测试, 11 个测试文件（~0.7s, 无需 API key）
 ```
@@ -311,14 +320,14 @@ PYTHONPATH=src python3 -m taskgen.cli inspect-data --data-dir data/
 PYTHONPATH=src python3 -m taskgen.cli normalize --input data/entities --output data/normalized/entities.json
 
 # 生成任务（mock LLM）
-PYTHONPATH=src python3 -m taskgen.cli generate --count 100 --mock-llm --entities data/normalized/entities.json --output data/outputs/tasks.json
+PYTHONPATH=src python3 -m taskgen.cli generate --count 100 --mock-llm --entities data/normalized/entities.json --output data/outputs/runs/latest/generated_tasks_100.json
 
 # 生成精选示例
-PYTHONPATH=src python3 -m taskgen.cli generate-examples --count 10 --mock-llm --entities data/normalized/entities.json --output data/outputs/examples.json
+PYTHONPATH=src python3 -m taskgen.cli generate-examples --count 10 --mock-llm --entities data/normalized/entities.json --output data/outputs/examples/generated_10_examples.json
 
 # 多样性报告
-PYTHONPATH=src python3 -m taskgen.cli report --input data/outputs/tasks.json
+PYTHONPATH=src python3 -m taskgen.cli report --input data/outputs/runs/latest/generated_tasks_100.json
 
 # 与 WebArena 对比评估
-PYTHONPATH=src python3 -m taskgen.cli evaluate-quality --generated data/outputs/tasks.json --webarena path/to/webarena_tasks.json
+PYTHONPATH=src python3 -m taskgen.cli evaluate-quality --generated data/outputs/runs/latest/generated_tasks_100.json --webarena path/to/webarena_tasks.json
 ```

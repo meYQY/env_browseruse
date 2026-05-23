@@ -165,7 +165,7 @@ def main() -> None:
     # generate
     p = sub.add_parser("generate", help="Generate tasks")
     p.add_argument("--count", type=int, default=100, help="Target task count")
-    p.add_argument("--output", default="data/outputs/generated_tasks_100.json")
+    p.add_argument("--output", default="data/outputs/runs/latest/generated_tasks_100.json")
     p.add_argument("--config-dir", default="config")
     p.add_argument("--data-dir", default=None)
     p.add_argument("--entities", default=None, help="Path to normalized entities")
@@ -176,7 +176,7 @@ def main() -> None:
     # generate-examples
     p = sub.add_parser("generate-examples", help="Generate curated examples")
     p.add_argument("--count", type=int, default=10)
-    p.add_argument("--output", default="data/outputs/generated_10_examples.json")
+    p.add_argument("--output", default="data/outputs/examples/generated_10_examples.json")
     p.add_argument("--config-dir", default="config")
     p.add_argument("--data-dir", default=None)
     p.add_argument("--entities", default=None)
@@ -185,12 +185,12 @@ def main() -> None:
 
     # report
     p = sub.add_parser("report", help="Show diversity report")
-    p.add_argument("--input", default="data/outputs/generated_tasks_100.json")
+    p.add_argument("--input", default="data/outputs/runs/latest/generated_tasks_100.json")
     p.add_argument("--output", default=None)
 
     # evaluate-quality
     p = sub.add_parser("evaluate-quality", help="Compare generated tasks with official WebArena tasks")
-    p.add_argument("--generated", default="data/outputs/generated_tasks_100.json")
+    p.add_argument("--generated", default="data/outputs/runs/latest/generated_tasks_100.json")
     p.add_argument("--webarena", default="arena_repos/webarena/config_files/test.raw.json")
     p.add_argument("--output", default=None)
 
